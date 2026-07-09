@@ -4,7 +4,6 @@
     "id",
     "name",
     "reading",
-    "desc",
     "lv",
     "lang",
     "genre"
@@ -37,14 +36,5 @@
     "travel",
     "work"
   ],
-  "counts": {
-    "ja": 500,
-    "en": 50,
-    "zh": 50,
-    "ko": 50,
-    "fr": 50,
-    "de": 50,
-    "it": 50
-  },
-  "note": "category is retired. concept_id is reserved for future multilingual linking."
+  "note": "category is retired. concept_id is reserved for future multilingual linking. Counts are intentionally omitted because data files are the source of truth."
 }

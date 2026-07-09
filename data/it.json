@@ -2,7 +2,6 @@
   {
     "id": "fe459297-c484-40fc-ba7f-ce85cc305197",
     "name": "chiaroscuro",
-    "desc": "明暗法。 低頻度・専門的・抽象度が高い語。",
     "lv": 5,
     "lang": "it",
     "genre": "art"
@@ -10,7 +9,6 @@
   {
     "id": "4f278a45-fc92-4a6b-9e63-99308cb58449",
     "name": "composizione",
-    "desc": "構図・構成。 抽象度または専門性がやや高い語。",
     "lv": 3,
     "lang": "it",
     "genre": "art"
@@ -18,7 +16,6 @@
   {
     "id": "24b4be47-9256-405c-8a72-fe8fae91ee4f",
     "name": "prospettiva",
-    "desc": "遠近法・視点。 抽象度または専門性がやや高い語。",
     "lv": 3,
     "lang": "it",
     "genre": "art"
@@ -26,7 +23,6 @@
   {
     "id": "35d97ea1-42a5-499c-8a66-d744a9fd9942",
     "name": "texture",
-    "desc": "質感。 抽象度または専門性がやや高い語。",
     "lv": 3,
     "lang": "it",
     "genre": "art"
@@ -34,7 +30,6 @@
   {
     "id": "79ed35fc-3c4e-4b9c-914a-6501fdce1f5a",
     "name": "metabolismo",
-    "desc": "代謝。 文章語・専門語寄りで難度が高い語。",
     "lv": 4,
     "lang": "it",
     "genre": "body"
@@ -42,7 +37,6 @@
   {
     "id": "3a3c5fc7-8781-4029-aac5-2d57bc8780f4",
     "name": "muscolo",
-    "desc": "筋肉。 日常で使えるが、少し文脈を選ぶ語。",
     "lv": 2,
     "lang": "it",
     "genre": "body"
@@ -50,7 +44,6 @@
   {
     "id": "e0b1f8df-71b9-496b-afcc-f0f3065c33e9",
     "name": "postura",
-    "desc": "姿勢。 日常で使えるが、少し文脈を選ぶ語。",
     "lv": 2,
     "lang": "it",
     "genre": "body"
@@ -58,7 +51,6 @@
   {
     "id": "03003214-853a-4d24-adf0-7240050b6e27",
     "name": "infrastruttura",
-    "desc": "インフラ。 文章語・専門語寄りで難度が高い語。",
     "lv": 4,
     "lang": "it",
     "genre": "city"
@@ -66,7 +58,6 @@
   {
     "id": "c1e3e50b-9406-4401-b6e0-cbfc2ce5c9e4",
     "name": "metropoli",
-    "desc": "大都市。 文章語・専門語寄りで難度が高い語。",
     "lv": 4,
     "lang": "it",
     "genre": "city"
@@ -74,7 +65,6 @@
   {
     "id": "f2522a80-bfe0-4346-915e-932f61f87539",
     "name": "strada",
-    "desc": "通り。 日常でかなり使いやすい基本語。",
     "lv": 1,
     "lang": "it",
     "genre": "city"
@@ -82,7 +72,6 @@
   {
     "id": "835d24b7-ea19-4c22-9802-d034ad42fc41",
     "name": "acqua",
-    "desc": "水。日常基本語。 日常でかなり使いやすい基本語。",
     "lv": 1,
     "lang": "it",
     "genre": "daily"
@@ -90,7 +79,6 @@
   {
     "id": "35dce7ff-c89c-4d2f-846a-53d801efde60",
     "name": "finestra",
-    "desc": "窓。 日常でかなり使いやすい基本語。",
     "lv": 1,
     "lang": "it",
     "genre": "daily"
@@ -98,7 +86,6 @@
   {
     "id": "1648403c-3eff-48f0-8809-5158f6315ffb",
     "name": "contrasto",
-    "desc": "対比。 抽象度または専門性がやや高い語。",
     "lv": 3,
     "lang": "it",
     "genre": "design"
@@ -106,7 +93,6 @@
   {
     "id": "3fdf028a-ed0b-4040-a8cd-7c244f514dfe",
     "name": "interfaccia",
-    "desc": "インターフェース。 抽象度または専門性がやや高い語。",
     "lv": 3,
     "lang": "it",
     "genre": "design"
@@ -114,7 +100,6 @@
   {
     "id": "f022015b-7489-4bfc-9add-14211af841ac",
     "name": "prototipo",
-    "desc": "試作品。 抽象度または専門性がやや高い語。",
     "lv": 3,
     "lang": "it",
     "genre": "design"
@@ -122,7 +107,6 @@
   {
     "id": "0f7763e6-151a-404c-bf7d-c6eae7bb3d4e",
     "name": "silenzio",
-    "desc": "静けさ。 日常で使えるが、少し文脈を選ぶ語。",
     "lv": 2,
     "lang": "it",
     "genre": "emotion"
@@ -130,7 +114,6 @@
   {
     "id": "7130e645-6eb8-4421-9d06-b60d61c1fb82",
     "name": "fermentazione",
-    "desc": "発酵。 文章語・専門語寄りで難度が高い語。",
     "lv": 4,
     "lang": "it",
     "genre": "food"
@@ -138,7 +121,6 @@
   {
     "id": "dcb0a6c7-0262-4e66-b847-044f6e1c7a1b",
     "name": "nutriente",
-    "desc": "栄養素。 抽象度または専門性がやや高い語。",
     "lv": 3,
     "lang": "it",
     "genre": "food"
@@ -146,7 +128,6 @@
   {
     "id": "6356bcc4-612b-4658-9f5e-2d23a4698468",
     "name": "ricetta",
-    "desc": "レシピ。 日常で使えるが、少し文脈を選ぶ語。",
     "lv": 2,
     "lang": "it",
     "genre": "food"
@@ -154,7 +135,6 @@
   {
     "id": "662b4b47-df11-4106-8127-255b436c6bfa",
     "name": "civiltà",
-    "desc": "文明。 抽象度または専門性がやや高い語。",
     "lv": 3,
     "lang": "it",
     "genre": "history"
@@ -162,7 +142,6 @@
   {
     "id": "4bb91010-84ad-4ddd-8ff4-8b9b5d5d1746",
     "name": "manufatto",
-    "desc": "人工遺物。 文章語・専門語寄りで難度が高い語。",
     "lv": 4,
     "lang": "it",
     "genre": "history"
@@ -170,7 +149,6 @@
   {
     "id": "9362944b-5c81-42b2-b491-21ba43dab25f",
     "name": "formante",
-    "desc": "フォルマント。 低頻度・専門的・抽象度が高い語。",
     "lv": 5,
     "lang": "it",
     "genre": "music"
@@ -178,7 +156,6 @@
   {
     "id": "58c1e431-36b9-4f7d-9b4d-a5a2b477dc35",
     "name": "risonanza",
-    "desc": "共鳴。 文章語・専門語寄りで難度が高い語。",
     "lv": 4,
     "lang": "it",
     "genre": "music"
@@ -186,7 +163,6 @@
   {
     "id": "11e316b8-bf48-4472-8688-b835d99d0740",
     "name": "ritmo",
-    "desc": "リズム。 日常で使えるが、少し文脈を選ぶ語。",
     "lv": 2,
     "lang": "it",
     "genre": "music"
@@ -194,7 +170,6 @@
   {
     "id": "2ea6ac90-0089-4497-8355-564d0e3a302e",
     "name": "ambiguità",
-    "desc": "曖昧性。 文章語・専門語寄りで難度が高い語。",
     "lv": 4,
     "lang": "it",
     "genre": "philosophy"
@@ -202,7 +177,6 @@
   {
     "id": "d91449ef-c4d8-4988-91d4-c0d2ce9dabdf",
     "name": "coscienza",
-    "desc": "意識。 文章語・専門語寄りで難度が高い語。",
     "lv": 4,
     "lang": "it",
     "genre": "philosophy"
@@ -210,7 +184,6 @@
   {
     "id": "77983053-b2e1-4c62-9d55-8524dfbe6263",
     "name": "effimero",
-    "desc": "儚い。 文章語・専門語寄りで難度が高い語。",
     "lv": 4,
     "lang": "it",
     "genre": "philosophy"
@@ -218,7 +191,6 @@
   {
     "id": "ece821ba-fadd-4771-bbe8-c1afc2fff0f3",
     "name": "memoria",
-    "desc": "記憶。 日常で使えるが、少し文脈を選ぶ語。",
     "lv": 2,
     "lang": "it",
     "genre": "philosophy"
@@ -226,7 +198,6 @@
   {
     "id": "09bc2045-cd4c-4516-a735-35c56f74e5fd",
     "name": "percezione",
-    "desc": "知覚。 抽象度または専門性がやや高い語。",
     "lv": 3,
     "lang": "it",
     "genre": "philosophy"
@@ -234,7 +205,6 @@
   {
     "id": "1fe1285d-8c22-4603-8a76-1cf0d88dca2d",
     "name": "serendipità",
-    "desc": "偶然の発見。 低頻度・専門的・抽象度が高い語。",
     "lv": 5,
     "lang": "it",
     "genre": "philosophy"
@@ -242,7 +212,6 @@
   {
     "id": "1aefd092-b1cb-40a1-8b74-687e4f167f9b",
     "name": "correlazione",
-    "desc": "相関。 文章語・専門語寄りで難度が高い語。",
     "lv": 4,
     "lang": "it",
     "genre": "science"
@@ -250,7 +219,6 @@
   {
     "id": "9d2a439c-c47c-4686-aa1a-235bbf1a4a02",
     "name": "entropia",
-    "desc": "エントロピー。 文章語・専門語寄りで難度が高い語。",
     "lv": 4,
     "lang": "it",
     "genre": "science"
@@ -258,7 +226,6 @@
   {
     "id": "61682e38-c4ea-4f5b-adbe-05ad3bdbc4de",
     "name": "ipotesi",
-    "desc": "仮説。 抽象度または専門性がやや高い語。",
     "lv": 3,
     "lang": "it",
     "genre": "science"
@@ -266,7 +233,6 @@
   {
     "id": "f0d28d43-5676-450a-b6a3-e59b4956a704",
     "name": "singolarità",
-    "desc": "特異点。 低頻度・専門的・抽象度が高い語。",
     "lv": 5,
     "lang": "it",
     "genre": "science"
@@ -274,7 +240,6 @@
   {
     "id": "d0948def-70f1-4722-8aa8-561028b28ce4",
     "name": "variabile",
-    "desc": "変数。 抽象度または専門性がやや高い語。",
     "lv": 3,
     "lang": "it",
     "genre": "science"
@@ -282,7 +247,6 @@
   {
     "id": "a620fc3a-21ce-4eae-9f3a-76020e54f2a3",
     "name": "amico",
-    "desc": "友人。 日常でかなり使いやすい基本語。",
     "lv": 1,
     "lang": "it",
     "genre": "society"
@@ -290,7 +254,6 @@
   {
     "id": "981f85ec-52c2-4c60-a549-00c74c4e0e20",
     "name": "confine",
-    "desc": "境界。 抽象度または専門性がやや高い語。",
     "lv": 3,
     "lang": "it",
     "genre": "space"
@@ -298,7 +261,6 @@
   {
     "id": "7bad28b7-8b9d-4e3a-a636-47f887d3c0b4",
     "name": "lezione",
-    "desc": "講義。 日常で使えるが、少し文脈を選ぶ語。",
     "lv": 2,
     "lang": "it",
     "genre": "study"
@@ -306,7 +268,6 @@
   {
     "id": "37c71d17-e76e-4134-b1a5-8cf838cf7775",
     "name": "algoritmo",
-    "desc": "アルゴリズム。 抽象度または専門性がやや高い語。",
     "lv": 3,
     "lang": "it",
     "genre": "tech"
@@ -314,7 +275,6 @@
   {
     "id": "efe4ded1-f417-49a8-96d6-af73fe706d3c",
     "name": "dataset",
-    "desc": "データセット。 抽象度または専門性がやや高い語。",
     "lv": 3,
     "lang": "it",
     "genre": "tech"
@@ -322,7 +282,6 @@
   {
     "id": "634d7601-7739-41c8-b9bf-7634395ef6cb",
     "name": "segnale",
-    "desc": "信号。 日常で使えるが、少し文脈を選ぶ語。",
     "lv": 2,
     "lang": "it",
     "genre": "tech"
@@ -330,7 +289,6 @@
   {
     "id": "8e97911c-d50d-4b47-9263-d47f44df76a6",
     "name": "sensore",
-    "desc": "センサー。 抽象度または専門性がやや高い語。",
     "lv": 3,
     "lang": "it",
     "genre": "tech"
@@ -338,7 +296,6 @@
   {
     "id": "b6972050-38a3-40f1-90af-5a3a4729b523",
     "name": "mattina",
-    "desc": "朝。 日常でかなり使いやすい基本語。",
     "lv": 1,
     "lang": "it",
     "genre": "time"
@@ -346,7 +303,6 @@
   {
     "id": "3641bfb9-96ff-4fe9-bc50-89ce9d32858e",
     "name": "itinerario",
-    "desc": "旅程。 文章語・専門語寄りで難度が高い語。",
     "lv": 4,
     "lang": "it",
     "genre": "travel"
@@ -354,7 +310,6 @@
   {
     "id": "01c54f09-60a9-4297-ac95-1949f7bde561",
     "name": "valuta",
-    "desc": "通貨。 抽象度または専門性がやや高い語。",
     "lv": 3,
     "lang": "it",
     "genre": "travel"
@@ -362,7 +317,6 @@
   {
     "id": "bcc8bd61-ac18-4ce8-a5e9-34a8add4faf9",
     "name": "viaggio",
-    "desc": "旅行。 日常で使えるが、少し文脈を選ぶ語。",
     "lv": 2,
     "lang": "it",
     "genre": "travel"
@@ -370,7 +324,6 @@
   {
     "id": "1127a2e8-37d2-4e68-a3d8-d2724531a03e",
     "name": "consenso",
-    "desc": "合意。 文章語・専門語寄りで難度が高い語。",
     "lv": 4,
     "lang": "it",
     "genre": "work"
@@ -378,7 +331,6 @@
   {
     "id": "cd7dc7d7-f21a-49a8-87b8-b841de5a61cd",
     "name": "manutenzione",
-    "desc": "保守。 抽象度または専門性がやや高い語。",
     "lv": 3,
     "lang": "it",
     "genre": "work"
@@ -386,7 +338,6 @@
   {
     "id": "cb94a7a5-ba44-40d3-a8d1-186a65b4b237",
     "name": "scadenza",
-    "desc": "締切。 日常で使えるが、少し文脈を選ぶ語。",
     "lv": 2,
     "lang": "it",
     "genre": "work"
@@ -394,7 +345,6 @@
   {
     "id": "0847cd15-e93c-4ad6-b7e0-e320ac083e78",
     "name": "archivio",
-    "desc": "アーカイブ。 抽象度または専門性がやや高い語。",
     "lv": 3,
     "lang": "it",
     "genre": "media"

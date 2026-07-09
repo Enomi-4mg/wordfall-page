@@ -8,8 +8,7 @@ import {
   isValidGenre,
   isValidUuidV4,
   normalizeWord,
-  serializeWords,
-  sortWords
+  serializeWords
 } from "../shared/words.js";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
@@ -147,7 +146,7 @@ async function main() {
 
     if (!dryRun) {
       const langCode = path.basename(file, ".json");
-      await writeFile(filePath, serializeWords(sortWords(migrated, langCode), langCode), "utf8");
+      await writeFile(filePath, serializeWords(migrated, langCode), "utf8");
     }
   }
 

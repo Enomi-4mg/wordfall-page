@@ -2,7 +2,6 @@
   {
     "id": "ea07634e-1f11-4d60-bde5-0de372840783",
     "name": "clair-obscur",
-    "desc": "明暗法。 低頻度・専門的・抽象度が高い語。",
     "lv": 5,
     "lang": "fr",
     "genre": "art"
@@ -10,7 +9,6 @@
   {
     "id": "3b620c52-c5ae-4d4a-b903-0a67f2c94a21",
     "name": "composition",
-    "desc": "構図・構成。 抽象度または専門性がやや高い語。",
     "lv": 3,
     "lang": "fr",
     "genre": "art"
@@ -18,7 +16,6 @@
   {
     "id": "5362f621-6a6b-4933-bade-1649857f2d01",
     "name": "perspective",
-    "desc": "遠近法・視点。 抽象度または専門性がやや高い語。",
     "lv": 3,
     "lang": "fr",
     "genre": "art"
@@ -26,7 +23,6 @@
   {
     "id": "8d5e5c53-6512-4dca-a8fb-e7efcb28b763",
     "name": "texture",
-    "desc": "質感。 抽象度または専門性がやや高い語。",
     "lv": 3,
     "lang": "fr",
     "genre": "art"
@@ -34,7 +30,6 @@
   {
     "id": "3e7c5ecc-a6a5-4c92-9561-8915f0cbdd1c",
     "name": "métabolisme",
-    "desc": "代謝。 文章語・専門語寄りで難度が高い語。",
     "lv": 4,
     "lang": "fr",
     "genre": "body"
@@ -42,7 +37,6 @@
   {
     "id": "0de874ac-aacc-4ae5-84ac-bcabfcf8b751",
     "name": "muscle",
-    "desc": "筋肉。 日常で使えるが、少し文脈を選ぶ語。",
     "lv": 2,
     "lang": "fr",
     "genre": "body"
@@ -50,7 +44,6 @@
   {
     "id": "01ea25c8-4efb-4d31-ac9c-b4ff3bd14026",
     "name": "posture",
-    "desc": "姿勢。 日常で使えるが、少し文脈を選ぶ語。",
     "lv": 2,
     "lang": "fr",
     "genre": "body"
@@ -58,7 +51,6 @@
   {
     "id": "338a2ba7-c70f-49b6-992e-b2664c308261",
     "name": "infrastructure",
-    "desc": "インフラ。 文章語・専門語寄りで難度が高い語。",
     "lv": 4,
     "lang": "fr",
     "genre": "city"
@@ -66,7 +58,6 @@
   {
     "id": "567c6e9e-5d01-4606-a42a-dcd989f6982c",
     "name": "métropole",
-    "desc": "大都市。 文章語・専門語寄りで難度が高い語。",
     "lv": 4,
     "lang": "fr",
     "genre": "city"
@@ -74,7 +65,6 @@
   {
     "id": "6f839cf7-d0e8-4f0a-99c9-a0ce34afe96e",
     "name": "rue",
-    "desc": "通り。 日常でかなり使いやすい基本語。",
     "lv": 1,
     "lang": "fr",
     "genre": "city"
@@ -82,7 +72,6 @@
   {
     "id": "3cf897f4-746b-4e20-857b-71626d2cd9db",
     "name": "eau",
-    "desc": "水。日常基本語。 日常でかなり使いやすい基本語。",
     "lv": 1,
     "lang": "fr",
     "genre": "daily"
@@ -90,7 +79,6 @@
   {
     "id": "6dcf236d-f045-4e0b-9331-5140b9f2a11c",
     "name": "fenêtre",
-    "desc": "窓。 日常でかなり使いやすい基本語。",
     "lv": 1,
     "lang": "fr",
     "genre": "daily"
@@ -98,7 +86,6 @@
   {
     "id": "8ee4ccb5-104c-4eaf-a5eb-c3c26bbc193e",
     "name": "contraste",
-    "desc": "対比。 抽象度または専門性がやや高い語。",
     "lv": 3,
     "lang": "fr",
     "genre": "design"
@@ -106,7 +93,6 @@
   {
     "id": "bae8e223-ab4e-4e7c-a773-fed13f4a751c",
     "name": "interface",
-    "desc": "インターフェース。 抽象度または専門性がやや高い語。",
     "lv": 3,
     "lang": "fr",
     "genre": "design"
@@ -114,7 +100,6 @@
   {
     "id": "fdb5faeb-347d-4a53-b4b1-2bc6075c7018",
     "name": "prototype",
-    "desc": "試作品。 抽象度または専門性がやや高い語。",
     "lv": 3,
     "lang": "fr",
     "genre": "design"
@@ -122,7 +107,6 @@
   {
     "id": "3dde2b3a-dcf9-4794-860b-293f30fcf0de",
     "name": "silence",
-    "desc": "静けさ。 日常で使えるが、少し文脈を選ぶ語。",
     "lv": 2,
     "lang": "fr",
     "genre": "emotion"
@@ -130,7 +114,6 @@
   {
     "id": "3889a96b-98d9-4d4a-8d91-9de6421182eb",
     "name": "fermentation",
-    "desc": "発酵。 文章語・専門語寄りで難度が高い語。",
     "lv": 4,
     "lang": "fr",
     "genre": "food"
@@ -138,7 +121,6 @@
   {
     "id": "7b3d862e-0a31-47ad-878e-028aa6663a8c",
     "name": "nutriment",
-    "desc": "栄養素。 抽象度または専門性がやや高い語。",
     "lv": 3,
     "lang": "fr",
     "genre": "food"
@@ -146,7 +128,6 @@
   {
     "id": "8afa1cbb-a436-4ed9-8e7a-37252a1efe9c",
     "name": "recette",
-    "desc": "レシピ。 日常で使えるが、少し文脈を選ぶ語。",
     "lv": 2,
     "lang": "fr",
     "genre": "food"
@@ -154,7 +135,6 @@
   {
     "id": "5bcf2bb0-b772-406e-93fb-b9025984595d",
     "name": "artefact",
-    "desc": "人工遺物。 文章語・専門語寄りで難度が高い語。",
     "lv": 4,
     "lang": "fr",
     "genre": "history"
@@ -162,7 +142,6 @@
   {
     "id": "df1ac11b-a553-453c-9ea1-f57fd0363f5c",
     "name": "civilisation",
-    "desc": "文明。 抽象度または専門性がやや高い語。",
     "lv": 3,
     "lang": "fr",
     "genre": "history"
@@ -170,7 +149,6 @@
   {
     "id": "385eb499-e187-4508-b4b9-19230ee3a99f",
     "name": "formant",
-    "desc": "フォルマント。 低頻度・専門的・抽象度が高い語。",
     "lv": 5,
     "lang": "fr",
     "genre": "music"
@@ -178,7 +156,6 @@
   {
     "id": "7e996dc3-f665-4f20-abdd-871f28fe0dec",
     "name": "résonance",
-    "desc": "共鳴。 文章語・専門語寄りで難度が高い語。",
     "lv": 4,
     "lang": "fr",
     "genre": "music"
@@ -186,7 +163,6 @@
   {
     "id": "8ff61cdd-666f-474e-b0cc-e0845f810892",
     "name": "rythme",
-    "desc": "リズム。 日常で使えるが、少し文脈を選ぶ語。",
     "lv": 2,
     "lang": "fr",
     "genre": "music"
@@ -194,7 +170,6 @@
   {
     "id": "30b3c79f-3745-4365-96f2-391d96191406",
     "name": "ambiguïté",
-    "desc": "曖昧性。 文章語・専門語寄りで難度が高い語。",
     "lv": 4,
     "lang": "fr",
     "genre": "philosophy"
@@ -202,7 +177,6 @@
   {
     "id": "3967d3f0-6a7e-42ed-a8cf-0b74763bca13",
     "name": "conscience",
-    "desc": "意識。 文章語・専門語寄りで難度が高い語。",
     "lv": 4,
     "lang": "fr",
     "genre": "philosophy"
@@ -210,7 +184,6 @@
   {
     "id": "90cef096-cb22-4a0d-a54a-6cc57a232811",
     "name": "éphémère",
-    "desc": "儚い。 文章語・専門語寄りで難度が高い語。",
     "lv": 4,
     "lang": "fr",
     "genre": "philosophy"
@@ -218,7 +191,6 @@
   {
     "id": "87e004ac-2cc7-4860-a68e-18d531453df9",
     "name": "mémoire",
-    "desc": "記憶。 日常で使えるが、少し文脈を選ぶ語。",
     "lv": 2,
     "lang": "fr",
     "genre": "philosophy"
@@ -226,7 +198,6 @@
   {
     "id": "1a12dd2e-7b7d-4dcf-a6a8-9499e1bd546b",
     "name": "perception",
-    "desc": "知覚。 抽象度または専門性がやや高い語。",
     "lv": 3,
     "lang": "fr",
     "genre": "philosophy"
@@ -234,7 +205,6 @@
   {
     "id": "0a068a2b-fb58-46f0-9d88-a30901679d48",
     "name": "sérendipité",
-    "desc": "偶然の発見。 低頻度・専門的・抽象度が高い語。",
     "lv": 5,
     "lang": "fr",
     "genre": "philosophy"
@@ -242,7 +212,6 @@
   {
     "id": "72970fb8-88d6-4b57-accb-cf810452ea4a",
     "name": "corrélation",
-    "desc": "相関。 文章語・専門語寄りで難度が高い語。",
     "lv": 4,
     "lang": "fr",
     "genre": "science"
@@ -250,7 +219,6 @@
   {
     "id": "b163a293-ade6-4cce-ab92-670f52932270",
     "name": "entropie",
-    "desc": "エントロピー。 文章語・専門語寄りで難度が高い語。",
     "lv": 4,
     "lang": "fr",
     "genre": "science"
@@ -258,7 +226,6 @@
   {
     "id": "be23c5ac-ed49-40bc-aa65-29d9478999b4",
     "name": "hypothèse",
-    "desc": "仮説。 抽象度または専門性がやや高い語。",
     "lv": 3,
     "lang": "fr",
     "genre": "science"
@@ -266,7 +233,6 @@
   {
     "id": "98e6952e-1842-4080-944e-de2e4e0c5227",
     "name": "singularité",
-    "desc": "特異点。 低頻度・専門的・抽象度が高い語。",
     "lv": 5,
     "lang": "fr",
     "genre": "science"
@@ -274,7 +240,6 @@
   {
     "id": "e682f7eb-793a-4e03-a972-c8909d27549a",
     "name": "variable",
-    "desc": "変数。 抽象度または専門性がやや高い語。",
     "lv": 3,
     "lang": "fr",
     "genre": "science"
@@ -282,7 +247,6 @@
   {
     "id": "ffe0eaad-ce31-4400-80e0-47fdaab1c2b1",
     "name": "ami",
-    "desc": "友人。 日常でかなり使いやすい基本語。",
     "lv": 1,
     "lang": "fr",
     "genre": "society"
@@ -290,7 +254,6 @@
   {
     "id": "9c665d40-c566-417f-8747-d2d4b557b656",
     "name": "frontière",
-    "desc": "境界。 抽象度または専門性がやや高い語。",
     "lv": 3,
     "lang": "fr",
     "genre": "space"
@@ -298,7 +261,6 @@
   {
     "id": "a1b556c2-1d2f-4ecd-914e-95bfbac83ce3",
     "name": "conférence",
-    "desc": "講義。 日常で使えるが、少し文脈を選ぶ語。",
     "lv": 2,
     "lang": "fr",
     "genre": "study"
@@ -306,7 +268,6 @@
   {
     "id": "e10d1d43-e5a8-4c79-8860-a2212dcc458c",
     "name": "algorithme",
-    "desc": "アルゴリズム。 抽象度または専門性がやや高い語。",
     "lv": 3,
     "lang": "fr",
     "genre": "tech"
@@ -314,7 +275,6 @@
   {
     "id": "0aa5580c-a4a5-4b60-a19c-6f50f75733f9",
     "name": "capteur",
-    "desc": "センサー。 抽象度または専門性がやや高い語。",
     "lv": 3,
     "lang": "fr",
     "genre": "tech"
@@ -322,7 +282,6 @@
   {
     "id": "fa32e086-9fb1-4e47-bf92-12aca24aa834",
     "name": "jeu de données",
-    "desc": "データセット。 抽象度または専門性がやや高い語。",
     "lv": 3,
     "lang": "fr",
     "genre": "tech"
@@ -330,7 +289,6 @@
   {
     "id": "ff589c7c-a3f4-4d3c-8481-0f5dc2a539ab",
     "name": "signal",
-    "desc": "信号。 日常で使えるが、少し文脈を選ぶ語。",
     "lv": 2,
     "lang": "fr",
     "genre": "tech"
@@ -338,7 +296,6 @@
   {
     "id": "dfa27365-66a8-4f78-b10f-79a33ff597a8",
     "name": "matin",
-    "desc": "朝。 日常でかなり使いやすい基本語。",
     "lv": 1,
     "lang": "fr",
     "genre": "time"
@@ -346,7 +303,6 @@
   {
     "id": "bac2121d-dade-45b0-95b2-9c1f62fbd325",
     "name": "itinéraire",
-    "desc": "旅程。 文章語・専門語寄りで難度が高い語。",
     "lv": 4,
     "lang": "fr",
     "genre": "travel"
@@ -354,7 +310,6 @@
   {
     "id": "2cc60b13-f363-43a9-847b-a8a97192fc75",
     "name": "monnaie",
-    "desc": "通貨。 抽象度または専門性がやや高い語。",
     "lv": 3,
     "lang": "fr",
     "genre": "travel"
@@ -362,7 +317,6 @@
   {
     "id": "d8ef8450-9b2b-46e5-ba80-0d10fc7c4faa",
     "name": "voyage",
-    "desc": "旅行。 日常で使えるが、少し文脈を選ぶ語。",
     "lv": 2,
     "lang": "fr",
     "genre": "travel"
@@ -370,7 +324,6 @@
   {
     "id": "192b1547-72e5-4d54-a9d8-88775c0e0883",
     "name": "consensus",
-    "desc": "合意。 文章語・専門語寄りで難度が高い語。",
     "lv": 4,
     "lang": "fr",
     "genre": "work"
@@ -378,7 +331,6 @@
   {
     "id": "bf1e66d3-3018-4e5b-b151-6c4e58f7239c",
     "name": "échéance",
-    "desc": "締切。 日常で使えるが、少し文脈を選ぶ語。",
     "lv": 2,
     "lang": "fr",
     "genre": "work"
@@ -386,7 +338,6 @@
   {
     "id": "383f1394-fc12-4da8-8b83-4c1c78dc20ec",
     "name": "maintenance",
-    "desc": "保守。 抽象度または専門性がやや高い語。",
     "lv": 3,
     "lang": "fr",
     "genre": "work"
@@ -394,9 +345,18 @@
   {
     "id": "2cbab614-b163-4069-817b-b87f29767a69",
     "name": "archive",
-    "desc": "アーカイブ。 抽象度または専門性がやや高い語。",
     "lv": 3,
     "lang": "fr",
     "genre": "media"
+  },
+  {
+    "id": "bc5bf5c0-3334-4397-acc9-d72ca4d30caf",
+    "name": "archange",
+    "lang": "fr"
+  },
+  {
+    "id": "e1273936-b7d4-4761-93e7-9870f57fd9f1",
+    "name": "エクリチュール",
+    "lang": "fr"
   }
 ]

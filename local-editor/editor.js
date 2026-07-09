@@ -5,7 +5,6 @@ import {
   getGenreLabel,
   normalizeWord,
   serializeWords,
-  sortWords,
   validateWord
 } from "../shared/words.js";
 
@@ -51,7 +50,7 @@ async function loadAllWords() {
     if (!response.ok) throw new Error(`Could not load ${lang.file}`);
     const data = await response.json();
     if (!Array.isArray(data)) throw new Error(`${lang.file} must contain an array.`);
-    loaded.push(...data.map(normalizeWord).filter(Boolean));
+    loaded.push(...data.map((item) => ensureEditableWord(normalizeWord(item))).filter(Boolean));
   }
   state.words = loaded;
 }
@@ -195,7 +194,7 @@ function applyFormChange() {
   const word = readFormWord();
   state.lastLang = word.lang || state.lastLang;
   if (state.selectedDraftId) {
-    if (!word.name && !word.desc) {
+    if (!word.name) {
       renderValidation();
       return;
     }
@@ -258,10 +257,15 @@ function updateDirtyStatus() {
 
 async function chooseFolder() {
   if (!window.showDirectoryPicker) {
-    alert("File System Access API is not available in this browser. Save will download JSON files.");
+    alert("このブラウザでは元JSONの直接上書きに対応していません。Chromeなど File System Access API 対応ブラウザで開いてください。");
     return;
   }
-  state.directoryHandle = await window.showDirectoryPicker({ mode: "readwrite" });
+  try {
+    state.directoryHandle = await window.showDirectoryPicker({ mode: "readwrite" });
+  } catch (error) {
+    if (error.name === "AbortError") return;
+    alert(`dataフォルダを開けませんでした: ${error.message}`);
+  }
 }
 
 async function saveChanges() {
@@ -277,37 +281,36 @@ async function saveChanges() {
     return;
   }
 
-  if (!state.directoryHandle && window.showDirectoryPicker) {
-    await chooseFolder();
-    if (!state.directoryHandle) return;
+  if (!window.showDirectoryPicker) {
+    alert("このブラウザでは元JSONの直接上書きに対応していません。Chromeなど File System Access API 対応ブラウザで開いてください。");
+    return;
   }
 
-  for (const lang of dirty) {
-    const words = sortWords(state.words.filter((word) => word.lang === lang), lang);
-    const text = serializeWords(words, lang);
-    if (state.directoryHandle) {
-      const fileHandle = await state.directoryHandle.getFileHandle(`${lang}.json`, { create: true });
-      const writable = await fileHandle.createWritable();
-      await writable.write(text);
-      await writable.close();
-    } else {
-      downloadJson(`${lang}.json`, text);
+  try {
+    if (!state.directoryHandle) {
+      await chooseFolder();
+      if (!state.directoryHandle) return;
     }
+
+    for (const lang of dirty) {
+      const words = state.words.filter((word) => word.lang === lang);
+      const text = serializeWords(words, lang);
+      const fileHandle = await state.directoryHandle.getFileHandle(`${lang}.json`, { create: false });
+      const writable = await fileHandle.createWritable();
+      try {
+        await writable.write(text);
+      } finally {
+        await writable.close();
+      }
+    }
+
+    alert(dirty.map((lang) => `${lang}.json: ${state.words.filter((word) => word.lang === lang).length}件`).join("\n"));
+    state.dirtyLangs.clear();
+    updateDirtyStatus();
+  } catch (error) {
+    if (error.name === "AbortError") return;
+    alert(`保存に失敗しました: ${error.message}`);
   }
-
-  alert(dirty.map((lang) => `${lang}.json: ${state.words.filter((word) => word.lang === lang).length}件`).join("\n"));
-  state.dirtyLangs.clear();
-  updateDirtyStatus();
-}
-
-function downloadJson(filename, text) {
-  const blob = new Blob([text], { type: "application/json" });
-  const url = URL.createObjectURL(blob);
-  const link = document.createElement("a");
-  link.href = url;
-  link.download = filename;
-  link.click();
-  URL.revokeObjectURL(url);
 }
 
 function bindEvents() {
@@ -376,6 +379,11 @@ function escapeHtml(value) {
 
 function escapeAttribute(value) {
   return escapeHtml(value).replace(/`/g, "&#096;");
+}
+
+function ensureEditableWord(word) {
+  if (!word) return null;
+  return word.id ? word : { ...word, id: crypto.randomUUID() };
 }
 
 init();

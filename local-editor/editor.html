@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Wordfall Local Editor</title>
-  <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+  <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" integrity="sha384-uTYyvsSSUZeaPhb5RbKlQa0zY/WpX/QHfvg2mczXyBQOpkWPEDy9lczyp+w7SKXu" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="editor.css">
 </head>
 <body>
@@ -22,7 +22,7 @@
 
       <div class="filters">
         <label class="field-label" for="searchInput">検索</label>
-        <input id="searchInput" class="control-input" type="search" placeholder="name / reading / desc">
+        <input id="searchInput" class="control-input" type="search" placeholder="name / reading">
 
         <label class="field-label" for="sortSelect">ソート</label>
         <select id="sortSelect" class="control-input">
@@ -61,7 +61,7 @@
         </label>
         <label>
           <span>desc</span>
-          <textarea id="descInput" class="control-input textarea" name="desc" required></textarea>
+          <textarea id="descInput" class="control-input textarea" name="desc"></textarea>
         </label>
         <div class="two-column">
           <label>

@@ -1,13 +1,12 @@
 # audio
 
-このフォルダは、Wordfall で使う音声ファイルを置くための場所です。
+このフォルダには、Wordfall の `Audio file` 音源として使うファイルを置きます。
 
-例:
+現在の公開版は設定パネルで次の2種類を選べます。
 
-- `audio/ambient.mp3`
-- `audio/waterfall.wav`
-- `audio/silence-loop.ogg`
+- `Generated noise`: ブラウザ内で生成する低いブラウンノイズ
+- `Audio file`: `audio/Nature_river_Track3_long_128.mp3` のループ再生
 
-現在のアプリはブラウザのファイル選択またはドラッグ＆ドロップで音声を読み込みます。静的サイトとして安全に動かすため、フォルダ内の音声を自動再生・自動読込する仕組みは入れていません。
+ブラウザから任意ファイルをアップロードする機能はありません。音源を差し替える場合は、`app.js` の `AUDIO_FILE` とこの README を同時に更新してください。
 
-音声を使う場合は、設定パネルの Audio で `Custom File Uploader` を選び、ここに置いたファイルを選択してください。
+`Generated noise` は現時点で `createScriptProcessor` を使っています。この API は非推奨のため、長期的には AudioWorklet への移行を検討してください。

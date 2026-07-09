@@ -10,6 +10,7 @@ Wordfall は、日本語の言葉が静かに落ちてくる鑑賞型Webペー�
 - 単語クリックによる詳細表示
 - Google / Wikipedia検索
 - Sound ON/OFF
+- 音源選択（Generated noise / Audio file）
 - 音量設定
 - Information
 - Formsリンク
@@ -23,7 +24,6 @@ Wordfall は、日本語の言葉が静かに落ちてくる鑑賞型Webペー�
   "id": "00000000-0000-4000-8000-000000000000",
   "name": "余白",
   "reading": "よはく",
-  "desc": "説明本文",
   "lv": 2,
   "lang": "ja",
   "genre": "design"
@@ -31,7 +31,9 @@ Wordfall は、日本語の言葉が静かに落ちてくる鑑賞型Webペー�
 ```
 
 - `id` は UUID v4 です。
-- `name`, `desc`, `lang` は必須です。
+- `name`, `lang` は必須です。
+- `desc` は任意です。意味や説明は後から編集できます。
+- 公開版の落下表示に出るのは `name`, `desc`, `lang` が揃った語だけです。`desc` が未入力の語はデータに残りますが、公開版では非表示です。
 - `reading`, `lv`, `genre` は任意です。
 - `lv` は 1〜5 を使います。未設定の場合は公開版で `-` と表示します。
 - `genre` は未設定でも保存できます。公開版では未設定を `-` と表示します。
@@ -49,7 +51,7 @@ philosophy, science, society, space, study, tech, time, travel, work
 
 ローカルエディタは `local-editor/editor.html` です。公開版からのリンクはありません。
 
-起動直後は `fetch()` で全言語JSONを読み込み、一覧から検索・絞り込み・編集できます。保存時は File System Access API に対応したブラウザでは `data` フォルダを選択し、変更された言語ファイルだけを書き戻します。非対応ブラウザでは変更言語ごとにJSONをダウンロードします。
+起動直後は `fetch()` で全言語JSONを読み込み、一覧から検索・絞り込み・編集できます。保存時は File System Access API に対応したブラウザで `data` フォルダを選択し、変更された元JSONだけを直接上書きします。
 
 `local-editor/` は制作者用の管理画面です。公開デプロイには含めない運用にしてください。
 
@@ -63,6 +65,16 @@ npm run migrate
 ```
 
 dry-run はファイルを書き換えず、category分布、genre警告、重複、ID付与件数を表示します。
+
+## 音声
+
+公開版の設定パネルでは、ブラウザ内で生成する `Generated noise` と、同梱の `audio/Nature_river_Track3_long_128.mp3` を再生する `Audio file` を選べます。
+
+音量設定はブラウザに保存され、次回表示時に復元されます。
+
+`Generated noise` は現在 `createScriptProcessor` を使っています。この API は非推奨のため、長期的には AudioWorklet への移行を検討してください。
+
+`manifest.json` には語数カウントを手書きで持たせません。語数は `data/*.json` をソースオブトゥルースとして集計してください。
 
 ## 起動方法
 

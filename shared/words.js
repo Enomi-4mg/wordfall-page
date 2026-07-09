@@ -5,7 +5,8 @@ export const SUPPORTED_LANGUAGES = [
   { code: "ko", label: "Korean", file: "data/ko.json" },
   { code: "fr", label: "French", file: "data/fr.json" },
   { code: "de", label: "German", file: "data/de.json" },
-  { code: "it", label: "Italian", file: "data/it.json" }
+  { code: "it", label: "Italian", file: "data/it.json" },
+  { code: "other", label: "Other", file: "data/other.json" }
 ];
 
 export const GENRE_LABELS = {
@@ -31,6 +32,7 @@ export const GENRE_LABELS = {
 };
 
 export const GENRE_ORDER = Object.keys(GENRE_LABELS);
+const GENRE_INDEX = new Map(GENRE_ORDER.map((genre, index) => [genre, index]));
 export const VALID_LANGS = new Set(SUPPORTED_LANGUAGES.map((lang) => lang.code));
 export const VALID_LEVELS = new Set([1, 2, 3, 4, 5]);
 
@@ -50,6 +52,15 @@ export function isValidGenre(value) {
 
 export function getGenreLabel(genre) {
   return isValidGenre(genre) ? GENRE_LABELS[genre] : "-";
+}
+
+export function isDisplayReadyWord(word) {
+  return Boolean(
+    word &&
+    cleanText(word.name) &&
+    cleanText(word.desc) &&
+    VALID_LANGS.has(cleanText(word.lang).toLowerCase())
+  );
 }
 
 export function normalizeOptionalFields(word) {
@@ -78,7 +89,7 @@ export function normalizeWord(raw) {
   const desc = cleanText(raw.desc);
   const lang = cleanText(raw.lang).toLowerCase();
 
-  if (!name || !desc || !VALID_LANGS.has(lang)) return null;
+  if (!name || !VALID_LANGS.has(lang)) return null;
 
   const word = normalizeOptionalFields({
     id,
@@ -104,8 +115,9 @@ export function validateWord(word) {
 
   if (!isValidUuidV4(word.id)) errors.push("id must be a UUID v4.");
   if (!cleanText(word.name)) errors.push("name is required.");
-  if (!cleanText(word.desc)) errors.push("desc is required.");
-  if (!VALID_LANGS.has(cleanText(word.lang).toLowerCase())) errors.push("lang is required.");
+  const lang = cleanText(word.lang).toLowerCase();
+  if (!lang) errors.push("lang is required.");
+  else if (!VALID_LANGS.has(lang)) errors.push(`lang is not supported: ${lang}`);
   if (!Object.prototype.hasOwnProperty.call(word, "genre")) warnings.push("genre is not set.");
   if (word.genre && !isValidGenre(word.genre)) warnings.push(`genre is not in the standard list: ${word.genre}`);
   if (!Object.prototype.hasOwnProperty.call(word, "lv")) warnings.push("lv is not set.");
@@ -120,8 +132,8 @@ export function sortWords(words, langCode = "ja") {
   return [...words].sort((a, b) => {
     const genreA = a.genre || "\uffff";
     const genreB = b.genre || "\uffff";
-    const genreIndexA = GENRE_ORDER.includes(genreA) ? GENRE_ORDER.indexOf(genreA) : GENRE_ORDER.length;
-    const genreIndexB = GENRE_ORDER.includes(genreB) ? GENRE_ORDER.indexOf(genreB) : GENRE_ORDER.length;
+    const genreIndexA = GENRE_INDEX.get(genreA) ?? GENRE_ORDER.length;
+    const genreIndexB = GENRE_INDEX.get(genreB) ?? GENRE_ORDER.length;
     if (genreIndexA !== genreIndexB) return genreIndexA - genreIndexB;
     if (genreA !== genreB) return genreA.localeCompare(genreB, langCode);
     return a.name.localeCompare(b.name, langCode);
@@ -141,7 +153,7 @@ export function orderWordKeys(word) {
   if (word.id) ordered.id = word.id;
   ordered.name = word.name;
   if (word.reading) ordered.reading = word.reading;
-  ordered.desc = word.desc;
+  if (word.desc) ordered.desc = word.desc;
   if (Object.prototype.hasOwnProperty.call(word, "lv")) ordered.lv = Number(word.lv);
   ordered.lang = word.lang;
   if (word.genre) ordered.genre = word.genre;
