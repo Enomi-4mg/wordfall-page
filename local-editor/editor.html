@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Wordfall Local Editor</title>
+  <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+  <link rel="stylesheet" href="editor.css">
+</head>
+<body>
+  <main class="editor-shell">
+    <aside class="list-pane" aria-label="Word list">
+      <header class="pane-header">
+        <div>
+          <p class="kicker">Wordfall</p>
+          <h1>Local Editor</h1>
+        </div>
+        <button id="newButton" class="icon-button" type="button" aria-label="Add word">
+          <i data-lucide="plus"></i>
+        </button>
+      </header>
+
+      <div class="filters">
+        <label class="field-label" for="searchInput">検索</label>
+        <input id="searchInput" class="control-input" type="search" placeholder="name / reading / desc">
+
+        <label class="field-label" for="sortSelect">ソート</label>
+        <select id="sortSelect" class="control-input">
+          <option value="lang">lang</option>
+          <option value="genre">genre</option>
+          <option value="lv">lv</option>
+          <option value="name">name</option>
+        </select>
+
+        <div id="languageChips" class="language-chips" aria-label="Language filters"></div>
+      </div>
+
+      <div id="wordList" class="word-list"></div>
+    </aside>
+
+    <section class="form-pane" aria-label="Word form">
+      <header class="form-header">
+        <div>
+          <p id="formMode" class="kicker">Select</p>
+          <h2 id="formTitle">語を選択</h2>
+        </div>
+        <button id="deleteButton" class="text-button danger" type="button" disabled>
+          <i data-lucide="trash-2"></i>
+          <span>削除</span>
+        </button>
+      </header>
+
+      <form id="wordForm" class="word-form">
+        <label>
+          <span>name</span>
+          <input id="nameInput" class="control-input" name="name" required>
+        </label>
+        <label>
+          <span>reading</span>
+          <input id="readingInput" class="control-input" name="reading">
+        </label>
+        <label>
+          <span>desc</span>
+          <textarea id="descInput" class="control-input textarea" name="desc" required></textarea>
+        </label>
+        <div class="two-column">
+          <label>
+            <span>lang</span>
+            <select id="langSelect" class="control-input" name="lang" required></select>
+          </label>
+          <label>
+            <span>lv</span>
+            <select id="lvSelect" class="control-input" name="lv">
+              <option value="">-</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+          </label>
+        </div>
+        <label>
+          <span>genre</span>
+          <select id="genreSelect" class="control-input" name="genre"></select>
+        </label>
+        <label>
+          <span>id</span>
+          <input id="idInput" class="control-input mono" name="id" readonly>
+        </label>
+        <div id="validationMessages" class="validation-messages"></div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="bottom-bar">
+    <div id="dirtyStatus" class="dirty-status">No changes</div>
+    <div class="bar-actions">
+      <button id="chooseFolderButton" class="text-button" type="button">
+        <i data-lucide="folder-open"></i>
+        <span>dataフォルダ</span>
+      </button>
+      <button id="saveButton" class="text-button primary" type="button" disabled>
+        <i data-lucide="save"></i>
+        <span>保存</span>
+      </button>
+    </div>
+  </footer>
+
+  <script type="module" src="editor.js"></script>
+</body>
+</html>

@@ -1,0 +1,452 @@
+[
+  {
+    "id": "13d759d5-5ac7-4cff-8cb8-276db989a057",
+    "name": "구도",
+    "reading": "gudo",
+    "desc": "構図。 抽象度または専門性がやや高い語。",
+    "lv": 3,
+    "lang": "ko",
+    "genre": "art"
+  },
+  {
+    "id": "e5d80605-8cc9-4937-8a07-a51819c9214d",
+    "name": "명암법",
+    "reading": "myeongambeop",
+    "desc": "明暗法。 低頻度・専門的・抽象度が高い語。",
+    "lv": 5,
+    "lang": "ko",
+    "genre": "art"
+  },
+  {
+    "id": "d5a8d877-9a8b-461b-8f00-76a34d42d2d3",
+    "name": "원근법",
+    "reading": "wongeunbeop",
+    "desc": "遠近法。 文章語・専門語寄りで難度が高い語。",
+    "lv": 4,
+    "lang": "ko",
+    "genre": "art"
+  },
+  {
+    "id": "95538fa0-bd1f-450c-9e97-971fd2df0c8d",
+    "name": "질감",
+    "reading": "jilgam",
+    "desc": "質感。 抽象度または専門性がやや高い語。",
+    "lv": 3,
+    "lang": "ko",
+    "genre": "art"
+  },
+  {
+    "id": "c26543ff-2722-46ce-b097-5ecb825c0f2f",
+    "name": "근육",
+    "reading": "geunyuk",
+    "desc": "筋肉。 日常で使えるが、少し文脈を選ぶ語。",
+    "lv": 2,
+    "lang": "ko",
+    "genre": "body"
+  },
+  {
+    "id": "e74ce765-3ed1-4825-89cd-b5605d3ce5f9",
+    "name": "대사",
+    "reading": "daesa",
+    "desc": "代謝。 文章語・専門語寄りで難度が高い語。",
+    "lv": 4,
+    "lang": "ko",
+    "genre": "body"
+  },
+  {
+    "id": "8cd4efab-d081-4550-8e69-436e0d9f0298",
+    "name": "자세",
+    "reading": "jase",
+    "desc": "姿勢。 日常で使えるが、少し文脈を選ぶ語。",
+    "lv": 2,
+    "lang": "ko",
+    "genre": "body"
+  },
+  {
+    "id": "013f5279-11bd-4206-9af8-e28dab0d5507",
+    "name": "거리",
+    "reading": "geori",
+    "desc": "通り・街。 日常でかなり使いやすい基本語。",
+    "lv": 1,
+    "lang": "ko",
+    "genre": "city"
+  },
+  {
+    "id": "f3e0c74e-e665-4d8b-a6a0-54d7e59fae5a",
+    "name": "기반 시설",
+    "reading": "giban siseol",
+    "desc": "インフラ。 文章語・専門語寄りで難度が高い語。",
+    "lv": 4,
+    "lang": "ko",
+    "genre": "city"
+  },
+  {
+    "id": "e91a4a91-10b5-4728-bbae-10cfa4387ab3",
+    "name": "대도시",
+    "reading": "daedosi",
+    "desc": "大都市。 抽象度または専門性がやや高い語。",
+    "lv": 3,
+    "lang": "ko",
+    "genre": "city"
+  },
+  {
+    "id": "722aa069-1ae9-4ce1-8c01-b1736fa4f945",
+    "name": "물",
+    "reading": "mul",
+    "desc": "水。日常基本語。 日常でかなり使いやすい基本語。",
+    "lv": 1,
+    "lang": "ko",
+    "genre": "daily"
+  },
+  {
+    "id": "02b48c63-e8f7-4d5f-9e5f-02a7c34aee46",
+    "name": "창문",
+    "reading": "changmun",
+    "desc": "窓。生活空間の語。 日常でかなり使いやすい基本語。",
+    "lv": 1,
+    "lang": "ko",
+    "genre": "daily"
+  },
+  {
+    "id": "9702ce58-2a7d-4c8d-b860-e3d08bd64f45",
+    "name": "대비",
+    "reading": "daebi",
+    "desc": "対比。 抽象度または専門性がやや高い語。",
+    "lv": 3,
+    "lang": "ko",
+    "genre": "design"
+  },
+  {
+    "id": "242f91e5-1345-498b-9c70-cac427515ec3",
+    "name": "시제품",
+    "reading": "sijepum",
+    "desc": "試作品。 抽象度または専門性がやや高い語。",
+    "lv": 3,
+    "lang": "ko",
+    "genre": "design"
+  },
+  {
+    "id": "ada38a10-17de-440e-9431-f81bacba5459",
+    "name": "인터페이스",
+    "reading": "inteopeiseu",
+    "desc": "インターフェース。 抽象度または専門性がやや高い語。",
+    "lv": 3,
+    "lang": "ko",
+    "genre": "design"
+  },
+  {
+    "id": "8d6a6c2f-f82e-4d85-8e2a-9cf457b54b35",
+    "name": "고요",
+    "reading": "goyo",
+    "desc": "静けさ。 日常で使えるが、少し文脈を選ぶ語。",
+    "lv": 2,
+    "lang": "ko",
+    "genre": "emotion"
+  },
+  {
+    "id": "fd9189ea-9b50-4d34-be8b-8d0f62342605",
+    "name": "발효",
+    "reading": "balhyo",
+    "desc": "発酵。 文章語・専門語寄りで難度が高い語。",
+    "lv": 4,
+    "lang": "ko",
+    "genre": "food"
+  },
+  {
+    "id": "50c752e7-14fe-419a-9d14-ce059144c91c",
+    "name": "영양소",
+    "reading": "yeongyangso",
+    "desc": "栄養素。 抽象度または専門性がやや高い語。",
+    "lv": 3,
+    "lang": "ko",
+    "genre": "food"
+  },
+  {
+    "id": "ea9c6d40-8c6a-408b-8866-9ffb80b26c0d",
+    "name": "조리법",
+    "reading": "joribeop",
+    "desc": "レシピ。 日常で使えるが、少し文脈を選ぶ語。",
+    "lv": 2,
+    "lang": "ko",
+    "genre": "food"
+  },
+  {
+    "id": "6e01ac41-0061-41f0-be31-e6922d44abe7",
+    "name": "문명",
+    "reading": "munmyeong",
+    "desc": "文明。 抽象度または専門性がやや高い語。",
+    "lv": 3,
+    "lang": "ko",
+    "genre": "history"
+  },
+  {
+    "id": "8dcf4d3c-a119-48c4-ac5f-a8691cd6ca7d",
+    "name": "유물",
+    "reading": "yumul",
+    "desc": "遺物。 文章語・専門語寄りで難度が高い語。",
+    "lv": 4,
+    "lang": "ko",
+    "genre": "history"
+  },
+  {
+    "id": "619c372e-5fff-48d1-8fbc-314755bb8bbf",
+    "name": "공명",
+    "reading": "gongmyeong",
+    "desc": "共鳴。 文章語・専門語寄りで難度が高い語。",
+    "lv": 4,
+    "lang": "ko",
+    "genre": "music"
+  },
+  {
+    "id": "20922d87-73bd-4339-a703-45a6cd7fa5bd",
+    "name": "리듬",
+    "reading": "rideum",
+    "desc": "リズム。 日常で使えるが、少し文脈を選ぶ語。",
+    "lv": 2,
+    "lang": "ko",
+    "genre": "music"
+  },
+  {
+    "id": "92fb61b3-e57b-4e8f-ae24-7fc3c1c0dbb5",
+    "name": "포먼트",
+    "reading": "pomeonteu",
+    "desc": "フォルマント。 低頻度・専門的・抽象度が高い語。",
+    "lv": 5,
+    "lang": "ko",
+    "genre": "music"
+  },
+  {
+    "id": "9e2ae854-4b5d-4124-b8ef-df486c5010e5",
+    "name": "기억",
+    "reading": "gieok",
+    "desc": "記憶。 日常で使えるが、少し文脈を選ぶ語。",
+    "lv": 2,
+    "lang": "ko",
+    "genre": "philosophy"
+  },
+  {
+    "id": "dd07bb2a-4cf4-4f83-bc55-dcf0fc85741f",
+    "name": "덧없음",
+    "reading": "deoseopseum",
+    "desc": "儚さ。 文章語・専門語寄りで難度が高い語。",
+    "lv": 4,
+    "lang": "ko",
+    "genre": "philosophy"
+  },
+  {
+    "id": "bb07ddef-eb60-49f1-8faf-7d64032ca79b",
+    "name": "모호성",
+    "reading": "mohoseong",
+    "desc": "曖昧性。 文章語・専門語寄りで難度が高い語。",
+    "lv": 4,
+    "lang": "ko",
+    "genre": "philosophy"
+  },
+  {
+    "id": "0c3a37a5-e81e-411b-9743-4912f6202a79",
+    "name": "우연한 발견",
+    "reading": "uyeonhan balgyeon",
+    "desc": "偶然の発見。 低頻度・専門的・抽象度が高い語。",
+    "lv": 5,
+    "lang": "ko",
+    "genre": "philosophy"
+  },
+  {
+    "id": "75e8c028-0145-4fda-a6b9-b080e68fffbc",
+    "name": "의식",
+    "reading": "uisik",
+    "desc": "意識。 文章語・専門語寄りで難度が高い語。",
+    "lv": 4,
+    "lang": "ko",
+    "genre": "philosophy"
+  },
+  {
+    "id": "b3135a20-9e45-4aa3-905d-5c273d1d5158",
+    "name": "지각",
+    "reading": "jigak",
+    "desc": "知覚。 抽象度または専門性がやや高い語。",
+    "lv": 3,
+    "lang": "ko",
+    "genre": "philosophy"
+  },
+  {
+    "id": "e3a7b3b1-516d-4679-972a-a8ddd45b64e3",
+    "name": "가설",
+    "reading": "gaseol",
+    "desc": "仮説。 抽象度または専門性がやや高い語。",
+    "lv": 3,
+    "lang": "ko",
+    "genre": "science"
+  },
+  {
+    "id": "1b966d76-6cfb-493e-995b-a108dd44cd42",
+    "name": "변수",
+    "reading": "byeonsu",
+    "desc": "変数。 抽象度または専門性がやや高い語。",
+    "lv": 3,
+    "lang": "ko",
+    "genre": "science"
+  },
+  {
+    "id": "6a621ef2-9cfd-4ab8-b210-4447c5b3d102",
+    "name": "상관",
+    "reading": "sanggwan",
+    "desc": "相関。 文章語・専門語寄りで難度が高い語。",
+    "lv": 4,
+    "lang": "ko",
+    "genre": "science"
+  },
+  {
+    "id": "e7e1165a-c047-482f-99c4-0fab14fa71c4",
+    "name": "엔트로피",
+    "reading": "enteuropi",
+    "desc": "エントロピー。 文章語・専門語寄りで難度が高い語。",
+    "lv": 4,
+    "lang": "ko",
+    "genre": "science"
+  },
+  {
+    "id": "fd13b455-757e-416b-a557-ea4101ad5890",
+    "name": "특이점",
+    "reading": "teugijeom",
+    "desc": "特異点。 低頻度・専門的・抽象度が高い語。",
+    "lv": 5,
+    "lang": "ko",
+    "genre": "science"
+  },
+  {
+    "id": "864078bc-8a30-4881-870f-64cece365779",
+    "name": "친구",
+    "reading": "chingu",
+    "desc": "友人。 日常でかなり使いやすい基本語。",
+    "lv": 1,
+    "lang": "ko",
+    "genre": "society"
+  },
+  {
+    "id": "1f1b008e-a9b9-45f1-ae53-e999548d77fb",
+    "name": "경계",
+    "reading": "gyeonggye",
+    "desc": "境界。 抽象度または専門性がやや高い語。",
+    "lv": 3,
+    "lang": "ko",
+    "genre": "space"
+  },
+  {
+    "id": "d3bfe695-47f9-48e9-9746-fa23c253637f",
+    "name": "강의",
+    "reading": "gangui",
+    "desc": "講義。 日常で使えるが、少し文脈を選ぶ語。",
+    "lv": 2,
+    "lang": "ko",
+    "genre": "study"
+  },
+  {
+    "id": "b28d2265-1b1a-4c53-8d4b-eaa10d6b3197",
+    "name": "데이터셋",
+    "reading": "deiteoset",
+    "desc": "データセット。 抽象度または専門性がやや高い語。",
+    "lv": 3,
+    "lang": "ko",
+    "genre": "tech"
+  },
+  {
+    "id": "ee962865-8195-4e21-8e9c-52db1123f9de",
+    "name": "센서",
+    "reading": "senseo",
+    "desc": "センサー。 抽象度または専門性がやや高い語。",
+    "lv": 3,
+    "lang": "ko",
+    "genre": "tech"
+  },
+  {
+    "id": "b2171d35-349a-4beb-b5a1-f8383c878598",
+    "name": "신호",
+    "reading": "sinho",
+    "desc": "信号。 日常で使えるが、少し文脈を選ぶ語。",
+    "lv": 2,
+    "lang": "ko",
+    "genre": "tech"
+  },
+  {
+    "id": "a6de4db1-8b70-4479-997c-8f5e23ecd82c",
+    "name": "알고리즘",
+    "reading": "algorijeum",
+    "desc": "アルゴリズム。 抽象度または専門性がやや高い語。",
+    "lv": 3,
+    "lang": "ko",
+    "genre": "tech"
+  },
+  {
+    "id": "5c26005e-ab12-4adb-8c7a-49fb03d421b8",
+    "name": "아침",
+    "reading": "achim",
+    "desc": "朝。 日常でかなり使いやすい基本語。",
+    "lv": 1,
+    "lang": "ko",
+    "genre": "time"
+  },
+  {
+    "id": "19612bf2-d244-4675-a593-35f2b11bfac9",
+    "name": "여행",
+    "reading": "yeohaeng",
+    "desc": "旅行。 日常で使えるが、少し文脈を選ぶ語。",
+    "lv": 2,
+    "lang": "ko",
+    "genre": "travel"
+  },
+  {
+    "id": "db372314-7b5e-4244-90d3-ddbe18c1ea49",
+    "name": "일정",
+    "reading": "iljeong",
+    "desc": "旅程。 抽象度または専門性がやや高い語。",
+    "lv": 3,
+    "lang": "ko",
+    "genre": "travel"
+  },
+  {
+    "id": "7c315e01-dda7-43cd-934f-5bea44a0f679",
+    "name": "통화",
+    "reading": "tonghwa",
+    "desc": "通貨。 抽象度または専門性がやや高い語。",
+    "lv": 3,
+    "lang": "ko",
+    "genre": "travel"
+  },
+  {
+    "id": "99ede73e-b518-4710-8c0c-9492b6ebd23f",
+    "name": "마감",
+    "reading": "magam",
+    "desc": "締切。 日常で使えるが、少し文脈を選ぶ語。",
+    "lv": 2,
+    "lang": "ko",
+    "genre": "work"
+  },
+  {
+    "id": "6c698145-68a4-4fe8-9a70-3f985b661a7b",
+    "name": "유지보수",
+    "reading": "yujibosu",
+    "desc": "保守。 抽象度または専門性がやや高い語。",
+    "lv": 3,
+    "lang": "ko",
+    "genre": "work"
+  },
+  {
+    "id": "cb925939-1fc2-470d-a32c-edee5da2a88b",
+    "name": "합의",
+    "reading": "habui",
+    "desc": "合意。 文章語・専門語寄りで難度が高い語。",
+    "lv": 4,
+    "lang": "ko",
+    "genre": "work"
+  },
+  {
+    "id": "5053e68a-21b3-4cca-931d-8b04759c4ada",
+    "name": "기록 보관",
+    "reading": "girok bogwan",
+    "desc": "アーカイブ。 抽象度または専門性がやや高い語。",
+    "lv": 3,
+    "lang": "ko",
+    "genre": "media"
+  }
+]

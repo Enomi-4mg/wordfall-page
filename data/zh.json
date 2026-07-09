@@ -1,0 +1,452 @@
+[
+  {
+    "id": "d5827d07-9f30-444c-8674-1c6f6095d78a",
+    "name": "构图",
+    "reading": "gòutú",
+    "desc": "構図。画面の配置。 抽象度または専門性がやや高い語。",
+    "lv": 3,
+    "lang": "zh",
+    "genre": "art"
+  },
+  {
+    "id": "9b391090-d164-4eb6-a97a-280631c5651b",
+    "name": "明暗法",
+    "reading": "míng'ànfǎ",
+    "desc": "明暗法。光と影の技法。 低頻度・専門的・抽象度が高い語。",
+    "lv": 5,
+    "lang": "zh",
+    "genre": "art"
+  },
+  {
+    "id": "55b9d48b-edea-4813-82a7-c98d04fe87b7",
+    "name": "透视法",
+    "reading": "tòushìfǎ",
+    "desc": "遠近法。絵画技法。 文章語・専門語寄りで難度が高い語。",
+    "lv": 4,
+    "lang": "zh",
+    "genre": "art"
+  },
+  {
+    "id": "8b69e721-b268-43df-950a-04ec7581c594",
+    "name": "质感",
+    "reading": "zhìgǎn",
+    "desc": "質感。美術・デザインの語。 抽象度または専門性がやや高い語。",
+    "lv": 3,
+    "lang": "zh",
+    "genre": "art"
+  },
+  {
+    "id": "c6dbff4d-9ba6-48c2-9049-739f95067318",
+    "name": "肌肉",
+    "reading": "jīròu",
+    "desc": "筋肉。身体に関する語。 日常で使えるが、少し文脈を選ぶ語。",
+    "lv": 2,
+    "lang": "zh",
+    "genre": "body"
+  },
+  {
+    "id": "2c51136c-87a2-4329-9523-ae41196b7f65",
+    "name": "新陈代谢",
+    "reading": "xīnchén dàixiè",
+    "desc": "代謝。 文章語・専門語寄りで難度が高い語。",
+    "lv": 4,
+    "lang": "zh",
+    "genre": "body"
+  },
+  {
+    "id": "d79c0c9a-0b72-4c29-be9c-0469a88f007b",
+    "name": "姿势",
+    "reading": "zīshì",
+    "desc": "姿勢。 日常で使えるが、少し文脈を選ぶ語。",
+    "lv": 2,
+    "lang": "zh",
+    "genre": "body"
+  },
+  {
+    "id": "54448911-4708-4658-963a-72c4529ebeb1",
+    "name": "大都市",
+    "reading": "dàdūshì",
+    "desc": "大都市。都市を表す語。 抽象度または専門性がやや高い語。",
+    "lv": 3,
+    "lang": "zh",
+    "genre": "city"
+  },
+  {
+    "id": "4950a83e-c039-40fe-840f-4713fd469e7f",
+    "name": "基础设施",
+    "reading": "jīchǔ shèshī",
+    "desc": "インフラ。社会基盤。 文章語・専門語寄りで難度が高い語。",
+    "lv": 4,
+    "lang": "zh",
+    "genre": "city"
+  },
+  {
+    "id": "3167acc9-c133-4bc9-8047-68a8aa649d4f",
+    "name": "街道",
+    "reading": "jiēdào",
+    "desc": "通り・道路。都市で使う語。 日常でかなり使いやすい基本語。",
+    "lv": 1,
+    "lang": "zh",
+    "genre": "city"
+  },
+  {
+    "id": "4a4ed22f-324e-4bdf-a05f-8f2d592f280d",
+    "name": "窗",
+    "reading": "chuāng",
+    "desc": "窓。生活空間の基本語。 日常でかなり使いやすい基本語。",
+    "lv": 1,
+    "lang": "zh",
+    "genre": "daily"
+  },
+  {
+    "id": "9bb0896b-f046-4df6-ba83-8d0516db34ea",
+    "name": "水",
+    "reading": "shuǐ",
+    "desc": "水。日常で頻出する基本語。 日常でかなり使いやすい基本語。",
+    "lv": 1,
+    "lang": "zh",
+    "genre": "daily"
+  },
+  {
+    "id": "ed94ce15-7776-46bc-9166-4bc5b5942547",
+    "name": "对比",
+    "reading": "duìbǐ",
+    "desc": "対比。デザインや分析で使う語。 抽象度または専門性がやや高い語。",
+    "lv": 3,
+    "lang": "zh",
+    "genre": "design"
+  },
+  {
+    "id": "253d8b37-7a17-4d94-9387-ccdf82996ef2",
+    "name": "界面",
+    "reading": "jièmiàn",
+    "desc": "インターフェース。操作面。 抽象度または専門性がやや高い語。",
+    "lv": 3,
+    "lang": "zh",
+    "genre": "design"
+  },
+  {
+    "id": "7b575118-c7ab-4175-909c-e72e1c68386d",
+    "name": "原型",
+    "reading": "yuánxíng",
+    "desc": "プロトタイプ。試作モデル。 抽象度または専門性がやや高い語。",
+    "lv": 3,
+    "lang": "zh",
+    "genre": "design"
+  },
+  {
+    "id": "6d004dca-00e2-4e27-ace5-773d07bd6550",
+    "name": "安静",
+    "reading": "ānjìng",
+    "desc": "静かさ。状態や雰囲気を表す語。 日常で使えるが、少し文脈を選ぶ語。",
+    "lv": 2,
+    "lang": "zh",
+    "genre": "emotion"
+  },
+  {
+    "id": "d6733e2d-4715-4ea9-a91d-d8a93a7de939",
+    "name": "发酵",
+    "reading": "fājiào",
+    "desc": "発酵。食品・生物の語。 文章語・専門語寄りで難度が高い語。",
+    "lv": 4,
+    "lang": "zh",
+    "genre": "food"
+  },
+  {
+    "id": "004847c6-4b5f-472b-8089-5d02dabb5372",
+    "name": "食谱",
+    "reading": "shípǔ",
+    "desc": "レシピ。料理の手順。 日常で使えるが、少し文脈を選ぶ語。",
+    "lv": 2,
+    "lang": "zh",
+    "genre": "food"
+  },
+  {
+    "id": "68a2c1f9-7a9c-45ce-8f11-b89de817f137",
+    "name": "营养素",
+    "reading": "yíngyǎngsù",
+    "desc": "栄養素。 抽象度または専門性がやや高い語。",
+    "lv": 3,
+    "lang": "zh",
+    "genre": "food"
+  },
+  {
+    "id": "ab905814-b754-4a12-94fc-d7f6766704e9",
+    "name": "文明",
+    "reading": "wénmíng",
+    "desc": "文明。歴史の基本語。 抽象度または専門性がやや高い語。",
+    "lv": 3,
+    "lang": "zh",
+    "genre": "history"
+  },
+  {
+    "id": "6a627190-0af6-4e35-aed2-e19b364f7fd4",
+    "name": "文物",
+    "reading": "wénwù",
+    "desc": "文化財・遺物。 文章語・専門語寄りで難度が高い語。",
+    "lv": 4,
+    "lang": "zh",
+    "genre": "history"
+  },
+  {
+    "id": "26c3c443-e3e9-4f21-9172-d9260990dab1",
+    "name": "共鸣",
+    "reading": "gòngmíng",
+    "desc": "共鳴。音や感情の響き合い。 文章語・専門語寄りで難度が高い語。",
+    "lv": 4,
+    "lang": "zh",
+    "genre": "music"
+  },
+  {
+    "id": "ac094686-bd63-4d2c-a883-e9d10e922a6d",
+    "name": "共振峰",
+    "reading": "gòngzhènfēng",
+    "desc": "フォルマント。音声分析の専門語。 低頻度・専門的・抽象度が高い語。",
+    "lv": 5,
+    "lang": "zh",
+    "genre": "music"
+  },
+  {
+    "id": "7d230a6b-1ab5-40ab-bee2-12cfcbcae452",
+    "name": "节奏",
+    "reading": "jiézòu",
+    "desc": "リズム。音楽や動きの周期。 日常で使えるが、少し文脈を選ぶ語。",
+    "lv": 2,
+    "lang": "zh",
+    "genre": "music"
+  },
+  {
+    "id": "9b93d59e-2a6b-4432-a2a8-9f5de73548a6",
+    "name": "短暂",
+    "reading": "duǎnzàn",
+    "desc": "一時的・儚い。 文章語・専門語寄りで難度が高い語。",
+    "lv": 4,
+    "lang": "zh",
+    "genre": "philosophy"
+  },
+  {
+    "id": "f6d00480-cf4c-4825-8359-781520c10e56",
+    "name": "感知",
+    "reading": "gǎnzhī",
+    "desc": "知覚。外界を捉える働き。 抽象度または専門性がやや高い語。",
+    "lv": 3,
+    "lang": "zh",
+    "genre": "philosophy"
+  },
+  {
+    "id": "373cc2f9-c3b6-4ec1-9064-17607e8c9839",
+    "name": "机缘巧合",
+    "reading": "jīyuán qiǎohé",
+    "desc": "偶然の巡り合わせ。 低頻度・専門的・抽象度が高い語。",
+    "lv": 5,
+    "lang": "zh",
+    "genre": "philosophy"
+  },
+  {
+    "id": "ea8b172f-ad7a-4cc9-95e0-20bc148aedd9",
+    "name": "记忆",
+    "reading": "jìyì",
+    "desc": "記憶。経験を保持する働き。 日常で使えるが、少し文脈を選ぶ語。",
+    "lv": 2,
+    "lang": "zh",
+    "genre": "philosophy"
+  },
+  {
+    "id": "18eafb07-036d-404f-8f81-9795ba836365",
+    "name": "歧义",
+    "reading": "qíyì",
+    "desc": "曖昧性。複数解釈を持つ性質。 文章語・専門語寄りで難度が高い語。",
+    "lv": 4,
+    "lang": "zh",
+    "genre": "philosophy"
+  },
+  {
+    "id": "81b80a83-e8a2-47d8-9b57-ade2b8fa560b",
+    "name": "意识",
+    "reading": "yìshí",
+    "desc": "意識。哲学・心理の語。 文章語・専門語寄りで難度が高い語。",
+    "lv": 4,
+    "lang": "zh",
+    "genre": "philosophy"
+  },
+  {
+    "id": "8c458385-a944-4d22-8d67-7832d06e2678",
+    "name": "变量",
+    "reading": "biànliàng",
+    "desc": "変数。数学・統計の語。 抽象度または専門性がやや高い語。",
+    "lv": 3,
+    "lang": "zh",
+    "genre": "science"
+  },
+  {
+    "id": "7181867d-b7cf-457d-8373-f205940b8dad",
+    "name": "假设",
+    "reading": "jiǎshè",
+    "desc": "仮説。検証前の説明。 抽象度または専門性がやや高い語。",
+    "lv": 3,
+    "lang": "zh",
+    "genre": "science"
+  },
+  {
+    "id": "578ecbf8-658d-4e1e-810f-dd71fb7da88b",
+    "name": "奇点",
+    "reading": "qídiǎn",
+    "desc": "特異点。物理・数学の難語。 低頻度・専門的・抽象度が高い語。",
+    "lv": 5,
+    "lang": "zh",
+    "genre": "science"
+  },
+  {
+    "id": "7b5fb456-869b-4a70-b8fe-0b08f41368a3",
+    "name": "熵",
+    "reading": "shāng",
+    "desc": "エントロピー。専門性の高い科学語。 低頻度・専門的・抽象度が高い語。",
+    "lv": 5,
+    "lang": "zh",
+    "genre": "science"
+  },
+  {
+    "id": "be4cacad-1efb-4450-abc8-e9ff549cd58d",
+    "name": "相关",
+    "reading": "xiāngguān",
+    "desc": "相関。関係性を表す語。 文章語・専門語寄りで難度が高い語。",
+    "lv": 4,
+    "lang": "zh",
+    "genre": "science"
+  },
+  {
+    "id": "41944366-069b-4d6f-823a-dab638b33990",
+    "name": "朋友",
+    "reading": "péngyou",
+    "desc": "友人。人間関係の基本語。 日常でかなり使いやすい基本語。",
+    "lv": 1,
+    "lang": "zh",
+    "genre": "society"
+  },
+  {
+    "id": "c92d0bf6-9022-4ae4-858d-05f89b69cc49",
+    "name": "边界",
+    "reading": "biānjiè",
+    "desc": "境界。空間や概念の区切り。 抽象度または専門性がやや高い語。",
+    "lv": 3,
+    "lang": "zh",
+    "genre": "space"
+  },
+  {
+    "id": "b9c43f69-2827-4fe0-8de0-99aaf0649ebb",
+    "name": "讲座",
+    "reading": "jiǎngzuò",
+    "desc": "講義・講座。学習の語。 日常で使えるが、少し文脈を選ぶ語。",
+    "lv": 2,
+    "lang": "zh",
+    "genre": "study"
+  },
+  {
+    "id": "a80b117c-0369-4dcb-a548-c9058cb129c8",
+    "name": "传感器",
+    "reading": "chuángǎnqì",
+    "desc": "センサー。計測装置。 抽象度または専門性がやや高い語。",
+    "lv": 3,
+    "lang": "zh",
+    "genre": "tech"
+  },
+  {
+    "id": "13009cb0-8881-43e2-88c9-9cdfd613c510",
+    "name": "数据集",
+    "reading": "shùjùjí",
+    "desc": "データセット。分析用データ群。 抽象度または専門性がやや高い語。",
+    "lv": 3,
+    "lang": "zh",
+    "genre": "tech"
+  },
+  {
+    "id": "43caddd4-a5d7-49c8-8735-574fe8823145",
+    "name": "算法",
+    "reading": "suànfǎ",
+    "desc": "アルゴリズム。計算手順。 抽象度または専門性がやや高い語。",
+    "lv": 3,
+    "lang": "zh",
+    "genre": "tech"
+  },
+  {
+    "id": "d2b59c4e-fbd6-4f6d-a5b0-a05a8fc8bff2",
+    "name": "信号",
+    "reading": "xìnhào",
+    "desc": "信号。通信・制御の基本語。 日常で使えるが、少し文脈を選ぶ語。",
+    "lv": 2,
+    "lang": "zh",
+    "genre": "tech"
+  },
+  {
+    "id": "397a0f24-093c-4417-bcd7-68e3b0ef23d2",
+    "name": "早晨",
+    "reading": "zǎochén",
+    "desc": "朝。時間を表す基本語。 日常でかなり使いやすい基本語。",
+    "lv": 1,
+    "lang": "zh",
+    "genre": "time"
+  },
+  {
+    "id": "92b58127-5ace-4068-a44f-7fd88026d0d2",
+    "name": "货币",
+    "reading": "huòbì",
+    "desc": "通貨。 抽象度または専門性がやや高い語。",
+    "lv": 3,
+    "lang": "zh",
+    "genre": "travel"
+  },
+  {
+    "id": "c51812b7-0809-4c66-900a-381acae7430c",
+    "name": "旅行",
+    "reading": "lǚxíng",
+    "desc": "旅行。移動や滞在を表す語。 日常で使えるが、少し文脈を選ぶ語。",
+    "lv": 2,
+    "lang": "zh",
+    "genre": "travel"
+  },
+  {
+    "id": "b38832d3-a742-48fb-afde-12d7e6f8e2e0",
+    "name": "行程",
+    "reading": "xíngchéng",
+    "desc": "旅程・行程。 抽象度または専門性がやや高い語。",
+    "lv": 3,
+    "lang": "zh",
+    "genre": "travel"
+  },
+  {
+    "id": "4da4c224-f339-41c7-8253-acbfbec3a115",
+    "name": "共识",
+    "reading": "gòngshí",
+    "desc": "合意・コンセンサス。 文章語・専門語寄りで難度が高い語。",
+    "lv": 4,
+    "lang": "zh",
+    "genre": "work"
+  },
+  {
+    "id": "0c0b80e9-c0be-4761-b707-876608781f8f",
+    "name": "期限",
+    "reading": "qīxiàn",
+    "desc": "期限。課題や仕事で使う語。 日常で使えるが、少し文脈を選ぶ語。",
+    "lv": 2,
+    "lang": "zh",
+    "genre": "work"
+  },
+  {
+    "id": "83e9594d-0cfc-42a6-9c10-a001298deac3",
+    "name": "维护",
+    "reading": "wéihù",
+    "desc": "保守・メンテナンス。 抽象度または専門性がやや高い語。",
+    "lv": 3,
+    "lang": "zh",
+    "genre": "work"
+  },
+  {
+    "id": "3a1d5999-fbad-4817-8323-0460b58d40fa",
+    "name": "档案",
+    "reading": "dàng'àn",
+    "desc": "アーカイブ・記録。 抽象度または専門性がやや高い語。",
+    "lv": 3,
+    "lang": "zh",
+    "genre": "media"
+  }
+]

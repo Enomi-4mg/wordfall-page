@@ -1,0 +1,9 @@
+{
+  "name": "wordfall-page",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "migrate": "node scripts/migrate.js",
+    "migrate:dry-run": "node scripts/migrate.js --dry-run"
+  }
+}
