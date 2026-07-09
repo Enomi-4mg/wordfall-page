@@ -7,15 +7,18 @@ import {
   serializeWords,
   validateWord
 } from "../shared/words.js";
+import { fitTextList } from "../shared/fit-text.js";
 
 const state = {
   words: [],
   selectedId: null,
   selectedDraftId: null,
-  activeLanguages: new Set(SUPPORTED_LANGUAGES.map((lang) => lang.code)),
+  activeLanguages: new Set(["ja"]),
   sortBy: "lang",
   query: "",
   dirtyLangs: new Set(),
+  newWordIds: new Set(),
+  savedTextByLang: new Map(),
   lastLang: "ja",
   directoryHandle: null
 };
@@ -28,6 +31,7 @@ const dom = {
   wordList: document.getElementById("wordList"),
   formMode: document.getElementById("formMode"),
   formTitle: document.getElementById("formTitle"),
+  discardButton: document.getElementById("discardButton"),
   deleteButton: document.getElementById("deleteButton"),
   wordForm: document.getElementById("wordForm"),
   nameInput: document.getElementById("nameInput"),
@@ -50,9 +54,17 @@ async function loadAllWords() {
     if (!response.ok) throw new Error(`Could not load ${lang.file}`);
     const data = await response.json();
     if (!Array.isArray(data)) throw new Error(`${lang.file} must contain an array.`);
-    loaded.push(...data.map((item) => ensureEditableWord(normalizeWord(item))).filter(Boolean));
+    const normalized = data.map(normalizeWord).filter(Boolean);
+    state.savedTextByLang.set(lang.code, serializeWords(normalized, lang.code));
+    data.forEach((item) => {
+      const word = ensureEditableWord(normalizeWord(item));
+      if (!word) return;
+      if (!item.id || item.id !== word.id) markDirty(word.lang);
+      loaded.push(word);
+    });
   }
   state.words = loaded;
+  SUPPORTED_LANGUAGES.forEach((lang) => refreshDirtyLang(lang.code));
 }
 
 function renderLanguageOptions() {
@@ -60,7 +72,10 @@ function renderLanguageOptions() {
     .map((lang) => `<option value="${lang.code}">${lang.code} - ${lang.label}</option>`)
     .join("");
   dom.languageChips.innerHTML = SUPPORTED_LANGUAGES
-    .map((lang) => `<button class="chip is-active" type="button" data-lang="${lang.code}">${lang.code}</button>`)
+    .map((lang) => {
+      const active = state.activeLanguages.has(lang.code);
+      return `<button class="chip ${active ? "is-active" : ""}" type="button" data-lang="${lang.code}" aria-pressed="${active}">${lang.code}</button>`;
+    })
     .join("");
 }
 
@@ -72,12 +87,12 @@ function renderGenreOptions() {
 }
 
 function ensureGenreOption(genre) {
+  [...dom.genreSelect.querySelectorAll("option[data-custom-genre]")].forEach((option) => option.remove());
   if (!genre || GENRE_ORDER.includes(genre)) return;
-  const exists = [...dom.genreSelect.options].some((option) => option.value === genre);
-  if (exists) return;
   const option = document.createElement("option");
   option.value = genre;
   option.textContent = `${genre} (non-standard)`;
+  option.dataset.customGenre = "true";
   dom.genreSelect.appendChild(option);
 }
 
@@ -128,6 +143,7 @@ function renderList() {
       </button>
     `;
   }).join("");
+  fitTextList([...dom.wordList.querySelectorAll(".word-name")], 13);
 }
 
 function selectWord(id) {
@@ -151,6 +167,7 @@ function fillForm(word, mode) {
   ensureGenreOption(word.genre);
   dom.genreSelect.value = word.genre || "";
   dom.deleteButton.disabled = mode === "New";
+  updateDiscardButton();
   renderValidation();
 }
 
@@ -205,6 +222,8 @@ function applyFormChange() {
     state.words.push(created);
     state.selectedId = created.id;
     state.selectedDraftId = null;
+    state.newWordIds.add(created.id);
+    syncCreatedWordUi(created);
     markDirty(created.lang);
   } else if (state.selectedId) {
     const index = state.words.findIndex((item) => item.id === state.selectedId);
@@ -225,7 +244,20 @@ function deleteSelectedWord() {
   if (!word) return;
   if (!window.confirm(`${word.name} を削除しますか？`)) return;
   state.words = state.words.filter((item) => item.id !== word.id);
+  state.newWordIds.delete(word.id);
   markDirty(word.lang);
+  state.selectedId = null;
+  startNewWord();
+  renderList();
+  updateDirtyStatus();
+}
+
+function discardNewWord() {
+  const word = getCurrentWord();
+  if (!word || !state.newWordIds.has(word.id)) return;
+  state.words = state.words.filter((item) => item.id !== word.id);
+  state.newWordIds.delete(word.id);
+  refreshDirtyLang(word.lang);
   state.selectedId = null;
   startNewWord();
   renderList();
@@ -247,6 +279,16 @@ function renderValidation() {
 
 function markDirty(lang) {
   if (lang) state.dirtyLangs.add(lang);
+}
+
+function refreshDirtyLang(lang) {
+  if (!lang) return;
+  const current = serializeWords(state.words.filter((word) => word.lang === lang), lang);
+  if (current === state.savedTextByLang.get(lang)) {
+    state.dirtyLangs.delete(lang);
+  } else {
+    state.dirtyLangs.add(lang);
+  }
 }
 
 function updateDirtyStatus() {
@@ -292,10 +334,17 @@ async function saveChanges() {
       if (!state.directoryHandle) return;
     }
 
+    const fileHandles = new Map();
+    for (const lang of dirty) {
+      fileHandles.set(lang, await state.directoryHandle.getFileHandle(`${lang}.json`, { create: false }));
+    }
+
+    const savedTexts = new Map();
     for (const lang of dirty) {
       const words = state.words.filter((word) => word.lang === lang);
       const text = serializeWords(words, lang);
-      const fileHandle = await state.directoryHandle.getFileHandle(`${lang}.json`, { create: false });
+      savedTexts.set(lang, text);
+      const fileHandle = fileHandles.get(lang);
       const writable = await fileHandle.createWritable();
       try {
         await writable.write(text);
@@ -305,10 +354,17 @@ async function saveChanges() {
     }
 
     alert(dirty.map((lang) => `${lang}.json: ${state.words.filter((word) => word.lang === lang).length}件`).join("\n"));
+    savedTexts.forEach((text, lang) => state.savedTextByLang.set(lang, text));
     state.dirtyLangs.clear();
+    state.newWordIds.clear();
+    updateDiscardButton();
     updateDirtyStatus();
   } catch (error) {
     if (error.name === "AbortError") return;
+    if (error.name === "NotFoundError") {
+      alert(`保存に失敗しました: ${dirty.map((lang) => `${lang}.json`).join(", ")} が見つかりません。dataフォルダを選択しているか確認してください。`);
+      return;
+    }
     alert(`保存に失敗しました: ${error.message}`);
   }
 }
@@ -330,9 +386,11 @@ function bindEvents() {
     if (state.activeLanguages.has(lang) && state.activeLanguages.size > 1) {
       state.activeLanguages.delete(lang);
       chip.classList.remove("is-active");
+      chip.setAttribute("aria-pressed", "false");
     } else {
       state.activeLanguages.add(lang);
       chip.classList.add("is-active");
+      chip.setAttribute("aria-pressed", "true");
     }
     renderList();
   });
@@ -341,7 +399,7 @@ function bindEvents() {
     if (row?.dataset.id) selectWord(row.dataset.id);
   });
   dom.wordForm.addEventListener("input", applyFormChange);
-  dom.wordForm.addEventListener("change", applyFormChange);
+  dom.discardButton.addEventListener("click", discardNewWord);
   dom.deleteButton.addEventListener("click", deleteSelectedWord);
   dom.chooseFolderButton.addEventListener("click", chooseFolder);
   dom.saveButton.addEventListener("click", saveChanges);
@@ -384,6 +442,20 @@ function escapeAttribute(value) {
 function ensureEditableWord(word) {
   if (!word) return null;
   return word.id ? word : { ...word, id: crypto.randomUUID() };
+}
+
+function syncCreatedWordUi(word) {
+  dom.formMode.textContent = "Edit";
+  dom.formTitle.textContent = word.name || "新しい語";
+  dom.idInput.value = word.id;
+  dom.deleteButton.disabled = false;
+  updateDiscardButton();
+}
+
+function updateDiscardButton() {
+  const canDiscard = Boolean(state.selectedId && state.newWordIds.has(state.selectedId));
+  dom.discardButton.hidden = !canDiscard;
+  dom.discardButton.disabled = !canDiscard;
 }
 
 init();

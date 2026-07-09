@@ -1,4 +1,5 @@
 import { getGenreLabel, isDisplayReadyWord, normalizeWord } from "./shared/words.js";
+import { fitTextToWidth } from "./shared/fit-text.js";
 
 const DATA_FILE = "data/ja.json";
 const AUDIO_FILE = "audio/Nature_river_Track3_long_128.mp3";
@@ -36,14 +37,12 @@ const state = {
 
 const dom = {
   cascade: document.getElementById("wordCascade"),
+  topControls: document.querySelector(".top-controls"),
   settingsButton: document.getElementById("settingsButton"),
-  closeSettingsButton: document.getElementById("closeSettingsButton"),
   settingsPanel: document.getElementById("settingsPanel"),
   soundButton: document.getElementById("soundButton"),
   infoButton: document.getElementById("infoButton"),
-  infoBackdrop: document.getElementById("infoBackdrop"),
   infoDialog: document.getElementById("infoDialog"),
-  closeInfoButton: document.getElementById("closeInfoButton"),
   formsLink: document.getElementById("formsLink"),
   statusMessage: document.getElementById("statusMessage"),
   audioSourceSelect: document.getElementById("audioSourceSelect"),
@@ -167,6 +166,7 @@ function openModal(item, opener = document.activeElement) {
   dom.modalLevel.textContent = `Lv ${item.lv ?? "-"}`;
   dom.modalGenre.textContent = getGenreLabel(item.genre);
   dom.modalWord.textContent = item.name;
+  fitTextToWidth(dom.modalWord, 20);
   dom.modalReading.textContent = item.reading || "";
   dom.modalReading.hidden = !item.reading;
   dom.modalDesc.textContent = item.desc || "";
@@ -183,19 +183,32 @@ function closeModal() {
   restoreFocus();
 }
 
-function openInfo() {
-  state.paused = true;
-  state.focusReturnTarget = document.activeElement;
-  openLayer(dom.infoBackdrop);
-  dom.infoButton.setAttribute("aria-expanded", "true");
-  dom.infoDialog.focus();
+function getPopovers() {
+  return [
+    { button: dom.settingsButton, panel: dom.settingsPanel },
+    { button: dom.infoButton, panel: dom.infoDialog }
+  ];
 }
 
-function closeInfo() {
-  closeLayer(dom.infoBackdrop);
-  dom.infoButton.setAttribute("aria-expanded", "false");
-  if (!state.selectedWord) state.paused = false;
-  restoreFocus();
+function togglePopover(panel) {
+  const isOpen = panel.classList.contains("is-open");
+  closePopovers();
+  if (isOpen) return;
+  state.focusReturnTarget = document.activeElement;
+  openLayer(panel);
+  const entry = getPopovers().find((item) => item.panel === panel);
+  if (entry) entry.button.setAttribute("aria-expanded", "true");
+  panel.focus();
+}
+
+function closePopovers() {
+  let closedActive = false;
+  for (const { button, panel } of getPopovers()) {
+    if (panel.classList.contains("is-open")) closedActive = true;
+    closeLayer(panel);
+    button.setAttribute("aria-expanded", "false");
+  }
+  if (closedActive) restoreFocus();
 }
 
 function searchSelectedWord(site) {
@@ -205,20 +218,6 @@ function searchSelectedWord(site) {
     ? `https://www.wikipedia.org/search-redirect.php?search=${query}`
     : `https://www.google.com/search?q=${query}`;
   window.open(url, "_blank", "noopener,noreferrer");
-}
-
-function openSettings() {
-  state.focusReturnTarget = document.activeElement;
-  openLayer(dom.settingsPanel);
-  dom.settingsButton.setAttribute("aria-expanded", "true");
-  dom.closeSettingsButton.focus();
-}
-
-function closeSettings() {
-  const wasOpen = dom.settingsPanel.classList.contains("is-open");
-  closeLayer(dom.settingsPanel);
-  dom.settingsButton.setAttribute("aria-expanded", "false");
-  if (wasOpen) restoreFocus();
 }
 
 async function ensureAudioContext() {
@@ -395,11 +394,9 @@ function trapFocus(event, container) {
 }
 
 function bindEvents() {
-  dom.settingsButton.addEventListener("click", openSettings);
-  dom.closeSettingsButton.addEventListener("click", closeSettings);
+  dom.settingsButton.addEventListener("click", () => togglePopover(dom.settingsPanel));
   dom.soundButton.addEventListener("click", toggleSound);
-  dom.infoButton.addEventListener("click", openInfo);
-  dom.closeInfoButton.addEventListener("click", closeInfo);
+  dom.infoButton.addEventListener("click", () => togglePopover(dom.infoDialog));
   dom.formsLink.addEventListener("click", (event) => {
     if (FORMS_URL === "#") {
       event.preventDefault();
@@ -421,26 +418,28 @@ function bindEvents() {
   dom.modalBackdrop.addEventListener("click", (event) => {
     if (event.target === dom.modalBackdrop) closeModal();
   });
-  dom.infoBackdrop.addEventListener("click", (event) => {
-    if (event.target === dom.infoBackdrop) closeInfo();
-  });
   dom.googleButton.addEventListener("click", () => searchSelectedWord("google"));
   dom.wikiButton.addEventListener("click", () => searchSelectedWord("wiki"));
+  document.addEventListener("click", (event) => {
+    if (!event.target.closest(".top-controls") && !event.target.closest(".popover")) {
+      closePopovers();
+    }
+  });
   window.addEventListener("keydown", (event) => {
     if (event.key === "Escape") {
       if (dom.modalBackdrop.classList.contains("is-open")) closeModal();
-      if (dom.infoBackdrop.classList.contains("is-open")) closeInfo();
-      closeSettings();
+      closePopovers();
     }
     trapFocus(event, dom.modalBackdrop);
-    trapFocus(event, dom.infoBackdrop);
-    trapFocus(event, dom.settingsPanel);
+  });
+  window.addEventListener("resize", () => {
+    if (dom.modalBackdrop.classList.contains("is-open")) fitTextToWidth(dom.modalWord, 20);
   });
 }
 
 async function init() {
   closeLayer(dom.settingsPanel);
-  closeLayer(dom.infoBackdrop);
+  closeLayer(dom.infoDialog);
   closeLayer(dom.modalBackdrop);
   dom.formsLink.href = FORMS_URL;
   dom.volumeSlider.value = state.settings.volume;

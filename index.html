@@ -13,55 +13,41 @@
     <section id="wordCascade" class="word-cascade" aria-label="落ちてくる言葉"></section>
 
     <div class="top-controls" aria-label="Controls">
-      <button id="settingsButton" class="icon-button" type="button" aria-label="Open settings" aria-expanded="false" aria-controls="settingsPanel">
+      <button id="settingsButton" class="icon-button" type="button" aria-label="Open settings" aria-haspopup="dialog" aria-expanded="false" aria-controls="settingsPanel">
         <i data-lucide="settings"></i>
       </button>
       <button id="soundButton" class="icon-button" type="button" aria-label="Turn sound on" aria-pressed="false">
         <i data-lucide="volume-x"></i>
       </button>
-      <button id="infoButton" class="icon-button" type="button" aria-label="Open information" aria-expanded="false" aria-controls="infoDialog">
+      <button id="infoButton" class="icon-button" type="button" aria-label="Open information" aria-haspopup="dialog" aria-expanded="false" aria-controls="infoDialog">
         <i data-lucide="info"></i>
       </button>
     </div>
 
+    <div class="popover-stack">
+      <div id="settingsPanel" class="popover" role="dialog" aria-label="Settings" aria-hidden="true" tabindex="-1" inert>
+        <p class="popover-title">Sound</p>
+        <label class="field-label" for="audioSourceSelect">音源</label>
+        <select id="audioSourceSelect" class="select-input">
+          <option value="generated">Generated noise</option>
+          <option value="file">Audio file</option>
+        </select>
+        <label class="field-label" for="volumeSlider">音量 <span id="volumeValue">35%</span></label>
+        <input id="volumeSlider" class="range-input" type="range" min="0" max="1" step="0.01" value="0.35">
+      </div>
+
+      <div id="infoDialog" class="popover popover-wide" role="dialog" aria-label="Information" aria-hidden="true" tabindex="-1" inert>
+        <p class="popover-title">Wordfall</p>
+        <p class="popover-text">言葉が静かに落ちてくるページです。気になった言葉を選ぶと、短い説明と検索への入口が開きます。</p>
+        <a id="formsLink" class="text-button primary" href="https://docs.google.com/forms/d/e/1FAIpQLScQgEK_keyP4dlT2oEpgExAKFNpHAql7iXq7Nmpwxrpi7uZ4w/viewform" target="_blank" rel="noopener noreferrer">
+          <i data-lucide="send"></i>
+          <span>言葉を投稿する</span>
+        </a>
+      </div>
+    </div>
+
     <div id="statusMessage" class="status-message" role="status"></div>
   </main>
-
-  <aside id="settingsPanel" class="side-panel" aria-label="Settings" aria-hidden="true" inert>
-    <div class="panel-header">
-      <div>
-        <p class="panel-kicker">Wordfall</p>
-        <h1>Settings</h1>
-      </div>
-      <button id="closeSettingsButton" class="icon-button compact" type="button" aria-label="Close settings">
-        <i data-lucide="x"></i>
-      </button>
-    </div>
-    <div class="panel-body">
-      <label class="field-label" for="audioSourceSelect">音源</label>
-      <select id="audioSourceSelect" class="select-input">
-        <option value="generated">Generated noise</option>
-        <option value="file">Audio file</option>
-      </select>
-      <label class="field-label" for="volumeSlider">音量 <span id="volumeValue">35%</span></label>
-      <input id="volumeSlider" class="range-input" type="range" min="0" max="1" step="0.01" value="0.35">
-    </div>
-  </aside>
-
-  <div id="infoBackdrop" class="modal-backdrop" aria-hidden="true" inert>
-    <article id="infoDialog" class="info-modal" role="dialog" aria-modal="true" aria-labelledby="infoTitle" tabindex="-1">
-      <button id="closeInfoButton" class="icon-button compact modal-close" type="button" aria-label="Close information">
-        <i data-lucide="x"></i>
-      </button>
-      <p class="modal-kicker">Information</p>
-      <h2 id="infoTitle">Wordfall</h2>
-      <p>言葉が静かに落ちてくるページです。気になった言葉を選ぶと、短い説明と検索への入口が開きます。</p>
-      <a id="formsLink" class="text-button primary" href="https://docs.google.com/forms/d/e/1FAIpQLScQgEK_keyP4dlT2oEpgExAKFNpHAql7iXq7Nmpwxrpi7uZ4w/viewform" target="_blank" rel="noopener noreferrer">
-        <i data-lucide="send"></i>
-        <span>言葉を投稿する</span>
-      </a>
-    </article>
-  </div>
 
   <div id="modalBackdrop" class="modal-backdrop" aria-hidden="true" inert>
     <article id="detailModal" class="detail-modal" role="dialog" aria-modal="true" aria-labelledby="modalWord" tabindex="-1">

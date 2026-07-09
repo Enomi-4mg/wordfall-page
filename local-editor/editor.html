@@ -22,7 +22,7 @@
 
       <div class="filters">
         <label class="field-label" for="searchInput">検索</label>
-        <input id="searchInput" class="control-input" type="search" placeholder="name / reading">
+        <input id="searchInput" class="control-input" type="search" placeholder="name / reading / desc">
 
         <label class="field-label" for="sortSelect">ソート</label>
         <select id="sortSelect" class="control-input">
@@ -44,10 +44,16 @@
           <p id="formMode" class="kicker">Select</p>
           <h2 id="formTitle">語を選択</h2>
         </div>
-        <button id="deleteButton" class="text-button danger" type="button" disabled>
-          <i data-lucide="trash-2"></i>
-          <span>削除</span>
-        </button>
+        <div class="form-actions">
+          <button id="discardButton" class="text-button" type="button" hidden disabled>
+            <i data-lucide="rotate-ccw"></i>
+            <span>破棄</span>
+          </button>
+          <button id="deleteButton" class="text-button danger" type="button" disabled>
+            <i data-lucide="trash-2"></i>
+            <span>削除</span>
+          </button>
+        </div>
       </header>
 
       <form id="wordForm" class="word-form">
