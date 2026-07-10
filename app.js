@@ -10,6 +10,7 @@ const DEFAULT_VOLUME = 0.35;
 const VOLUME_STORAGE_KEY = "wordfall.volume";
 const AUDIO_SOURCE_STORAGE_KEY = "wordfall.audioSource";
 const AUDIO_SOURCES = new Set(["generated", "file"]);
+const WIKIPEDIA_LANGS = new Set(["ja", "en", "zh", "ko", "fr", "de", "it"]);
 
 const state = {
   vocabulary: [],
@@ -215,9 +216,16 @@ function searchSelectedWord(site) {
   if (!state.selectedWord) return;
   const query = encodeURIComponent(state.selectedWord.name);
   const url = site === "wiki"
-    ? `https://www.wikipedia.org/search-redirect.php?search=${query}`
+    ? getWikipediaUrl(state.selectedWord)
     : `https://www.google.com/search?q=${query}`;
   window.open(url, "_blank", "noopener,noreferrer");
+}
+
+function getWikipediaUrl(word) {
+  const lang = word.lang;
+  const title = encodeURIComponent(word.name.replace(/\s+/g, "_"));
+  if (WIKIPEDIA_LANGS.has(lang)) return `https://${lang}.wikipedia.org/wiki/${title}`;
+  return `https://www.wikipedia.org/search-redirect.php?search=${encodeURIComponent(word.name)}`;
 }
 
 async function ensureAudioContext() {
