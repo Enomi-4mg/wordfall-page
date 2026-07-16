@@ -234,6 +234,7 @@ function applyFormChange() {
       markDirty(word.lang);
     }
   }
+  dom.formTitle.textContent = word.name || "新しい語";
   renderValidation();
   renderList();
   updateDirtyStatus();
