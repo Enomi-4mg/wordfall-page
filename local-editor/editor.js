@@ -6,7 +6,7 @@ import {
   normalizeWord,
   serializeWords,
   validateWord
-} from "../shared/words.js";
+} from "../shared/words.js?v=genre-taxonomy-v2";
 import { fitTextList } from "../shared/fit-text.js";
 
 const state = {
@@ -91,7 +91,7 @@ function ensureGenreOption(genre) {
   if (!genre || GENRE_ORDER.includes(genre)) return;
   const option = document.createElement("option");
   option.value = genre;
-  option.textContent = `${genre} (non-standard)`;
+  option.textContent = `${genre} (unsupported genre)`;
   option.dataset.customGenre = "true";
   dom.genreSelect.appendChild(option);
 }

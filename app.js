@@ -1,4 +1,4 @@
-import { getGenreLabel, isDisplayReadyWord, normalizeWord } from "./shared/words.js";
+import { getGenreLabel, isDisplayReadyWord, normalizeWord } from "./shared/words.js?v=genre-taxonomy-v2";
 import { fitTextToWidth } from "./shared/fit-text.js";
 
 const DATA_FILE = "data/ja.json";

@@ -22,11 +22,6 @@ function increment(map, key) {
 function createReport() {
   return {
     files: [],
-    categoryValues: new Map(),
-    categoryGenrePairs: new Map(),
-    categoryTechDifferentGenre: [],
-    media: [],
-    custom: [],
     invalidGenres: new Map(),
     missingGenre: 0,
     missingLv: 0,
@@ -67,19 +62,7 @@ function collectDuplicates(file, rawWords, report) {
 }
 
 function migrateWord(item, fileReport, report) {
-  const category = String(item.category || "").trim().toLowerCase();
   const genre = String(item.genre || "").trim().toLowerCase();
-  if (category) {
-    fileReport.categoryRemoved += 1;
-    increment(report.categoryValues, category);
-    increment(report.categoryGenrePairs, `${category || "-"} / ${genre || "-"}`);
-    if (category === "tech" && genre && genre !== "tech") {
-      report.categoryTechDifferentGenre.push(`${item.lang || "?"}:${item.name || "?"} (${genre})`);
-    }
-  }
-
-  if (genre === "media") report.media.push(`${item.lang || "?"}:${item.name || "?"}`);
-  if (genre === "custom") report.custom.push(`${item.lang || "?"}:${item.name || "?"}`);
   if (!genre) {
     report.missingGenre += 1;
   } else if (!isValidGenre(genre)) {
@@ -137,8 +120,7 @@ async function main() {
       written: 0,
       skipped: 0,
       newIds: 0,
-      regeneratedIds: 0,
-      categoryRemoved: 0
+      regeneratedIds: 0
     };
     const migrated = parsed.map((item) => migrateWord(item, fileReport, report)).filter(Boolean);
     fileReport.written = migrated.length;
@@ -158,22 +140,13 @@ async function main() {
     console.log(`  skipped: ${item.skipped}`);
     console.log(`  new ids: ${item.newIds}`);
     console.log(`  regenerated ids: ${item.regeneratedIds}`);
-    console.log(`  category removed: ${item.categoryRemoved}`);
   });
-  printMap("category values", report.categoryValues);
-  printMap("category / genre pairs", report.categoryGenrePairs);
   printMap("invalid genres", report.invalidGenres);
   printMap("exact duplicate groups", report.exactDuplicates);
   printMap("name duplicate reference groups", report.nameDuplicates);
   console.log(`\nstandard genres: ${GENRE_ORDER.join(", ")}`);
-  console.log(`media count: ${report.media.length}`);
-  console.log(`custom count: ${report.custom.length}`);
   console.log(`missing genre count: ${report.missingGenre}`);
   console.log(`missing lv count: ${report.missingLv}`);
-  if (report.categoryTechDifferentGenre.length) {
-    console.log("\ncategory tech with non-tech genre");
-    report.categoryTechDifferentGenre.forEach((item) => console.log(`  - ${item}`));
-  }
 }
 
 main().catch((error) => {

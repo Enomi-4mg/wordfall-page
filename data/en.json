@@ -1,31 +1,220 @@
 [
   {
+    "id": "916d53fe-10d4-4e25-b9a7-faa052d749d7",
+    "name": "1d100",
+    "lv": 5,
+    "lang": "en",
+    "genre": "culture"
+  },
+  {
+    "id": "ce4bd372-b46b-4d8f-90a6-14c89c5c8199",
+    "name": "archive",
+    "lv": 3,
+    "lang": "en",
+    "genre": "culture"
+  },
+  {
     "id": "9fc7996d-eaa4-4ac8-b15a-ba3e89b01699",
     "name": "chiaroscuro",
     "lv": 5,
     "lang": "en",
-    "genre": "art"
+    "genre": "culture"
   },
   {
     "id": "f1fea23f-df4e-4628-8d8d-c4d1ec45d48b",
     "name": "composition",
     "lv": 3,
     "lang": "en",
-    "genre": "art"
+    "genre": "culture"
+  },
+  {
+    "id": "d6a0e65a-8291-4000-87df-d929a93bd857",
+    "name": "contrast",
+    "lv": 3,
+    "lang": "en",
+    "genre": "culture"
+  },
+  {
+    "id": "575609c1-6b5c-4ab6-aa59-95bf48d86d4b",
+    "name": "Everybody wants to rule the world",
+    "lv": 2,
+    "lang": "en",
+    "genre": "culture"
+  },
+  {
+    "id": "63d19030-c502-455c-886c-b51d1821c8e5",
+    "name": "formant",
+    "lv": 5,
+    "lang": "en",
+    "genre": "culture"
+  },
+  {
+    "id": "03533dfa-3eb8-40e8-bec0-4aab05031920",
+    "name": "interface",
+    "lv": 3,
+    "lang": "en",
+    "genre": "culture"
   },
   {
     "id": "1a90a4fe-65ca-4c4b-b21b-5795c03aaaad",
     "name": "perspective",
     "lv": 3,
     "lang": "en",
-    "genre": "art"
+    "genre": "culture"
+  },
+  {
+    "id": "e3801258-e535-49d0-b611-c28ed0d45aac",
+    "name": "prototype",
+    "lv": 3,
+    "lang": "en",
+    "genre": "culture"
+  },
+  {
+    "id": "10301b0a-5593-4dbd-b295-3a12d7f9ca1f",
+    "name": "resonance",
+    "lv": 4,
+    "lang": "en",
+    "genre": "culture"
+  },
+  {
+    "id": "22b87544-7e62-4aa2-9a72-04ae2c82bbc0",
+    "name": "rhythm",
+    "lv": 2,
+    "lang": "en",
+    "genre": "culture"
   },
   {
     "id": "47feb456-9ab3-4c5a-97dc-b996322547f7",
     "name": "texture",
     "lv": 3,
     "lang": "en",
-    "genre": "art"
+    "genre": "culture"
+  },
+  {
+    "id": "32454561-e200-4009-8e75-cb6d25e8ef7d",
+    "name": "retronym",
+    "lv": 4,
+    "lang": "en",
+    "genre": "language"
+  },
+  {
+    "id": "0ddf1904-1c7e-4d48-8e8a-2172c69cafb2",
+    "name": "synecdoche",
+    "lv": 5,
+    "lang": "en",
+    "genre": "language"
+  },
+  {
+    "id": "7d53c89b-2b2b-4187-b65a-bd60bf27a7d5",
+    "name": "ambiguity",
+    "lv": 4,
+    "lang": "en",
+    "genre": "mind"
+  },
+  {
+    "id": "964173e1-894b-47e7-8d77-760c50caebd1",
+    "name": "consciousness",
+    "lv": 4,
+    "lang": "en",
+    "genre": "mind"
+  },
+  {
+    "id": "017c2433-16d0-4791-90cb-c2b98d3e3b61",
+    "name": "ephemeral",
+    "lv": 4,
+    "lang": "en",
+    "genre": "mind"
+  },
+  {
+    "id": "22f7572d-3c68-4350-b762-4663d8b45018",
+    "name": "experience",
+    "lv": 1,
+    "lang": "en",
+    "genre": "mind"
+  },
+  {
+    "id": "9562eccd-21b4-4b46-ae1c-c589195c8e53",
+    "name": "memory",
+    "lv": 2,
+    "lang": "en",
+    "genre": "mind"
+  },
+  {
+    "id": "bc710e44-3082-4fa7-978d-7958a9dd49d1",
+    "name": "perception",
+    "lv": 3,
+    "lang": "en",
+    "genre": "mind"
+  },
+  {
+    "id": "0a00079b-ca75-453b-b172-7f194d801cdb",
+    "name": "serendipity",
+    "lv": 5,
+    "lang": "en",
+    "genre": "mind"
+  },
+  {
+    "id": "71b176aa-9661-4184-9f85-7348853833c9",
+    "name": "silence",
+    "lv": 2,
+    "lang": "en",
+    "genre": "mind"
+  },
+  {
+    "id": "e371b3d7-9152-4406-b256-375b9fcd32f0",
+    "name": "アポステリオリ",
+    "lv": 4,
+    "lang": "en",
+    "genre": "mind"
+  },
+  {
+    "id": "edd1141c-bded-47e2-a41a-52e679222313",
+    "name": "artifact",
+    "lv": 4,
+    "lang": "en",
+    "genre": "society"
+  },
+  {
+    "id": "c39558d5-6cce-4dd3-a9d0-8e8c1a960c36",
+    "name": "civilization",
+    "lv": 3,
+    "lang": "en",
+    "genre": "society"
+  },
+  {
+    "id": "97494723-c362-4cf9-825e-69cc723b3d7c",
+    "name": "consensus",
+    "lv": 4,
+    "lang": "en",
+    "genre": "society"
+  },
+  {
+    "id": "2857402c-39d8-4ed4-9c22-a2d00de35791",
+    "name": "deadline",
+    "lv": 2,
+    "lang": "en",
+    "genre": "society"
+  },
+  {
+    "id": "18e4279d-7c42-4272-a68b-293565b46e4d",
+    "name": "friend",
+    "lv": 1,
+    "lang": "en",
+    "genre": "society"
+  },
+  {
+    "id": "9b813ef2-bdf1-434d-a9c3-86f716967a96",
+    "name": "Guarantee",
+    "lv": 2,
+    "lang": "en",
+    "genre": "society"
+  },
+  {
+    "id": "f0192b25-bf63-442b-a78c-f3b16acbac9d",
+    "name": "maintenance",
+    "lv": 3,
+    "lang": "en",
+    "genre": "society"
   },
   {
     "id": "7c7d9f81-6ab1-4a34-8f3f-536ca0e1fe01",
@@ -49,165 +238,18 @@
     "genre": "body"
   },
   {
-    "id": "14a7c45b-c5d4-4a6b-8ee8-79cc14e9193f",
-    "name": "infrastructure",
-    "lv": 4,
-    "lang": "en",
-    "genre": "city"
-  },
-  {
-    "id": "d86a7d61-2a64-4a5e-bfdc-b8c94b492dbb",
-    "name": "metropolis",
-    "lv": 4,
-    "lang": "en",
-    "genre": "city"
-  },
-  {
-    "id": "d0a2b044-74bd-47fc-8c45-b49f0e355eee",
-    "name": "street",
-    "lv": 1,
-    "lang": "en",
-    "genre": "city"
-  },
-  {
-    "id": "23e0f781-33a1-4989-a9ed-c57872af6f5f",
-    "name": "water",
-    "lv": 1,
-    "lang": "en",
-    "genre": "daily"
-  },
-  {
-    "id": "6f36fa09-649b-403c-bfca-a086eb9d9866",
-    "name": "window",
-    "lv": 1,
-    "lang": "en",
-    "genre": "daily"
-  },
-  {
-    "id": "d6a0e65a-8291-4000-87df-d929a93bd857",
-    "name": "contrast",
-    "lv": 3,
-    "lang": "en",
-    "genre": "design"
-  },
-  {
-    "id": "03533dfa-3eb8-40e8-bec0-4aab05031920",
-    "name": "interface",
-    "lv": 3,
-    "lang": "en",
-    "genre": "design"
-  },
-  {
-    "id": "e3801258-e535-49d0-b611-c28ed0d45aac",
-    "name": "prototype",
-    "lv": 3,
-    "lang": "en",
-    "genre": "design"
-  },
-  {
-    "id": "71b176aa-9661-4184-9f85-7348853833c9",
-    "name": "silence",
-    "lv": 2,
-    "lang": "en",
-    "genre": "emotion"
-  },
-  {
-    "id": "5a7c1df4-474b-4ea9-b507-52eb35905ac3",
-    "name": "fermentation",
-    "lv": 4,
-    "lang": "en",
-    "genre": "food"
-  },
-  {
-    "id": "ced7539e-b322-4fc8-8514-8de013ab9701",
-    "name": "nutrient",
-    "lv": 3,
-    "lang": "en",
-    "genre": "food"
-  },
-  {
-    "id": "b0f73262-4a4b-4978-9745-28d5f8e63a6e",
-    "name": "recipe",
-    "lv": 2,
-    "lang": "en",
-    "genre": "food"
-  },
-  {
-    "id": "edd1141c-bded-47e2-a41a-52e679222313",
-    "name": "artifact",
-    "lv": 4,
-    "lang": "en",
-    "genre": "history"
-  },
-  {
-    "id": "c39558d5-6cce-4dd3-a9d0-8e8c1a960c36",
-    "name": "civilization",
-    "lv": 3,
-    "lang": "en",
-    "genre": "history"
-  },
-  {
-    "id": "63d19030-c502-455c-886c-b51d1821c8e5",
-    "name": "formant",
+    "id": "9ee3d302-93ef-4348-9b83-9857dbee4dc9",
+    "name": "アンプランド・アポトーシス",
     "lv": 5,
     "lang": "en",
-    "genre": "music"
+    "genre": "body"
   },
   {
-    "id": "10301b0a-5593-4dbd-b295-3a12d7f9ca1f",
-    "name": "resonance",
-    "lv": 4,
-    "lang": "en",
-    "genre": "music"
-  },
-  {
-    "id": "22b87544-7e62-4aa2-9a72-04ae2c82bbc0",
-    "name": "rhythm",
-    "lv": 2,
-    "lang": "en",
-    "genre": "music"
-  },
-  {
-    "id": "7d53c89b-2b2b-4187-b65a-bd60bf27a7d5",
-    "name": "ambiguity",
-    "lv": 4,
-    "lang": "en",
-    "genre": "philosophy"
-  },
-  {
-    "id": "964173e1-894b-47e7-8d77-760c50caebd1",
-    "name": "consciousness",
-    "lv": 4,
-    "lang": "en",
-    "genre": "philosophy"
-  },
-  {
-    "id": "017c2433-16d0-4791-90cb-c2b98d3e3b61",
-    "name": "ephemeral",
-    "lv": 4,
-    "lang": "en",
-    "genre": "philosophy"
-  },
-  {
-    "id": "9562eccd-21b4-4b46-ae1c-c589195c8e53",
-    "name": "memory",
-    "lv": 2,
-    "lang": "en",
-    "genre": "philosophy"
-  },
-  {
-    "id": "bc710e44-3082-4fa7-978d-7958a9dd49d1",
-    "name": "perception",
-    "lv": 3,
-    "lang": "en",
-    "genre": "philosophy"
-  },
-  {
-    "id": "0a00079b-ca75-453b-b172-7f194d801cdb",
-    "name": "serendipity",
+    "id": "0e22dc97-d6d1-41e4-a174-6ee5d7dc62b7",
+    "name": "ネクローシス",
     "lv": 5,
     "lang": "en",
-    "genre": "philosophy"
+    "genre": "body"
   },
   {
     "id": "390eee66-b113-484b-a8a2-a420c2463aed",
@@ -238,6 +280,20 @@
     "genre": "science"
   },
   {
+    "id": "3816d6f2-cac7-4be7-9d84-a77f7a0d74fb",
+    "name": "Singularity",
+    "lv": 3,
+    "lang": "en",
+    "genre": "science"
+  },
+  {
+    "id": "4831a8b7-85b4-48f2-b93a-86df7e9296ee",
+    "name": "syzygy",
+    "lv": 5,
+    "lang": "en",
+    "genre": "science"
+  },
+  {
     "id": "f26315a0-21cc-45c1-9b6a-b008be0f2e55",
     "name": "variable",
     "lv": 3,
@@ -245,53 +301,137 @@
     "genre": "science"
   },
   {
-    "id": "18e4279d-7c42-4272-a68b-293565b46e4d",
-    "name": "friend",
-    "lv": 1,
-    "lang": "en",
-    "genre": "society"
-  },
-  {
-    "id": "b1aa91ac-0f8e-4749-9dfc-3aa0faaca9bf",
-    "name": "boundary",
-    "lv": 3,
-    "lang": "en",
-    "genre": "space"
-  },
-  {
-    "id": "3b917e01-1c29-444a-a949-c6734e978584",
-    "name": "lecture",
-    "lv": 2,
-    "lang": "en",
-    "genre": "study"
-  },
-  {
     "id": "d7261acd-51f9-4d81-9bf7-ecce50e388af",
     "name": "algorithm",
     "lv": 3,
     "lang": "en",
-    "genre": "tech"
+    "genre": "technology"
+  },
+  {
+    "id": "1490a67b-e93b-4f87-b9b0-f11f25e79b69",
+    "name": "AWACS",
+    "lv": 4,
+    "lang": "en",
+    "genre": "technology"
   },
   {
     "id": "585a8060-3538-4a9c-ba1a-563ba2284b20",
     "name": "dataset",
     "lv": 3,
     "lang": "en",
-    "genre": "tech"
+    "genre": "technology"
+  },
+  {
+    "id": "e7ec1418-6345-49c2-a521-4195f0ee7d5a",
+    "name": "LGTM",
+    "lv": 3,
+    "lang": "en",
+    "genre": "technology"
   },
   {
     "id": "533eac6c-a272-4c77-9b68-9d6d7bbc75aa",
     "name": "sensor",
     "lv": 3,
     "lang": "en",
-    "genre": "tech"
+    "genre": "technology"
   },
   {
     "id": "32c1cc62-ebd8-40b5-81c1-324ebdb184bc",
     "name": "signal",
     "lv": 2,
     "lang": "en",
-    "genre": "tech"
+    "genre": "technology"
+  },
+  {
+    "id": "5a7c1df4-474b-4ea9-b507-52eb35905ac3",
+    "name": "fermentation",
+    "lv": 4,
+    "lang": "en",
+    "genre": "living"
+  },
+  {
+    "id": "ced7539e-b322-4fc8-8514-8de013ab9701",
+    "name": "nutrient",
+    "lv": 3,
+    "lang": "en",
+    "genre": "living"
+  },
+  {
+    "id": "b0f73262-4a4b-4978-9745-28d5f8e63a6e",
+    "name": "recipe",
+    "lv": 2,
+    "lang": "en",
+    "genre": "living"
+  },
+  {
+    "id": "23e0f781-33a1-4989-a9ed-c57872af6f5f",
+    "name": "water",
+    "lv": 1,
+    "lang": "en",
+    "genre": "living"
+  },
+  {
+    "id": "6f36fa09-649b-403c-bfca-a086eb9d9866",
+    "name": "window",
+    "lv": 1,
+    "lang": "en",
+    "genre": "living"
+  },
+  {
+    "id": "b1aa91ac-0f8e-4749-9dfc-3aa0faaca9bf",
+    "name": "boundary",
+    "lv": 3,
+    "lang": "en",
+    "genre": "place"
+  },
+  {
+    "id": "a90ade0d-8b34-40c4-9904-89e527c3400a",
+    "name": "currency",
+    "lv": 3,
+    "lang": "en",
+    "genre": "place"
+  },
+  {
+    "id": "14a7c45b-c5d4-4a6b-8ee8-79cc14e9193f",
+    "name": "infrastructure",
+    "lv": 4,
+    "lang": "en",
+    "genre": "place"
+  },
+  {
+    "id": "cd8124f2-788b-4ac8-bb57-b69f6bdce429",
+    "name": "itinerary",
+    "lv": 4,
+    "lang": "en",
+    "genre": "place"
+  },
+  {
+    "id": "9f937202-a80b-45c8-b972-e36332f88d42",
+    "name": "journey",
+    "lv": 2,
+    "lang": "en",
+    "genre": "place"
+  },
+  {
+    "id": "d86a7d61-2a64-4a5e-bfdc-b8c94b492dbb",
+    "name": "metropolis",
+    "lv": 4,
+    "lang": "en",
+    "genre": "place"
+  },
+  {
+    "id": "d0a2b044-74bd-47fc-8c45-b49f0e355eee",
+    "name": "street",
+    "lv": 1,
+    "lang": "en",
+    "genre": "place"
+  },
+  {
+    "id": "3cd18db3-49ea-4be4-8644-c7be4f21064d",
+    "name": "Thule",
+    "lv": 4,
+    "lang": "en",
+    "genre": "place"
   },
   {
     "id": "25972226-9417-4071-b5c9-846963e329c5",
@@ -301,127 +441,17 @@
     "genre": "time"
   },
   {
-    "id": "a90ade0d-8b34-40c4-9904-89e527c3400a",
-    "name": "currency",
-    "lv": 3,
-    "lang": "en",
-    "genre": "travel"
-  },
-  {
-    "id": "cd8124f2-788b-4ac8-bb57-b69f6bdce429",
-    "name": "itinerary",
-    "lv": 4,
-    "lang": "en",
-    "genre": "travel"
-  },
-  {
-    "id": "9f937202-a80b-45c8-b972-e36332f88d42",
-    "name": "journey",
-    "lv": 2,
-    "lang": "en",
-    "genre": "travel"
-  },
-  {
-    "id": "97494723-c362-4cf9-825e-69cc723b3d7c",
-    "name": "consensus",
-    "lv": 4,
-    "lang": "en",
-    "genre": "work"
-  },
-  {
-    "id": "2857402c-39d8-4ed4-9c22-a2d00de35791",
-    "name": "deadline",
-    "lv": 2,
-    "lang": "en",
-    "genre": "work"
-  },
-  {
-    "id": "f0192b25-bf63-442b-a78c-f3b16acbac9d",
-    "name": "maintenance",
-    "lv": 3,
-    "lang": "en",
-    "genre": "work"
-  },
-  {
-    "id": "ce4bd372-b46b-4d8f-90a6-14c89c5c8199",
-    "name": "archive",
-    "lv": 3,
-    "lang": "en",
-    "genre": "media"
-  },
-  {
-    "id": "916d53fe-10d4-4e25-b9a7-faa052d749d7",
-    "name": "1d100",
-    "lang": "en"
-  },
-  {
-    "id": "1490a67b-e93b-4f87-b9b0-f11f25e79b69",
-    "name": "AWACS",
-    "lang": "en"
-  },
-  {
     "id": "8c5d6739-3b56-4c9a-a4f8-df698161ad84",
     "name": "criteria",
-    "lang": "en"
+    "lv": 2,
+    "lang": "en",
+    "genre": "learning"
   },
   {
-    "id": "575609c1-6b5c-4ab6-aa59-95bf48d86d4b",
-    "name": "Everybody wants to rule the world",
-    "lang": "en"
-  },
-  {
-    "id": "22f7572d-3c68-4350-b762-4663d8b45018",
-    "name": "experience",
-    "lang": "en"
-  },
-  {
-    "id": "9b813ef2-bdf1-434d-a9c3-86f716967a96",
-    "name": "Guarantee",
-    "lang": "en"
-  },
-  {
-    "id": "e7ec1418-6345-49c2-a521-4195f0ee7d5a",
-    "name": "LGTM",
-    "lang": "en"
-  },
-  {
-    "id": "32454561-e200-4009-8e75-cb6d25e8ef7d",
-    "name": "retronym",
-    "lang": "en"
-  },
-  {
-    "id": "3816d6f2-cac7-4be7-9d84-a77f7a0d74fb",
-    "name": "Singularity",
-    "lang": "en"
-  },
-  {
-    "id": "0ddf1904-1c7e-4d48-8e8a-2172c69cafb2",
-    "name": "synecdoche",
-    "lang": "en"
-  },
-  {
-    "id": "4831a8b7-85b4-48f2-b93a-86df7e9296ee",
-    "name": "syzygy",
-    "lang": "en"
-  },
-  {
-    "id": "3cd18db3-49ea-4be4-8644-c7be4f21064d",
-    "name": "Thule",
-    "lang": "en"
-  },
-  {
-    "id": "e371b3d7-9152-4406-b256-375b9fcd32f0",
-    "name": "アポステリオリ",
-    "lang": "en"
-  },
-  {
-    "id": "9ee3d302-93ef-4348-9b83-9857dbee4dc9",
-    "name": "アンプランド・アポトーシス",
-    "lang": "en"
-  },
-  {
-    "id": "0e22dc97-d6d1-41e4-a174-6ee5d7dc62b7",
-    "name": "ネクローシス",
-    "lang": "en"
+    "id": "3b917e01-1c29-444a-a949-c6734e978584",
+    "name": "lecture",
+    "lv": 2,
+    "lang": "en",
+    "genre": "learning"
   }
 ]

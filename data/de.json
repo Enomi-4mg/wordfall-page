@@ -1,31 +1,171 @@
 [
   {
+    "id": "4922260c-d712-48da-875f-03bd0d32ce12",
+    "name": "Archiv",
+    "lv": 3,
+    "lang": "de",
+    "genre": "culture"
+  },
+  {
+    "id": "e6a265ba-01fe-41f8-9066-321c5517a6c7",
+    "name": "Formant",
+    "lv": 5,
+    "lang": "de",
+    "genre": "culture"
+  },
+  {
     "id": "b34ab87c-3d96-40f9-bb25-98e1b76bf03e",
     "name": "Helldunkel",
     "lv": 5,
     "lang": "de",
-    "genre": "art"
+    "genre": "culture"
   },
   {
     "id": "0be3b7ec-3f1d-49e0-9aaa-7e4de9d76542",
     "name": "Komposition",
     "lv": 3,
     "lang": "de",
-    "genre": "art"
+    "genre": "culture"
+  },
+  {
+    "id": "4b992b46-a11a-430e-94e2-4a91113d40b2",
+    "name": "Kontrast",
+    "lv": 3,
+    "lang": "de",
+    "genre": "culture"
   },
   {
     "id": "d8497845-1465-41c8-a6cd-37b8841a7857",
     "name": "Perspektive",
     "lv": 3,
     "lang": "de",
-    "genre": "art"
+    "genre": "culture"
+  },
+  {
+    "id": "c6ab4d84-4447-4e9b-8d6f-966e654a4a15",
+    "name": "Prototyp",
+    "lv": 3,
+    "lang": "de",
+    "genre": "culture"
+  },
+  {
+    "id": "e8bde400-6a26-4861-8964-2b27eb8208a5",
+    "name": "Resonanz",
+    "lv": 4,
+    "lang": "de",
+    "genre": "culture"
+  },
+  {
+    "id": "c78cd554-0e61-4690-a62e-1cf4c73a2d11",
+    "name": "Rhythmus",
+    "lv": 2,
+    "lang": "de",
+    "genre": "culture"
+  },
+  {
+    "id": "515b26f1-4910-4280-9c9d-9b25db03d9a4",
+    "name": "Schnittstelle",
+    "lv": 3,
+    "lang": "de",
+    "genre": "culture"
   },
   {
     "id": "73c3bb60-1679-4ad9-901f-0bebe5484a81",
     "name": "Textur",
     "lv": 3,
     "lang": "de",
-    "genre": "art"
+    "genre": "culture"
+  },
+  {
+    "id": "1dab42fe-6716-414d-8e43-e3498181e0c8",
+    "name": "Bewusstsein",
+    "lv": 4,
+    "lang": "de",
+    "genre": "mind"
+  },
+  {
+    "id": "89f6e591-8015-480d-8570-6049a61481f2",
+    "name": "Erinnerung",
+    "lv": 2,
+    "lang": "de",
+    "genre": "mind"
+  },
+  {
+    "id": "8276d4be-676e-46a3-a37e-c04e57cd562d",
+    "name": "Mehrdeutigkeit",
+    "lv": 4,
+    "lang": "de",
+    "genre": "mind"
+  },
+  {
+    "id": "29b0f1f6-868a-49d5-808e-2d509bf1b884",
+    "name": "Serendipität",
+    "lv": 5,
+    "lang": "de",
+    "genre": "mind"
+  },
+  {
+    "id": "1b49c26c-15a9-4da5-9071-23e982ab8a4c",
+    "name": "Stille",
+    "lv": 2,
+    "lang": "de",
+    "genre": "mind"
+  },
+  {
+    "id": "5a3db818-9440-43fd-844f-e574be61f7af",
+    "name": "vergänglich",
+    "lv": 4,
+    "lang": "de",
+    "genre": "mind"
+  },
+  {
+    "id": "abcb6f65-e0a5-4858-922e-7e32524ae647",
+    "name": "Wahrnehmung",
+    "lv": 3,
+    "lang": "de",
+    "genre": "mind"
+  },
+  {
+    "id": "f3a3b882-e86e-4d04-b6dd-55400c6a93e7",
+    "name": "Artefakt",
+    "lv": 4,
+    "lang": "de",
+    "genre": "society"
+  },
+  {
+    "id": "ffd55122-0da2-467c-9283-d3de8ec62977",
+    "name": "Freund",
+    "lv": 1,
+    "lang": "de",
+    "genre": "society"
+  },
+  {
+    "id": "5da2e457-76f7-4b8e-b681-3db698f3a8d1",
+    "name": "Frist",
+    "lv": 2,
+    "lang": "de",
+    "genre": "society"
+  },
+  {
+    "id": "a44a0275-e5dc-4386-b4b8-e6336ab5a85c",
+    "name": "Konsens",
+    "lv": 4,
+    "lang": "de",
+    "genre": "society"
+  },
+  {
+    "id": "e69d1204-5a1b-403d-9e77-ee1b3a6f216c",
+    "name": "Wartung",
+    "lv": 3,
+    "lang": "de",
+    "genre": "society"
+  },
+  {
+    "id": "f2edb604-d8ff-43d0-a870-993e8b0ff83b",
+    "name": "Zivilisation",
+    "lv": 3,
+    "lang": "de",
+    "genre": "society"
   },
   {
     "id": "12f540f5-3212-44b8-ae95-e8e30034f275",
@@ -47,167 +187,6 @@
     "lv": 4,
     "lang": "de",
     "genre": "body"
-  },
-  {
-    "id": "3d77af30-a176-47de-94d1-a41291120560",
-    "name": "Infrastruktur",
-    "lv": 4,
-    "lang": "de",
-    "genre": "city"
-  },
-  {
-    "id": "3cd89320-8b46-400b-b605-163eadd1c6ca",
-    "name": "Metropole",
-    "lv": 4,
-    "lang": "de",
-    "genre": "city"
-  },
-  {
-    "id": "b0fd5b97-e115-4137-b978-646f926c05b0",
-    "name": "Straße",
-    "lv": 1,
-    "lang": "de",
-    "genre": "city"
-  },
-  {
-    "id": "0f9ebbed-f80a-49de-8f5b-531ba350112d",
-    "name": "Fenster",
-    "lv": 1,
-    "lang": "de",
-    "genre": "daily"
-  },
-  {
-    "id": "2bb26b8a-f079-4af8-aeea-6934a4d56618",
-    "name": "Wasser",
-    "lv": 1,
-    "lang": "de",
-    "genre": "daily"
-  },
-  {
-    "id": "4b992b46-a11a-430e-94e2-4a91113d40b2",
-    "name": "Kontrast",
-    "lv": 3,
-    "lang": "de",
-    "genre": "design"
-  },
-  {
-    "id": "c6ab4d84-4447-4e9b-8d6f-966e654a4a15",
-    "name": "Prototyp",
-    "lv": 3,
-    "lang": "de",
-    "genre": "design"
-  },
-  {
-    "id": "515b26f1-4910-4280-9c9d-9b25db03d9a4",
-    "name": "Schnittstelle",
-    "lv": 3,
-    "lang": "de",
-    "genre": "design"
-  },
-  {
-    "id": "1b49c26c-15a9-4da5-9071-23e982ab8a4c",
-    "name": "Stille",
-    "lv": 2,
-    "lang": "de",
-    "genre": "emotion"
-  },
-  {
-    "id": "1592be50-82c5-4965-ba2b-d176caa383ec",
-    "name": "Fermentation",
-    "lv": 4,
-    "lang": "de",
-    "genre": "food"
-  },
-  {
-    "id": "f033f89d-63c8-4440-8cba-797132549aa4",
-    "name": "Nährstoff",
-    "lv": 3,
-    "lang": "de",
-    "genre": "food"
-  },
-  {
-    "id": "41889e24-57b5-44a5-b630-001895daee2b",
-    "name": "Rezept",
-    "lv": 2,
-    "lang": "de",
-    "genre": "food"
-  },
-  {
-    "id": "f3a3b882-e86e-4d04-b6dd-55400c6a93e7",
-    "name": "Artefakt",
-    "lv": 4,
-    "lang": "de",
-    "genre": "history"
-  },
-  {
-    "id": "f2edb604-d8ff-43d0-a870-993e8b0ff83b",
-    "name": "Zivilisation",
-    "lv": 3,
-    "lang": "de",
-    "genre": "history"
-  },
-  {
-    "id": "e6a265ba-01fe-41f8-9066-321c5517a6c7",
-    "name": "Formant",
-    "lv": 5,
-    "lang": "de",
-    "genre": "music"
-  },
-  {
-    "id": "e8bde400-6a26-4861-8964-2b27eb8208a5",
-    "name": "Resonanz",
-    "lv": 4,
-    "lang": "de",
-    "genre": "music"
-  },
-  {
-    "id": "c78cd554-0e61-4690-a62e-1cf4c73a2d11",
-    "name": "Rhythmus",
-    "lv": 2,
-    "lang": "de",
-    "genre": "music"
-  },
-  {
-    "id": "1dab42fe-6716-414d-8e43-e3498181e0c8",
-    "name": "Bewusstsein",
-    "lv": 4,
-    "lang": "de",
-    "genre": "philosophy"
-  },
-  {
-    "id": "89f6e591-8015-480d-8570-6049a61481f2",
-    "name": "Erinnerung",
-    "lv": 2,
-    "lang": "de",
-    "genre": "philosophy"
-  },
-  {
-    "id": "8276d4be-676e-46a3-a37e-c04e57cd562d",
-    "name": "Mehrdeutigkeit",
-    "lv": 4,
-    "lang": "de",
-    "genre": "philosophy"
-  },
-  {
-    "id": "29b0f1f6-868a-49d5-808e-2d509bf1b884",
-    "name": "Serendipität",
-    "lv": 5,
-    "lang": "de",
-    "genre": "philosophy"
-  },
-  {
-    "id": "5a3db818-9440-43fd-844f-e574be61f7af",
-    "name": "vergänglich",
-    "lv": 4,
-    "lang": "de",
-    "genre": "philosophy"
-  },
-  {
-    "id": "abcb6f65-e0a5-4858-922e-7e32524ae647",
-    "name": "Wahrnehmung",
-    "lv": 3,
-    "lang": "de",
-    "genre": "philosophy"
   },
   {
     "id": "68b925ef-cc32-4df1-abff-008fe87ceb5b",
@@ -245,53 +224,116 @@
     "genre": "science"
   },
   {
-    "id": "ffd55122-0da2-467c-9283-d3de8ec62977",
-    "name": "Freund",
-    "lv": 1,
-    "lang": "de",
-    "genre": "society"
-  },
-  {
-    "id": "2d508f92-0a12-44fa-9170-0ce0d4c4f984",
-    "name": "Grenze",
-    "lv": 3,
-    "lang": "de",
-    "genre": "space"
-  },
-  {
-    "id": "24d62143-c5f6-40f7-910a-97b9a180a81b",
-    "name": "Vorlesung",
-    "lv": 2,
-    "lang": "de",
-    "genre": "study"
-  },
-  {
     "id": "93c88d05-1b4d-4895-8a7e-c8a6bad3e57f",
     "name": "Algorithmus",
     "lv": 3,
     "lang": "de",
-    "genre": "tech"
+    "genre": "technology"
   },
   {
     "id": "a72f558f-42ba-4a95-a1e7-59c02446e512",
     "name": "Datensatz",
     "lv": 3,
     "lang": "de",
-    "genre": "tech"
+    "genre": "technology"
   },
   {
     "id": "88a3142d-0780-4c63-8e12-d3b0ed071526",
     "name": "Sensor",
     "lv": 3,
     "lang": "de",
-    "genre": "tech"
+    "genre": "technology"
   },
   {
     "id": "ad9430ae-4923-4151-845f-525dc231c017",
     "name": "Signal",
     "lv": 2,
     "lang": "de",
-    "genre": "tech"
+    "genre": "technology"
+  },
+  {
+    "id": "0f9ebbed-f80a-49de-8f5b-531ba350112d",
+    "name": "Fenster",
+    "lv": 1,
+    "lang": "de",
+    "genre": "living"
+  },
+  {
+    "id": "1592be50-82c5-4965-ba2b-d176caa383ec",
+    "name": "Fermentation",
+    "lv": 4,
+    "lang": "de",
+    "genre": "living"
+  },
+  {
+    "id": "f033f89d-63c8-4440-8cba-797132549aa4",
+    "name": "Nährstoff",
+    "lv": 3,
+    "lang": "de",
+    "genre": "living"
+  },
+  {
+    "id": "41889e24-57b5-44a5-b630-001895daee2b",
+    "name": "Rezept",
+    "lv": 2,
+    "lang": "de",
+    "genre": "living"
+  },
+  {
+    "id": "2bb26b8a-f079-4af8-aeea-6934a4d56618",
+    "name": "Wasser",
+    "lv": 1,
+    "lang": "de",
+    "genre": "living"
+  },
+  {
+    "id": "2d508f92-0a12-44fa-9170-0ce0d4c4f984",
+    "name": "Grenze",
+    "lv": 3,
+    "lang": "de",
+    "genre": "place"
+  },
+  {
+    "id": "3d77af30-a176-47de-94d1-a41291120560",
+    "name": "Infrastruktur",
+    "lv": 4,
+    "lang": "de",
+    "genre": "place"
+  },
+  {
+    "id": "3cd89320-8b46-400b-b605-163eadd1c6ca",
+    "name": "Metropole",
+    "lv": 4,
+    "lang": "de",
+    "genre": "place"
+  },
+  {
+    "id": "477198b8-80be-4e2f-87fb-b6a8ae05be91",
+    "name": "Reise",
+    "lv": 2,
+    "lang": "de",
+    "genre": "place"
+  },
+  {
+    "id": "13dca03e-8822-4eb7-bdfc-9b8c71be7bf5",
+    "name": "Reiseplan",
+    "lv": 4,
+    "lang": "de",
+    "genre": "place"
+  },
+  {
+    "id": "b0fd5b97-e115-4137-b978-646f926c05b0",
+    "name": "Straße",
+    "lv": 1,
+    "lang": "de",
+    "genre": "place"
+  },
+  {
+    "id": "1dc6f9b4-6243-478f-8fad-d0743f92441c",
+    "name": "Währung",
+    "lv": 3,
+    "lang": "de",
+    "genre": "place"
   },
   {
     "id": "20dce54b-c222-4225-b767-eb4af2d25687",
@@ -301,52 +343,10 @@
     "genre": "time"
   },
   {
-    "id": "477198b8-80be-4e2f-87fb-b6a8ae05be91",
-    "name": "Reise",
+    "id": "24d62143-c5f6-40f7-910a-97b9a180a81b",
+    "name": "Vorlesung",
     "lv": 2,
     "lang": "de",
-    "genre": "travel"
-  },
-  {
-    "id": "13dca03e-8822-4eb7-bdfc-9b8c71be7bf5",
-    "name": "Reiseplan",
-    "lv": 4,
-    "lang": "de",
-    "genre": "travel"
-  },
-  {
-    "id": "1dc6f9b4-6243-478f-8fad-d0743f92441c",
-    "name": "Währung",
-    "lv": 3,
-    "lang": "de",
-    "genre": "travel"
-  },
-  {
-    "id": "5da2e457-76f7-4b8e-b681-3db698f3a8d1",
-    "name": "Frist",
-    "lv": 2,
-    "lang": "de",
-    "genre": "work"
-  },
-  {
-    "id": "a44a0275-e5dc-4386-b4b8-e6336ab5a85c",
-    "name": "Konsens",
-    "lv": 4,
-    "lang": "de",
-    "genre": "work"
-  },
-  {
-    "id": "e69d1204-5a1b-403d-9e77-ee1b3a6f216c",
-    "name": "Wartung",
-    "lv": 3,
-    "lang": "de",
-    "genre": "work"
-  },
-  {
-    "id": "4922260c-d712-48da-875f-03bd0d32ce12",
-    "name": "Archiv",
-    "lv": 3,
-    "lang": "de",
-    "genre": "media"
+    "genre": "learning"
   }
 ]

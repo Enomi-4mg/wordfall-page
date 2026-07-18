@@ -1,12 +1,64 @@
 [
   {
+    "id": "24f922ab-156d-4fa8-bd1a-cd090da542fd",
+    "name": "イリヤ",
+    "lv": 3,
+    "lang": "ja",
+    "genre": "culture"
+  },
+  {
+    "id": "e8f0cada-a77f-4225-b92d-3dcbdbe67e6b",
+    "name": "インタラクションデザイン",
+    "lv": 3,
+    "lang": "ja",
+    "genre": "culture"
+  },
+  {
+    "id": "e31bcd82-7bc0-4cc8-91a2-e24f7aa39ff9",
+    "name": "オイディプス王",
+    "lv": 3,
+    "lang": "ja",
+    "genre": "culture"
+  },
+  {
+    "id": "2ee9fce2-ff70-4fcd-a73a-b84510547d29",
+    "name": "ガストロノミー",
+    "reading": "がすとろのみー",
+    "lv": 4,
+    "lang": "ja",
+    "genre": "culture"
+  },
+  {
     "id": "8e673b6b-a682-44b7-92ca-2fb66339c674",
     "name": "チェーホフの銃",
     "reading": "ちぇーほふのじゅう",
     "desc": "ロシアの劇作家アントン・チェーホフの言葉に由来する、物語創作上の原則。\n主に、物語の中で重要そうに提示した要素には後の展開で何らかの役割を与え、使用しない要素は不必要に目立たせるべきではない、という考えを表す。ただし、何を「提示」「使用」とみなすかには幅があり、絶対的な規則ではない。\nこの言葉は、チェーホフが他の作家の戯曲について助言した際、観客に期待を抱かせながら後の内容と結び付かないモノローグを批判し、「撃つ予定のない装填済みの銃を舞台に置いてはならない」という趣旨を述べたことに由来する。したがって、もともとは戯曲の構成についての比喩であり、あらゆる物語の細部に適用される普遍的な法則として提示されたものではない。\n後に「第一幕で壁に銃を掛けたなら、最終幕で発砲させなければならない」という形で広まり、小説、映画、漫画などにも適用されるようになった。\n伏線として扱われる場合もあるが、伏線が後の展開を予告・暗示する手法であるのに対し、チェーホフの銃は提示した要素を無駄にしないという構成上の考え方であり、両者は同じではない。",
     "lv": 3,
     "lang": "ja",
-    "genre": "art"
+    "genre": "culture"
+  },
+  {
+    "id": "16acfd6d-65b6-44dd-a35d-5403576ae26d",
+    "name": "フレデリカ・ローゼンフォルト",
+    "lv": 4,
+    "lang": "ja",
+    "genre": "culture"
+  },
+  {
+    "id": "e9981cf3-8c76-4b08-821e-d7cd5cf0f946",
+    "name": "ホメロス",
+    "lv": 3,
+    "lang": "ja",
+    "genre": "culture"
+  },
+  {
+    "id": "2312b2af-ec4a-4423-a47e-a3d896bf5f8a",
+    "name": "マクガフィン",
+    "reading": "まくがふぃん",
+    "desc": "小説や映画などの物語において登場人物の目的や争いの対象として話を前に進める役割を持ったアイテムや人物を指す概念。登場人物にとっては重要な意味を持つ一方で、それ自体は作品の主題や観客にとって必ずしも重要ではない。\n脚本家アンガス・マクファイルが考案し、映画監督アルフレッド・ヒッチコックが広めたとされる。\n典型例として、スパイ映画における極秘文書や、犯罪映画における宝石などが挙げられる。",
+    "lv": 3,
+    "lang": "ja",
+    "genre": "culture"
   },
   {
     "id": "912e2ead-0283-4685-a7c9-10301f369d74",
@@ -14,7 +66,30 @@
     "reading": "いんえい",
     "lv": 2,
     "lang": "ja",
-    "genre": "art"
+    "genre": "culture"
+  },
+  {
+    "id": "c531dce4-b80e-4048-a9fa-c7b49ace6b8e",
+    "name": "音",
+    "reading": "おと",
+    "lv": 1,
+    "lang": "ja",
+    "genre": "culture"
+  },
+  {
+    "id": "beec8ff7-1e44-4b59-bf4a-2dd4282582e1",
+    "name": "可読性",
+    "reading": "かどくせい",
+    "lv": 2,
+    "lang": "ja",
+    "genre": "culture"
+  },
+  {
+    "id": "ad317152-1b73-4863-8170-df6a8f2e43af",
+    "name": "花鳥風月",
+    "lv": 3,
+    "lang": "ja",
+    "genre": "culture"
   },
   {
     "id": "8c060046-deb2-4190-9cb4-a851dad56dd1",
@@ -22,7 +97,29 @@
     "reading": "かいが",
     "lv": 1,
     "lang": "ja",
-    "genre": "art"
+    "genre": "culture"
+  },
+  {
+    "id": "75ed5e1e-8975-47cb-b4dc-bdb8a2f21d43",
+    "name": "勧善懲悪",
+    "lv": 3,
+    "lang": "ja",
+    "genre": "culture"
+  },
+  {
+    "id": "cc6f70d3-fced-4016-8ee2-07d572cecd75",
+    "name": "健啖家",
+    "reading": "けんたんか",
+    "lv": 4,
+    "lang": "ja",
+    "genre": "culture"
+  },
+  {
+    "id": "2ed77ed5-6409-4f6c-a7b9-db7492c91223",
+    "name": "後光",
+    "lv": 2,
+    "lang": "ja",
+    "genre": "culture"
   },
   {
     "id": "126d31e1-03f4-42c8-abe5-491f44d893ef",
@@ -30,7 +127,7 @@
     "reading": "こうず",
     "lv": 1,
     "lang": "ja",
-    "genre": "art"
+    "genre": "culture"
   },
   {
     "id": "b10b8782-b94c-4790-995a-e845300c2f4e",
@@ -39,313 +136,7 @@
     "desc": "光・放射線・粒子線などの性質を利用して、対象の像や構造を二次元上に静的に記録した画像、またはその技術。一般には、カメラで撮影された静止画像を指す。\n日本語では古くから「ありのままに写し取ること」を意味し、写生や写実的に描かれた絵画を指す語としても用いられていた。江戸時代末期から明治期にかけて西洋の写真術が伝来すると、photograph の訳語として定着した。\n写真技術は、1820年代のジョゼフ・ニセフォール・ニエプスによるヘリオグラフィーを重要な端緒とし、1839年のダゲレオタイプ公表などを経て発展した。以後、文化・風俗・歴史の記録だけでなく、報道、科学観察、芸術表現、日常的な記念や共有の手段として、情報を画像として保存・伝達する重要な役割を担っている。",
     "lv": 1,
     "lang": "ja",
-    "genre": "art"
-  },
-  {
-    "id": "0823d883-e6c1-4b47-b08c-75af2cfb299c",
-    "name": "彫刻",
-    "reading": "ちょうこく",
-    "lv": 1,
-    "lang": "ja",
-    "genre": "art"
-  },
-  {
-    "id": "9ba619c5-891a-4242-8007-a8ee634e183f",
-    "name": "肩",
-    "reading": "かた",
-    "lv": 2,
-    "lang": "ja",
-    "genre": "body"
-  },
-  {
-    "id": "e7d58d97-4bdc-4f65-b780-4bfffa9aff62",
-    "name": "口",
-    "reading": "くち",
-    "lv": 1,
-    "lang": "ja",
-    "genre": "body"
-  },
-  {
-    "id": "58306f4e-443a-455b-9eaa-64492a5ec1c0",
-    "name": "耳",
-    "reading": "みみ",
-    "lv": 1,
-    "lang": "ja",
-    "genre": "body"
-  },
-  {
-    "id": "73ad879c-9496-4974-a27c-68b3f5c3be5c",
-    "name": "頭",
-    "reading": "あたま",
-    "lv": 1,
-    "lang": "ja",
-    "genre": "body"
-  },
-  {
-    "id": "c4df8243-a908-4c92-a0ae-f30c7a114fb9",
-    "name": "鼻",
-    "reading": "はな",
-    "lv": 1,
-    "lang": "ja",
-    "genre": "body"
-  },
-  {
-    "id": "3a24098f-5014-4244-95dc-e73019304968",
-    "name": "目",
-    "reading": "め",
-    "lv": 1,
-    "lang": "ja",
-    "genre": "body"
-  },
-  {
-    "id": "335a51bb-a880-4c4a-98f8-b9e7ac76c794",
-    "name": "駅前",
-    "reading": "えきまえ",
-    "lv": 2,
-    "lang": "ja",
-    "genre": "city"
-  },
-  {
-    "id": "852396a7-6226-44a8-8eb5-14f7b17c0af2",
-    "name": "橋",
-    "reading": "はし",
-    "lv": 1,
-    "lang": "ja",
-    "genre": "city"
-  },
-  {
-    "id": "acaaa45f-50d2-45a9-b8d9-0e665e164b8e",
-    "name": "交差点",
-    "reading": "こうさてん",
-    "lv": 1,
-    "lang": "ja",
-    "genre": "city"
-  },
-  {
-    "id": "b9da69b5-a246-4c18-8d8e-b828b3209321",
-    "name": "信号機",
-    "reading": "しんごうき",
-    "lv": 1,
-    "lang": "ja",
-    "genre": "city"
-  },
-  {
-    "id": "d90f39cf-0670-4cca-9c25-681c6af82353",
-    "name": "道路",
-    "reading": "どうろ",
-    "lv": 1,
-    "lang": "ja",
-    "genre": "city"
-  },
-  {
-    "id": "a67a7d30-9baf-4479-850e-bdc7ee3a4a5c",
-    "name": "歩道",
-    "reading": "ほどう",
-    "lv": 1,
-    "lang": "ja",
-    "genre": "city"
-  },
-  {
-    "id": "e552e93c-a67b-47a1-bc84-f2b9f9de9645",
-    "name": "椅子",
-    "reading": "いす",
-    "lv": 2,
-    "lang": "ja",
-    "genre": "daily"
-  },
-  {
-    "id": "a25618a0-180b-42cb-980e-92df1af586ab",
-    "name": "昼",
-    "reading": "ひる",
-    "lv": 1,
-    "lang": "ja",
-    "genre": "daily"
-  },
-  {
-    "id": "394c5c8a-21ab-4a17-b976-ef2344123abb",
-    "name": "朝",
-    "reading": "あさ",
-    "lv": 1,
-    "lang": "ja",
-    "genre": "daily"
-  },
-  {
-    "id": "8f5b0944-9fb6-4981-a0c8-e65c1901b37b",
-    "name": "部屋",
-    "reading": "へや",
-    "lv": 1,
-    "lang": "ja",
-    "genre": "daily"
-  },
-  {
-    "id": "41102d54-4b22-4a4c-95fc-3b1b83407ae7",
-    "name": "夜",
-    "reading": "よる",
-    "lv": 1,
-    "lang": "ja",
-    "genre": "daily"
-  },
-  {
-    "id": "beec8ff7-1e44-4b59-bf4a-2dd4282582e1",
-    "name": "可読性",
-    "reading": "かどくせい",
-    "lv": 2,
-    "lang": "ja",
-    "genre": "design"
-  },
-  {
-    "id": "3b61b359-6b13-40e2-bd19-fb5f72cf2831",
-    "name": "線",
-    "reading": "せん",
-    "lv": 1,
-    "lang": "ja",
-    "genre": "design"
-  },
-  {
-    "id": "b25f460a-1129-42b2-9079-331f54f41da3",
-    "name": "配置",
-    "reading": "はいち",
-    "lv": 1,
-    "lang": "ja",
-    "genre": "design"
-  },
-  {
-    "id": "70ee9534-6ecb-41ca-a9c8-11274b886ccd",
-    "name": "面",
-    "reading": "めん",
-    "lv": 1,
-    "lang": "ja",
-    "genre": "design"
-  },
-  {
-    "id": "8ad70687-0953-44db-acc4-ce87c4831202",
-    "name": "余白",
-    "reading": "よはく",
-    "lv": 1,
-    "lang": "ja",
-    "genre": "design"
-  },
-  {
-    "id": "83dadbb5-d53a-46fd-8e69-778e9ecb6dea",
-    "name": "パセティック",
-    "reading": "ぱせてぃっく",
-    "desc": "pathetic\n「哀れな」「痛ましい」「悲愴な」「情けない」などの意味を持つ形容詞。\nもともとは「哀れみや悲しみを誘う」という意味を持ち、文芸・音楽などでは「悲愴な」「哀切な」といった意味で使われる。一方、現代英語では「みじめな」「情けない」「見るに堪えない」といった、軽蔑や侮蔑を含む意味で使われることも多い。\n日本語では「パセティックなドラマ」、「パセティックな夢」のように形容動詞的に用いられることもある。",
-    "lv": 3,
-    "lang": "ja",
-    "genre": "emotion"
-  },
-  {
-    "id": "79a5982b-f4d5-4fe1-bb3f-d510d3e6daf6",
-    "name": "愛及屋烏",
-    "reading": "あいきゅうおくう",
-    "desc": "溺愛することのたとえ。\n人を愛するあまり、その人の家の屋根にいる鳥まで愛しく思うこと。\n『説苑』「貴徳」に拠る。",
-    "lv": 3,
-    "lang": "ja",
-    "genre": "emotion"
-  },
-  {
-    "id": "eafc6230-6b57-4a1a-a115-c0a19b8bc6e5",
-    "name": "喜び",
-    "reading": "よろこび",
-    "lv": 1,
-    "lang": "ja",
-    "genre": "emotion"
-  },
-  {
-    "id": "2157e5c2-1947-46ab-8cdf-ef0d4835e843",
-    "name": "怒り",
-    "reading": "いかり",
-    "lv": 1,
-    "lang": "ja",
-    "genre": "emotion"
-  },
-  {
-    "id": "6d7ed5b9-c6c9-401f-8534-e975e9d71b3c",
-    "name": "悲しみ",
-    "reading": "かなしみ",
-    "lv": 1,
-    "lang": "ja",
-    "genre": "emotion"
-  },
-  {
-    "id": "f8cb0e50-89e5-4583-9748-7e43da96d8c0",
-    "name": "不安",
-    "reading": "ふあん",
-    "lv": 1,
-    "lang": "ja",
-    "genre": "emotion"
-  },
-  {
-    "id": "0b7acdc9-4e98-4093-b69d-8ec71944ed53",
-    "name": "塩",
-    "reading": "しお",
-    "lv": 1,
-    "lang": "ja",
-    "genre": "food"
-  },
-  {
-    "id": "fb185d78-ff27-40f0-a698-1c205bd3b6db",
-    "name": "出汁",
-    "reading": "だし",
-    "lv": 1,
-    "lang": "ja",
-    "genre": "food"
-  },
-  {
-    "id": "87f9dcb1-9801-4264-8c3d-510b2e5fd778",
-    "name": "醤油",
-    "reading": "しょうゆ",
-    "lv": 1,
-    "lang": "ja",
-    "genre": "food"
-  },
-  {
-    "id": "40fc83f2-2387-4871-bb39-0946b7c4cbda",
-    "name": "米",
-    "reading": "こめ",
-    "lv": 1,
-    "lang": "ja",
-    "genre": "food"
-  },
-  {
-    "id": "01836dc2-07a3-43f9-9fbe-c49e1fa39604",
-    "name": "味噌",
-    "reading": "みそ",
-    "lv": 1,
-    "lang": "ja",
-    "genre": "food"
-  },
-  {
-    "id": "29857cbb-5d16-4f71-ad05-83d5f1ebd9ec",
-    "name": "神話",
-    "reading": "しんわ",
-    "lv": 1,
-    "lang": "ja",
-    "genre": "history"
-  },
-  {
-    "id": "3da5a1df-e65b-4dca-9cb6-4cd85fc5efa3",
-    "name": "都市国家",
-    "reading": "としこっか",
-    "lv": 1,
-    "lang": "ja",
-    "genre": "history"
-  },
-  {
-    "id": "e5d4fdc7-3f23-44c6-9a26-3b710eb0aa38",
-    "name": "文明",
-    "reading": "ぶんめい",
-    "lv": 1,
-    "lang": "ja",
-    "genre": "history"
-  },
-  {
-    "id": "c531dce4-b80e-4048-a9fa-c7b49ace6b8e",
-    "name": "音",
-    "reading": "おと",
-    "lv": 1,
-    "lang": "ja",
-    "genre": "music"
+    "genre": "culture"
   },
   {
     "id": "ac271b5a-e207-4e40-9a95-4a284e3c674e",
@@ -353,7 +144,7 @@
     "reading": "こえ",
     "lv": 1,
     "lang": "ja",
-    "genre": "music"
+    "genre": "culture"
   },
   {
     "id": "9cfc2704-8a00-41fe-a2df-9352a1b63e3e",
@@ -361,7 +152,31 @@
     "reading": "せんりつ",
     "lv": 1,
     "lang": "ja",
-    "genre": "music"
+    "genre": "culture"
+  },
+  {
+    "id": "3b61b359-6b13-40e2-bd19-fb5f72cf2831",
+    "name": "線",
+    "reading": "せん",
+    "lv": 1,
+    "lang": "ja",
+    "genre": "culture"
+  },
+  {
+    "id": "0823d883-e6c1-4b47-b08c-75af2cfb299c",
+    "name": "彫刻",
+    "reading": "ちょうこく",
+    "lv": 1,
+    "lang": "ja",
+    "genre": "culture"
+  },
+  {
+    "id": "b25f460a-1129-42b2-9079-331f54f41da3",
+    "name": "配置",
+    "reading": "はいち",
+    "lv": 1,
+    "lang": "ja",
+    "genre": "culture"
   },
   {
     "id": "1c462510-ed6d-4d1b-8ed7-f7837b08e7a0",
@@ -369,7 +184,31 @@
     "reading": "ひょうし",
     "lv": 1,
     "lang": "ja",
-    "genre": "music"
+    "genre": "culture"
+  },
+  {
+    "id": "383633dc-96ed-4c57-9b61-7fd56f3774bc",
+    "name": "法服",
+    "reading": "ほうふく",
+    "lv": 3,
+    "lang": "ja",
+    "genre": "culture"
+  },
+  {
+    "id": "70ee9534-6ecb-41ca-a9c8-11274b886ccd",
+    "name": "面",
+    "reading": "めん",
+    "lv": 1,
+    "lang": "ja",
+    "genre": "culture"
+  },
+  {
+    "id": "8ad70687-0953-44db-acc4-ce87c4831202",
+    "name": "余白",
+    "reading": "よはく",
+    "lv": 1,
+    "lang": "ja",
+    "genre": "culture"
   },
   {
     "id": "7ce7a537-91e0-4350-bcc2-373047fad773",
@@ -377,47 +216,133 @@
     "reading": "わおん",
     "lv": 1,
     "lang": "ja",
-    "genre": "music"
+    "genre": "culture"
   },
   {
-    "id": "f05d3820-0f07-4c1c-8ebf-0cff879cd758",
-    "name": "雨",
-    "reading": "あめ",
-    "lv": 1,
+    "id": "244dfc41-50ea-4332-b4c4-a328dabd7c8f",
+    "name": "魑魅魍魎",
+    "reading": "ちみもうりょう",
+    "desc": "種々の化け物、妖怪変化などを指す総称。\n魑魅は山林、魍魎は山川・木石に関する神・怪物に由来する。\n古くは古代中国の『春秋左氏伝』に見られる。\n螭魅罔兩とも書く。",
+    "lv": 3,
     "lang": "ja",
-    "genre": "nature"
+    "genre": "culture"
   },
   {
-    "id": "5112aca3-0403-43c1-9be5-03135ede871f",
-    "name": "雲",
-    "reading": "くも",
-    "lv": 1,
+    "id": "31fd415f-db72-48de-9d35-28b5e268136e",
+    "name": "シグニファイヤ",
+    "lv": 4,
     "lang": "ja",
-    "genre": "nature"
+    "genre": "language"
   },
   {
-    "id": "1e83886a-c3fe-4fad-8289-7b49ca113b1d",
-    "name": "海",
-    "reading": "うみ",
-    "lv": 1,
+    "id": "02673e5b-6361-4f77-8a1a-a161b2970f59",
+    "name": "逆撫",
+    "lv": 4,
     "lang": "ja",
-    "genre": "nature"
+    "genre": "language"
   },
   {
-    "id": "8be33aea-c10d-45a6-b6ff-5758727c4f02",
-    "name": "空",
-    "reading": "そら",
-    "lv": 1,
+    "id": "b04e24c5-d662-4b85-ab5a-1583e6642424",
+    "name": "鶏鳴狗盗",
+    "lv": 5,
     "lang": "ja",
-    "genre": "nature"
+    "genre": "language"
   },
   {
-    "id": "ba770cc4-3dc6-49c3-9979-b1803355b4af",
-    "name": "風",
-    "reading": "かぜ",
+    "id": "e8e72c52-b9cb-4569-9ba6-ee97c00f5460",
+    "name": "左見右見",
+    "lv": 4,
+    "lang": "ja",
+    "genre": "language"
+  },
+  {
+    "id": "a87e4103-7007-4708-ba11-8116aafe0b02",
+    "name": "辞典",
+    "reading": "じてん",
     "lv": 1,
     "lang": "ja",
-    "genre": "nature"
+    "genre": "language"
+  },
+  {
+    "id": "3caccc13-1faf-424f-befa-1841a1c095cb",
+    "name": "八面六臂",
+    "lv": 3,
+    "lang": "ja",
+    "genre": "language"
+  },
+  {
+    "id": "9106b95d-7b9f-4332-bf21-b9b633769a74",
+    "name": "百花繚乱",
+    "lv": 3,
+    "lang": "ja",
+    "genre": "language"
+  },
+  {
+    "id": "aa48ed6b-a97e-47ed-8bb6-88947de13330",
+    "name": "不承不承",
+    "lv": 4,
+    "lang": "ja",
+    "genre": "language"
+  },
+  {
+    "id": "2e1c5abb-9894-4dff-8d47-d076d57e04f7",
+    "name": "幽栖",
+    "lv": 5,
+    "lang": "ja",
+    "genre": "language"
+  },
+  {
+    "id": "8b75e205-192f-4f0f-b154-a650e3e3149a",
+    "name": "丿乀",
+    "lv": 5,
+    "lang": "ja",
+    "genre": "language"
+  },
+  {
+    "id": "4578f4de-6f3a-4156-b91b-18b28f9613d8",
+    "name": "呻吟",
+    "lv": 4,
+    "lang": "ja",
+    "genre": "language"
+  },
+  {
+    "id": "7a7780ab-343e-4a07-b894-4198cd887b70",
+    "name": "夭逝",
+    "reading": "ようせい",
+    "desc": "若くして亡くなること\n＝夭折（ようせつ）",
+    "lv": 4,
+    "lang": "ja",
+    "genre": "language"
+  },
+  {
+    "id": "10d4ab22-ec03-4867-87da-50f9af8a9c33",
+    "name": "歿",
+    "reading": "ぼつ",
+    "lv": 5,
+    "lang": "ja",
+    "genre": "language"
+  },
+  {
+    "id": "31ae9725-ff10-4f3b-ae54-6acf53ef5506",
+    "name": "衒学",
+    "lv": 4,
+    "lang": "ja",
+    "genre": "language"
+  },
+  {
+    "id": "eb944f6b-8b16-436c-84e1-f38f1ca9282b",
+    "name": "4E認知",
+    "lv": 5,
+    "lang": "ja",
+    "genre": "mind"
+  },
+  {
+    "id": "433d88c4-f6b9-46dc-b905-540e8ab3ee58",
+    "name": "ア・プリオリ",
+    "reading": "あぷりおり",
+    "lv": 4,
+    "lang": "ja",
+    "genre": "mind"
   },
   {
     "id": "84b66066-6b0a-49e6-963a-4fd6eadb6832",
@@ -426,7 +351,21 @@
     "desc": "思考が行き詰まり解決の糸口が見えなくなった難問、またはその状態を表す言葉。\n古代ギリシア語の ἀπορία（aporía） に由来する。\n・a-：ない\n・poros：道、通路、手段",
     "lv": 4,
     "lang": "ja",
-    "genre": "philosophy"
+    "genre": "mind"
+  },
+  {
+    "id": "494a79cc-3af4-46c5-a806-b687e2aaacc4",
+    "name": "エディプスコンプレックス",
+    "lv": 4,
+    "lang": "ja",
+    "genre": "mind"
+  },
+  {
+    "id": "d69f3c0e-e39f-4a6c-ba22-ed5b513c03e0",
+    "name": "エナクティヴィズム",
+    "lv": 5,
+    "lang": "ja",
+    "genre": "mind"
   },
   {
     "id": "88a25413-df92-461f-bce6-6eadd97c3d37",
@@ -435,7 +374,54 @@
     "desc": "ある物事を説明する際には、必要以上に仮定を増やすべきではないとする考え方。\n単純な説明が常に正しいという意味ではなく、同じ程度に説明できるなら、余計な仮定を置かない説明を優先すべきであることを示す。\n14世紀の哲学者・神学者ウィリアム・オブ・オッカム（オッカム村のウィリアム）の思想に由来し、後に「オッカムの剃刀」と呼ばれるようになった。\n後世の科学的思考や仮説選択の態度にも影響を与えている。",
     "lv": 2,
     "lang": "ja",
-    "genre": "philosophy"
+    "genre": "mind"
+  },
+  {
+    "id": "e17c06b6-a769-4c68-964b-7303cd6bfc88",
+    "name": "コンコルド効果",
+    "reading": "こんこるどこうか",
+    "lv": 3,
+    "lang": "ja",
+    "genre": "mind"
+  },
+  {
+    "id": "5187f8e8-89b0-4461-88d1-42d00ae5c8f7",
+    "name": "シャーデンフロイデ",
+    "lv": 4,
+    "lang": "ja",
+    "genre": "mind"
+  },
+  {
+    "id": "5bea98ca-94b6-40d0-98a9-a3df17c787a8",
+    "name": "センス",
+    "lv": 2,
+    "lang": "ja",
+    "genre": "mind"
+  },
+  {
+    "id": "83dadbb5-d53a-46fd-8e69-778e9ecb6dea",
+    "name": "パセティック",
+    "reading": "ぱせてぃっく",
+    "desc": "pathetic\n「哀れな」「痛ましい」「悲愴な」「情けない」などの意味を持つ形容詞。\nもともとは「哀れみや悲しみを誘う」という意味を持ち、文芸・音楽などでは「悲愴な」「哀切な」といった意味で使われる。一方、現代英語では「みじめな」「情けない」「見るに堪えない」といった、軽蔑や侮蔑を含む意味で使われることも多い。\n日本語では「パセティックなドラマ」、「パセティックな夢」のように形容動詞的に用いられることもある。",
+    "lv": 3,
+    "lang": "ja",
+    "genre": "mind"
+  },
+  {
+    "id": "27be1f56-1ea6-427d-9a07-35bfe2ff04b5",
+    "name": "フロイト",
+    "lv": 3,
+    "lang": "ja",
+    "genre": "mind"
+  },
+  {
+    "id": "79a5982b-f4d5-4fe1-bb3f-d510d3e6daf6",
+    "name": "愛及屋烏",
+    "reading": "あいきゅうおくう",
+    "desc": "溺愛することのたとえ。\n人を愛するあまり、その人の家の屋根にいる鳥まで愛しく思うこと。\n『説苑』「貴徳」に拠る。",
+    "lv": 3,
+    "lang": "ja",
+    "genre": "mind"
   },
   {
     "id": "0ce969da-8996-4f08-b172-11d3395c1cf0",
@@ -443,7 +429,22 @@
     "reading": "いしき",
     "lv": 1,
     "lang": "ja",
-    "genre": "philosophy"
+    "genre": "mind"
+  },
+  {
+    "id": "0060ed6b-470e-45ff-9e9a-65028174c4c6",
+    "name": "厭世",
+    "lv": 4,
+    "lang": "ja",
+    "genre": "mind"
+  },
+  {
+    "id": "eafc6230-6b57-4a1a-a115-c0a19b8bc6e5",
+    "name": "喜び",
+    "reading": "よろこび",
+    "lv": 1,
+    "lang": "ja",
+    "genre": "mind"
   },
   {
     "id": "5297c084-6fa0-4fc9-8de7-66aba1b00145",
@@ -451,7 +452,28 @@
     "reading": "げんしょう",
     "lv": 1,
     "lang": "ja",
-    "genre": "philosophy"
+    "genre": "mind"
+  },
+  {
+    "id": "16aaef9a-a96a-4bcc-a58e-afc3b1b81543",
+    "name": "孤高",
+    "lv": 3,
+    "lang": "ja",
+    "genre": "mind"
+  },
+  {
+    "id": "d9a04546-8762-4935-83f5-4b2150b58d4c",
+    "name": "自律",
+    "lv": 2,
+    "lang": "ja",
+    "genre": "mind"
+  },
+  {
+    "id": "f7048b1f-eaf2-4910-a8e6-b52cc38a35ab",
+    "name": "身体性認知科学",
+    "lv": 5,
+    "lang": "ja",
+    "genre": "mind"
   },
   {
     "id": "e53c4ad8-e97a-4f65-b8d0-4ccb41072369",
@@ -459,7 +481,36 @@
     "reading": "そんざい",
     "lv": 1,
     "lang": "ja",
-    "genre": "philosophy"
+    "genre": "mind"
+  },
+  {
+    "id": "c1eededd-0c7a-4d11-9e12-3c05f4bd6480",
+    "name": "超越論的間主観性",
+    "lv": 5,
+    "lang": "ja",
+    "genre": "mind"
+  },
+  {
+    "id": "d724ae72-a442-4390-bcf0-ad13c5f48330",
+    "name": "超自我",
+    "lv": 4,
+    "lang": "ja",
+    "genre": "mind"
+  },
+  {
+    "id": "aebb8a7e-25e5-4475-ad22-b30bbfb9b51d",
+    "name": "直接知覚論",
+    "lv": 5,
+    "lang": "ja",
+    "genre": "mind"
+  },
+  {
+    "id": "2157e5c2-1947-46ab-8cdf-ef0d4835e843",
+    "name": "怒り",
+    "reading": "いかり",
+    "lv": 1,
+    "lang": "ja",
+    "genre": "mind"
   },
   {
     "id": "f5902d6d-8816-4367-a863-44aae0db18a5",
@@ -467,7 +518,30 @@
     "reading": "にんしき",
     "lv": 1,
     "lang": "ja",
-    "genre": "philosophy"
+    "genre": "mind"
+  },
+  {
+    "id": "6d7ed5b9-c6c9-401f-8534-e975e9d71b3c",
+    "name": "悲しみ",
+    "reading": "かなしみ",
+    "lv": 1,
+    "lang": "ja",
+    "genre": "mind"
+  },
+  {
+    "id": "45ed44b8-bdf9-4f55-8e16-6970bdfe15be",
+    "name": "表象",
+    "lv": 3,
+    "lang": "ja",
+    "genre": "mind"
+  },
+  {
+    "id": "f8cb0e50-89e5-4583-9748-7e43da96d8c0",
+    "name": "不安",
+    "reading": "ふあん",
+    "lv": 1,
+    "lang": "ja",
+    "genre": "mind"
   },
   {
     "id": "a5b4a7b0-06ca-4185-b893-e1d419502c9f",
@@ -475,82 +549,14 @@
     "reading": "ほんしつ",
     "lv": 1,
     "lang": "ja",
-    "genre": "philosophy"
+    "genre": "mind"
   },
   {
-    "id": "35f78ef9-99a4-4e63-b75e-770a207caa07",
-    "name": "フェノールフタレイン",
-    "reading": "ふぇのーるふたれいん",
-    "lv": 2,
-    "lang": "ja",
-    "genre": "science"
-  },
-  {
-    "id": "9837cfc6-ff11-4b8a-b358-b0d82c7af861",
-    "name": "モホロビチッチ不連続面",
-    "reading": "もほろびちっちふれんぞくめん",
-    "desc": "地球の地殻とマントルの境界。通称モホ面。\n1909年10月8日にクロアチアで起きた地震をきっかけに、クロアチアの地震学者アンドリヤ・モホロビチッチは、地震波の到着時刻のずれを分析した。その結果、地下のある深さで地震波速度が急に増加する境界があると推定した。\nこの境界は現在、地殻とマントルを分ける不連続面として理解されている。",
+    "id": "1a858a45-2a23-4d7c-a138-3209bf7410d8",
+    "name": "離人症",
     "lv": 4,
     "lang": "ja",
-    "genre": "science"
-  },
-  {
-    "id": "84e372b4-a4d9-488f-aea3-943d1dca48eb",
-    "name": "遺伝子",
-    "reading": "いでんし",
-    "lv": 1,
-    "lang": "ja",
-    "genre": "science"
-  },
-  {
-    "id": "13ce77a8-f5bd-4521-aa7f-6e39a87d9f73",
-    "name": "原子",
-    "reading": "げんし",
-    "lv": 1,
-    "lang": "ja",
-    "genre": "science"
-  },
-  {
-    "id": "89938bb9-5d61-4710-b630-d452ec88e1a1",
-    "name": "高エネルギーリン酸結合",
-    "reading": "こうえねるぎーりんさんけつごう",
-    "desc": "生物の細胞内でエネルギーの受け渡しに関わるリン酸結合。\nリン酸基を含む結合のうち、加水分解されると大きな自由エネルギーを放出できるものを指す。\nこの結合を持つ代表的な化合物として、アデノシン三リン酸（ATP）やクレアチンリン酸などが挙げられる。",
-    "lv": 2,
-    "lang": "ja",
-    "genre": "science"
-  },
-  {
-    "id": "e65a252c-132e-4ee2-99f8-70b80a7f22fc",
-    "name": "細胞",
-    "reading": "さいぼう",
-    "lv": 1,
-    "lang": "ja",
-    "genre": "science"
-  },
-  {
-    "id": "be8e8ad3-09a8-44eb-9e7c-0472781ee94f",
-    "name": "進化",
-    "reading": "しんか",
-    "lv": 1,
-    "lang": "ja",
-    "genre": "science"
-  },
-  {
-    "id": "8e884095-acfd-43fd-8fdb-68752af3df5c",
-    "name": "二人零和有限確定完全情報ゲーム",
-    "reading": "ふたりぜろわゆうげんかくていかんぜんじょうほうげーむ",
-    "desc": "以下の条件を満たすゲームを指す。\n・二人＝プレイヤーが２人（チームが２チーム）\n・零和＝一方の利益が、もう一方の損になる\n・有限＝手数が有限\n・確定＝運要素が無い\n・完全情報＝すべての情報がプレイヤーに公開されている\n例としてチェス、将棋、囲碁、オセロなどのゲームが挙げられる。",
-    "lv": 3,
-    "lang": "ja",
-    "genre": "science"
-  },
-  {
-    "id": "126a2fff-677e-497a-b48f-c44b9c9b620b",
-    "name": "分子",
-    "reading": "ぶんし",
-    "lv": 1,
-    "lang": "ja",
-    "genre": "science"
+    "genre": "mind"
   },
   {
     "id": "21596f51-6c24-4bab-8a5e-6bfc2b3a67f7",
@@ -562,10 +568,31 @@
     "genre": "society"
   },
   {
+    "id": "593effe0-ed94-4712-9f55-079bf8c6d8a6",
+    "name": "ことなかれ",
+    "lv": 3,
+    "lang": "ja",
+    "genre": "society"
+  },
+  {
     "id": "1d535cf4-006d-48c8-8c85-cca95ddeff62",
     "name": "ゴママヨ",
     "reading": "ごままよ",
     "desc": "ゴマとマヨネーズを組み合わせた調味料、またはインターネット上で広まった言葉遊びの一種。\n後者は、複数の語が結び付く境目で同じ音が連続して現れる語を見つけ、その偶然性や発音のぎこちなさを楽しむものを指す。「ゴマ＋マヨネーズ」の境目で「ま」が重なることに由来する。\n高次ゴママヨ、多項ゴママヨ、架空ゴママヨ、ゴママヨキャンセルなど、愛好者による独自の派生分類も存在する。\n例：スマホ＋本体（すまほ＋ほんたい）、相関＋関係（そうかん＋かんけい）、銀行＋口座＋残高（ぎんこう＋こうざ＋ざんだか）\nまた、音楽ゲーム、いわゆる音ゲーでは、階段状のノーツの途中に同じレーンの連打が挟まる配置を、形の類似から「ゴママヨ配置」と呼ぶことがある。",
+    "lv": 4,
+    "lang": "ja",
+    "genre": "society"
+  },
+  {
+    "id": "44494725-edd9-45ca-8b44-b814ef26f463",
+    "name": "ハイカラ",
+    "lv": 2,
+    "lang": "ja",
+    "genre": "society"
+  },
+  {
+    "id": "4e87446b-8020-4196-a3ac-8d5667ffbe13",
+    "name": "ペルソナ・ノン・グラータ",
     "lv": 4,
     "lang": "ja",
     "genre": "society"
@@ -597,9 +624,25 @@
     "genre": "society"
   },
   {
+    "id": "29857cbb-5d16-4f71-ad05-83d5f1ebd9ec",
+    "name": "神話",
+    "reading": "しんわ",
+    "lv": 1,
+    "lang": "ja",
+    "genre": "society"
+  },
+  {
     "id": "752436de-cf86-46f5-8d57-c679c652e250",
     "name": "制度",
     "reading": "せいど",
+    "lv": 1,
+    "lang": "ja",
+    "genre": "society"
+  },
+  {
+    "id": "1c0baf28-cb86-407a-b39d-dd954fa92e96",
+    "name": "相談",
+    "reading": "そうだん",
     "lv": 1,
     "lang": "ja",
     "genre": "society"
@@ -613,68 +656,333 @@
     "genre": "society"
   },
   {
-    "id": "7a0b86d3-2543-437a-ac6e-b8a789b210e3",
-    "name": "場所",
-    "reading": "ばしょ",
-    "lv": 1,
+    "id": "1cc80018-751b-4d7b-963e-ec1641683a36",
+    "name": "朕は国家なり",
+    "lv": 4,
     "lang": "ja",
-    "genre": "space"
+    "genre": "society"
   },
   {
-    "id": "6c51e88b-edc0-47d6-85fe-bc2d48b9a883",
-    "name": "中心",
-    "reading": "ちゅうしん",
+    "id": "3da5a1df-e65b-4dca-9cb6-4cd85fc5efa3",
+    "name": "都市国家",
+    "reading": "としこっか",
     "lv": 1,
     "lang": "ja",
-    "genre": "space"
+    "genre": "society"
   },
   {
-    "id": "6beb77f6-2810-4e13-914d-16dbccf079bc",
-    "name": "方向",
-    "reading": "ほうこう",
+    "id": "e5d4fdc7-3f23-44c6-9a26-3b710eb0aa38",
+    "name": "文明",
+    "reading": "ぶんめい",
     "lv": 1,
     "lang": "ja",
-    "genre": "space"
+    "genre": "society"
   },
   {
-    "id": "716a9ea2-69cb-4b56-884c-15713cb597c9",
-    "name": "課題",
-    "reading": "かだい",
+    "id": "814fd4cf-0f96-401e-9835-f4bf40b83d94",
+    "name": "報告",
+    "reading": "ほうこく",
     "lv": 1,
     "lang": "ja",
-    "genre": "study"
+    "genre": "society"
   },
   {
-    "id": "0419b831-e9c5-4c7f-8de4-24920291c4d1",
-    "name": "授業",
-    "reading": "じゅぎょう",
-    "lv": 1,
+    "id": "103ce8c6-69c7-41ff-b8ec-331da07b7e23",
+    "name": "報連相",
+    "lv": 2,
     "lang": "ja",
-    "genre": "study"
+    "genre": "society"
   },
   {
-    "id": "465271db-8f82-41c8-917d-b5923f36d74f",
-    "name": "提出",
-    "reading": "ていしゅつ",
+    "id": "cdb2d015-1dde-4350-b2a9-410474c237a4",
+    "name": "連絡",
+    "reading": "れんらく",
     "lv": 1,
     "lang": "ja",
-    "genre": "study"
+    "genre": "society"
   },
   {
-    "id": "3c6ac72c-540d-4739-b1d5-8c59de7fcae7",
-    "name": "復習",
-    "reading": "ふくしゅう",
-    "lv": 1,
+    "id": "1fabbb13-e043-4416-abee-a1c9a979ea57",
+    "name": "シナプス",
+    "lv": 3,
     "lang": "ja",
-    "genre": "study"
+    "genre": "body"
   },
   {
-    "id": "ba407e11-b3bb-4062-a910-ea79f0dc92bc",
-    "name": "予習",
-    "reading": "よしゅう",
+    "id": "910f0eca-de9d-4a98-b126-0e62315cccaa",
+    "name": "ホムンクルス",
+    "lv": 3,
+    "lang": "ja",
+    "genre": "body"
+  },
+  {
+    "id": "9ba619c5-891a-4242-8007-a8ee634e183f",
+    "name": "肩",
+    "reading": "かた",
+    "lv": 2,
+    "lang": "ja",
+    "genre": "body"
+  },
+  {
+    "id": "e7d58d97-4bdc-4f65-b780-4bfffa9aff62",
+    "name": "口",
+    "reading": "くち",
     "lv": 1,
     "lang": "ja",
-    "genre": "study"
+    "genre": "body"
+  },
+  {
+    "id": "7a901a9e-2542-481c-876b-f6770778abd7",
+    "name": "甲殻類",
+    "lv": 2,
+    "lang": "ja",
+    "genre": "body"
+  },
+  {
+    "id": "58306f4e-443a-455b-9eaa-64492a5ec1c0",
+    "name": "耳",
+    "reading": "みみ",
+    "lv": 1,
+    "lang": "ja",
+    "genre": "body"
+  },
+  {
+    "id": "fabe5f5b-9dcb-44d0-babc-7b1e4f031a38",
+    "name": "軸索",
+    "lv": 4,
+    "lang": "ja",
+    "genre": "body"
+  },
+  {
+    "id": "13df7598-5ed9-4e36-a33d-f9e0bc05c2e0",
+    "name": "髄鞘化",
+    "lv": 5,
+    "lang": "ja",
+    "genre": "body"
+  },
+  {
+    "id": "89934151-d7c5-42dc-8763-7b9cd5e144bc",
+    "name": "側頭葉",
+    "lv": 3,
+    "lang": "ja",
+    "genre": "body"
+  },
+  {
+    "id": "73ad879c-9496-4974-a27c-68b3f5c3be5c",
+    "name": "頭",
+    "reading": "あたま",
+    "lv": 1,
+    "lang": "ja",
+    "genre": "body"
+  },
+  {
+    "id": "c4df8243-a908-4c92-a0ae-f30c7a114fb9",
+    "name": "鼻",
+    "reading": "はな",
+    "lv": 1,
+    "lang": "ja",
+    "genre": "body"
+  },
+  {
+    "id": "bc9f5758-efc4-4ed5-bebd-d191a837852e",
+    "name": "不思議の国のアリス症候群",
+    "lv": 4,
+    "lang": "ja",
+    "genre": "body"
+  },
+  {
+    "id": "3a24098f-5014-4244-95dc-e73019304968",
+    "name": "目",
+    "reading": "め",
+    "lv": 1,
+    "lang": "ja",
+    "genre": "body"
+  },
+  {
+    "id": "5d915729-3d40-456a-b9df-13c0ba1e4ced",
+    "name": "ド・ブロイ波",
+    "lv": 4,
+    "lang": "ja",
+    "genre": "science"
+  },
+  {
+    "id": "35f78ef9-99a4-4e63-b75e-770a207caa07",
+    "name": "フェノールフタレイン",
+    "reading": "ふぇのーるふたれいん",
+    "lv": 2,
+    "lang": "ja",
+    "genre": "science"
+  },
+  {
+    "id": "9f40839f-d5e8-4d85-bef9-8532bddc25ce",
+    "name": "ポリテトラフルオロエチレン",
+    "lv": 4,
+    "lang": "ja",
+    "genre": "science"
+  },
+  {
+    "id": "9837cfc6-ff11-4b8a-b358-b0d82c7af861",
+    "name": "モホロビチッチ不連続面",
+    "reading": "もほろびちっちふれんぞくめん",
+    "desc": "地球の地殻とマントルの境界。通称モホ面。\n1909年10月8日にクロアチアで起きた地震をきっかけに、クロアチアの地震学者アンドリヤ・モホロビチッチは、地震波の到着時刻のずれを分析した。その結果、地下のある深さで地震波速度が急に増加する境界があると推定した。\nこの境界は現在、地殻とマントルを分ける不連続面として理解されている。",
+    "lv": 4,
+    "lang": "ja",
+    "genre": "science"
+  },
+  {
+    "id": "84e372b4-a4d9-488f-aea3-943d1dca48eb",
+    "name": "遺伝子",
+    "reading": "いでんし",
+    "lv": 1,
+    "lang": "ja",
+    "genre": "science"
+  },
+  {
+    "id": "1048e375-5ec3-4308-a7f9-d4629f3c1077",
+    "name": "可換環",
+    "lv": 5,
+    "lang": "ja",
+    "genre": "science"
+  },
+  {
+    "id": "13ce77a8-f5bd-4521-aa7f-6e39a87d9f73",
+    "name": "原子",
+    "reading": "げんし",
+    "lv": 1,
+    "lang": "ja",
+    "genre": "science"
+  },
+  {
+    "id": "89938bb9-5d61-4710-b630-d452ec88e1a1",
+    "name": "高エネルギーリン酸結合",
+    "reading": "こうえねるぎーりんさんけつごう",
+    "desc": "生物の細胞内でエネルギーの受け渡しに関わるリン酸結合。\nリン酸基を含む結合のうち、加水分解されると大きな自由エネルギーを放出できるものを指す。\nこの結合を持つ代表的な化合物として、アデノシン三リン酸（ATP）やクレアチンリン酸などが挙げられる。",
+    "lv": 2,
+    "lang": "ja",
+    "genre": "science"
+  },
+  {
+    "id": "e65a252c-132e-4ee2-99f8-70b80a7f22fc",
+    "name": "細胞",
+    "reading": "さいぼう",
+    "lv": 1,
+    "lang": "ja",
+    "genre": "science"
+  },
+  {
+    "id": "6c4cdb33-918a-450c-b628-61c66352be1c",
+    "name": "初期微動継続時間",
+    "lv": 5,
+    "lang": "ja",
+    "genre": "science"
+  },
+  {
+    "id": "be8e8ad3-09a8-44eb-9e7c-0472781ee94f",
+    "name": "進化",
+    "reading": "しんか",
+    "lv": 1,
+    "lang": "ja",
+    "genre": "science"
+  },
+  {
+    "id": "f8a748f7-0373-4233-b307-277536991376",
+    "name": "先手必勝",
+    "lv": 4,
+    "lang": "ja",
+    "genre": "science"
+  },
+  {
+    "id": "8e884095-acfd-43fd-8fdb-68752af3df5c",
+    "name": "二人零和有限確定完全情報ゲーム",
+    "reading": "ふたりぜろわゆうげんかくていかんぜんじょうほうげーむ",
+    "desc": "以下の条件を満たすゲームを指す。\n・二人＝プレイヤーが２人（チームが２チーム）\n・零和＝一方の利益が、もう一方の損になる\n・有限＝手数が有限\n・確定＝運要素が無い\n・完全情報＝すべての情報がプレイヤーに公開されている\n例としてチェス、将棋、囲碁、オセロなどのゲームが挙げられる。",
+    "lv": 3,
+    "lang": "ja",
+    "genre": "science"
+  },
+  {
+    "id": "126a2fff-677e-497a-b48f-c44b9c9b620b",
+    "name": "分子",
+    "reading": "ぶんし",
+    "lv": 1,
+    "lang": "ja",
+    "genre": "science"
+  },
+  {
+    "id": "20d9d48c-a95a-4591-97af-620b89cf98ad",
+    "name": "テレビ石",
+    "lv": 3,
+    "lang": "ja",
+    "genre": "nature"
+  },
+  {
+    "id": "2dedfdaa-bffe-46f4-b614-0aaa1637ea28",
+    "name": "ポインセチア",
+    "lv": 2,
+    "lang": "ja",
+    "genre": "nature"
+  },
+  {
+    "id": "f05d3820-0f07-4c1c-8ebf-0cff879cd758",
+    "name": "雨",
+    "reading": "あめ",
+    "lv": 1,
+    "lang": "ja",
+    "genre": "nature"
+  },
+  {
+    "id": "5112aca3-0403-43c1-9be5-03135ede871f",
+    "name": "雲",
+    "reading": "くも",
+    "lv": 1,
+    "lang": "ja",
+    "genre": "nature"
+  },
+  {
+    "id": "1e83886a-c3fe-4fad-8289-7b49ca113b1d",
+    "name": "海",
+    "reading": "うみ",
+    "desc": "地球表面の大部分を占めている塩水域。",
+    "lv": 1,
+    "lang": "ja",
+    "genre": "nature"
+  },
+  {
+    "id": "8be33aea-c10d-45a6-b6ff-5758727c4f02",
+    "name": "空",
+    "reading": "そら",
+    "lv": 1,
+    "lang": "ja",
+    "genre": "nature"
+  },
+  {
+    "id": "acb9abb0-b05f-4113-9d4e-5bd0ef2ff7c0",
+    "name": "雪花石膏",
+    "lv": 3,
+    "lang": "ja",
+    "genre": "nature"
+  },
+  {
+    "id": "ba770cc4-3dc6-49c3-9979-b1803355b4af",
+    "name": "風",
+    "reading": "かぜ",
+    "lv": 1,
+    "lang": "ja",
+    "genre": "nature"
+  },
+  {
+    "id": "a0d61e2d-8882-4d51-8a1f-0ccd80777ca2",
+    "name": "瑠璃",
+    "lv": 3,
+    "lang": "ja",
+    "genre": "nature"
+  },
+  {
+    "id": "a01921fc-3626-4b22-932e-5905f4f2905b",
+    "name": "バイラテラル制御",
+    "lv": 5,
+    "lang": "ja",
+    "genre": "technology"
   },
   {
     "id": "893cd405-4500-4ad9-ab60-b559e3df03e6",
@@ -682,7 +990,7 @@
     "reading": "がぞう",
     "lv": 1,
     "lang": "ja",
-    "genre": "tech"
+    "genre": "technology"
   },
   {
     "id": "441495ce-f3b1-44b3-b184-0c5c793f1503",
@@ -690,7 +998,7 @@
     "reading": "かいろ",
     "lv": 1,
     "lang": "ja",
-    "genre": "tech"
+    "genre": "technology"
   },
   {
     "id": "525f7b41-bddf-47ff-b50a-06d49c0ec574",
@@ -698,7 +1006,7 @@
     "reading": "けいさん",
     "lv": 1,
     "lang": "ja",
-    "genre": "tech"
+    "genre": "technology"
   },
   {
     "id": "17c41327-04aa-4872-849f-9061b7a6be92",
@@ -706,7 +1014,7 @@
     "reading": "しんごう",
     "lv": 1,
     "lang": "ja",
-    "genre": "tech"
+    "genre": "technology"
   },
   {
     "id": "68362127-59df-4725-9636-4e1ea4cc0efb",
@@ -714,7 +1022,208 @@
     "reading": "つうしん",
     "lv": 1,
     "lang": "ja",
-    "genre": "tech"
+    "genre": "technology"
+  },
+  {
+    "id": "e552e93c-a67b-47a1-bc84-f2b9f9de9645",
+    "name": "椅子",
+    "reading": "いす",
+    "lv": 2,
+    "lang": "ja",
+    "genre": "living"
+  },
+  {
+    "id": "0b7acdc9-4e98-4093-b69d-8ec71944ed53",
+    "name": "塩",
+    "reading": "しお",
+    "lv": 1,
+    "lang": "ja",
+    "genre": "living"
+  },
+  {
+    "id": "fb185d78-ff27-40f0-a698-1c205bd3b6db",
+    "name": "出汁",
+    "reading": "だし",
+    "lv": 1,
+    "lang": "ja",
+    "genre": "living"
+  },
+  {
+    "id": "87f9dcb1-9801-4264-8c3d-510b2e5fd778",
+    "name": "醤油",
+    "reading": "しょうゆ",
+    "lv": 1,
+    "lang": "ja",
+    "genre": "living"
+  },
+  {
+    "id": "a25618a0-180b-42cb-980e-92df1af586ab",
+    "name": "昼",
+    "reading": "ひる",
+    "lv": 1,
+    "lang": "ja",
+    "genre": "living"
+  },
+  {
+    "id": "394c5c8a-21ab-4a17-b976-ef2344123abb",
+    "name": "朝",
+    "reading": "あさ",
+    "lv": 1,
+    "lang": "ja",
+    "genre": "living"
+  },
+  {
+    "id": "d3627447-8910-4e9e-aa7c-bbed71626f40",
+    "name": "敷衍",
+    "reading": "ふえん",
+    "desc": "ある物事の意味や内容について、言葉を加えたり具体例などを補足することで、分かりやすく詳しく説明すること。\nまたは、単に押し広げること。\n敷：しく、広げる、広く行き渡らせる\n衍：延ばす、広げる、展開する",
+    "lv": 3,
+    "lang": "ja",
+    "genre": "living"
+  },
+  {
+    "id": "8f5b0944-9fb6-4981-a0c8-e65c1901b37b",
+    "name": "部屋",
+    "reading": "へや",
+    "lv": 1,
+    "lang": "ja",
+    "genre": "living"
+  },
+  {
+    "id": "40fc83f2-2387-4871-bb39-0946b7c4cbda",
+    "name": "米",
+    "reading": "こめ",
+    "lv": 1,
+    "lang": "ja",
+    "genre": "living"
+  },
+  {
+    "id": "01836dc2-07a3-43f9-9fbe-c49e1fa39604",
+    "name": "味噌",
+    "reading": "みそ",
+    "lv": 1,
+    "lang": "ja",
+    "genre": "living"
+  },
+  {
+    "id": "41102d54-4b22-4a4c-95fc-3b1b83407ae7",
+    "name": "夜",
+    "reading": "よる",
+    "lv": 1,
+    "lang": "ja",
+    "genre": "living"
+  },
+  {
+    "id": "335a51bb-a880-4c4a-98f8-b9e7ac76c794",
+    "name": "駅前",
+    "reading": "えきまえ",
+    "lv": 2,
+    "lang": "ja",
+    "genre": "place"
+  },
+  {
+    "id": "852396a7-6226-44a8-8eb5-14f7b17c0af2",
+    "name": "橋",
+    "reading": "はし",
+    "lv": 1,
+    "lang": "ja",
+    "genre": "place"
+  },
+  {
+    "id": "acaaa45f-50d2-45a9-b8d9-0e665e164b8e",
+    "name": "交差点",
+    "reading": "こうさてん",
+    "lv": 1,
+    "lang": "ja",
+    "genre": "place"
+  },
+  {
+    "id": "e2bf1d80-ae28-492c-b943-58ac3148594a",
+    "name": "出発",
+    "reading": "しゅっぱつ",
+    "lv": 1,
+    "lang": "ja",
+    "genre": "place"
+  },
+  {
+    "id": "7c41546b-96ea-4ece-9bd4-7d4234a7bef0",
+    "name": "乗換",
+    "reading": "のりかえ",
+    "lv": 1,
+    "lang": "ja",
+    "genre": "place"
+  },
+  {
+    "id": "7a0b86d3-2543-437a-ac6e-b8a789b210e3",
+    "name": "場所",
+    "reading": "ばしょ",
+    "lv": 1,
+    "lang": "ja",
+    "genre": "place"
+  },
+  {
+    "id": "b9da69b5-a246-4c18-8d8e-b828b3209321",
+    "name": "信号機",
+    "reading": "しんごうき",
+    "lv": 1,
+    "lang": "ja",
+    "genre": "place"
+  },
+  {
+    "id": "965fce8b-b7eb-45b7-8465-6cf81cc41434",
+    "name": "切符",
+    "reading": "きっぷ",
+    "lv": 1,
+    "lang": "ja",
+    "genre": "place"
+  },
+  {
+    "id": "6c51e88b-edc0-47d6-85fe-bc2d48b9a883",
+    "name": "中心",
+    "reading": "ちゅうしん",
+    "lv": 1,
+    "lang": "ja",
+    "genre": "place"
+  },
+  {
+    "id": "06167d1d-7973-41b1-a328-7ce3f9ed5f88",
+    "name": "到着",
+    "reading": "とうちゃく",
+    "lv": 1,
+    "lang": "ja",
+    "genre": "place"
+  },
+  {
+    "id": "d90f39cf-0670-4cca-9c25-681c6af82353",
+    "name": "道路",
+    "reading": "どうろ",
+    "lv": 1,
+    "lang": "ja",
+    "genre": "place"
+  },
+  {
+    "id": "a67a7d30-9baf-4479-850e-bdc7ee3a4a5c",
+    "name": "歩道",
+    "reading": "ほどう",
+    "lv": 1,
+    "lang": "ja",
+    "genre": "place"
+  },
+  {
+    "id": "6beb77f6-2810-4e13-914d-16dbccf079bc",
+    "name": "方向",
+    "reading": "ほうこう",
+    "lv": 1,
+    "lang": "ja",
+    "genre": "place"
+  },
+  {
+    "id": "464a731f-07db-4ed8-8cae-36f12437241f",
+    "name": "旅",
+    "reading": "たび",
+    "lv": 1,
+    "lang": "ja",
+    "genre": "place"
   },
   {
     "id": "7f7014ea-d3b6-4db6-839e-71e441c1d82f",
@@ -749,392 +1258,57 @@
     "genre": "time"
   },
   {
-    "id": "e2bf1d80-ae28-492c-b943-58ac3148594a",
-    "name": "出発",
-    "reading": "しゅっぱつ",
+    "id": "985cc3da-9ace-4c89-8bef-52cd7fa52edd",
+    "name": "刹那",
+    "lv": 2,
+    "lang": "ja",
+    "genre": "time"
+  },
+  {
+    "id": "716a9ea2-69cb-4b56-884c-15713cb597c9",
+    "name": "課題",
+    "reading": "かだい",
     "lv": 1,
     "lang": "ja",
-    "genre": "travel"
-  },
-  {
-    "id": "7c41546b-96ea-4ece-9bd4-7d4234a7bef0",
-    "name": "乗換",
-    "reading": "のりかえ",
-    "lv": 1,
-    "lang": "ja",
-    "genre": "travel"
-  },
-  {
-    "id": "965fce8b-b7eb-45b7-8465-6cf81cc41434",
-    "name": "切符",
-    "reading": "きっぷ",
-    "lv": 1,
-    "lang": "ja",
-    "genre": "travel"
-  },
-  {
-    "id": "06167d1d-7973-41b1-a328-7ce3f9ed5f88",
-    "name": "到着",
-    "reading": "とうちゃく",
-    "lv": 1,
-    "lang": "ja",
-    "genre": "travel"
-  },
-  {
-    "id": "464a731f-07db-4ed8-8cae-36f12437241f",
-    "name": "旅",
-    "reading": "たび",
-    "lv": 1,
-    "lang": "ja",
-    "genre": "travel"
-  },
-  {
-    "id": "1c0baf28-cb86-407a-b39d-dd954fa92e96",
-    "name": "相談",
-    "reading": "そうだん",
-    "lv": 1,
-    "lang": "ja",
-    "genre": "work"
-  },
-  {
-    "id": "814fd4cf-0f96-401e-9835-f4bf40b83d94",
-    "name": "報告",
-    "reading": "ほうこく",
-    "lv": 1,
-    "lang": "ja",
-    "genre": "work"
-  },
-  {
-    "id": "cdb2d015-1dde-4350-b2a9-410474c237a4",
-    "name": "連絡",
-    "reading": "れんらく",
-    "lv": 1,
-    "lang": "ja",
-    "genre": "work"
-  },
-  {
-    "id": "eb944f6b-8b16-436c-84e1-f38f1ca9282b",
-    "name": "4E認知",
-    "lang": "ja"
-  },
-  {
-    "id": "433d88c4-f6b9-46dc-b905-540e8ab3ee58",
-    "name": "ア・プリオリ",
-    "reading": "あぷりおり",
-    "lang": "ja"
-  },
-  {
-    "id": "24f922ab-156d-4fa8-bd1a-cd090da542fd",
-    "name": "イリヤ",
-    "lang": "ja"
-  },
-  {
-    "id": "e8f0cada-a77f-4225-b92d-3dcbdbe67e6b",
-    "name": "インタラクションデザイン",
-    "lang": "ja"
-  },
-  {
-    "id": "494a79cc-3af4-46c5-a806-b687e2aaacc4",
-    "name": "エディプスコンプレックス",
-    "lang": "ja"
-  },
-  {
-    "id": "d69f3c0e-e39f-4a6c-ba22-ed5b513c03e0",
-    "name": "エナクティヴィズム",
-    "lang": "ja"
-  },
-  {
-    "id": "e31bcd82-7bc0-4cc8-91a2-e24f7aa39ff9",
-    "name": "オイディプス王",
-    "lang": "ja"
-  },
-  {
-    "id": "593effe0-ed94-4712-9f55-079bf8c6d8a6",
-    "name": "ことなかれ",
-    "lang": "ja"
-  },
-  {
-    "id": "e17c06b6-a769-4c68-964b-7303cd6bfc88",
-    "name": "コンコルド効果",
-    "reading": "こんこるどこうか",
-    "lang": "ja"
-  },
-  {
-    "id": "31fd415f-db72-48de-9d35-28b5e268136e",
-    "name": "シグニファイヤ",
-    "lang": "ja"
-  },
-  {
-    "id": "1fabbb13-e043-4416-abee-a1c9a979ea57",
-    "name": "シナプス",
-    "lang": "ja"
-  },
-  {
-    "id": "5187f8e8-89b0-4461-88d1-42d00ae5c8f7",
-    "name": "シャーデンフロイデ",
-    "lang": "ja"
-  },
-  {
-    "id": "5bea98ca-94b6-40d0-98a9-a3df17c787a8",
-    "name": "センス",
-    "lang": "ja"
-  },
-  {
-    "id": "20d9d48c-a95a-4591-97af-620b89cf98ad",
-    "name": "テレビ石",
-    "lang": "ja"
-  },
-  {
-    "id": "5d915729-3d40-456a-b9df-13c0ba1e4ced",
-    "name": "ド・ブロイ波",
-    "lang": "ja"
-  },
-  {
-    "id": "44494725-edd9-45ca-8b44-b814ef26f463",
-    "name": "ハイカラ",
-    "lang": "ja"
-  },
-  {
-    "id": "a01921fc-3626-4b22-932e-5905f4f2905b",
-    "name": "バイラテラル制御",
-    "lang": "ja"
-  },
-  {
-    "id": "16acfd6d-65b6-44dd-a35d-5403576ae26d",
-    "name": "フレデリカ・ローゼンフォルト",
-    "lang": "ja"
-  },
-  {
-    "id": "27be1f56-1ea6-427d-9a07-35bfe2ff04b5",
-    "name": "フロイト",
-    "lang": "ja"
-  },
-  {
-    "id": "4e87446b-8020-4196-a3ac-8d5667ffbe13",
-    "name": "ペルソナ・ノン・グラータ",
-    "lang": "ja"
-  },
-  {
-    "id": "2dedfdaa-bffe-46f4-b614-0aaa1637ea28",
-    "name": "ポインセチア",
-    "lang": "ja"
-  },
-  {
-    "id": "910f0eca-de9d-4a98-b126-0e62315cccaa",
-    "name": "ホムンクルス",
-    "lang": "ja"
-  },
-  {
-    "id": "e9981cf3-8c76-4b08-821e-d7cd5cf0f946",
-    "name": "ホメロス",
-    "lang": "ja"
-  },
-  {
-    "id": "9f40839f-d5e8-4d85-bef9-8532bddc25ce",
-    "name": "ポリテトラフルオロエチレン",
-    "lang": "ja"
-  },
-  {
-    "id": "2312b2af-ec4a-4423-a47e-a3d896bf5f8a",
-    "name": "マクガフィン",
-    "lang": "ja"
-  },
-  {
-    "id": "0060ed6b-470e-45ff-9e9a-65028174c4c6",
-    "name": "厭世",
-    "lang": "ja"
-  },
-  {
-    "id": "1048e375-5ec3-4308-a7f9-d4629f3c1077",
-    "name": "可換環",
-    "lang": "ja"
-  },
-  {
-    "id": "ad317152-1b73-4863-8170-df6a8f2e43af",
-    "name": "花鳥風月",
-    "lang": "ja"
-  },
-  {
-    "id": "75ed5e1e-8975-47cb-b4dc-bdb8a2f21d43",
-    "name": "勧善懲悪",
-    "lang": "ja"
-  },
-  {
-    "id": "02673e5b-6361-4f77-8a1a-a161b2970f59",
-    "name": "逆撫",
-    "lang": "ja"
+    "genre": "learning"
   },
   {
     "id": "1c370760-1235-4dbc-b7dc-69e11637f86d",
     "name": "吟味",
-    "lang": "ja"
+    "lv": 2,
+    "lang": "ja",
+    "genre": "learning"
   },
   {
-    "id": "b04e24c5-d662-4b85-ab5a-1583e6642424",
-    "name": "鶏鳴狗盗",
-    "lang": "ja"
+    "id": "0419b831-e9c5-4c7f-8de4-24920291c4d1",
+    "name": "授業",
+    "reading": "じゅぎょう",
+    "lv": 1,
+    "lang": "ja",
+    "genre": "learning"
   },
   {
-    "id": "16aaef9a-a96a-4bcc-a58e-afc3b1b81543",
-    "name": "孤高",
-    "lang": "ja"
+    "id": "465271db-8f82-41c8-917d-b5923f36d74f",
+    "name": "提出",
+    "reading": "ていしゅつ",
+    "lv": 1,
+    "lang": "ja",
+    "genre": "learning"
   },
   {
-    "id": "2ed77ed5-6409-4f6c-a7b9-db7492c91223",
-    "name": "後光",
-    "lang": "ja"
+    "id": "3c6ac72c-540d-4739-b1d5-8c59de7fcae7",
+    "name": "復習",
+    "reading": "ふくしゅう",
+    "lv": 1,
+    "lang": "ja",
+    "genre": "learning"
   },
   {
-    "id": "7a901a9e-2542-481c-876b-f6770778abd7",
-    "name": "甲殻類",
-    "lang": "ja"
-  },
-  {
-    "id": "e8e72c52-b9cb-4569-9ba6-ee97c00f5460",
-    "name": "左見右見",
-    "lang": "ja"
-  },
-  {
-    "id": "d9a04546-8762-4935-83f5-4b2150b58d4c",
-    "name": "自律",
-    "lang": "ja"
-  },
-  {
-    "id": "a87e4103-7007-4708-ba11-8116aafe0b02",
-    "name": "辞典",
-    "lang": "ja"
-  },
-  {
-    "id": "fabe5f5b-9dcb-44d0-babc-7b1e4f031a38",
-    "name": "軸索",
-    "lang": "ja"
-  },
-  {
-    "id": "6c4cdb33-918a-450c-b628-61c66352be1c",
-    "name": "初期微動継続時間",
-    "lang": "ja"
-  },
-  {
-    "id": "f7048b1f-eaf2-4910-a8e6-b52cc38a35ab",
-    "name": "身体性認知科学",
-    "lang": "ja"
-  },
-  {
-    "id": "13df7598-5ed9-4e36-a33d-f9e0bc05c2e0",
-    "name": "髄鞘化",
-    "lang": "ja"
-  },
-  {
-    "id": "acb9abb0-b05f-4113-9d4e-5bd0ef2ff7c0",
-    "name": "雪花石膏",
-    "lang": "ja"
-  },
-  {
-    "id": "f8a748f7-0373-4233-b307-277536991376",
-    "name": "先手必勝",
-    "lang": "ja"
-  },
-  {
-    "id": "89934151-d7c5-42dc-8763-7b9cd5e144bc",
-    "name": "側頭葉",
-    "lang": "ja"
-  },
-  {
-    "id": "c1eededd-0c7a-4d11-9e12-3c05f4bd6480",
-    "name": "超越論的間主観性",
-    "lang": "ja"
-  },
-  {
-    "id": "d724ae72-a442-4390-bcf0-ad13c5f48330",
-    "name": "超自我",
-    "lang": "ja"
-  },
-  {
-    "id": "aebb8a7e-25e5-4475-ad22-b30bbfb9b51d",
-    "name": "直接知覚論",
-    "lang": "ja"
-  },
-  {
-    "id": "1cc80018-751b-4d7b-963e-ec1641683a36",
-    "name": "朕は国家なり",
-    "lang": "ja"
-  },
-  {
-    "id": "3caccc13-1faf-424f-befa-1841a1c095cb",
-    "name": "八面六臂",
-    "lang": "ja"
-  },
-  {
-    "id": "9106b95d-7b9f-4332-bf21-b9b633769a74",
-    "name": "百花繚乱",
-    "lang": "ja"
-  },
-  {
-    "id": "45ed44b8-bdf9-4f55-8e16-6970bdfe15be",
-    "name": "表象",
-    "lang": "ja"
-  },
-  {
-    "id": "bc9f5758-efc4-4ed5-bebd-d191a837852e",
-    "name": "不思議の国のアリス症候群",
-    "lang": "ja"
-  },
-  {
-    "id": "aa48ed6b-a97e-47ed-8bb6-88947de13330",
-    "name": "不承不承",
-    "lang": "ja"
-  },
-  {
-    "id": "d3627447-8910-4e9e-aa7c-bbed71626f40",
-    "name": "敷衍",
-    "lang": "ja"
-  },
-  {
-    "id": "103ce8c6-69c7-41ff-b8ec-331da07b7e23",
-    "name": "報連相",
-    "lang": "ja"
-  },
-  {
-    "id": "2e1c5abb-9894-4dff-8d47-d076d57e04f7",
-    "name": "幽栖",
-    "lang": "ja"
-  },
-  {
-    "id": "1a858a45-2a23-4d7c-a138-3209bf7410d8",
-    "name": "離人症",
-    "lang": "ja"
-  },
-  {
-    "id": "a0d61e2d-8882-4d51-8a1f-0ccd80777ca2",
-    "name": "瑠璃",
-    "lang": "ja"
-  },
-  {
-    "id": "8b75e205-192f-4f0f-b154-a650e3e3149a",
-    "name": "丿乀",
-    "lang": "ja"
-  },
-  {
-    "id": "985cc3da-9ace-4c89-8bef-52cd7fa52edd",
-    "name": "刹那",
-    "lang": "ja"
-  },
-  {
-    "id": "4578f4de-6f3a-4156-b91b-18b28f9613d8",
-    "name": "呻吟",
-    "lang": "ja"
-  },
-  {
-    "id": "31ae9725-ff10-4f3b-ae54-6acf53ef5506",
-    "name": "衒学",
-    "lang": "ja"
-  },
-  {
-    "id": "244dfc41-50ea-4332-b4c4-a328dabd7c8f",
-    "name": "魑魅魍魎",
-    "reading": "ちみもうりょう",
-    "desc": "種々の化け物、妖怪変化などを指す総称。\n魑魅は山林、魍魎は山川・木石に関する神・怪物に由来する。\n古くは古代中国の『春秋左氏伝』に見られる。\n螭魅罔兩とも書く。",
-    "lv": 3,
-    "lang": "ja"
+    "id": "ba407e11-b3bb-4062-a910-ea79f0dc92bc",
+    "name": "予習",
+    "reading": "よしゅう",
+    "lv": 1,
+    "lang": "ja",
+    "genre": "learning"
   }
 ]

@@ -35,17 +35,32 @@ Wordfall は、日本語の言葉が静かに落ちてくる鑑賞型Webペー�
 - `desc` は任意です。意味や説明は後から編集できます。
 - 公開版の落下表示に出るのは `name`, `desc`, `lang` が揃った語だけです。`desc` が未入力の語はデータに残りますが、公開版では非表示です。
 - `reading`, `lv`, `genre` は任意です。
-- `lv` は 1〜5 を使います。未設定の場合は公開版で `-` と表示します。
+- `lv` は語の読みやすさと前提知識の量を表す 1〜5 です。Lv 1 は基本語、Lv 2 は身近な抽象語・複合語、Lv 3 は短い説明があると親しみやすい語、Lv 4 は専門語・難読語・固有名詞、Lv 5 は高度に専門的またはまれな語です。未設定の場合は公開版で `-` と表示します。
 - `genre` は未設定でも保存できます。公開版では未設定を `-` と表示します。
 - `category` は使いません。
 - `concept_id` は将来の多言語リンク用に予約していますが、現在は保存しません。
 
-標準genreは次の19種です。
+genre は語の厳密な学問分野ではなく、語を眺めるときの入口です。複数にまたがる語は、説明の中心ではなく、その語を次にどんな語へつなげたいかで一つを選びます。標準genreは次の12種です。
 
 ```text
-art, body, city, daily, design, emotion, food, history, music, nature,
-philosophy, science, society, space, study, tech, time, travel, work
+culture, language, mind, society, body, science, nature, technology,
+living, place, time, learning
 ```
+
+| genre | 定義 |
+| --- | --- |
+| `culture` | 芸術、音楽、物語、神話、作品や表現の技法 |
+| `language` | 言葉そのもの、修辞、慣用句、語感、書記・記号 |
+| `mind` | 感情、認知、心理、哲学、ものの見方 |
+| `society` | 人間関係、制度、歴史、経済、政治、仕事 |
+| `body` | 身体、生命、医学、生物のしくみ |
+| `science` | 物理、化学、地学、数学、理論や法則 |
+| `nature` | 天候、動植物、鉱物、地形、宇宙 |
+| `technology` | 道具、情報、通信、工学、技術の設計 |
+| `living` | 衣食住、日常の行為や身の回りのもの |
+| `place` | 都市、空間、地理、移動や旅 |
+| `time` | 時刻、時間の流れ、時代や一瞬 |
+| `learning` | 学習、課題、知識を身につける営み |
 
 ## ローカルエディタ
 
@@ -64,7 +79,13 @@ npm run migrate:dry-run
 npm run migrate
 ```
 
-dry-run はファイルを書き換えず、category分布、genre警告、重複、ID付与件数を表示します。
+dry-run はファイルを書き換えず、genre警告、重複、ID付与件数を表示します。
+
+既存の語彙を現在のジャンル定義とレベルへ振り分け直すときは、次を実行します。これは旧ジャンルと個別に判断した未分類語・未設定レベルを現在の基準へ移す移行スクリプトです。
+
+```bash
+npm run reclassify-genres
+```
 
 ## 音声
 

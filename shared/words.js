@@ -10,25 +10,18 @@ export const SUPPORTED_LANGUAGES = [
 ];
 
 export const GENRE_LABELS = {
-  art: "Art",
-  body: "Body",
-  city: "City",
-  daily: "Daily",
-  design: "Design",
-  emotion: "Emotion",
-  food: "Food",
-  history: "History",
-  music: "Music",
-  nature: "Nature",
-  philosophy: "Philosophy",
-  science: "Science",
-  society: "Society",
-  space: "Space",
-  study: "Study",
-  tech: "Tech",
+  culture: "Culture & creative",
+  language: "Language & expression",
+  mind: "Mind & thought",
+  society: "People & society",
+  body: "Body & life",
+  science: "Science & mathematics",
+  nature: "Nature & universe",
+  technology: "Technology & information",
+  living: "Everyday life & food",
+  place: "Places & movement",
   time: "Time",
-  travel: "Travel",
-  work: "Work"
+  learning: "Learning"
 };
 
 export const GENRE_ORDER = Object.keys(GENRE_LABELS);
