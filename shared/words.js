@@ -30,6 +30,7 @@ export const VALID_LANGS = new Set(SUPPORTED_LANGUAGES.map((lang) => lang.code))
 export const VALID_LEVELS = new Set([1, 2, 3, 4, 5]);
 
 const UUID_V4_PATTERN = /^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/;
+const ISO_DATE_PATTERN = /^\d{4}-\d{2}-\d{2}$/;
 
 export function cleanText(value) {
   return typeof value === "string" ? value.trim() : "";
@@ -37,6 +38,15 @@ export function cleanText(value) {
 
 export function isValidUuidV4(str) {
   return typeof str === "string" && UUID_V4_PATTERN.test(str);
+}
+
+export function isValidCreatedAt(value) {
+  if (typeof value !== "string" || !ISO_DATE_PATTERN.test(value)) return false;
+  const [year, month, day] = value.split("-").map(Number);
+  const date = new Date(Date.UTC(year, month - 1, day));
+  return date.getUTCFullYear() === year
+    && date.getUTCMonth() === month - 1
+    && date.getUTCDate() === day;
 }
 
 export function isValidGenre(value) {
@@ -58,6 +68,7 @@ export function isDisplayReadyWord(word) {
 
 export function normalizeOptionalFields(word) {
   const normalized = { ...word };
+  if (!isValidCreatedAt(normalized.createdAt)) delete normalized.createdAt;
   if (!cleanText(normalized.reading)) delete normalized.reading;
   const level = Number(normalized.lv);
   if (!VALID_LEVELS.has(level)) {
@@ -86,6 +97,7 @@ export function normalizeWord(raw) {
 
   const word = normalizeOptionalFields({
     id,
+    createdAt: cleanText(raw.createdAt),
     name,
     reading: cleanText(raw.reading),
     desc,
@@ -107,6 +119,8 @@ export function validateWord(word) {
   }
 
   if (!isValidUuidV4(word.id)) errors.push("id must be a UUID v4.");
+  if (!Object.prototype.hasOwnProperty.call(word, "createdAt")) warnings.push("createdAt is not set.");
+  else if (!isValidCreatedAt(word.createdAt)) errors.push("createdAt must be a valid YYYY-MM-DD date.");
   if (!cleanText(word.name)) errors.push("name is required.");
   const lang = cleanText(word.lang).toLowerCase();
   if (!lang) errors.push("lang is required.");
@@ -144,6 +158,7 @@ export function serializeWords(words, langCode = "ja") {
 export function orderWordKeys(word) {
   const ordered = {};
   if (word.id) ordered.id = word.id;
+  if (word.createdAt) ordered.createdAt = word.createdAt;
   ordered.name = word.name;
   if (word.reading) ordered.reading = word.reading;
   if (word.desc) ordered.desc = word.desc;

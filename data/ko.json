@@ -1,6 +1,7 @@
 [
   {
     "id": "619c372e-5fff-48d1-8fbc-314755bb8bbf",
+    "createdAt": "2026-07-09",
     "name": "공명",
     "reading": "gongmyeong",
     "lv": 4,
@@ -9,6 +10,7 @@
   },
   {
     "id": "13d759d5-5ac7-4cff-8cb8-276db989a057",
+    "createdAt": "2026-07-09",
     "name": "구도",
     "reading": "gudo",
     "lv": 3,
@@ -17,6 +19,7 @@
   },
   {
     "id": "5053e68a-21b3-4cca-931d-8b04759c4ada",
+    "createdAt": "2026-07-09",
     "name": "기록 보관",
     "reading": "girok bogwan",
     "lv": 3,
@@ -25,6 +28,7 @@
   },
   {
     "id": "9702ce58-2a7d-4c8d-b860-e3d08bd64f45",
+    "createdAt": "2026-07-09",
     "name": "대비",
     "reading": "daebi",
     "lv": 3,
@@ -33,6 +37,7 @@
   },
   {
     "id": "20922d87-73bd-4339-a703-45a6cd7fa5bd",
+    "createdAt": "2026-07-09",
     "name": "리듬",
     "reading": "rideum",
     "lv": 2,
@@ -41,6 +46,7 @@
   },
   {
     "id": "e5d80605-8cc9-4937-8a07-a51819c9214d",
+    "createdAt": "2026-07-09",
     "name": "명암법",
     "reading": "myeongambeop",
     "lv": 5,
@@ -49,6 +55,7 @@
   },
   {
     "id": "242f91e5-1345-498b-9c70-cac427515ec3",
+    "createdAt": "2026-07-09",
     "name": "시제품",
     "reading": "sijepum",
     "lv": 3,
@@ -57,6 +64,7 @@
   },
   {
     "id": "d5a8d877-9a8b-461b-8f00-76a34d42d2d3",
+    "createdAt": "2026-07-09",
     "name": "원근법",
     "reading": "wongeunbeop",
     "lv": 4,
@@ -65,6 +73,7 @@
   },
   {
     "id": "ada38a10-17de-440e-9431-f81bacba5459",
+    "createdAt": "2026-07-09",
     "name": "인터페이스",
     "reading": "inteopeiseu",
     "lv": 3,
@@ -73,6 +82,7 @@
   },
   {
     "id": "95538fa0-bd1f-450c-9e97-971fd2df0c8d",
+    "createdAt": "2026-07-09",
     "name": "질감",
     "reading": "jilgam",
     "lv": 3,
@@ -81,6 +91,7 @@
   },
   {
     "id": "92fb61b3-e57b-4e8f-ae24-7fc3c1c0dbb5",
+    "createdAt": "2026-07-09",
     "name": "포먼트",
     "reading": "pomeonteu",
     "lv": 5,
@@ -89,6 +100,7 @@
   },
   {
     "id": "8d6a6c2f-f82e-4d85-8e2a-9cf457b54b35",
+    "createdAt": "2026-07-09",
     "name": "고요",
     "reading": "goyo",
     "lv": 2,
@@ -97,6 +109,7 @@
   },
   {
     "id": "9e2ae854-4b5d-4124-b8ef-df486c5010e5",
+    "createdAt": "2026-07-09",
     "name": "기억",
     "reading": "gieok",
     "lv": 2,
@@ -105,6 +118,7 @@
   },
   {
     "id": "dd07bb2a-4cf4-4f83-bc55-dcf0fc85741f",
+    "createdAt": "2026-07-09",
     "name": "덧없음",
     "reading": "deoseopseum",
     "lv": 4,
@@ -113,6 +127,7 @@
   },
   {
     "id": "bb07ddef-eb60-49f1-8faf-7d64032ca79b",
+    "createdAt": "2026-07-09",
     "name": "모호성",
     "reading": "mohoseong",
     "lv": 4,
@@ -121,6 +136,7 @@
   },
   {
     "id": "0c3a37a5-e81e-411b-9743-4912f6202a79",
+    "createdAt": "2026-07-09",
     "name": "우연한 발견",
     "reading": "uyeonhan balgyeon",
     "lv": 5,
@@ -129,6 +145,7 @@
   },
   {
     "id": "75e8c028-0145-4fda-a6b9-b080e68fffbc",
+    "createdAt": "2026-07-09",
     "name": "의식",
     "reading": "uisik",
     "lv": 4,
@@ -137,6 +154,7 @@
   },
   {
     "id": "b3135a20-9e45-4aa3-905d-5c273d1d5158",
+    "createdAt": "2026-07-09",
     "name": "지각",
     "reading": "jigak",
     "lv": 3,
@@ -145,6 +163,7 @@
   },
   {
     "id": "99ede73e-b518-4710-8c0c-9492b6ebd23f",
+    "createdAt": "2026-07-09",
     "name": "마감",
     "reading": "magam",
     "lv": 2,
@@ -153,6 +172,7 @@
   },
   {
     "id": "6e01ac41-0061-41f0-be31-e6922d44abe7",
+    "createdAt": "2026-07-09",
     "name": "문명",
     "reading": "munmyeong",
     "lv": 3,
@@ -161,6 +181,7 @@
   },
   {
     "id": "8dcf4d3c-a119-48c4-ac5f-a8691cd6ca7d",
+    "createdAt": "2026-07-09",
     "name": "유물",
     "reading": "yumul",
     "lv": 4,
@@ -169,6 +190,7 @@
   },
   {
     "id": "6c698145-68a4-4fe8-9a70-3f985b661a7b",
+    "createdAt": "2026-07-09",
     "name": "유지보수",
     "reading": "yujibosu",
     "lv": 3,
@@ -177,6 +199,7 @@
   },
   {
     "id": "864078bc-8a30-4881-870f-64cece365779",
+    "createdAt": "2026-07-09",
     "name": "친구",
     "reading": "chingu",
     "lv": 1,
@@ -185,6 +208,7 @@
   },
   {
     "id": "cb925939-1fc2-470d-a32c-edee5da2a88b",
+    "createdAt": "2026-07-09",
     "name": "합의",
     "reading": "habui",
     "lv": 4,
@@ -193,6 +217,7 @@
   },
   {
     "id": "c26543ff-2722-46ce-b097-5ecb825c0f2f",
+    "createdAt": "2026-07-09",
     "name": "근육",
     "reading": "geunyuk",
     "lv": 2,
@@ -201,6 +226,7 @@
   },
   {
     "id": "e74ce765-3ed1-4825-89cd-b5605d3ce5f9",
+    "createdAt": "2026-07-09",
     "name": "대사",
     "reading": "daesa",
     "lv": 4,
@@ -209,6 +235,7 @@
   },
   {
     "id": "8cd4efab-d081-4550-8e69-436e0d9f0298",
+    "createdAt": "2026-07-09",
     "name": "자세",
     "reading": "jase",
     "lv": 2,
@@ -217,6 +244,7 @@
   },
   {
     "id": "e3a7b3b1-516d-4679-972a-a8ddd45b64e3",
+    "createdAt": "2026-07-09",
     "name": "가설",
     "reading": "gaseol",
     "lv": 3,
@@ -225,6 +253,7 @@
   },
   {
     "id": "1b966d76-6cfb-493e-995b-a108dd44cd42",
+    "createdAt": "2026-07-09",
     "name": "변수",
     "reading": "byeonsu",
     "lv": 3,
@@ -233,6 +262,7 @@
   },
   {
     "id": "6a621ef2-9cfd-4ab8-b210-4447c5b3d102",
+    "createdAt": "2026-07-09",
     "name": "상관",
     "reading": "sanggwan",
     "lv": 4,
@@ -241,6 +271,7 @@
   },
   {
     "id": "e7e1165a-c047-482f-99c4-0fab14fa71c4",
+    "createdAt": "2026-07-09",
     "name": "엔트로피",
     "reading": "enteuropi",
     "lv": 4,
@@ -249,6 +280,7 @@
   },
   {
     "id": "fd13b455-757e-416b-a557-ea4101ad5890",
+    "createdAt": "2026-07-09",
     "name": "특이점",
     "reading": "teugijeom",
     "lv": 5,
@@ -257,6 +289,7 @@
   },
   {
     "id": "b28d2265-1b1a-4c53-8d4b-eaa10d6b3197",
+    "createdAt": "2026-07-09",
     "name": "데이터셋",
     "reading": "deiteoset",
     "lv": 3,
@@ -265,6 +298,7 @@
   },
   {
     "id": "ee962865-8195-4e21-8e9c-52db1123f9de",
+    "createdAt": "2026-07-09",
     "name": "센서",
     "reading": "senseo",
     "lv": 3,
@@ -273,6 +307,7 @@
   },
   {
     "id": "b2171d35-349a-4beb-b5a1-f8383c878598",
+    "createdAt": "2026-07-09",
     "name": "신호",
     "reading": "sinho",
     "lv": 2,
@@ -281,6 +316,7 @@
   },
   {
     "id": "a6de4db1-8b70-4479-997c-8f5e23ecd82c",
+    "createdAt": "2026-07-09",
     "name": "알고리즘",
     "reading": "algorijeum",
     "lv": 3,
@@ -289,6 +325,7 @@
   },
   {
     "id": "722aa069-1ae9-4ce1-8c01-b1736fa4f945",
+    "createdAt": "2026-07-09",
     "name": "물",
     "reading": "mul",
     "lv": 1,
@@ -297,6 +334,7 @@
   },
   {
     "id": "fd9189ea-9b50-4d34-be8b-8d0f62342605",
+    "createdAt": "2026-07-09",
     "name": "발효",
     "reading": "balhyo",
     "lv": 4,
@@ -305,6 +343,7 @@
   },
   {
     "id": "50c752e7-14fe-419a-9d14-ce059144c91c",
+    "createdAt": "2026-07-09",
     "name": "영양소",
     "reading": "yeongyangso",
     "lv": 3,
@@ -313,6 +352,7 @@
   },
   {
     "id": "ea9c6d40-8c6a-408b-8866-9ffb80b26c0d",
+    "createdAt": "2026-07-09",
     "name": "조리법",
     "reading": "joribeop",
     "lv": 2,
@@ -321,6 +361,7 @@
   },
   {
     "id": "02b48c63-e8f7-4d5f-9e5f-02a7c34aee46",
+    "createdAt": "2026-07-09",
     "name": "창문",
     "reading": "changmun",
     "lv": 1,
@@ -329,6 +370,7 @@
   },
   {
     "id": "013f5279-11bd-4206-9af8-e28dab0d5507",
+    "createdAt": "2026-07-09",
     "name": "거리",
     "reading": "geori",
     "lv": 1,
@@ -337,6 +379,7 @@
   },
   {
     "id": "1f1b008e-a9b9-45f1-ae53-e999548d77fb",
+    "createdAt": "2026-07-09",
     "name": "경계",
     "reading": "gyeonggye",
     "lv": 3,
@@ -345,6 +388,7 @@
   },
   {
     "id": "f3e0c74e-e665-4d8b-a6a0-54d7e59fae5a",
+    "createdAt": "2026-07-09",
     "name": "기반 시설",
     "reading": "giban siseol",
     "lv": 4,
@@ -353,6 +397,7 @@
   },
   {
     "id": "e91a4a91-10b5-4728-bbae-10cfa4387ab3",
+    "createdAt": "2026-07-09",
     "name": "대도시",
     "reading": "daedosi",
     "lv": 3,
@@ -361,6 +406,7 @@
   },
   {
     "id": "19612bf2-d244-4675-a593-35f2b11bfac9",
+    "createdAt": "2026-07-09",
     "name": "여행",
     "reading": "yeohaeng",
     "lv": 2,
@@ -369,6 +415,7 @@
   },
   {
     "id": "db372314-7b5e-4244-90d3-ddbe18c1ea49",
+    "createdAt": "2026-07-09",
     "name": "일정",
     "reading": "iljeong",
     "lv": 3,
@@ -377,6 +424,7 @@
   },
   {
     "id": "7c315e01-dda7-43cd-934f-5bea44a0f679",
+    "createdAt": "2026-07-09",
     "name": "통화",
     "reading": "tonghwa",
     "lv": 3,
@@ -385,6 +433,7 @@
   },
   {
     "id": "5c26005e-ab12-4adb-8c7a-49fb03d421b8",
+    "createdAt": "2026-07-09",
     "name": "아침",
     "reading": "achim",
     "lv": 1,
@@ -393,6 +442,7 @@
   },
   {
     "id": "d3bfe695-47f9-48e9-9746-fa23c253637f",
+    "createdAt": "2026-07-09",
     "name": "강의",
     "reading": "gangui",
     "lv": 2,

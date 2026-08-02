@@ -9,6 +9,8 @@ Wordfall は、日本語の言葉が静かに落ちてくる鑑賞型Webペー�
 - 言葉の落下表示
 - 単語クリックによる詳細表示
 - Google / Wikipedia検索
+- 書体選択（明朝 / Gen Interface JP）
+- 落下の速度・密度の調整
 - Sound ON/OFF
 - 音源選択（Generated noise / Audio file）
 - 音量設定
@@ -22,6 +24,7 @@ Wordfall は、日本語の言葉が静かに落ちてくる鑑賞型Webペー�
 ```json
 {
   "id": "00000000-0000-4000-8000-000000000000",
+  "createdAt": "2026-07-19",
   "name": "余白",
   "reading": "よはく",
   "lv": 2,
@@ -31,6 +34,7 @@ Wordfall は、日本語の言葉が静かに落ちてくる鑑賞型Webペー�
 ```
 
 - `id` は UUID v4 です。
+- `createdAt` は登録日を表す `YYYY-MM-DD` 形式です。ローカルエディタで新規登録すると自動で保存されます。
 - `name`, `lang` は必須です。
 - `desc` は任意です。意味や説明は後から編集できます。
 - 公開版の落下表示に出るのは `name`, `desc`, `lang` が揃った語だけです。`desc` が未入力の語はデータに残りますが、公開版では非表示です。
@@ -81,15 +85,30 @@ npm run migrate
 
 dry-run はファイルを書き換えず、genre警告、重複、ID付与件数を表示します。
 
+Git履歴を基に既存語の登録日を補完するには、次を実行します。Git上で初出日を特定できない未コミット語には実行日の登録日を設定します。
+
+```bash
+npm run backfill-created-at
+```
+
 既存の語彙を現在のジャンル定義とレベルへ振り分け直すときは、次を実行します。これは旧ジャンルと個別に判断した未分類語・未設定レベルを現在の基準へ移す移行スクリプトです。
 
 ```bash
 npm run reclassify-genres
 ```
 
+## 書体
+
+落下する言葉と詳細表示の書体は設定パネルの `書体` で切り替えられます。選択はブラウザに保存され、次回表示時に復元されます。
+
+- `明朝`（既定）: 和文はシステムの明朝体、英字・数字は Charter を先頭にしたセリフ体で表示します。数字はライニング数字になり、ベースラインが揃います。
+- `Gen Interface JP`: 同梱の `fonts/GenInterfaceJP-Regular.woff2`（SIL OFL 1.1、ライセンスは `fonts/GenInterfaceJP-OFL.txt`）を使うゴシック体です。約2.6MBのため、選択したときにだけ読み込まれます。
+
 ## 音声
 
 公開版の設定パネルでは、ブラウザ内で生成する `Generated noise` と、同梱の `audio/Nature_river_Track3_long_128.mp3` を再生する `Audio file` を選べます。
+
+`audio/Nature_river_Track3_long_128.mp3` の出典は、[d-elf.com「川のせせらぎ」](https://www.d-elf.com/archives/8333.html)です。
 
 音量設定はブラウザに保存され、次回表示時に復元されます。
 

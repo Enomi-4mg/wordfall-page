@@ -1,29 +1,94 @@
-import { getGenreLabel, isDisplayReadyWord, normalizeWord } from "./shared/words.js?v=genre-taxonomy-v2";
+import { getGenreLabel, isDisplayReadyWord, normalizeWord } from "./shared/words.js?v=created-at-v1";
 import { fitTextToWidth } from "./shared/fit-text.js";
 
 const DATA_FILE = "data/ja.json";
 const AUDIO_FILE = "audio/Nature_river_Track3_long_128.mp3";
 const FORMS_URL = "#";
-const FALL_SPEED = 1;
-const MAX_ACTIVE_WORDS = 30;
 const DEFAULT_VOLUME = 0.35;
+const DEFAULT_SPEED = 1;
+const DEFAULT_DENSITY = 30;
+const SPEED_RANGE = { min: 0.35, max: 2.2 };
+const DENSITY_RANGE = { min: 6, max: 240 };
+const WORD_START_Y = -60;
+const WORD_END_MARGIN = 90;
+const SWAY_OMEGA = 0.0008;
+const SWAY_PERIOD_MS = (Math.PI * 2) / SWAY_OMEGA;
+const SWAY_KEYFRAME_COUNT = 16;
+const SWAY_SAMPLES = Object.freeze(Array.from(
+  { length: SWAY_KEYFRAME_COUNT + 1 },
+  (_, index) => Math.sin((index / SWAY_KEYFRAME_COUNT) * Math.PI * 2)
+));
 const VOLUME_STORAGE_KEY = "wordfall.volume";
 const AUDIO_SOURCE_STORAGE_KEY = "wordfall.audioSource";
+const FONT_STORAGE_KEY = "wordfall.font";
+const SPEED_STORAGE_KEY = "wordfall.speed";
+const DENSITY_STORAGE_KEY = "wordfall.density";
+const MOTION_STORAGE_KEY = "wordfall.motion";
+const SHOW_ALL_WORDS_STORAGE_KEY = "wordfall.showAllWords";
+const COLOR_BY_DESCRIPTION_STORAGE_KEY = "wordfall.colorByDescription";
+// Developer-only settings are rendered only when the page runs from a local origin.
+const IS_LOCAL_DEV = ["localhost", "127.0.0.1", "[::1]"].includes(window.location.hostname)
+  || window.location.protocol === "file:";
 const AUDIO_SOURCES = new Set(["generated", "file"]);
+const FONTS = new Set(["mincho", "gen"]);
+const DEFAULT_FONT = "mincho";
+const MOTIONS = new Set(["sway", "straight"]);
+const DEFAULT_MOTION = "sway";
+const SPAWN_LANE_COUNT = 10;
+const SPAWN_X_MIN = 2;
+const SPAWN_X_MAX = 92;
+// Parallax layers (遠景 / 中景 / 前景). Each layer owns a disjoint band of size,
+// fall speed (px/ms), and sway amplitude, so nearer words are always larger,
+// faster, and swing wider than farther ones. Background fills, foreground accents.
+const DEPTH_LAYERS = [
+  { weight: 0.45, sizeRatio: [0, 0.28], speed: [0.016, 0.028], sway: [5, 12] },
+  { weight: 0.35, sizeRatio: [0.36, 0.64], speed: [0.032, 0.052], sway: [10, 22] },
+  { weight: 0.2, sizeRatio: [0.72, 1], speed: [0.058, 0.088], sway: [16, 30] }
+];
+// Subtle magnetism so words are easier to catch under the cursor.
+// ATTRACT_MARGIN extends the hit area outward from the whole word box (not just its center).
+const ATTRACT_MARGIN = 64;
+const ATTRACT_PULL = 16;
+const ATTRACT_EASE = 0.2;
 const WIKIPEDIA_LANGS = new Set(["ja", "en", "zh", "ko", "fr", "de", "it"]);
 
 const state = {
   vocabulary: [],
+  allWords: [],
+  wordBag: [],
   activeWords: [],
   selectedWord: null,
   paused: false,
-  lastFrame: 0,
   lastSpawn: 0,
+  lastMagnetFrame: 0,
+  magnetSettling: false,
+  spawnLanes: [],
   statusTimer: null,
+  resizeTimer: null,
+  animationFrame: 0,
+  animationTimer: 0,
+  speedUpdateFrame: 0,
   focusReturnTarget: null,
+  pointer: {
+    x: 0,
+    y: 0,
+    active: false,
+    fine: typeof window.matchMedia === "function" && window.matchMedia("(hover: hover) and (pointer: fine)").matches
+  },
+  // Cached viewport size so the frame loop never queries window metrics mid-frame.
+  viewport: {
+    width: window.innerWidth,
+    height: window.innerHeight
+  },
   settings: {
     volume: loadStoredVolume(),
-    audioSource: loadStoredAudioSource()
+    audioSource: loadStoredAudioSource(),
+    font: loadStoredFont(),
+    speed: loadStoredSpeed(),
+    density: loadStoredDensity(),
+    motion: loadStoredMotion(),
+    showAllWords: loadStoredShowAllWords(),
+    colorByDescription: loadStoredColorByDescription()
   },
   audio: {
     context: null,
@@ -47,6 +112,15 @@ const dom = {
   formsLink: document.getElementById("formsLink"),
   statusMessage: document.getElementById("statusMessage"),
   audioSourceSelect: document.getElementById("audioSourceSelect"),
+  fontSelect: document.getElementById("fontSelect"),
+  motionSelect: document.getElementById("motionSelect"),
+  devSettings: document.getElementById("devSettings"),
+  showAllWordsCheckbox: document.getElementById("showAllWordsCheckbox"),
+  colorByDescriptionCheckbox: document.getElementById("colorByDescriptionCheckbox"),
+  speedSlider: document.getElementById("speedSlider"),
+  speedValue: document.getElementById("speedValue"),
+  densitySlider: document.getElementById("densitySlider"),
+  densityValue: document.getElementById("densityValue"),
   volumeSlider: document.getElementById("volumeSlider"),
   volumeValue: document.getElementById("volumeValue"),
   modalBackdrop: document.getElementById("modalBackdrop"),
@@ -61,117 +135,593 @@ const dom = {
   wikiButton: document.getElementById("wikiButton")
 };
 
+const floatingWordsByElement = new WeakMap();
+const wordSizeObserver = typeof ResizeObserver === "function"
+  ? new ResizeObserver((entries) => {
+    for (const entry of entries) {
+      const word = floatingWordsByElement.get(entry.target);
+      if (!word) continue;
+      word.w = entry.contentRect.width;
+      word.h = entry.contentRect.height;
+      if (fitFloatingWordToViewport(word)) continue;
+      positionWordHorizontally(word);
+    }
+  })
+  : null;
+
 async function loadData() {
   try {
     const response = await fetch(DATA_FILE, { cache: "no-store" });
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     const data = await response.json();
     if (!Array.isArray(data)) throw new Error("JSON root must be an array.");
-    const normalized = data.map(normalizeWord).filter(Boolean);
-    state.vocabulary = normalized.filter(isDisplayReadyWord);
-    const hiddenCount = normalized.length - state.vocabulary.length;
+    state.allWords = data.map(normalizeWord).filter(Boolean);
+    applyWordFilter();
+    const displayReadyCount = state.allWords.filter(isDisplayReadyWord).length;
+    const hiddenCount = state.allWords.length - displayReadyCount;
     if (!state.vocabulary.length) {
       showStatus(`No display-ready words were found in ${DATA_FILE}. Only words with desc are shown.`);
-    } else if (hiddenCount > state.vocabulary.length * 2) {
-      showStatus(`${state.vocabulary.length} words with desc are shown. ${hiddenCount} words without desc are hidden.`);
+    } else if (!isShowingAllWords() && hiddenCount > displayReadyCount * 2) {
+      showStatus(`${displayReadyCount} words with desc are shown. ${hiddenCount} words without desc are hidden.`);
     }
   } catch (error) {
     showStatus(`Could not load ${DATA_FILE}. Start a local static server and reload.`);
   }
 }
 
-function animationLoop(timestamp) {
-  if (!state.lastFrame) state.lastFrame = timestamp;
-  const delta = Math.min(42, timestamp - state.lastFrame);
-  state.lastFrame = timestamp;
+function isShowingAllWords() {
+  // The toggle only exists in local dev; never honor a stray stored value in production.
+  return IS_LOCAL_DEV && state.settings.showAllWords;
+}
 
-  if (!state.paused) {
-    spawnWords(timestamp);
-    moveWords(delta, timestamp);
+function applyWordFilter() {
+  state.vocabulary = isShowingAllWords()
+    ? state.allWords
+    : state.allWords.filter(isDisplayReadyWord);
+  state.wordBag = [];
+}
+
+// Shuffle-bag draw: every word appears exactly once per cycle, so the whole
+// vocabulary surfaces uniformly instead of pure random-with-replacement.
+function nextVocabularyItem() {
+  const words = state.vocabulary;
+  if (!words.length) return null;
+  if (!state.wordBag.length) {
+    state.wordBag = Array.from({ length: words.length }, (_, index) => index);
+    shuffleInPlace(state.wordBag);
   }
+  return words[state.wordBag.pop()];
+}
 
-  requestAnimationFrame(animationLoop);
+function animationLoop(timestamp) {
+  state.animationFrame = 0;
+  if (state.paused || document.hidden) return;
+  spawnWords(timestamp);
+  if (state.pointer.fine && (state.pointer.active || state.magnetSettling)) {
+    updateMagnetism(timestamp);
+  }
+  scheduleAnimationTick(timestamp);
+}
+
+// Falling and swaying stay on the compositor. Wake the main thread only when a
+// word is due to spawn or pointer magnetism needs another sample.
+function requestAnimationTick() {
+  if (state.paused || document.hidden) return;
+  if (state.animationTimer) {
+    window.clearTimeout(state.animationTimer);
+    state.animationTimer = 0;
+  }
+  if (state.animationFrame) return;
+  state.animationFrame = requestAnimationFrame(animationLoop);
+}
+
+function cancelAnimationTick() {
+  if (state.animationFrame) cancelAnimationFrame(state.animationFrame);
+  if (state.animationTimer) window.clearTimeout(state.animationTimer);
+  state.animationFrame = 0;
+  state.animationTimer = 0;
+}
+
+function scheduleAnimationTick(timestamp = performance.now()) {
+  if (state.paused || document.hidden || !state.vocabulary.length) return;
+  if (state.activeWords.length > 0 && state.pointer.fine && (state.pointer.active || state.magnetSettling)) {
+    requestAnimationTick();
+    return;
+  }
+  if (state.activeWords.length >= state.settings.density || state.animationTimer) return;
+  const wait = Math.max(0, getSpawnDelay() - (timestamp - state.lastSpawn));
+  if (wait <= 17) {
+    requestAnimationTick();
+    return;
+  }
+  state.animationTimer = window.setTimeout(() => {
+    state.animationTimer = 0;
+    requestAnimationTick();
+  }, wait);
+}
+
+function getSpawnDelay() {
+  return Math.max(24, Math.max(80, 950 - state.settings.density * 6) / Math.max(1, state.settings.speed));
 }
 
 function spawnWords(timestamp) {
   if (!state.vocabulary.length) return;
-  if (state.activeWords.length >= MAX_ACTIVE_WORDS) return;
-  const spawnDelay = Math.max(80, 950 - state.activeWords.length * 6);
-  if (timestamp - state.lastSpawn < spawnDelay) return;
-  state.lastSpawn = timestamp;
-  createFloatingWord();
+  const maxWords = state.settings.density;
+  if (state.activeWords.length >= maxWords) return;
+  const spawnDelay = getSpawnDelay();
+  const due = Math.floor((timestamp - state.lastSpawn) / spawnDelay);
+  if (due < 1) return;
+  const count = Math.min(due, 4, maxWords - state.activeWords.length);
+  for (let index = 0; index < count; index += 1) createFloatingWord();
+  state.lastSpawn += count * spawnDelay;
+  // A suspended frame should not turn into a large catch-up burst.
+  if (timestamp - state.lastSpawn > spawnDelay * 4) state.lastSpawn = timestamp;
 }
 
 function createFloatingWord() {
-  const item = state.vocabulary[Math.floor(Math.random() * state.vocabulary.length)];
+  const item = nextVocabularyItem();
   if (!item) return;
 
-  const minSize = 10;
-  const maxSize = 88;
-  const size = randomBetween(minSize, maxSize);
-  const sizeRatio = (size - minSize) / (maxSize - minSize);
-  const depth = 0.72 + sizeRatio * 0.72 + randomBetween(-0.05, 0.05);
-  const opacity = 0.14 + sizeRatio * 0.84;
+  const { min: minSize, max: maxSize } = getResponsiveWordSizeRange();
+  const layer = pickDepthLayer();
+  const sizeRatio = randomBetween(layer.sizeRatio[0], layer.sizeRatio[1]);
+  const size = minSize + sizeRatio * (maxSize - minSize);
+  // Keep the keyframes compact and stable when the word is handed to the compositor.
+  const depth = Math.round((0.72 + sizeRatio * 0.72 + randomBetween(-0.05, 0.05)) * 1000) / 1000;
+  // Bias the low end up (ease-out) with a lifted floor so small/far words stay readable
+  // instead of fading too thin, while large words still reach near-full opacity.
+  const opacity = 0.24 + Math.pow(sizeRatio, 0.7) * 0.74;
   const hoverOpacity = Math.min(1, opacity + 0.18);
   const word = {
     item,
-    x: randomBetween(2, 92),
-    y: -60,
-    speed: randomBetween(0.018, 0.09) * depth,
+    x: nextSpawnX(),
+    speed: randomBetween(layer.speed[0], layer.speed[1]),
     size,
-    phase: randomBetween(0, Math.PI * 2),
-    sway: randomBetween(6, 34),
+    sizeRatio,
+    sway: randomBetween(layer.sway[0], layer.sway[1]),
     opacity,
-    depth
+    depth,
+    attractX: 0,
+    attractY: 0,
+    attractTransform: "",
+    w: 0,
+    h: 0,
+    baseLeft: 0,
+    boxW: 0,
+    boxH: 0,
+    magnetMinX: 0,
+    magnetMaxX: 0,
+    fallAnimation: null,
+    fallStart: WORD_START_Y,
+    fallEnd: WORD_START_Y,
+    fallDuration: 1,
+    swayAnimation: null,
+    swayPhase: randomBetween(0, Math.PI * 2),
+    removed: false
   };
 
   const el = document.createElement("button");
+  const label = document.createElement("span");
   el.type = "button";
   el.className = "floating-word";
-  el.textContent = item.name;
+  label.className = "floating-word-label";
+  label.setAttribute("aria-hidden", "true");
+  label.textContent = item.name;
+  el.appendChild(label);
   el.style.fontSize = `${size}px`;
   el.style.setProperty("--word-alpha", opacity.toFixed(3));
   el.style.setProperty("--word-hover-alpha", hoverOpacity.toFixed(3));
+  el.style.setProperty("--word-hit-size", `${(44 / depth).toFixed(2)}px`);
+  el.style.scale = String(depth);
   el.style.zIndex = String(Math.round(depth * 10));
   el.setAttribute("aria-label", `${item.name} の詳細を開く`);
-  el.addEventListener("click", () => openModal(item, el));
   word.el = el;
+  word.label = label;
+  updateFloatingWordDescriptionColor(word);
+  floatingWordsByElement.set(el, word);
   state.activeWords.push(word);
   dom.cascade.appendChild(el);
+  positionWordHorizontally(word);
+  observeWordSize(word);
+  startFallAnimation(word);
+  startSwayAnimation(word);
 }
 
-function moveWords(delta, timestamp) {
-  const height = window.innerHeight;
-  for (let i = state.activeWords.length - 1; i >= 0; i -= 1) {
-    const word = state.activeWords[i];
-    word.y += delta * word.speed * FALL_SPEED;
-    const sway = Math.sin(timestamp * 0.0008 + word.phase) * word.sway;
-    word.el.style.transform = `translate3d(calc(${word.x}vw + ${sway}px), ${word.y}px, 0) scale(${word.depth})`;
+function pickDepthLayer() {
+  let roll = Math.random();
+  for (const layer of DEPTH_LAYERS) {
+    roll -= layer.weight;
+    if (roll < 0) return layer;
+  }
+  return DEPTH_LAYERS[DEPTH_LAYERS.length - 1];
+}
 
-    if (word.y > height + 90) {
-      word.el.remove();
-      state.activeWords.splice(i, 1);
+function getResponsiveWordSizeRange(width = state.viewport.width) {
+  if (width <= 640) return { min: 20, max: 38 };
+  if (width <= 1024) return { min: 22, max: 44 };
+  if (width >= 1440) return { min: 26, max: 54 };
+  return { min: 24, max: 50 };
+}
+
+function updateResponsiveWordSize(word) {
+  const range = getResponsiveWordSizeRange();
+  const currentSize = Number.parseFloat(word.el.style.fontSize) || word.size;
+  const nextSize = range.min + word.sizeRatio * (range.max - range.min);
+  if (currentSize > 0 && word.w > 0) {
+    const scale = nextSize / currentSize;
+    const minimumHitSize = state.pointer.fine ? 0 : 44 / word.depth;
+    word.w = Math.max(minimumHitSize, word.w * scale);
+    word.h = Math.max(minimumHitSize, word.h * scale);
+  }
+  word.size = nextSize;
+  word.el.style.fontSize = `${word.size.toFixed(2)}px`;
+}
+
+function nextSpawnX() {
+  if (!state.spawnLanes.length) {
+    state.spawnLanes = Array.from({ length: SPAWN_LANE_COUNT }, (_, index) => index);
+    shuffleInPlace(state.spawnLanes);
+  }
+
+  const lane = state.spawnLanes.pop();
+  const laneWidth = (SPAWN_X_MAX - SPAWN_X_MIN) / SPAWN_LANE_COUNT;
+  // Each batch uses every horizontal lane once. Random placement inside the lane
+  // keeps the result organic without allowing long-lived left/right clusters.
+  return SPAWN_X_MIN + (lane + Math.random()) * laneWidth;
+}
+
+function shuffleInPlace(values) {
+  for (let index = values.length - 1; index > 0; index -= 1) {
+    const swapIndex = Math.floor(Math.random() * (index + 1));
+    [values[index], values[swapIndex]] = [values[swapIndex], values[index]];
+  }
+}
+
+function positionWordHorizontally(word) {
+  const baseLeft = calculateWordBaseLeft(word);
+  word.baseLeft = baseLeft;
+  word.boxW = word.w * word.depth;
+  word.boxH = word.h * word.depth;
+  word.magnetMinX = baseLeft - word.sway - ATTRACT_MARGIN;
+  word.magnetMaxX = baseLeft + word.sway + word.boxW + ATTRACT_MARGIN;
+  word.el.style.left = `${baseLeft.toFixed(2)}px`;
+}
+
+function calculateWordBaseLeft(word) {
+  const edge = state.viewport.width <= 640 ? 10 : 16;
+  const progress = (word.x - SPAWN_X_MIN) / (SPAWN_X_MAX - SPAWN_X_MIN);
+  const inset = edge + word.sway;
+  const available = Math.max(0, state.viewport.width - inset * 2 - word.w * word.depth);
+  return inset + progress * available;
+}
+
+function fitFloatingWordToViewport(word) {
+  const edge = state.viewport.width <= 640 ? 10 : 16;
+  const maxWidth = Math.max(1, state.viewport.width - (edge + word.sway) * 2);
+  const visualWidth = word.w * word.depth;
+  if (visualWidth <= maxWidth + 0.5) return false;
+  const currentSize = Number.parseFloat(word.el.style.fontSize) || word.size;
+  const fittedSize = Math.max(14, currentSize * (maxWidth / visualWidth));
+  if (fittedSize >= currentSize - 0.25) return false;
+  word.el.style.fontSize = `${fittedSize.toFixed(2)}px`;
+  return true;
+}
+
+function observeWordSize(word) {
+  if (wordSizeObserver) {
+    wordSizeObserver.observe(word.el);
+    return;
+  }
+  // Old-browser fallback: defer the read until the next frame so appending a word
+  // does not immediately force style and layout calculation.
+  requestAnimationFrame(() => {
+    if (word.removed) return;
+    word.w = word.el.offsetWidth;
+    word.h = word.el.offsetHeight;
+    if (fitFloatingWordToViewport(word)) {
+      requestAnimationFrame(() => {
+        if (word.removed) return;
+        word.w = word.el.offsetWidth;
+        word.h = word.el.offsetHeight;
+        positionWordHorizontally(word);
+      });
+      return;
+    }
+    positionWordHorizontally(word);
+  });
+}
+
+function startFallAnimation(word, startY = WORD_START_Y) {
+  const endY = state.viewport.height + WORD_END_MARGIN;
+  const distance = Math.max(1, endY - startY);
+  const duration = distance / word.speed;
+  const animation = word.el.animate([
+    { translate: `0px ${startY.toFixed(2)}px` },
+    { translate: `0px ${endY.toFixed(2)}px` }
+  ], {
+    duration,
+    easing: "linear",
+    fill: "forwards"
+  });
+
+  word.fallStart = startY;
+  word.fallEnd = endY;
+  word.fallDuration = duration;
+  word.fallAnimation = animation;
+  animation.playbackRate = state.settings.speed;
+  if (state.paused || document.hidden) animation.pause();
+  animation.onfinish = () => {
+    if (word.fallAnimation === animation) removeFloatingWord(word);
+  };
+}
+
+function startSwayAnimation(word, phase = word.swayPhase) {
+  if (state.settings.motion === "straight") return;
+  const frames = [];
+  for (let index = 0; index <= SWAY_KEYFRAME_COUNT; index += 1) {
+    const progress = index / SWAY_KEYFRAME_COUNT;
+    // The parent's individual scale property also scales this legacy transform.
+    const x = (SWAY_SAMPLES[index] * word.sway) / word.depth;
+    frames.push({
+      offset: progress,
+      transform: `translate3d(${x.toFixed(2)}px, 0, 0)`
+    });
+  }
+  const animation = word.el.animate(frames, {
+    duration: SWAY_PERIOD_MS,
+    easing: "linear",
+    iterations: Infinity
+  });
+  const normalizedPhase = normalizePhase(phase);
+  animation.currentTime = normalizedPhase / SWAY_OMEGA;
+  word.swayPhase = normalizedPhase;
+  word.swayAnimation = animation;
+  if (state.paused || document.hidden) animation.pause();
+}
+
+function getSwayPhase(word) {
+  if (!word.swayAnimation) return word.swayPhase;
+  const currentTime = Math.max(0, Number(word.swayAnimation.currentTime) || 0);
+  return normalizePhase(currentTime * SWAY_OMEGA);
+}
+
+function normalizePhase(phase) {
+  const cycle = Math.PI * 2;
+  return ((phase % cycle) + cycle) % cycle;
+}
+
+function getFallY(word) {
+  const currentTime = Math.max(0, Number(word.fallAnimation?.currentTime) || 0);
+  const progress = Math.min(1, currentTime / word.fallDuration);
+  return word.fallStart + (word.fallEnd - word.fallStart) * progress;
+}
+
+function getRenderedSway(word, phase) {
+  // Match the browser's linear interpolation between the sway keyframes exactly.
+  // Using a continuous sine here while the pixels followed segmented keyframes made
+  // the magnetic target drift by sub-pixels and visibly twitch near its boundary.
+  const cycle = Math.PI * 2;
+  const framePosition = (normalizePhase(phase) / cycle) * SWAY_KEYFRAME_COUNT;
+  const frameIndex = Math.floor(framePosition);
+  const frameProgress = framePosition - frameIndex;
+  const from = SWAY_SAMPLES[frameIndex];
+  const to = SWAY_SAMPLES[frameIndex + 1];
+  return (from + (to - from) * frameProgress) * word.sway;
+}
+
+function retargetFallAnimations() {
+  for (const word of [...state.activeWords]) {
+    const y = getFallY(word);
+    const oldAnimation = word.fallAnimation;
+    if (oldAnimation) {
+      oldAnimation.onfinish = null;
+      oldAnimation.cancel();
+    }
+    if (y >= state.viewport.height + WORD_END_MARGIN) {
+      removeFloatingWord(word);
+      continue;
+    }
+    startFallAnimation(word, y);
+  }
+}
+
+function syncSwayAnimations() {
+  for (const word of state.activeWords) {
+    const phase = getSwayPhase(word);
+    if (word.swayAnimation) {
+      word.swayAnimation.cancel();
+      word.swayAnimation = null;
+    }
+    word.swayPhase = phase;
+    startSwayAnimation(word, phase);
+  }
+}
+
+function updateWordPlaybackRates() {
+  for (const word of state.activeWords) {
+    const animation = word.fallAnimation;
+    if (!animation) continue;
+    if (typeof animation.updatePlaybackRate === "function") {
+      animation.updatePlaybackRate(state.settings.speed);
+    } else {
+      animation.playbackRate = state.settings.speed;
     }
   }
 }
 
+function schedulePlaybackRateUpdate() {
+  if (state.speedUpdateFrame) return;
+  state.speedUpdateFrame = requestAnimationFrame(() => {
+    state.speedUpdateFrame = 0;
+    updateWordPlaybackRates();
+  });
+}
+
+function syncWordAnimationPlayback() {
+  const shouldPause = state.paused || document.hidden;
+  for (const word of state.activeWords) {
+    for (const animation of [word.fallAnimation, word.swayAnimation]) {
+      if (!animation) continue;
+      if (shouldPause) {
+        animation.pause();
+      } else {
+        animation.play();
+      }
+    }
+  }
+}
+
+function updateMagnetism(timestamp) {
+  const delta = state.lastMagnetFrame ? Math.min(50, timestamp - state.lastMagnetFrame) : 1000 / 60;
+  state.lastMagnetFrame = timestamp;
+  const ease = 1 - Math.pow(1 - ATTRACT_EASE, delta / (1000 / 60));
+  const magnetize = state.pointer.fine && state.pointer.active;
+  let hasMotion = false;
+  for (const word of state.activeWords) {
+    if (!magnetize && word.attractX === 0 && word.attractY === 0) continue;
+    if (!magnetize) {
+      applyMagnet(word, false, 0, 0, ease);
+      if (word.attractX !== 0 || word.attractY !== 0) hasMotion = true;
+      continue;
+    }
+    if (word.w > 0) {
+      if (state.pointer.x < word.magnetMinX || state.pointer.x > word.magnetMaxX) {
+        if (word.attractX !== 0 || word.attractY !== 0) {
+          applyMagnet(word, false, 0, 0, ease);
+          if (word.attractX !== 0 || word.attractY !== 0) hasMotion = true;
+        }
+        continue;
+      }
+    }
+    const y = getFallY(word);
+    if (word.h > 0 && (state.pointer.y < y - ATTRACT_MARGIN || state.pointer.y > y + word.boxH + ATTRACT_MARGIN)) {
+      if (word.attractX !== 0 || word.attractY !== 0) {
+        applyMagnet(word, false, 0, 0, ease);
+        if (word.attractX !== 0 || word.attractY !== 0) hasMotion = true;
+      }
+      continue;
+    }
+    const sway = state.settings.motion === "straight" ? 0 : getRenderedSway(word, getSwayPhase(word));
+    applyMagnet(word, true, y, sway, ease);
+    if (word.attractX !== 0 || word.attractY !== 0) hasMotion = true;
+  }
+  state.magnetSettling = hasMotion;
+}
+
+function applyMagnet(word, magnetize, y, sway, ease) {
+  let targetX = 0;
+  let targetY = 0;
+  if (magnetize && word.w > 0 && word.h > 0) {
+    const left = word.baseLeft + sway;
+    const top = y;
+    const boxW = word.boxW;
+    const boxH = word.boxH;
+    const right = left + boxW;
+    const bottom = top + boxH;
+    // Reject almost every word using comparisons before doing distance math.
+    const nearby = state.pointer.x >= left - ATTRACT_MARGIN
+      && state.pointer.x <= right + ATTRACT_MARGIN
+      && state.pointer.y >= top - ATTRACT_MARGIN
+      && state.pointer.y <= bottom + ATTRACT_MARGIN;
+    if (nearby) {
+      const edgeX = distanceToRange(state.pointer.x, left, right);
+      const edgeY = distanceToRange(state.pointer.y, top, bottom);
+      const edgeDistanceSquared = edgeX * edgeX + edgeY * edgeY;
+      if (edgeDistanceSquared < ATTRACT_MARGIN * ATTRACT_MARGIN) {
+        const edgeDist = Math.sqrt(edgeDistanceSquared);
+        const strength = (1 - edgeDist / ATTRACT_MARGIN) * ATTRACT_PULL;
+        const toPointerX = state.pointer.x - (left + boxW / 2);
+        const toPointerY = state.pointer.y - (top + boxH / 2);
+        const reachSquared = toPointerX * toPointerX + toPointerY * toPointerY;
+        if (reachSquared > 0.000001) {
+          const reach = Math.sqrt(reachSquared);
+          const pull = Math.min(strength, reach);
+          targetX = (toPointerX / reach) * pull;
+          targetY = (toPointerY / reach) * pull;
+        }
+      }
+    }
+  }
+
+  word.attractX += (targetX - word.attractX) * ease;
+  word.attractY += (targetY - word.attractY) * ease;
+  if (Math.abs(word.attractX) < 0.05) word.attractX = 0;
+  if (Math.abs(word.attractY) < 0.05) word.attractY = 0;
+  const transform = word.attractX === 0 && word.attractY === 0
+    ? ""
+    : `translate3d(${(word.attractX / word.depth).toFixed(2)}px, ${(word.attractY / word.depth).toFixed(2)}px, 0)`;
+  if (transform !== word.attractTransform) {
+    word.label.style.transform = transform;
+    word.attractTransform = transform;
+  }
+}
+
+function distanceToRange(value, min, max) {
+  if (value < min) return value - min;
+  if (value > max) return value - max;
+  return 0;
+}
+
+function removeFloatingWord(word) {
+  if (word.removed) return;
+  word.removed = true;
+  if (wordSizeObserver) wordSizeObserver.unobserve(word.el);
+  floatingWordsByElement.delete(word.el);
+  if (word.fallAnimation) {
+    word.fallAnimation.onfinish = null;
+    word.fallAnimation.cancel();
+  }
+  if (word.swayAnimation) word.swayAnimation.cancel();
+  word.el.remove();
+  const index = state.activeWords.indexOf(word);
+  if (index !== -1) state.activeWords.splice(index, 1);
+  requestAnimationTick();
+}
+
+function trimActiveWords(maxWords) {
+  const excess = state.activeWords.length - maxWords;
+  if (excess <= 0) return;
+  for (const word of state.activeWords.slice(0, excess)) removeFloatingWord(word);
+}
+
 function clearActiveWords() {
-  state.activeWords.forEach((word) => word.el.remove());
-  state.activeWords = [];
+  for (const word of [...state.activeWords]) removeFloatingWord(word);
+}
+
+function getModalMinimumFontSize() {
+  return state.viewport.width <= 640 ? 14 : 20;
+}
+
+function isDescriptionColoringEnabled() {
+  return IS_LOCAL_DEV && state.settings.colorByDescription;
+}
+
+function updateFloatingWordDescriptionColor(word) {
+  word.el.classList.toggle("is-description-missing", isDescriptionColoringEnabled() && !word.item.desc);
+}
+
+function updateActiveWordDescriptionColors() {
+  for (const word of state.activeWords) updateFloatingWordDescriptionColor(word);
 }
 
 function openModal(item, opener = document.activeElement) {
   state.selectedWord = item;
   state.paused = true;
+  cancelAnimationTick();
+  syncWordAnimationPlayback();
   state.focusReturnTarget = opener;
   dom.modalLevel.textContent = `Lv ${item.lv ?? "-"}`;
   dom.modalGenre.textContent = getGenreLabel(item.genre);
   dom.modalWord.textContent = item.name;
-  fitTextToWidth(dom.modalWord, 20);
+  fitTextToWidth(dom.modalWord, getModalMinimumFontSize());
   dom.modalReading.textContent = item.reading || "";
   dom.modalReading.hidden = !item.reading;
-  dom.modalDesc.textContent = item.desc || "";
-  dom.modalDesc.hidden = !item.desc;
+  const hasDescription = Boolean(item.desc);
+  dom.modalDesc.textContent = hasDescription
+    ? item.desc
+    : "この言葉には、まだ解説が設定されていません。";
+  dom.modalDesc.hidden = false;
+  dom.modalDesc.classList.toggle("is-missing-desc", !hasDescription);
   openLayer(dom.modalBackdrop);
   dom.detailModal.focus();
   refreshIcons();
@@ -181,6 +731,9 @@ function closeModal() {
   closeLayer(dom.modalBackdrop);
   state.selectedWord = null;
   state.paused = false;
+  state.lastMagnetFrame = 0;
+  syncWordAnimationPlayback();
+  requestAnimationTick();
   restoreFocus();
 }
 
@@ -324,6 +877,18 @@ function updateVolumeLabel() {
   dom.volumeValue.textContent = `${Math.round(state.settings.volume * 100)}%`;
 }
 
+function updateSpeedLabel() {
+  dom.speedValue.textContent = `${Number(state.settings.speed).toFixed(2)}x`;
+}
+
+function updateDensityLabel() {
+  dom.densityValue.textContent = String(state.settings.density);
+}
+
+function applyFont() {
+  document.documentElement.dataset.wordFont = state.settings.font;
+}
+
 function ensureFileAudio() {
   if (state.audio.file) return state.audio.file;
   const audio = new Audio(AUDIO_FILE);
@@ -401,7 +966,37 @@ function trapFocus(event, container) {
   }
 }
 
+function scheduleViewportUpdate() {
+  window.clearTimeout(state.resizeTimer);
+  state.resizeTimer = window.setTimeout(() => {
+    state.resizeTimer = null;
+    const width = Math.round(window.visualViewport?.width || window.innerWidth);
+    const height = Math.round(window.visualViewport?.height || window.innerHeight);
+    const widthChanged = width !== Math.round(state.viewport.width);
+    const heightChanged = height !== Math.round(state.viewport.height);
+    if (!widthChanged && !heightChanged) return;
+    state.viewport.width = width;
+    state.viewport.height = height;
+    if (widthChanged) {
+      for (const word of state.activeWords) {
+        updateResponsiveWordSize(word);
+        positionWordHorizontally(word);
+      }
+      if (dom.modalBackdrop.classList.contains("is-open")) {
+        fitTextToWidth(dom.modalWord, getModalMinimumFontSize());
+      }
+    }
+    if (heightChanged) retargetFallAnimations();
+  }, 120);
+}
+
 function bindEvents() {
+  dom.cascade.addEventListener("click", (event) => {
+    const element = event.target.closest(".floating-word");
+    if (!element || !dom.cascade.contains(element)) return;
+    const word = floatingWordsByElement.get(element);
+    if (word) openModal(word.item, element);
+  });
   dom.settingsButton.addEventListener("click", () => togglePopover(dom.settingsPanel));
   dom.soundButton.addEventListener("click", toggleSound);
   dom.infoButton.addEventListener("click", () => togglePopover(dom.infoDialog));
@@ -422,6 +1017,41 @@ function bindEvents() {
     setStoredValue(AUDIO_SOURCE_STORAGE_KEY, state.settings.audioSource);
     syncAudioSource();
   });
+  dom.fontSelect.addEventListener("change", () => {
+    state.settings.font = FONTS.has(dom.fontSelect.value) ? dom.fontSelect.value : DEFAULT_FONT;
+    setStoredValue(FONT_STORAGE_KEY, state.settings.font);
+    applyFont();
+  });
+  dom.motionSelect.addEventListener("change", () => {
+    state.settings.motion = MOTIONS.has(dom.motionSelect.value) ? dom.motionSelect.value : DEFAULT_MOTION;
+    setStoredValue(MOTION_STORAGE_KEY, state.settings.motion);
+    syncSwayAnimations();
+  });
+  dom.showAllWordsCheckbox.addEventListener("change", () => {
+    state.settings.showAllWords = dom.showAllWordsCheckbox.checked;
+    setStoredValue(SHOW_ALL_WORDS_STORAGE_KEY, state.settings.showAllWords ? "1" : "0");
+    applyWordFilter();
+    requestAnimationTick();
+  });
+  dom.colorByDescriptionCheckbox.addEventListener("change", () => {
+    state.settings.colorByDescription = dom.colorByDescriptionCheckbox.checked;
+    setStoredValue(COLOR_BY_DESCRIPTION_STORAGE_KEY, state.settings.colorByDescription ? "1" : "0");
+    updateActiveWordDescriptionColors();
+  });
+  dom.speedSlider.addEventListener("input", () => {
+    state.settings.speed = clampNumber(Number(dom.speedSlider.value), SPEED_RANGE.min, SPEED_RANGE.max, DEFAULT_SPEED);
+    setStoredValue(SPEED_STORAGE_KEY, String(state.settings.speed));
+    updateSpeedLabel();
+    schedulePlaybackRateUpdate();
+    requestAnimationTick();
+  });
+  dom.densitySlider.addEventListener("input", () => {
+    state.settings.density = Math.round(clampNumber(Number(dom.densitySlider.value), DENSITY_RANGE.min, DENSITY_RANGE.max, DEFAULT_DENSITY));
+    setStoredValue(DENSITY_STORAGE_KEY, String(state.settings.density));
+    updateDensityLabel();
+    trimActiveWords(state.settings.density);
+    requestAnimationTick();
+  });
   dom.closeModalButton.addEventListener("click", closeModal);
   dom.modalBackdrop.addEventListener("click", (event) => {
     if (event.target === dom.modalBackdrop) closeModal();
@@ -440,9 +1070,36 @@ function bindEvents() {
     }
     trapFocus(event, dom.modalBackdrop);
   });
-  window.addEventListener("resize", () => {
-    if (dom.modalBackdrop.classList.contains("is-open")) fitTextToWidth(dom.modalWord, 20);
+  window.addEventListener("resize", scheduleViewportUpdate);
+  window.visualViewport?.addEventListener("resize", scheduleViewportUpdate);
+  window.addEventListener("pagehide", cancelAnimationTick);
+  window.addEventListener("pageshow", (event) => {
+    if (event.persisted) requestAnimationTick();
   });
+  document.addEventListener("visibilitychange", () => {
+    state.lastMagnetFrame = 0;
+    if (document.hidden) {
+      state.pointer.active = false;
+      cancelAnimationTick();
+    } else {
+      state.lastSpawn = performance.now();
+    }
+    syncWordAnimationPlayback();
+    if (!document.hidden) requestAnimationTick();
+  });
+  if (state.pointer.fine) {
+    window.addEventListener("pointermove", (event) => {
+      if (event.pointerType && event.pointerType !== "mouse") return;
+      state.pointer.x = event.clientX;
+      state.pointer.y = event.clientY;
+      state.pointer.active = true;
+      requestAnimationTick();
+    }, { passive: true });
+    window.addEventListener("pointerleave", () => {
+      state.pointer.active = false;
+      requestAnimationTick();
+    });
+  }
 }
 
 async function init() {
@@ -452,12 +1109,22 @@ async function init() {
   dom.formsLink.href = FORMS_URL;
   dom.volumeSlider.value = state.settings.volume;
   dom.audioSourceSelect.value = state.settings.audioSource;
+  dom.fontSelect.value = state.settings.font;
+  dom.motionSelect.value = state.settings.motion;
+  dom.devSettings.hidden = !IS_LOCAL_DEV;
+  dom.showAllWordsCheckbox.checked = state.settings.showAllWords;
+  dom.colorByDescriptionCheckbox.checked = state.settings.colorByDescription;
+  dom.speedSlider.value = state.settings.speed;
+  dom.densitySlider.value = state.settings.density;
+  applyFont();
+  updateSpeedLabel();
+  updateDensityLabel();
   updateVolumeLabel();
   updateSoundButton();
   bindEvents();
   refreshIcons();
   await loadData();
-  requestAnimationFrame(animationLoop);
+  requestAnimationTick();
 }
 
 function showStatus(message) {
@@ -485,6 +1152,41 @@ function loadStoredVolume() {
 function loadStoredAudioSource() {
   const value = getStoredValue(AUDIO_SOURCE_STORAGE_KEY);
   return AUDIO_SOURCES.has(value) ? value : "generated";
+}
+
+function loadStoredFont() {
+  const value = getStoredValue(FONT_STORAGE_KEY);
+  return FONTS.has(value) ? value : DEFAULT_FONT;
+}
+
+function loadStoredMotion() {
+  const value = getStoredValue(MOTION_STORAGE_KEY);
+  return MOTIONS.has(value) ? value : DEFAULT_MOTION;
+}
+
+function loadStoredShowAllWords() {
+  return getStoredValue(SHOW_ALL_WORDS_STORAGE_KEY) === "1";
+}
+
+function loadStoredColorByDescription() {
+  return getStoredValue(COLOR_BY_DESCRIPTION_STORAGE_KEY) === "1";
+}
+
+function loadStoredSpeed() {
+  const raw = getStoredValue(SPEED_STORAGE_KEY);
+  if (raw === null || raw === "") return DEFAULT_SPEED;
+  return clampNumber(Number(raw), SPEED_RANGE.min, SPEED_RANGE.max, DEFAULT_SPEED);
+}
+
+function loadStoredDensity() {
+  const raw = getStoredValue(DENSITY_STORAGE_KEY);
+  if (raw === null || raw === "") return DEFAULT_DENSITY;
+  return Math.round(clampNumber(Number(raw), DENSITY_RANGE.min, DENSITY_RANGE.max, DEFAULT_DENSITY));
+}
+
+function clampNumber(value, min, max, fallback) {
+  if (!Number.isFinite(value)) return fallback;
+  return Math.min(max, Math.max(min, value));
 }
 
 function getStoredValue(key) {

@@ -1,6 +1,7 @@
 [
   {
     "id": "624284e2-ffe5-4aee-a60b-381d63d71144",
+    "createdAt": "2026-07-09",
     "name": "冰墩墩",
     "lv": 2,
     "lang": "zh",
@@ -8,6 +9,7 @@
   },
   {
     "id": "3a1d5999-fbad-4817-8323-0460b58d40fa",
+    "createdAt": "2026-07-09",
     "name": "档案",
     "reading": "dàng'àn",
     "lv": 3,
@@ -16,6 +18,7 @@
   },
   {
     "id": "ed94ce15-7776-46bc-9166-4bc5b5942547",
+    "createdAt": "2026-07-09",
     "name": "对比",
     "reading": "duìbǐ",
     "lv": 3,
@@ -24,6 +27,7 @@
   },
   {
     "id": "26c3c443-e3e9-4f21-9172-d9260990dab1",
+    "createdAt": "2026-07-09",
     "name": "共鸣",
     "reading": "gòngmíng",
     "lv": 4,
@@ -32,6 +36,7 @@
   },
   {
     "id": "ac094686-bd63-4d2c-a883-e9d10e922a6d",
+    "createdAt": "2026-07-09",
     "name": "共振峰",
     "reading": "gòngzhènfēng",
     "lv": 5,
@@ -40,6 +45,7 @@
   },
   {
     "id": "d5827d07-9f30-444c-8674-1c6f6095d78a",
+    "createdAt": "2026-07-09",
     "name": "构图",
     "reading": "gòutú",
     "lv": 3,
@@ -48,6 +54,7 @@
   },
   {
     "id": "7d230a6b-1ab5-40ab-bee2-12cfcbcae452",
+    "createdAt": "2026-07-09",
     "name": "节奏",
     "reading": "jiézòu",
     "lv": 2,
@@ -56,6 +63,7 @@
   },
   {
     "id": "253d8b37-7a17-4d94-9387-ccdf82996ef2",
+    "createdAt": "2026-07-09",
     "name": "界面",
     "reading": "jièmiàn",
     "lv": 3,
@@ -64,6 +72,7 @@
   },
   {
     "id": "9b391090-d164-4eb6-a97a-280631c5651b",
+    "createdAt": "2026-07-09",
     "name": "明暗法",
     "reading": "míng'ànfǎ",
     "lv": 5,
@@ -72,6 +81,7 @@
   },
   {
     "id": "55b9d48b-edea-4813-82a7-c98d04fe87b7",
+    "createdAt": "2026-07-09",
     "name": "透视法",
     "reading": "tòushìfǎ",
     "lv": 4,
@@ -80,6 +90,7 @@
   },
   {
     "id": "7b575118-c7ab-4175-909c-e72e1c68386d",
+    "createdAt": "2026-07-09",
     "name": "原型",
     "reading": "yuánxíng",
     "lv": 3,
@@ -88,6 +99,7 @@
   },
   {
     "id": "8b69e721-b268-43df-950a-04ec7581c594",
+    "createdAt": "2026-07-09",
     "name": "质感",
     "reading": "zhìgǎn",
     "lv": 3,
@@ -96,6 +108,7 @@
   },
   {
     "id": "6d004dca-00e2-4e27-ace5-773d07bd6550",
+    "createdAt": "2026-07-09",
     "name": "安静",
     "reading": "ānjìng",
     "lv": 2,
@@ -104,6 +117,7 @@
   },
   {
     "id": "9b93d59e-2a6b-4432-a2a8-9f5de73548a6",
+    "createdAt": "2026-07-09",
     "name": "短暂",
     "reading": "duǎnzàn",
     "lv": 4,
@@ -112,6 +126,7 @@
   },
   {
     "id": "f6d00480-cf4c-4825-8359-781520c10e56",
+    "createdAt": "2026-07-09",
     "name": "感知",
     "reading": "gǎnzhī",
     "lv": 3,
@@ -120,6 +135,7 @@
   },
   {
     "id": "373cc2f9-c3b6-4ec1-9064-17607e8c9839",
+    "createdAt": "2026-07-09",
     "name": "机缘巧合",
     "reading": "jīyuán qiǎohé",
     "lv": 5,
@@ -128,6 +144,7 @@
   },
   {
     "id": "ea8b172f-ad7a-4cc9-95e0-20bc148aedd9",
+    "createdAt": "2026-07-09",
     "name": "记忆",
     "reading": "jìyì",
     "lv": 2,
@@ -136,6 +153,7 @@
   },
   {
     "id": "18eafb07-036d-404f-8f81-9795ba836365",
+    "createdAt": "2026-07-09",
     "name": "歧义",
     "reading": "qíyì",
     "lv": 4,
@@ -144,6 +162,7 @@
   },
   {
     "id": "81b80a83-e8a2-47d8-9b57-ade2b8fa560b",
+    "createdAt": "2026-07-09",
     "name": "意识",
     "reading": "yìshí",
     "lv": 4,
@@ -152,6 +171,7 @@
   },
   {
     "id": "4da4c224-f339-41c7-8253-acbfbec3a115",
+    "createdAt": "2026-07-09",
     "name": "共识",
     "reading": "gòngshí",
     "lv": 4,
@@ -160,6 +180,7 @@
   },
   {
     "id": "41944366-069b-4d6f-823a-dab638b33990",
+    "createdAt": "2026-07-09",
     "name": "朋友",
     "reading": "péngyou",
     "lv": 1,
@@ -168,6 +189,7 @@
   },
   {
     "id": "0c0b80e9-c0be-4761-b707-876608781f8f",
+    "createdAt": "2026-07-09",
     "name": "期限",
     "reading": "qīxiàn",
     "lv": 2,
@@ -176,6 +198,7 @@
   },
   {
     "id": "83e9594d-0cfc-42a6-9c10-a001298deac3",
+    "createdAt": "2026-07-09",
     "name": "维护",
     "reading": "wéihù",
     "lv": 3,
@@ -184,6 +207,7 @@
   },
   {
     "id": "ab905814-b754-4a12-94fc-d7f6766704e9",
+    "createdAt": "2026-07-09",
     "name": "文明",
     "reading": "wénmíng",
     "lv": 3,
@@ -192,6 +216,7 @@
   },
   {
     "id": "6a627190-0af6-4e35-aed2-e19b364f7fd4",
+    "createdAt": "2026-07-09",
     "name": "文物",
     "reading": "wénwù",
     "lv": 4,
@@ -200,6 +225,7 @@
   },
   {
     "id": "c6dbff4d-9ba6-48c2-9049-739f95067318",
+    "createdAt": "2026-07-09",
     "name": "肌肉",
     "reading": "jīròu",
     "lv": 2,
@@ -208,6 +234,7 @@
   },
   {
     "id": "2c51136c-87a2-4329-9523-ae41196b7f65",
+    "createdAt": "2026-07-09",
     "name": "新陈代谢",
     "reading": "xīnchén dàixiè",
     "lv": 4,
@@ -216,6 +243,7 @@
   },
   {
     "id": "d79c0c9a-0b72-4c29-be9c-0469a88f007b",
+    "createdAt": "2026-07-09",
     "name": "姿势",
     "reading": "zīshì",
     "lv": 2,
@@ -224,6 +252,7 @@
   },
   {
     "id": "8c458385-a944-4d22-8d67-7832d06e2678",
+    "createdAt": "2026-07-09",
     "name": "变量",
     "reading": "biànliàng",
     "lv": 3,
@@ -232,6 +261,7 @@
   },
   {
     "id": "7181867d-b7cf-457d-8373-f205940b8dad",
+    "createdAt": "2026-07-09",
     "name": "假设",
     "reading": "jiǎshè",
     "lv": 3,
@@ -240,6 +270,7 @@
   },
   {
     "id": "578ecbf8-658d-4e1e-810f-dd71fb7da88b",
+    "createdAt": "2026-07-09",
     "name": "奇点",
     "reading": "qídiǎn",
     "lv": 5,
@@ -248,6 +279,7 @@
   },
   {
     "id": "7b5fb456-869b-4a70-b8fe-0b08f41368a3",
+    "createdAt": "2026-07-09",
     "name": "熵",
     "reading": "shāng",
     "lv": 5,
@@ -256,6 +288,7 @@
   },
   {
     "id": "be4cacad-1efb-4450-abc8-e9ff549cd58d",
+    "createdAt": "2026-07-09",
     "name": "相关",
     "reading": "xiāngguān",
     "lv": 4,
@@ -264,6 +297,7 @@
   },
   {
     "id": "a80b117c-0369-4dcb-a548-c9058cb129c8",
+    "createdAt": "2026-07-09",
     "name": "传感器",
     "reading": "chuángǎnqì",
     "lv": 3,
@@ -272,6 +306,7 @@
   },
   {
     "id": "13009cb0-8881-43e2-88c9-9cdfd613c510",
+    "createdAt": "2026-07-09",
     "name": "数据集",
     "reading": "shùjùjí",
     "lv": 3,
@@ -280,6 +315,7 @@
   },
   {
     "id": "43caddd4-a5d7-49c8-8735-574fe8823145",
+    "createdAt": "2026-07-09",
     "name": "算法",
     "reading": "suànfǎ",
     "lv": 3,
@@ -288,6 +324,7 @@
   },
   {
     "id": "d2b59c4e-fbd6-4f6d-a5b0-a05a8fc8bff2",
+    "createdAt": "2026-07-09",
     "name": "信号",
     "reading": "xìnhào",
     "lv": 2,
@@ -296,6 +333,7 @@
   },
   {
     "id": "4a4ed22f-324e-4bdf-a05f-8f2d592f280d",
+    "createdAt": "2026-07-09",
     "name": "窗",
     "reading": "chuāng",
     "lv": 1,
@@ -304,6 +342,7 @@
   },
   {
     "id": "d6733e2d-4715-4ea9-a91d-d8a93a7de939",
+    "createdAt": "2026-07-09",
     "name": "发酵",
     "reading": "fājiào",
     "lv": 4,
@@ -312,6 +351,7 @@
   },
   {
     "id": "004847c6-4b5f-472b-8089-5d02dabb5372",
+    "createdAt": "2026-07-09",
     "name": "食谱",
     "reading": "shípǔ",
     "lv": 2,
@@ -320,6 +360,7 @@
   },
   {
     "id": "9bb0896b-f046-4df6-ba83-8d0516db34ea",
+    "createdAt": "2026-07-09",
     "name": "水",
     "reading": "shuǐ",
     "lv": 1,
@@ -328,6 +369,7 @@
   },
   {
     "id": "68a2c1f9-7a9c-45ce-8f11-b89de817f137",
+    "createdAt": "2026-07-09",
     "name": "营养素",
     "reading": "yíngyǎngsù",
     "lv": 3,
@@ -336,6 +378,7 @@
   },
   {
     "id": "c92d0bf6-9022-4ae4-858d-05f89b69cc49",
+    "createdAt": "2026-07-09",
     "name": "边界",
     "reading": "biānjiè",
     "lv": 3,
@@ -344,6 +387,7 @@
   },
   {
     "id": "54448911-4708-4658-963a-72c4529ebeb1",
+    "createdAt": "2026-07-09",
     "name": "大都市",
     "reading": "dàdūshì",
     "lv": 3,
@@ -352,6 +396,7 @@
   },
   {
     "id": "92b58127-5ace-4068-a44f-7fd88026d0d2",
+    "createdAt": "2026-07-09",
     "name": "货币",
     "reading": "huòbì",
     "lv": 3,
@@ -360,6 +405,7 @@
   },
   {
     "id": "4950a83e-c039-40fe-840f-4713fd469e7f",
+    "createdAt": "2026-07-09",
     "name": "基础设施",
     "reading": "jīchǔ shèshī",
     "lv": 4,
@@ -368,6 +414,7 @@
   },
   {
     "id": "3167acc9-c133-4bc9-8047-68a8aa649d4f",
+    "createdAt": "2026-07-09",
     "name": "街道",
     "reading": "jiēdào",
     "lv": 1,
@@ -376,6 +423,7 @@
   },
   {
     "id": "c51812b7-0809-4c66-900a-381acae7430c",
+    "createdAt": "2026-07-09",
     "name": "旅行",
     "reading": "lǚxíng",
     "lv": 2,
@@ -384,6 +432,7 @@
   },
   {
     "id": "b38832d3-a742-48fb-afde-12d7e6f8e2e0",
+    "createdAt": "2026-07-09",
     "name": "行程",
     "reading": "xíngchéng",
     "lv": 3,
@@ -392,6 +441,7 @@
   },
   {
     "id": "397a0f24-093c-4417-bcd7-68e3b0ef23d2",
+    "createdAt": "2026-07-09",
     "name": "早晨",
     "reading": "zǎochén",
     "lv": 1,
@@ -400,6 +450,7 @@
   },
   {
     "id": "b9c43f69-2827-4fe0-8de0-99aaf0649ebb",
+    "createdAt": "2026-07-09",
     "name": "讲座",
     "reading": "jiǎngzuò",
     "lv": 2,

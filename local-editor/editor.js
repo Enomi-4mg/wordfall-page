@@ -6,7 +6,7 @@ import {
   normalizeWord,
   serializeWords,
   validateWord
-} from "../shared/words.js?v=genre-taxonomy-v2";
+} from "../shared/words.js?v=created-at-v1";
 import { fitTextList } from "../shared/fit-text.js";
 
 const state = {
@@ -40,6 +40,7 @@ const dom = {
   langSelect: document.getElementById("langSelect"),
   lvSelect: document.getElementById("lvSelect"),
   genreSelect: document.getElementById("genreSelect"),
+  createdAtInput: document.getElementById("createdAtInput"),
   idInput: document.getElementById("idInput"),
   validationMessages: document.getElementById("validationMessages"),
   dirtyStatus: document.getElementById("dirtyStatus"),
@@ -166,6 +167,7 @@ function fillForm(word, mode) {
   dom.lvSelect.value = word.lv || "";
   ensureGenreOption(word.genre);
   dom.genreSelect.value = word.genre || "";
+  dom.createdAtInput.value = word.createdAt || "";
   dom.deleteButton.disabled = mode === "New";
   updateDiscardButton();
   renderValidation();
@@ -175,6 +177,7 @@ function startNewWord() {
   const draftId = `draft-${Date.now()}`;
   const draft = {
     id: draftId,
+    createdAt: getLocalDate(),
     name: "",
     desc: "",
     lang: state.lastLang
@@ -188,6 +191,7 @@ function readFormWord() {
   const id = dom.idInput.value || state.selectedDraftId || "";
   const raw = {
     id,
+    createdAt: dom.createdAtInput.value,
     name: dom.nameInput.value,
     reading: dom.readingInput.value,
     desc: dom.descInput.value,
@@ -197,6 +201,7 @@ function readFormWord() {
   };
   const normalized = normalizeWord(raw) || {
     id,
+    createdAt: raw.createdAt,
     name: raw.name.trim(),
     desc: raw.desc.trim(),
     lang: raw.lang,
@@ -217,7 +222,8 @@ function applyFormChange() {
     }
     const created = {
       ...word,
-      id: crypto.randomUUID()
+      id: crypto.randomUUID(),
+      createdAt: getLocalDate()
     };
     state.words.push(created);
     state.selectedId = created.id;
@@ -229,7 +235,11 @@ function applyFormChange() {
     const index = state.words.findIndex((item) => item.id === state.selectedId);
     if (index >= 0) {
       const previousLang = state.words[index].lang;
-      state.words[index] = { ...word, id: state.selectedId };
+      state.words[index] = {
+        ...word,
+        id: state.selectedId,
+        createdAt: state.words[index].createdAt || word.createdAt || getLocalDate()
+      };
       markDirty(previousLang);
       markDirty(word.lang);
     }
@@ -434,6 +444,14 @@ function escapeHtml(value) {
     '"': "&quot;",
     "'": "&#039;"
   })[char]);
+}
+
+function getLocalDate() {
+  const today = new Date();
+  const year = today.getFullYear();
+  const month = String(today.getMonth() + 1).padStart(2, "0");
+  const day = String(today.getDate()).padStart(2, "0");
+  return `${year}-${month}-${day}`;
 }
 
 function escapeAttribute(value) {

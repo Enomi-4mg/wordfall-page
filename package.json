@@ -3,6 +3,7 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "backfill-created-at": "node scripts/backfill-created-at.js",
     "migrate": "node scripts/migrate.js",
     "migrate:dry-run": "node scripts/migrate.js --dry-run",
     "reclassify-genres": "node scripts/reclassify-genres.js"

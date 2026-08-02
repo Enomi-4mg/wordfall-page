@@ -2,11 +2,11 @@
 <html lang="ja">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="description" content="言葉が静かに落ちてくる鑑賞型Webページ。">
   <title>Wordfall</title>
   <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" integrity="sha384-uTYyvsSSUZeaPhb5RbKlQa0zY/WpX/QHfvg2mczXyBQOpkWPEDy9lczyp+w7SKXu" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=responsive-performance-v5">
 </head>
 <body>
   <main class="app-shell" aria-label="Wordfall">
@@ -26,6 +26,17 @@
 
     <div class="popover-stack">
       <div id="settingsPanel" class="popover" role="dialog" aria-label="Settings" aria-hidden="true" tabindex="-1" inert>
+        <p class="popover-title">Display</p>
+        <label class="field-label" for="fontSelect">書体</label>
+        <select id="fontSelect" class="select-input">
+          <option value="mincho">明朝</option>
+          <option value="gen">Gen Interface JP</option>
+        </select>
+        <p class="popover-title">Motion</p>
+        <label class="field-label" for="speedSlider">速度 <span id="speedValue">1.00x</span></label>
+        <input id="speedSlider" class="range-input" type="range" min="0.35" max="2.2" step="0.05" value="1">
+        <label class="field-label" for="densitySlider">密度 <span id="densityValue">30</span></label>
+        <input id="densitySlider" class="range-input" type="range" min="6" max="240" step="1" value="30">
         <p class="popover-title">Sound</p>
         <label class="field-label" for="audioSourceSelect">音源</label>
         <select id="audioSourceSelect" class="select-input">
@@ -34,6 +45,22 @@
         </select>
         <label class="field-label" for="volumeSlider">音量 <span id="volumeValue">35%</span></label>
         <input id="volumeSlider" class="range-input" type="range" min="0" max="1" step="0.01" value="0.35">
+        <div id="devSettings" hidden>
+          <p class="popover-title">Developer</p>
+          <label class="field-label" for="motionSelect">動き</label>
+          <select id="motionSelect" class="select-input">
+            <option value="sway">揺れる</option>
+            <option value="straight">まっすぐ</option>
+          </select>
+          <label class="checkbox-label" for="showAllWordsCheckbox">
+            <input id="showAllWordsCheckbox" type="checkbox">
+            <span>desc の無い言葉も表示</span>
+          </label>
+          <label class="checkbox-label" for="colorByDescriptionCheckbox">
+            <input id="colorByDescriptionCheckbox" type="checkbox">
+            <span>解説の有無で色分け（なし：黄）</span>
+          </label>
+        </div>
       </div>
 
       <div id="infoDialog" class="popover popover-wide" role="dialog" aria-label="Information" aria-hidden="true" tabindex="-1" inert>
@@ -74,6 +101,6 @@
     </article>
   </div>
 
-  <script type="module" src="app.js?v=genre-taxonomy-v2"></script>
+  <script type="module" src="app.js?v=created-at-v8"></script>
 </body>
 </html>

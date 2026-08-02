@@ -1,6 +1,7 @@
 [
   {
     "id": "bc5bf5c0-3334-4397-acc9-d72ca4d30caf",
+    "createdAt": "2026-07-09",
     "name": "archange",
     "lv": 2,
     "lang": "fr",
@@ -8,6 +9,7 @@
   },
   {
     "id": "2cbab614-b163-4069-817b-b87f29767a69",
+    "createdAt": "2026-07-09",
     "name": "archive",
     "lv": 3,
     "lang": "fr",
@@ -15,6 +17,7 @@
   },
   {
     "id": "ea07634e-1f11-4d60-bde5-0de372840783",
+    "createdAt": "2026-07-09",
     "name": "clair-obscur",
     "lv": 5,
     "lang": "fr",
@@ -22,6 +25,7 @@
   },
   {
     "id": "3b620c52-c5ae-4d4a-b903-0a67f2c94a21",
+    "createdAt": "2026-07-09",
     "name": "composition",
     "lv": 3,
     "lang": "fr",
@@ -29,6 +33,7 @@
   },
   {
     "id": "8ee4ccb5-104c-4eaf-a5eb-c3c26bbc193e",
+    "createdAt": "2026-07-09",
     "name": "contraste",
     "lv": 3,
     "lang": "fr",
@@ -36,6 +41,7 @@
   },
   {
     "id": "385eb499-e187-4508-b4b9-19230ee3a99f",
+    "createdAt": "2026-07-09",
     "name": "formant",
     "lv": 5,
     "lang": "fr",
@@ -43,6 +49,7 @@
   },
   {
     "id": "bae8e223-ab4e-4e7c-a773-fed13f4a751c",
+    "createdAt": "2026-07-09",
     "name": "interface",
     "lv": 3,
     "lang": "fr",
@@ -50,6 +57,7 @@
   },
   {
     "id": "5362f621-6a6b-4933-bade-1649857f2d01",
+    "createdAt": "2026-07-09",
     "name": "perspective",
     "lv": 3,
     "lang": "fr",
@@ -57,6 +65,7 @@
   },
   {
     "id": "fdb5faeb-347d-4a53-b4b1-2bc6075c7018",
+    "createdAt": "2026-07-09",
     "name": "prototype",
     "lv": 3,
     "lang": "fr",
@@ -64,6 +73,7 @@
   },
   {
     "id": "7e996dc3-f665-4f20-abdd-871f28fe0dec",
+    "createdAt": "2026-07-09",
     "name": "résonance",
     "lv": 4,
     "lang": "fr",
@@ -71,6 +81,7 @@
   },
   {
     "id": "8ff61cdd-666f-474e-b0cc-e0845f810892",
+    "createdAt": "2026-07-09",
     "name": "rythme",
     "lv": 2,
     "lang": "fr",
@@ -78,6 +89,7 @@
   },
   {
     "id": "8d5e5c53-6512-4dca-a8fb-e7efcb28b763",
+    "createdAt": "2026-07-09",
     "name": "texture",
     "lv": 3,
     "lang": "fr",
@@ -85,6 +97,7 @@
   },
   {
     "id": "e1273936-b7d4-4761-93e7-9870f57fd9f1",
+    "createdAt": "2026-07-09",
     "name": "エクリチュール",
     "lv": 4,
     "lang": "fr",
@@ -92,6 +105,7 @@
   },
   {
     "id": "30b3c79f-3745-4365-96f2-391d96191406",
+    "createdAt": "2026-07-09",
     "name": "ambiguïté",
     "lv": 4,
     "lang": "fr",
@@ -99,6 +113,7 @@
   },
   {
     "id": "3967d3f0-6a7e-42ed-a8cf-0b74763bca13",
+    "createdAt": "2026-07-09",
     "name": "conscience",
     "lv": 4,
     "lang": "fr",
@@ -106,6 +121,7 @@
   },
   {
     "id": "90cef096-cb22-4a0d-a54a-6cc57a232811",
+    "createdAt": "2026-07-09",
     "name": "éphémère",
     "lv": 4,
     "lang": "fr",
@@ -113,6 +129,7 @@
   },
   {
     "id": "87e004ac-2cc7-4860-a68e-18d531453df9",
+    "createdAt": "2026-07-09",
     "name": "mémoire",
     "lv": 2,
     "lang": "fr",
@@ -120,6 +137,7 @@
   },
   {
     "id": "1a12dd2e-7b7d-4dcf-a6a8-9499e1bd546b",
+    "createdAt": "2026-07-09",
     "name": "perception",
     "lv": 3,
     "lang": "fr",
@@ -127,6 +145,7 @@
   },
   {
     "id": "0a068a2b-fb58-46f0-9d88-a30901679d48",
+    "createdAt": "2026-07-09",
     "name": "sérendipité",
     "lv": 5,
     "lang": "fr",
@@ -134,6 +153,7 @@
   },
   {
     "id": "3dde2b3a-dcf9-4794-860b-293f30fcf0de",
+    "createdAt": "2026-07-09",
     "name": "silence",
     "lv": 2,
     "lang": "fr",
@@ -141,6 +161,7 @@
   },
   {
     "id": "ffe0eaad-ce31-4400-80e0-47fdaab1c2b1",
+    "createdAt": "2026-07-09",
     "name": "ami",
     "lv": 1,
     "lang": "fr",
@@ -148,6 +169,7 @@
   },
   {
     "id": "5bcf2bb0-b772-406e-93fb-b9025984595d",
+    "createdAt": "2026-07-09",
     "name": "artefact",
     "lv": 4,
     "lang": "fr",
@@ -155,6 +177,7 @@
   },
   {
     "id": "df1ac11b-a553-453c-9ea1-f57fd0363f5c",
+    "createdAt": "2026-07-09",
     "name": "civilisation",
     "lv": 3,
     "lang": "fr",
@@ -162,6 +185,7 @@
   },
   {
     "id": "192b1547-72e5-4d54-a9d8-88775c0e0883",
+    "createdAt": "2026-07-09",
     "name": "consensus",
     "lv": 4,
     "lang": "fr",
@@ -169,6 +193,7 @@
   },
   {
     "id": "bf1e66d3-3018-4e5b-b151-6c4e58f7239c",
+    "createdAt": "2026-07-09",
     "name": "échéance",
     "lv": 2,
     "lang": "fr",
@@ -176,6 +201,7 @@
   },
   {
     "id": "383f1394-fc12-4da8-8b83-4c1c78dc20ec",
+    "createdAt": "2026-07-09",
     "name": "maintenance",
     "lv": 3,
     "lang": "fr",
@@ -183,6 +209,7 @@
   },
   {
     "id": "3e7c5ecc-a6a5-4c92-9561-8915f0cbdd1c",
+    "createdAt": "2026-07-09",
     "name": "métabolisme",
     "lv": 4,
     "lang": "fr",
@@ -190,6 +217,7 @@
   },
   {
     "id": "0de874ac-aacc-4ae5-84ac-bcabfcf8b751",
+    "createdAt": "2026-07-09",
     "name": "muscle",
     "lv": 2,
     "lang": "fr",
@@ -197,6 +225,7 @@
   },
   {
     "id": "01ea25c8-4efb-4d31-ac9c-b4ff3bd14026",
+    "createdAt": "2026-07-09",
     "name": "posture",
     "lv": 2,
     "lang": "fr",
@@ -204,6 +233,7 @@
   },
   {
     "id": "72970fb8-88d6-4b57-accb-cf810452ea4a",
+    "createdAt": "2026-07-09",
     "name": "corrélation",
     "lv": 4,
     "lang": "fr",
@@ -211,6 +241,7 @@
   },
   {
     "id": "b163a293-ade6-4cce-ab92-670f52932270",
+    "createdAt": "2026-07-09",
     "name": "entropie",
     "lv": 4,
     "lang": "fr",
@@ -218,6 +249,7 @@
   },
   {
     "id": "be23c5ac-ed49-40bc-aa65-29d9478999b4",
+    "createdAt": "2026-07-09",
     "name": "hypothèse",
     "lv": 3,
     "lang": "fr",
@@ -225,6 +257,7 @@
   },
   {
     "id": "98e6952e-1842-4080-944e-de2e4e0c5227",
+    "createdAt": "2026-07-09",
     "name": "singularité",
     "lv": 5,
     "lang": "fr",
@@ -232,6 +265,7 @@
   },
   {
     "id": "e682f7eb-793a-4e03-a972-c8909d27549a",
+    "createdAt": "2026-07-09",
     "name": "variable",
     "lv": 3,
     "lang": "fr",
@@ -239,6 +273,7 @@
   },
   {
     "id": "e10d1d43-e5a8-4c79-8860-a2212dcc458c",
+    "createdAt": "2026-07-09",
     "name": "algorithme",
     "lv": 3,
     "lang": "fr",
@@ -246,6 +281,7 @@
   },
   {
     "id": "0aa5580c-a4a5-4b60-a19c-6f50f75733f9",
+    "createdAt": "2026-07-09",
     "name": "capteur",
     "lv": 3,
     "lang": "fr",
@@ -253,6 +289,7 @@
   },
   {
     "id": "fa32e086-9fb1-4e47-bf92-12aca24aa834",
+    "createdAt": "2026-07-09",
     "name": "jeu de données",
     "lv": 3,
     "lang": "fr",
@@ -260,6 +297,7 @@
   },
   {
     "id": "ff589c7c-a3f4-4d3c-8481-0f5dc2a539ab",
+    "createdAt": "2026-07-09",
     "name": "signal",
     "lv": 2,
     "lang": "fr",
@@ -267,6 +305,7 @@
   },
   {
     "id": "3cf897f4-746b-4e20-857b-71626d2cd9db",
+    "createdAt": "2026-07-09",
     "name": "eau",
     "lv": 1,
     "lang": "fr",
@@ -274,6 +313,7 @@
   },
   {
     "id": "6dcf236d-f045-4e0b-9331-5140b9f2a11c",
+    "createdAt": "2026-07-09",
     "name": "fenêtre",
     "lv": 1,
     "lang": "fr",
@@ -281,6 +321,7 @@
   },
   {
     "id": "3889a96b-98d9-4d4a-8d91-9de6421182eb",
+    "createdAt": "2026-07-09",
     "name": "fermentation",
     "lv": 4,
     "lang": "fr",
@@ -288,6 +329,7 @@
   },
   {
     "id": "7b3d862e-0a31-47ad-878e-028aa6663a8c",
+    "createdAt": "2026-07-09",
     "name": "nutriment",
     "lv": 3,
     "lang": "fr",
@@ -295,6 +337,7 @@
   },
   {
     "id": "8afa1cbb-a436-4ed9-8e7a-37252a1efe9c",
+    "createdAt": "2026-07-09",
     "name": "recette",
     "lv": 2,
     "lang": "fr",
@@ -302,6 +345,7 @@
   },
   {
     "id": "9c665d40-c566-417f-8747-d2d4b557b656",
+    "createdAt": "2026-07-09",
     "name": "frontière",
     "lv": 3,
     "lang": "fr",
@@ -309,6 +353,7 @@
   },
   {
     "id": "338a2ba7-c70f-49b6-992e-b2664c308261",
+    "createdAt": "2026-07-09",
     "name": "infrastructure",
     "lv": 4,
     "lang": "fr",
@@ -316,6 +361,7 @@
   },
   {
     "id": "bac2121d-dade-45b0-95b2-9c1f62fbd325",
+    "createdAt": "2026-07-09",
     "name": "itinéraire",
     "lv": 4,
     "lang": "fr",
@@ -323,6 +369,7 @@
   },
   {
     "id": "567c6e9e-5d01-4606-a42a-dcd989f6982c",
+    "createdAt": "2026-07-09",
     "name": "métropole",
     "lv": 4,
     "lang": "fr",
@@ -330,6 +377,7 @@
   },
   {
     "id": "2cc60b13-f363-43a9-847b-a8a97192fc75",
+    "createdAt": "2026-07-09",
     "name": "monnaie",
     "lv": 3,
     "lang": "fr",
@@ -337,6 +385,7 @@
   },
   {
     "id": "6f839cf7-d0e8-4f0a-99c9-a0ce34afe96e",
+    "createdAt": "2026-07-09",
     "name": "rue",
     "lv": 1,
     "lang": "fr",
@@ -344,6 +393,7 @@
   },
   {
     "id": "d8ef8450-9b2b-46e5-ba80-0d10fc7c4faa",
+    "createdAt": "2026-07-09",
     "name": "voyage",
     "lv": 2,
     "lang": "fr",
@@ -351,6 +401,7 @@
   },
   {
     "id": "dfa27365-66a8-4f78-b10f-79a33ff597a8",
+    "createdAt": "2026-07-09",
     "name": "matin",
     "lv": 1,
     "lang": "fr",
@@ -358,6 +409,7 @@
   },
   {
     "id": "a1b556c2-1d2f-4ecd-914e-95bfbac83ce3",
+    "createdAt": "2026-07-09",
     "name": "conférence",
     "lv": 2,
     "lang": "fr",

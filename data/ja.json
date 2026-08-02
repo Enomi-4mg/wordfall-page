@@ -22,8 +22,10 @@
   },
   {
     "id": "2ee9fce2-ff70-4fcd-a73a-b84510547d29",
+    "createdAt": "2026-07-22",
     "name": "ガストロノミー",
     "reading": "がすとろのみー",
+    "desc": "食事を地域の歴史や文化と結びついた芸術や学問として楽しむこと。",
     "lv": 4,
     "lang": "ja",
     "genre": "culture"
@@ -33,6 +35,15 @@
     "name": "チェーホフの銃",
     "reading": "ちぇーほふのじゅう",
     "desc": "ロシアの劇作家アントン・チェーホフの言葉に由来する、物語創作上の原則。\n主に、物語の中で重要そうに提示した要素には後の展開で何らかの役割を与え、使用しない要素は不必要に目立たせるべきではない、という考えを表す。ただし、何を「提示」「使用」とみなすかには幅があり、絶対的な規則ではない。\nこの言葉は、チェーホフが他の作家の戯曲について助言した際、観客に期待を抱かせながら後の内容と結び付かないモノローグを批判し、「撃つ予定のない装填済みの銃を舞台に置いてはならない」という趣旨を述べたことに由来する。したがって、もともとは戯曲の構成についての比喩であり、あらゆる物語の細部に適用される普遍的な法則として提示されたものではない。\n後に「第一幕で壁に銃を掛けたなら、最終幕で発砲させなければならない」という形で広まり、小説、映画、漫画などにも適用されるようになった。\n伏線として扱われる場合もあるが、伏線が後の展開を予告・暗示する手法であるのに対し、チェーホフの銃は提示した要素を無駄にしないという構成上の考え方であり、両者は同じではない。",
+    "lv": 3,
+    "lang": "ja",
+    "genre": "culture"
+  },
+  {
+    "id": "a55e4db5-f5bf-4588-b2b4-1e5d9f95305a",
+    "name": "トロンプ・ルイユ",
+    "reading": "とろんぷ・るいゆ",
+    "desc": "だまし絵のこと。\nフランス語で「目を欺く」を意味する。",
     "lv": 3,
     "lang": "ja",
     "genre": "culture"
@@ -235,6 +246,24 @@
     "genre": "language"
   },
   {
+    "id": "0cc4b3cc-5e05-4834-8052-bee2348a464a",
+    "createdAt": "2026-07-22",
+    "name": "ノモス",
+    "reading": "のもす",
+    "lv": 4,
+    "lang": "ja",
+    "genre": "language"
+  },
+  {
+    "id": "103b7136-539b-4af4-a8fe-d333d378f235",
+    "createdAt": "2026-07-23",
+    "name": "レゾンデートル",
+    "reading": "れぞんでーとる",
+    "lv": 4,
+    "lang": "ja",
+    "genre": "language"
+  },
+  {
     "id": "02673e5b-6361-4f77-8a1a-a161b2970f59",
     "name": "逆撫",
     "lv": 4,
@@ -287,6 +316,7 @@
   {
     "id": "2e1c5abb-9894-4dff-8d47-d076d57e04f7",
     "name": "幽栖",
+    "reading": "ゆうせい",
     "lv": 5,
     "lang": "ja",
     "genre": "language"
@@ -294,6 +324,8 @@
   {
     "id": "8b75e205-192f-4f0f-b154-a650e3e3149a",
     "name": "丿乀",
+    "reading": "へつほつ",
+    "desc": "左右に揺れること（船が揺れる様など）。\n丿（へつ）は左払い、乀（ほつ）は右払いを表す。",
     "lv": 5,
     "lang": "ja",
     "genre": "language"
@@ -326,6 +358,14 @@
     "id": "31ae9725-ff10-4f3b-ae54-6acf53ef5506",
     "name": "衒学",
     "lv": 4,
+    "lang": "ja",
+    "genre": "language"
+  },
+  {
+    "id": "1887676b-a414-478f-9baf-e07647e5212f",
+    "name": "錚々",
+    "reading": "そうそう",
+    "lv": 3,
     "lang": "ja",
     "genre": "language"
   },
@@ -1310,5 +1350,572 @@
     "lv": 1,
     "lang": "ja",
     "genre": "learning"
+  },
+  {
+    "id": "99ead65b-b3b8-4853-9147-a810e304138d",
+    "name": "アゴラ",
+    "reading": "あごら",
+    "lv": 2,
+    "lang": "ja"
+  },
+  {
+    "id": "9fa8f30f-f862-4208-90ac-787ad2fba418",
+    "name": "アサガオ",
+    "reading": "あさがお",
+    "lang": "ja"
+  },
+  {
+    "id": "88e8e876-cba8-45c2-a801-5aa106621923",
+    "createdAt": "2026-07-25",
+    "name": "あしひきの",
+    "reading": "あしひきの",
+    "lang": "ja"
+  },
+  {
+    "id": "64995bc2-9880-413f-9454-368c1cf1dff9",
+    "name": "アレクサンドリア図書館",
+    "reading": "あれくさんどりあとしょかん",
+    "lv": 3,
+    "lang": "ja"
+  },
+  {
+    "id": "d1e71eb0-720c-4195-92de-acf93ef9df95",
+    "name": "アンパイア",
+    "reading": "あんぱいあ",
+    "lang": "ja"
+  },
+  {
+    "id": "aa106e77-8e31-4468-8e0f-63c4662bf5f0",
+    "createdAt": "2026-07-26",
+    "name": "インキュベーター",
+    "reading": "いんきゅべーたー",
+    "lang": "ja"
+  },
+  {
+    "id": "10a930e3-fdab-4f5f-969e-d96f21409420",
+    "name": "カエル",
+    "reading": "かえる",
+    "lang": "ja"
+  },
+  {
+    "id": "54a19603-fd75-4aea-8719-459d03e7dc6a",
+    "name": "カノッサの屈辱",
+    "reading": "かのっさのくつじょく",
+    "lang": "ja"
+  },
+  {
+    "id": "ea22a2dd-b8b3-483b-a776-b27e1059ada2",
+    "name": "スイレン",
+    "reading": "すいれん",
+    "lang": "ja"
+  },
+  {
+    "id": "d1d96146-0d5c-4f6c-9b5d-520b3695ea7d",
+    "name": "スズキ",
+    "reading": "すずき",
+    "lang": "ja"
+  },
+  {
+    "id": "4988c8d1-b284-4628-abc3-ccc486bf334b",
+    "createdAt": "2026-07-26",
+    "name": "スタンションポール",
+    "reading": "すたんしょんぽーる",
+    "lang": "ja"
+  },
+  {
+    "id": "e1d7a6f7-751c-4923-b144-fd74cf871aec",
+    "name": "セミ",
+    "reading": "せみ",
+    "lang": "ja"
+  },
+  {
+    "id": "d2e411ca-3ef4-4c2f-bba5-997ea2ffb6ac",
+    "name": "チャイコフスキー",
+    "reading": "ちゃいこふすきー",
+    "lang": "ja"
+  },
+  {
+    "id": "5abaf6c8-5760-436e-8e48-28b72eaf8e89",
+    "name": "ツバメ",
+    "reading": "つばめ",
+    "lang": "ja"
+  },
+  {
+    "id": "df3152cf-4d6d-4373-ad2f-8ecc28a0b971",
+    "createdAt": "2026-07-26",
+    "name": "テクノクラート",
+    "reading": "てくのくらーと",
+    "lang": "ja"
+  },
+  {
+    "id": "92d5675a-18de-4331-8621-b78cc9521f5f",
+    "createdAt": "2026-07-23",
+    "name": "とおい",
+    "reading": "とおい",
+    "desc": "遠い\n悠い",
+    "lang": "ja"
+  },
+  {
+    "id": "f996f5ca-ffe2-462d-930d-d2dbbe8a096a",
+    "name": "ニューラルネットワーク",
+    "reading": "にゅーらるねっとわーく",
+    "lang": "ja"
+  },
+  {
+    "id": "b4fbcddb-44ac-4d83-8905-6ce3fc88b939",
+    "name": "パンフレット",
+    "reading": "ぱんふれっと",
+    "lang": "ja"
+  },
+  {
+    "id": "9dfab1a8-2608-4663-8fce-668bcc0189fa",
+    "name": "ヒマワリ",
+    "reading": "ひまわり",
+    "lang": "ja"
+  },
+  {
+    "id": "937cbd7f-8299-402d-8612-664d4eeb1ee0",
+    "name": "ファランクス",
+    "reading": "ふぁらんくす",
+    "lv": 2,
+    "lang": "ja"
+  },
+  {
+    "id": "91d593a8-0ac3-4b54-9a94-75dceeef990f",
+    "name": "ペレストロイカ",
+    "reading": "ぺれすとろいか",
+    "lv": 2,
+    "lang": "ja"
+  },
+  {
+    "id": "e794cf95-5e55-4f25-95ba-54189a947e14",
+    "createdAt": "2026-07-26",
+    "name": "メンソール",
+    "reading": "めんそーる",
+    "lang": "ja"
+  },
+  {
+    "id": "064975a8-1e1d-491c-aa56-6d773b864d42",
+    "name": "リヒテンベルク図形",
+    "lang": "ja"
+  },
+  {
+    "id": "306b4d38-164c-4d04-a198-1cfb9071e4ce",
+    "name": "ワシ",
+    "reading": "わし",
+    "lang": "ja"
+  },
+  {
+    "id": "146edfee-af2c-4453-8d98-ca19c061d35e",
+    "name": "葦",
+    "reading": "あし",
+    "lang": "ja"
+  },
+  {
+    "id": "c198cecd-0cb6-48f7-aec5-52c433203694",
+    "name": "鮎",
+    "reading": "あゆ",
+    "lang": "ja"
+  },
+  {
+    "id": "426515fa-8e6d-48e2-8f18-64ce1dbba2fc",
+    "name": "伊能忠敬",
+    "reading": "いのうただたか",
+    "lang": "ja"
+  },
+  {
+    "id": "6d5e9831-47c1-4c54-bde2-176ad54e78dd",
+    "name": "雲の峰",
+    "reading": "くものみね",
+    "desc": "積乱雲の別名。",
+    "lv": 4,
+    "lang": "ja"
+  },
+  {
+    "id": "78a6ac3f-44f0-4399-9acc-103fe019e991",
+    "name": "炎天",
+    "reading": "えんてん",
+    "lang": "ja"
+  },
+  {
+    "id": "51f426d1-89d0-4672-a554-5f4b958e9482",
+    "name": "遠雷",
+    "reading": "えんらい",
+    "lang": "ja"
+  },
+  {
+    "id": "302d29a0-b28d-4cf8-86fe-bd1331bfdbe3",
+    "name": "夏休み",
+    "reading": "なつやすみ",
+    "lang": "ja"
+  },
+  {
+    "id": "99501986-f8a5-47cd-b87c-e3517052491f",
+    "name": "夏祭り",
+    "reading": "なつまつり",
+    "lang": "ja"
+  },
+  {
+    "id": "ef87caf1-a793-4384-a579-04f53afcc3b5",
+    "name": "歌川広重",
+    "reading": "うたがわひろしげ",
+    "lang": "ja"
+  },
+  {
+    "id": "694b78a7-3d36-4dbb-bdd1-f053ecdd859d",
+    "name": "海の日",
+    "reading": "うみのひ",
+    "desc": "海の恩恵に感謝するとともに、海洋国日本の繁栄を願う祝日。\n７月の第３月曜日。",
+    "lv": 2,
+    "lang": "ja"
+  },
+  {
+    "id": "95a3317c-15de-4684-a5dc-15132775e969",
+    "name": "開陳",
+    "reading": "かいちん",
+    "lang": "ja"
+  },
+  {
+    "id": "79763f46-f653-4c45-bdc9-85e47cb8f72e",
+    "name": "凱旋門",
+    "reading": "がいせんもん",
+    "lang": "ja"
+  },
+  {
+    "id": "7bc4a7ea-2ad8-4bb8-bb71-7e0ca2a08ffb",
+    "createdAt": "2026-07-26",
+    "name": "咳き",
+    "reading": "しわぶき",
+    "lv": 4,
+    "lang": "ja"
+  },
+  {
+    "id": "ac52fb45-4f7b-4281-9e76-49840d2ac62b",
+    "createdAt": "2026-07-26",
+    "name": "汗馬",
+    "reading": "かんば",
+    "lang": "ja"
+  },
+  {
+    "id": "af6b95b0-48f8-44c7-9d05-5d55434e7f57",
+    "name": "祇園祭",
+    "reading": "ぎおんまつり",
+    "lang": "ja"
+  },
+  {
+    "id": "22507b60-f8d8-4116-a421-a054afe28d2c",
+    "createdAt": "2026-07-26",
+    "name": "極彩色",
+    "reading": "ごくさいしき",
+    "lang": "ja"
+  },
+  {
+    "id": "425e77ef-2734-4a2d-85fc-40a1afc5c055",
+    "name": "蛍",
+    "reading": "ほたる",
+    "lang": "ja"
+  },
+  {
+    "id": "e4f21d2a-b15e-4e63-93a6-e10906ce3f1e",
+    "createdAt": "2026-07-25",
+    "name": "午睡",
+    "reading": "ごすい",
+    "lang": "ja"
+  },
+  {
+    "id": "018519b0-633c-45ae-8dff-8389be6cae5d",
+    "name": "歳時記",
+    "reading": "さいじき",
+    "lang": "ja"
+  },
+  {
+    "id": "911122a5-1040-4456-a6ab-336c5c29269c",
+    "name": "山上憶良",
+    "reading": "やまがみのおくら",
+    "lang": "ja"
+  },
+  {
+    "id": "0a3f87f7-108c-4059-8fe4-327bae101760",
+    "name": "枝豆",
+    "reading": "えだまめ",
+    "lang": "ja"
+  },
+  {
+    "id": "cd4ae06b-3d60-49a4-9418-6f65a99f49c5",
+    "createdAt": "2026-07-26",
+    "name": "歯痛",
+    "reading": "しつう",
+    "lang": "ja"
+  },
+  {
+    "id": "0e803d9d-d46c-4dd7-8a0c-f74d9a8d540a",
+    "name": "七夕",
+    "reading": "たなばた",
+    "lang": "ja"
+  },
+  {
+    "id": "bb1fdb4e-0230-41b4-b0d1-ed3425399a40",
+    "name": "暑中見舞い",
+    "reading": "しょちゅうみまい",
+    "lang": "ja"
+  },
+  {
+    "id": "13d97de3-5841-4112-8873-585e63e17fc6",
+    "name": "松尾芭蕉",
+    "reading": "まつおばしょう",
+    "lang": "ja"
+  },
+  {
+    "id": "a3238161-d0c7-437e-aca5-344b263846da",
+    "createdAt": "2026-07-26",
+    "name": "照り返し",
+    "reading": "てりかえし",
+    "lang": "ja"
+  },
+  {
+    "id": "7156e5c3-7ba4-420d-a3e4-ee72295d36f3",
+    "name": "心的回転",
+    "reading": "しんてきかいてん",
+    "lang": "ja"
+  },
+  {
+    "id": "604563dc-0b45-4ef8-90f8-2c062e8871a3",
+    "name": "正岡子規",
+    "reading": "まさおかしき",
+    "lang": "ja"
+  },
+  {
+    "id": "328cd89d-1ee9-404b-9444-97b8718e9e63",
+    "name": "西周",
+    "reading": "にしあまね",
+    "lang": "ja"
+  },
+  {
+    "id": "96419223-ecd7-483b-b8cd-82e950893248",
+    "name": "青田",
+    "reading": "あおた",
+    "lang": "ja"
+  },
+  {
+    "id": "45358cc1-be34-4089-9f70-a2798893d2e1",
+    "name": "石田三成",
+    "reading": "いしだみつなり",
+    "lang": "ja"
+  },
+  {
+    "id": "13f8e3ea-ae0c-4a76-a021-a7e81ef9138a",
+    "name": "積乱雲",
+    "reading": "せきらんうん",
+    "lang": "ja"
+  },
+  {
+    "id": "b93d3850-0301-4d4b-88bc-326df64b2e78",
+    "name": "蝉時雨",
+    "reading": "せみしぐれ",
+    "lang": "ja"
+  },
+  {
+    "id": "4e897e32-9be1-4a63-b4bf-f6d2a988f376",
+    "createdAt": "2026-07-27",
+    "name": "相対性理論",
+    "reading": "そうたいせいりろん",
+    "lv": 4,
+    "lang": "ja"
+  },
+  {
+    "id": "21cb418b-fb8e-4ab7-9784-73a002b852ef",
+    "name": "打ち水",
+    "reading": "うちみず",
+    "lang": "ja"
+  },
+  {
+    "id": "c9f70dfe-120c-4b2e-b7f0-fab1a1c70eae",
+    "name": "大暑",
+    "reading": "たいしょ",
+    "lang": "ja"
+  },
+  {
+    "id": "4e914e02-900d-41f7-975c-26b45e8dd207",
+    "name": "長雨",
+    "reading": "ながあめ",
+    "lang": "ja"
+  },
+  {
+    "id": "ac7f195f-dd0a-456d-949b-c53400e4eec0",
+    "name": "土用の丑",
+    "reading": "どようのうし",
+    "lang": "ja"
+  },
+  {
+    "id": "336b5fbd-845d-4747-8c94-fcb744d6a98b",
+    "name": "曇天",
+    "reading": "どんてん",
+    "lang": "ja"
+  },
+  {
+    "id": "f6c1fd25-54c2-4f4d-ab15-54852ada712d",
+    "name": "入道雲",
+    "reading": "にゅうどうぐも",
+    "lang": "ja"
+  },
+  {
+    "id": "29292ccc-2ff4-444d-af63-061615141849",
+    "name": "梅雨",
+    "reading": "つゆ",
+    "lang": "ja"
+  },
+  {
+    "id": "37b7b515-4ab8-4c13-b593-e3b873c7575f",
+    "name": "卑弥呼",
+    "reading": "ひみこ",
+    "lang": "ja"
+  },
+  {
+    "id": "7fc414f9-55ea-4623-b29c-ee5018977514",
+    "name": "百合",
+    "reading": "ゆり",
+    "lang": "ja"
+  },
+  {
+    "id": "98d01ab8-1241-4bae-95ad-4935fee59001",
+    "name": "百日紅",
+    "reading": "さるすべり",
+    "lang": "ja"
+  },
+  {
+    "id": "dcb3c15b-d839-4849-9089-18a537e67f02",
+    "name": "俵万智",
+    "reading": "たわらまち",
+    "lang": "ja"
+  },
+  {
+    "id": "8ddef6d3-e5da-4d8c-a122-b71ca71692d6",
+    "name": "風林火山",
+    "reading": "ふうりんかざん",
+    "lang": "ja"
+  },
+  {
+    "id": "6a936d01-a406-47a3-b8fe-57de3d309abf",
+    "name": "風鈴",
+    "reading": "ふうりん",
+    "lang": "ja"
+  },
+  {
+    "id": "b92b21e0-cb97-4574-93ee-44514e488789",
+    "name": "憤死",
+    "reading": "ふんし",
+    "lang": "ja"
+  },
+  {
+    "id": "74933df1-3cdd-4882-87b5-0dd9972898e3",
+    "createdAt": "2026-07-26",
+    "name": "傍証",
+    "reading": "ぼうしょう",
+    "lv": 3,
+    "lang": "ja"
+  },
+  {
+    "id": "a7d25512-3c2e-4b65-abd4-179fdaaa1253",
+    "name": "万葉集",
+    "reading": "まんようしゅう",
+    "lang": "ja"
+  },
+  {
+    "id": "d6a8acfe-5ce4-46cf-8834-3b5a5cf5d5ed",
+    "name": "万里の長城",
+    "reading": "ばんりのちょうじょう",
+    "lang": "ja"
+  },
+  {
+    "id": "783bbb8d-ec22-45cc-9e7d-04e9db030034",
+    "createdAt": "2026-07-27",
+    "name": "蜜月",
+    "reading": "みつげつ",
+    "lang": "ja"
+  },
+  {
+    "id": "f789deec-9725-4bc5-a463-c4f888870926",
+    "name": "無花果",
+    "reading": "いちぢく",
+    "lang": "ja"
+  },
+  {
+    "id": "ac46b2b3-492a-4176-82a7-fdb62937d25c",
+    "name": "命題",
+    "reading": "めいだい",
+    "lang": "ja"
+  },
+  {
+    "id": "0a482c16-e7e0-4275-aad6-9b510adee711",
+    "name": "猛暑",
+    "reading": "もうしょ",
+    "lang": "ja"
+  },
+  {
+    "id": "e7fa6e0a-83b1-4301-b758-204955b844bb",
+    "createdAt": "2026-07-26",
+    "name": "誘蛾灯",
+    "reading": "ゆうがとう",
+    "lang": "ja"
+  },
+  {
+    "id": "23d6d961-401c-4ac5-9e32-062dc2db7037",
+    "name": "夕立",
+    "reading": "ゆうだち",
+    "lang": "ja"
+  },
+  {
+    "id": "12ffa5a9-6a0a-4769-8208-37c9ddf10ccf",
+    "name": "陽炎",
+    "reading": "かげろう",
+    "lang": "ja"
+  },
+  {
+    "id": "d55815f5-d048-4036-8407-0c27f4a05dc6",
+    "createdAt": "2026-07-26",
+    "name": "霊感",
+    "reading": "れいかん",
+    "lang": "ja"
+  },
+  {
+    "id": "6e10c3d1-16d1-4a5a-b252-b2fe26e52926",
+    "name": "蓮",
+    "reading": "はす",
+    "lang": "ja"
+  },
+  {
+    "id": "f26837d6-a01e-4f5e-bf0f-85113df3b324",
+    "createdAt": "2026-07-25",
+    "name": "呷る",
+    "reading": "あおる",
+    "lang": "ja"
+  },
+  {
+    "id": "9002ff88-f3c5-4ab9-ad25-216371edc6bb",
+    "createdAt": "2026-07-26",
+    "name": "矜恃",
+    "reading": "きょうじ",
+    "lang": "ja"
+  },
+  {
+    "id": "4607540b-73b9-44b7-a990-d65552b7e060",
+    "name": "蜻蛉",
+    "reading": "かげろう",
+    "lang": "ja"
+  },
+  {
+    "id": "3664e75a-f019-42ca-bf2e-5da7e7d615cc",
+    "name": "鱸",
+    "reading": "すずき",
+    "lang": "ja"
+  },
+  {
+    "id": "a64fb717-dfc8-4d61-a936-f77c11ba016f",
+    "createdAt": "2026-08-02",
+    "name": "鵲橋",
+    "reading": "かささぎはし",
+    "desc": "七夕の伝説で織姫と彦星を逢わせるためにカササギが翼を並べて天の川に架けたとされる想像上の橋。\n\n小倉百人一首で詠まれた歌に中納言家持（大伴家持）の「かささぎの 渡せる橋に おく霜の 白きを見れば 夜ぞ更けにける」がある。",
+    "lv": 5,
+    "lang": "ja"
   }
 ]
