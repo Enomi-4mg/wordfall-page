@@ -2,7 +2,7 @@ import { getGenreLabel, isDisplayReadyWord, normalizeWord } from "./shared/words
 import { fitTextToWidth } from "./shared/fit-text.js";
 
 const DATA_FILE = "data/ja.json";
-const AUDIO_FILE = "audio/Nature_river_Track3_long_128.mp3";
+const AUDIO_FILE = "audio/Nature_river_Track3_loop_128.mp3";
 const FORMS_URL = "#";
 const DEFAULT_VOLUME = 0.35;
 const DEFAULT_SPEED = 1;
