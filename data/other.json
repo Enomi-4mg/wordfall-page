@@ -1,6 +1,7 @@
 [
   {
     "id": "916d53fe-10d4-4e25-b9a7-faa052d749d7",
+    "createdAt": "2026-08-02",
     "name": "1d100",
     "lv": 5,
     "lang": "other",
@@ -8,6 +9,7 @@
   },
   {
     "id": "dbc9c58c-2919-4a1a-981d-591fae011df5",
+    "createdAt": "2026-07-09",
     "name": "cogito",
     "lv": 4,
     "lang": "other",
