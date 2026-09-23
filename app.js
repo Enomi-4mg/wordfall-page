@@ -4,12 +4,12 @@ import { fitTextToWidth } from "./shared/fit-text.js";
 const DATA_FILE = "data/ja.json";
 const AUDIO_FILE = "audio/Nature_river_Track3_loop_128.mp3";
 const FORMS_URL = "#";
-const DEFAULT_VOLUME = 0.35;
+const DEFAULT_VOLUME = 0.1;
+const AUDIO_FADE_DURATION = 0.8;
 const DEFAULT_SPEED = 1.0;
-// Rebase the speed control: the former 1.5x pace is the new 1.0x default.
 const SPEED_BASELINE_MULTIPLIER = 1.5;
 const DEFAULT_DENSITY = 30;
-const SPEED_RANGE = { min: 0.35, max: 2.2 };
+const SPEED_RANGE = { min: 0.35, max: 5.0 };
 const DENSITY_RANGE = { min: 6, max: 240 };
 const WORD_START_Y = -60;
 const WORD_END_MARGIN = 90;
@@ -96,11 +96,13 @@ const state = {
   audio: {
     context: null,
     gain: null,
-    muted: true,
+    muted: false,
     noiseNode: null,
     lowpass: null,
     highpass: null,
-    file: null
+    file: null,
+    ambientStopTimer: 0,
+    fileFadeTimer: 0
   }
 };
 
@@ -799,9 +801,17 @@ function renderModalUsage(item) {
 function renderModalSiteLinks(item) {
   const links = item.links || { wikipedia: { enabled: true }, custom: [] };
   const buttons = [];
-  if (links.wikipedia?.enabled !== false) {
+  const wikipediaUrl = getWikipediaUrl(item);
+  if (links.wikipedia?.enabled === false) {
     buttons.push(`
-      <a class="text-button" href="${escapeAttribute(getWikipediaUrl(item))}" target="_blank" rel="noopener noreferrer">
+      <span class="text-button is-disabled" aria-disabled="true" title="Wikipediaリンクは無効です">
+        <i data-lucide="book-open"></i>
+        <span>Wikipedia</span>
+      </span>
+    `);
+  } else {
+    buttons.push(`
+      <a class="text-button" href="${escapeAttribute(wikipediaUrl)}" target="_blank" rel="noopener noreferrer">
         <i data-lucide="book-open"></i>
         <span>Wikipedia</span>
       </a>
@@ -850,7 +860,7 @@ async function ensureAudioContext() {
     }
     state.audio.context = new AudioContextClass();
     state.audio.gain = state.audio.context.createGain();
-    state.audio.gain.gain.value = state.audio.muted ? 0 : state.settings.volume;
+    state.audio.gain.gain.value = 0;
     state.audio.gain.connect(state.audio.context.destination);
   }
   if (state.audio.context.state === "suspended") await state.audio.context.resume();
@@ -867,6 +877,8 @@ async function toggleSound() {
 }
 
 function startAmbientNoise() {
+  window.clearTimeout(state.audio.ambientStopTimer);
+  state.audio.ambientStopTimer = 0;
   if (!state.audio.context || state.audio.noiseNode) return;
   const ctx = state.audio.context;
   const bufferSize = 4096;
@@ -897,7 +909,7 @@ function startAmbientNoise() {
   state.audio.lowpass = lowpass;
 }
 
-function stopAmbientNoise() {
+function disconnectAmbientNoise() {
   if (state.audio.noiseNode) {
     state.audio.noiseNode.disconnect();
     state.audio.noiseNode.onaudioprocess = null;
@@ -913,16 +925,71 @@ function stopAmbientNoise() {
   }
 }
 
-function applyVolume() {
-  if (state.audio.gain) {
-    state.audio.gain.gain.setTargetAtTime(
-      state.audio.muted ? 0 : state.settings.volume,
-      state.audio.context.currentTime,
-      0.03
-    );
+function stopAmbientNoise({ fade = true } = {}) {
+  if (!state.audio.noiseNode) return;
+  window.clearTimeout(state.audio.ambientStopTimer);
+  state.audio.ambientStopTimer = 0;
+  if (!fade || !state.audio.gain || !state.audio.context) {
+    disconnectAmbientNoise();
+    return;
   }
+  applyGainTo(0, fade);
+  const node = state.audio.noiseNode;
+  state.audio.ambientStopTimer = window.setTimeout(() => {
+    state.audio.ambientStopTimer = 0;
+    if (state.audio.noiseNode === node) disconnectAmbientNoise();
+  }, AUDIO_FADE_DURATION * 1000);
+}
+
+function fadeFileVolumeTo(target, onComplete = null) {
+  if (!state.audio.file) return;
+  const audio = state.audio.file;
+  window.clearInterval(state.audio.fileFadeTimer);
+  state.audio.fileFadeTimer = 0;
+  const start = audio.volume;
+  if (Math.abs(start - target) < 0.001) {
+    audio.volume = target;
+    if (onComplete) onComplete();
+    return;
+  }
+  const startedAt = performance.now();
+  const step = () => {
+    const progress = Math.min(1, (performance.now() - startedAt) / (AUDIO_FADE_DURATION * 1000));
+    audio.volume = start + (target - start) * progress;
+    if (progress >= 1) {
+      window.clearInterval(state.audio.fileFadeTimer);
+      state.audio.fileFadeTimer = 0;
+      if (onComplete) onComplete();
+    }
+  };
+  state.audio.fileFadeTimer = window.setInterval(step, 16);
+  step();
+}
+
+function applyVolume({ fade = true } = {}) {
+  const target = state.audio.muted ? 0 : state.settings.volume;
+  applyGainTo(target, fade);
   if (state.audio.file) {
-    state.audio.file.volume = state.audio.muted ? 0 : state.settings.volume;
+    if (fade) {
+      fadeFileVolumeTo(target);
+    } else {
+      window.clearInterval(state.audio.fileFadeTimer);
+      state.audio.fileFadeTimer = 0;
+      state.audio.file.volume = target;
+    }
+  }
+}
+
+function applyGainTo(target, fade = true) {
+  if (state.audio.gain) {
+    const now = state.audio.context.currentTime;
+    state.audio.gain.gain.cancelScheduledValues(now);
+    if (fade) {
+      state.audio.gain.gain.setValueAtTime(state.audio.gain.gain.value, now);
+      state.audio.gain.gain.linearRampToValueAtTime(target, now + AUDIO_FADE_DURATION);
+    } else {
+      state.audio.gain.gain.setValueAtTime(target, now);
+    }
   }
 }
 
@@ -954,15 +1021,27 @@ function ensureFileAudio() {
   const audio = new Audio(AUDIO_FILE);
   audio.loop = true;
   audio.preload = "auto";
-  audio.volume = state.audio.muted ? 0 : state.settings.volume;
+  audio.volume = 0;
   state.audio.file = audio;
   return audio;
 }
 
-function stopFileAudio() {
+function stopFileAudio({ fade = true } = {}) {
   if (!state.audio.file) return;
-  state.audio.file.pause();
-  state.audio.file.currentTime = 0;
+  const audio = state.audio.file;
+  const stop = () => {
+    if (state.audio.file !== audio) return;
+    audio.pause();
+    audio.currentTime = 0;
+  };
+  if (!fade) {
+    window.clearInterval(state.audio.fileFadeTimer);
+    state.audio.fileFadeTimer = 0;
+    audio.volume = 0;
+    stop();
+    return;
+  }
+  fadeFileVolumeTo(0, stop);
 }
 
 function syncAudioSource() {
@@ -975,8 +1054,9 @@ function syncAudioSource() {
   if (state.settings.audioSource === "file") {
     stopAmbientNoise();
     const audio = ensureFileAudio();
-    applyVolume();
-    audio.play().catch(() => {
+    audio.play().then(() => {
+      if (!state.audio.muted) applyVolume();
+    }).catch(() => {
       state.audio.muted = true;
       updateSoundButton();
       applyVolume();
@@ -987,7 +1067,10 @@ function syncAudioSource() {
 
   stopFileAudio();
   ensureAudioContext().then((ready) => {
-    if (ready && !state.audio.muted) startAmbientNoise();
+    if (ready && !state.audio.muted) {
+      startAmbientNoise();
+      applyVolume();
+    }
   });
 }
 
@@ -1156,6 +1239,11 @@ function bindEvents() {
     syncWordAnimationPlayback();
     if (!document.hidden) requestAnimationTick();
   });
+  const startAudioOnInteraction = () => {
+    if (!state.audio.muted) syncAudioSource();
+  };
+  document.addEventListener("pointerdown", startAudioOnInteraction, { once: true, passive: true });
+  document.addEventListener("keydown", startAudioOnInteraction, { once: true });
   if (state.pointer.fine) {
     window.addEventListener("pointermove", (event) => {
       if (event.pointerType && event.pointerType !== "mouse") return;
@@ -1235,7 +1323,8 @@ function loadStoredMotion() {
 }
 
 function loadStoredShowAllWords() {
-  return getStoredValue(SHOW_ALL_WORDS_STORAGE_KEY) === "1";
+  const value = getStoredValue(SHOW_ALL_WORDS_STORAGE_KEY);
+  return value === null ? true : value === "1";
 }
 
 function loadStoredColorByDescription() {

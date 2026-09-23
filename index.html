@@ -6,7 +6,7 @@
   <meta name="description" content="言葉が静かに落ちてくる鑑賞型Webページ。">
   <title>Wordfall</title>
   <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" integrity="sha384-uTYyvsSSUZeaPhb5RbKlQa0zY/WpX/QHfvg2mczXyBQOpkWPEDy9lczyp+w7SKXu" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="style.css?v=developer-toggle-v1">
+  <link rel="stylesheet" href="style.css?v=wiki-disabled-v1">
 </head>
 <body>
   <main class="app-shell" aria-label="Wordfall">
@@ -16,8 +16,8 @@
       <button id="settingsButton" class="icon-button" type="button" aria-label="Open settings" aria-haspopup="dialog" aria-expanded="false" aria-controls="settingsPanel">
         <i data-lucide="settings"></i>
       </button>
-      <button id="soundButton" class="icon-button" type="button" aria-label="Turn sound on" aria-pressed="false">
-        <i data-lucide="volume-x"></i>
+      <button id="soundButton" class="icon-button" type="button" aria-label="Turn sound off" aria-pressed="true">
+        <i data-lucide="volume-2"></i>
       </button>
       <button id="infoButton" class="icon-button" type="button" aria-label="Open information" aria-haspopup="dialog" aria-expanded="false" aria-controls="infoDialog">
         <i data-lucide="info"></i>
@@ -43,8 +43,8 @@
           <option value="generated">Generated noise</option>
           <option value="file">Audio file</option>
         </select>
-        <label class="field-label" for="volumeSlider">音量 <span id="volumeValue">35%</span></label>
-        <input id="volumeSlider" class="range-input" type="range" min="0" max="1" step="0.01" value="0.35">
+        <label class="field-label" for="volumeSlider">音量 <span id="volumeValue">10%</span></label>
+        <input id="volumeSlider" class="range-input" type="range" min="0" max="1" step="0.01" value="0.1">
         <button id="devSettingsToggle" class="developer-toggle" type="button" aria-expanded="false" aria-controls="devSettings">
           <span>開発者用を開く</span>
           <i data-lucide="chevron-down"></i>
@@ -57,7 +57,7 @@
             <option value="straight">まっすぐ</option>
           </select>
           <label class="checkbox-label" for="showAllWordsCheckbox">
-            <input id="showAllWordsCheckbox" type="checkbox">
+            <input id="showAllWordsCheckbox" type="checkbox" checked>
             <span>desc の無い言葉も表示</span>
           </label>
           <label class="checkbox-label" for="colorByDescriptionCheckbox">
@@ -106,6 +106,6 @@
     </article>
   </div>
 
-  <script type="module" src="app.js?v=developer-toggle-v1"></script>
+  <script type="module" src="app.js?v=wiki-disabled-v1"></script>
 </body>
 </html>

@@ -6,7 +6,13 @@
     "desc": "create for personality",
     "lv": 4,
     "lang": "ja",
-    "genre": "culture"
+    "genre": "culture",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "33c361da-6a6a-4f4a-a848-020df0923ba9",
@@ -15,7 +21,13 @@
     "desc": "create for quality",
     "lv": 4,
     "lang": "ja",
-    "genre": "culture"
+    "genre": "culture",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "24f922ab-156d-4fa8-bd1a-cd090da542fd",
@@ -23,7 +35,13 @@
     "name": "イリヤ",
     "lv": 3,
     "lang": "ja",
-    "genre": "culture"
+    "genre": "culture",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "e8f0cada-a77f-4225-b92d-3dcbdbe67e6b",
@@ -31,7 +49,13 @@
     "name": "インタラクションデザイン",
     "lv": 3,
     "lang": "ja",
-    "genre": "culture"
+    "genre": "culture",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "e31bcd82-7bc0-4cc8-91a2-e24f7aa39ff9",
@@ -39,7 +63,13 @@
     "name": "オイディプス王",
     "lv": 3,
     "lang": "ja",
-    "genre": "culture"
+    "genre": "culture",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "2ee9fce2-ff70-4fcd-a73a-b84510547d29",
@@ -49,7 +79,13 @@
     "desc": "食事を地域の歴史や文化と結びついた芸術や学問として楽しむこと。",
     "lv": 4,
     "lang": "ja",
-    "genre": "culture"
+    "genre": "culture",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "8e673b6b-a682-44b7-92ca-2fb66339c674",
@@ -59,7 +95,13 @@
     "desc": "ロシアの劇作家アントン・チェーホフの言葉に由来する、物語創作上の原則。\n主に、物語の中で重要そうに提示した要素には後の展開で何らかの役割を与え、使用しない要素は不必要に目立たせるべきではない、という考えを表す。ただし、何を「提示」「使用」とみなすかには幅があり、絶対的な規則ではない。\nこの言葉は、チェーホフが他の作家の戯曲について助言した際、観客に期待を抱かせながら後の内容と結び付かないモノローグを批判し、「撃つ予定のない装填済みの銃を舞台に置いてはならない」という趣旨を述べたことに由来する。したがって、もともとは戯曲の構成についての比喩であり、あらゆる物語の細部に適用される普遍的な法則として提示されたものではない。\n後に「第一幕で壁に銃を掛けたなら、最終幕で発砲させなければならない」という形で広まり、小説、映画、漫画などにも適用されるようになった。\n伏線として扱われる場合もあるが、伏線が後の展開を予告・暗示する手法であるのに対し、チェーホフの銃は提示した要素を無駄にしないという構成上の考え方であり、両者は同じではない。",
     "lv": 3,
     "lang": "ja",
-    "genre": "culture"
+    "genre": "culture",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "d2e411ca-3ef4-4c2f-bba5-997ea2ffb6ac",
@@ -68,7 +110,13 @@
     "reading": "ちゃいこふすきー",
     "lv": 3,
     "lang": "ja",
-    "genre": "culture"
+    "genre": "culture",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "a55e4db5-f5bf-4588-b2b4-1e5d9f95305a",
@@ -78,7 +126,13 @@
     "desc": "だまし絵のこと。\nフランス語で「目を欺く」を意味する。",
     "lv": 3,
     "lang": "ja",
-    "genre": "culture"
+    "genre": "culture",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "d4344aa3-1849-472c-b27a-a99dd87dc1ba",
@@ -86,7 +140,13 @@
     "name": "トンマナ",
     "lv": 3,
     "lang": "ja",
-    "genre": "culture"
+    "genre": "culture",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "b4fbcddb-44ac-4d83-8905-6ce3fc88b939",
@@ -95,7 +155,13 @@
     "reading": "ぱんふれっと",
     "lv": 2,
     "lang": "ja",
-    "genre": "culture"
+    "genre": "culture",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "16acfd6d-65b6-44dd-a35d-5403576ae26d",
@@ -103,7 +169,13 @@
     "name": "フレデリカ・ローゼンフォルト",
     "lv": 4,
     "lang": "ja",
-    "genre": "culture"
+    "genre": "culture",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "e9981cf3-8c76-4b08-821e-d7cd5cf0f946",
@@ -111,7 +183,13 @@
     "name": "ホメロス",
     "lv": 3,
     "lang": "ja",
-    "genre": "culture"
+    "genre": "culture",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "2312b2af-ec4a-4423-a47e-a3d896bf5f8a",
@@ -121,7 +199,13 @@
     "desc": "小説や映画などの物語において登場人物の目的や争いの対象として話を前に進める役割を持ったアイテムや人物を指す概念。登場人物にとっては重要な意味を持つ一方で、それ自体は作品の主題や観客にとって必ずしも重要ではない。\n脚本家アンガス・マクファイルが考案し、映画監督アルフレッド・ヒッチコックが広めたとされる。\n典型例として、スパイ映画における極秘文書や、犯罪映画における宝石などが挙げられる。",
     "lv": 3,
     "lang": "ja",
-    "genre": "culture"
+    "genre": "culture",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "39bad4b9-4e62-4f91-95b1-f69aea5349b4",
@@ -129,7 +213,13 @@
     "name": "メフィストフェレス",
     "lv": 4,
     "lang": "ja",
-    "genre": "culture"
+    "genre": "culture",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "912e2ead-0283-4685-a7c9-10301f369d74",
@@ -138,7 +228,13 @@
     "reading": "いんえい",
     "lv": 2,
     "lang": "ja",
-    "genre": "culture"
+    "genre": "culture",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "c531dce4-b80e-4048-a9fa-c7b49ace6b8e",
@@ -147,7 +243,13 @@
     "reading": "おと",
     "lv": 1,
     "lang": "ja",
-    "genre": "culture"
+    "genre": "culture",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "beec8ff7-1e44-4b59-bf4a-2dd4282582e1",
@@ -156,7 +258,13 @@
     "reading": "かどくせい",
     "lv": 2,
     "lang": "ja",
-    "genre": "culture"
+    "genre": "culture",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "99501986-f8a5-47cd-b87c-e3517052491f",
@@ -165,7 +273,13 @@
     "reading": "なつまつり",
     "lv": 1,
     "lang": "ja",
-    "genre": "culture"
+    "genre": "culture",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "ef87caf1-a793-4384-a579-04f53afcc3b5",
@@ -174,7 +288,13 @@
     "reading": "うたがわひろしげ",
     "lv": 3,
     "lang": "ja",
-    "genre": "culture"
+    "genre": "culture",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "ad317152-1b73-4863-8170-df6a8f2e43af",
@@ -182,7 +302,13 @@
     "name": "花鳥風月",
     "lv": 3,
     "lang": "ja",
-    "genre": "culture"
+    "genre": "culture",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "8c060046-deb2-4190-9cb4-a851dad56dd1",
@@ -191,7 +317,13 @@
     "reading": "かいが",
     "lv": 1,
     "lang": "ja",
-    "genre": "culture"
+    "genre": "culture",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "75ed5e1e-8975-47cb-b4dc-bdb8a2f21d43",
@@ -199,7 +331,13 @@
     "name": "勧善懲悪",
     "lv": 3,
     "lang": "ja",
-    "genre": "culture"
+    "genre": "culture",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "af6b95b0-48f8-44c7-9d05-5d55434e7f57",
@@ -208,7 +346,13 @@
     "reading": "ぎおんまつり",
     "lv": 2,
     "lang": "ja",
-    "genre": "culture"
+    "genre": "culture",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "22507b60-f8d8-4116-a421-a054afe28d2c",
@@ -217,7 +361,13 @@
     "reading": "ごくさいしき",
     "lv": 2,
     "lang": "ja",
-    "genre": "culture"
+    "genre": "culture",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "cc6f70d3-fced-4016-8ee2-07d572cecd75",
@@ -226,7 +376,13 @@
     "reading": "けんたんか",
     "lv": 4,
     "lang": "ja",
-    "genre": "culture"
+    "genre": "culture",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "2ed77ed5-6409-4f6c-a7b9-db7492c91223",
@@ -234,7 +390,13 @@
     "name": "後光",
     "lv": 2,
     "lang": "ja",
-    "genre": "culture"
+    "genre": "culture",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "126d31e1-03f4-42c8-abe5-491f44d893ef",
@@ -243,7 +405,13 @@
     "reading": "こうず",
     "lv": 1,
     "lang": "ja",
-    "genre": "culture"
+    "genre": "culture",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "911122a5-1040-4456-a6ab-336c5c29269c",
@@ -252,7 +420,13 @@
     "reading": "やまがみのおくら",
     "lv": 4,
     "lang": "ja",
-    "genre": "culture"
+    "genre": "culture",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "fc22459e-ac28-4c86-a630-f0e27073b7f1",
@@ -260,7 +434,13 @@
     "name": "四門出遊",
     "lv": 4,
     "lang": "ja",
-    "genre": "culture"
+    "genre": "culture",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "0e803d9d-d46c-4dd7-8a0c-f74d9a8d540a",
@@ -269,7 +449,13 @@
     "reading": "たなばた",
     "lv": 1,
     "lang": "ja",
-    "genre": "culture"
+    "genre": "culture",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "b10b8782-b94c-4790-995a-e845300c2f4e",
@@ -279,7 +465,13 @@
     "desc": "光・放射線・粒子線などの性質を利用して、対象の像や構造を二次元上に静的に記録した画像、またはその技術。一般には、カメラで撮影された静止画像を指す。\n日本語では古くから「ありのままに写し取ること」を意味し、写生や写実的に描かれた絵画を指す語としても用いられていた。江戸時代末期から明治期にかけて西洋の写真術が伝来すると、photograph の訳語として定着した。\n写真技術は、1820年代のジョゼフ・ニセフォール・ニエプスによるヘリオグラフィーを重要な端緒とし、1839年のダゲレオタイプ公表などを経て発展した。以後、文化・風俗・歴史の記録だけでなく、報道、科学観察、芸術表現、日常的な記念や共有の手段として、情報を画像として保存・伝達する重要な役割を担っている。",
     "lv": 1,
     "lang": "ja",
-    "genre": "culture"
+    "genre": "culture",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "13d97de3-5841-4112-8873-585e63e17fc6",
@@ -288,7 +480,13 @@
     "reading": "まつおばしょう",
     "lv": 3,
     "lang": "ja",
-    "genre": "culture"
+    "genre": "culture",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "604563dc-0b45-4ef8-90f8-2c062e8871a3",
@@ -297,7 +495,13 @@
     "reading": "まさおかしき",
     "lv": 3,
     "lang": "ja",
-    "genre": "culture"
+    "genre": "culture",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "ac271b5a-e207-4e40-9a95-4a284e3c674e",
@@ -306,7 +510,13 @@
     "reading": "こえ",
     "lv": 1,
     "lang": "ja",
-    "genre": "culture"
+    "genre": "culture",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "9cfc2704-8a00-41fe-a2df-9352a1b63e3e",
@@ -315,7 +525,13 @@
     "reading": "せんりつ",
     "lv": 1,
     "lang": "ja",
-    "genre": "culture"
+    "genre": "culture",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "3b61b359-6b13-40e2-bd19-fb5f72cf2831",
@@ -324,7 +540,13 @@
     "reading": "せん",
     "lv": 1,
     "lang": "ja",
-    "genre": "culture"
+    "genre": "culture",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "0823d883-e6c1-4b47-b08c-75af2cfb299c",
@@ -333,7 +555,13 @@
     "reading": "ちょうこく",
     "lv": 1,
     "lang": "ja",
-    "genre": "culture"
+    "genre": "culture",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "b25f460a-1129-42b2-9079-331f54f41da3",
@@ -342,7 +570,13 @@
     "reading": "はいち",
     "lv": 1,
     "lang": "ja",
-    "genre": "culture"
+    "genre": "culture",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "1c462510-ed6d-4d1b-8ed7-f7837b08e7a0",
@@ -351,7 +585,13 @@
     "reading": "ひょうし",
     "lv": 1,
     "lang": "ja",
-    "genre": "culture"
+    "genre": "culture",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "dcb3c15b-d839-4849-9089-18a537e67f02",
@@ -360,7 +600,13 @@
     "reading": "たわらまち",
     "lv": 3,
     "lang": "ja",
-    "genre": "culture"
+    "genre": "culture",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "383633dc-96ed-4c57-9b61-7fd56f3774bc",
@@ -369,7 +615,13 @@
     "reading": "ほうふく",
     "lv": 3,
     "lang": "ja",
-    "genre": "culture"
+    "genre": "culture",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "a7d25512-3c2e-4b65-abd4-179fdaaa1253",
@@ -378,7 +630,13 @@
     "reading": "まんようしゅう",
     "lv": 3,
     "lang": "ja",
-    "genre": "culture"
+    "genre": "culture",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "70ee9534-6ecb-41ca-a9c8-11274b886ccd",
@@ -387,7 +645,13 @@
     "reading": "めん",
     "lv": 1,
     "lang": "ja",
-    "genre": "culture"
+    "genre": "culture",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "8ad70687-0953-44db-acc4-ce87c4831202",
@@ -396,7 +660,13 @@
     "reading": "よはく",
     "lv": 1,
     "lang": "ja",
-    "genre": "culture"
+    "genre": "culture",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "7ce7a537-91e0-4350-bcc2-373047fad773",
@@ -405,7 +675,13 @@
     "reading": "わおん",
     "lv": 1,
     "lang": "ja",
-    "genre": "culture"
+    "genre": "culture",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "244dfc41-50ea-4332-b4c4-a328dabd7c8f",
@@ -415,7 +691,13 @@
     "desc": "種々の化け物、妖怪変化などを指す総称。\n魑魅は山林、魍魎は山川・木石に関する神・怪物に由来する。\n古くは古代中国の『春秋左氏伝』に見られる。\n螭魅罔兩とも書く。",
     "lv": 3,
     "lang": "ja",
-    "genre": "culture"
+    "genre": "culture",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "a64fb717-dfc8-4d61-a936-f77c11ba016f",
@@ -425,7 +707,13 @@
     "desc": "七夕の伝説で織姫と彦星を逢わせるためにカササギが翼を並べて天の川に架けたとされる想像上の橋。\n\n小倉百人一首で詠まれた歌に中納言家持（大伴家持）の「かささぎの 渡せる橋に おく霜の 白きを見れば 夜ぞ更けにける」がある。",
     "lv": 5,
     "lang": "ja",
-    "genre": "culture"
+    "genre": "culture",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "88e8e876-cba8-45c2-a801-5aa106621923",
@@ -434,7 +722,13 @@
     "reading": "あしひきの",
     "lv": 4,
     "lang": "ja",
-    "genre": "language"
+    "genre": "language",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "2b4dd201-fa1b-42dc-9fd7-4caa8d0fab80",
@@ -442,7 +736,13 @@
     "name": "アフォリズム",
     "lv": 3,
     "lang": "ja",
-    "genre": "language"
+    "genre": "language",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "31fd415f-db72-48de-9d35-28b5e268136e",
@@ -450,7 +750,13 @@
     "name": "シグニファイヤ",
     "lv": 4,
     "lang": "ja",
-    "genre": "language"
+    "genre": "language",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "92d5675a-18de-4331-8621-b78cc9521f5f",
@@ -460,7 +766,13 @@
     "desc": "遠い\n悠い",
     "lv": 1,
     "lang": "ja",
-    "genre": "language"
+    "genre": "language",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "0cc4b3cc-5e05-4834-8052-bee2348a464a",
@@ -469,7 +781,13 @@
     "reading": "のもす",
     "lv": 4,
     "lang": "ja",
-    "genre": "language"
+    "genre": "language",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "6aee4dc6-13c4-4cbf-82a2-36a9c13da8f9",
@@ -477,7 +795,13 @@
     "name": "メロい",
     "lv": 2,
     "lang": "ja",
-    "genre": "language"
+    "genre": "language",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "103b7136-539b-4af4-a8fe-d333d378f235",
@@ -486,7 +810,13 @@
     "reading": "れぞんでーとる",
     "lv": 4,
     "lang": "ja",
-    "genre": "language"
+    "genre": "language",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "95a3317c-15de-4684-a5dc-15132775e969",
@@ -495,7 +825,13 @@
     "reading": "かいちん",
     "lv": 4,
     "lang": "ja",
-    "genre": "language"
+    "genre": "language",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "ac52fb45-4f7b-4281-9e76-49840d2ac62b",
@@ -504,7 +840,13 @@
     "reading": "かんば",
     "lv": 4,
     "lang": "ja",
-    "genre": "language"
+    "genre": "language",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "9f77f025-0ebe-41f8-bf24-91f0df19ae20",
@@ -512,7 +854,13 @@
     "name": "眼光紙背に徹す",
     "lv": 4,
     "lang": "ja",
-    "genre": "language"
+    "genre": "language",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "02673e5b-6361-4f77-8a1a-a161b2970f59",
@@ -520,7 +868,13 @@
     "name": "逆撫",
     "lv": 4,
     "lang": "ja",
-    "genre": "language"
+    "genre": "language",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "aae83adc-9035-4be6-affc-6570c6e40c92",
@@ -528,7 +882,13 @@
     "name": "鶏群の一鶴",
     "lv": 4,
     "lang": "ja",
-    "genre": "language"
+    "genre": "language",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "b04e24c5-d662-4b85-ab5a-1583e6642424",
@@ -536,7 +896,13 @@
     "name": "鶏鳴狗盗",
     "lv": 5,
     "lang": "ja",
-    "genre": "language"
+    "genre": "language",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "39c1e83c-c5ef-4de5-92fb-f7e2bceb9926",
@@ -545,7 +911,13 @@
     "desc": "ことほぐ。",
     "lv": 4,
     "lang": "ja",
-    "genre": "language"
+    "genre": "language",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "e8e72c52-b9cb-4569-9ba6-ee97c00f5460",
@@ -553,7 +925,13 @@
     "name": "左見右見",
     "lv": 4,
     "lang": "ja",
-    "genre": "language"
+    "genre": "language",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "a87e4103-7007-4708-ba11-8116aafe0b02",
@@ -562,7 +940,13 @@
     "reading": "じてん",
     "lv": 1,
     "lang": "ja",
-    "genre": "language"
+    "genre": "language",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "39cee2c7-5c6c-4c7b-9853-045a97403b46",
@@ -571,7 +955,13 @@
     "reading": "のうがき",
     "lv": 3,
     "lang": "ja",
-    "genre": "language"
+    "genre": "language",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "3caccc13-1faf-424f-befa-1841a1c095cb",
@@ -579,7 +969,13 @@
     "name": "八面六臂",
     "lv": 3,
     "lang": "ja",
-    "genre": "language"
+    "genre": "language",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "9106b95d-7b9f-4332-bf21-b9b633769a74",
@@ -587,7 +983,13 @@
     "name": "百花繚乱",
     "lv": 3,
     "lang": "ja",
-    "genre": "language"
+    "genre": "language",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "aa48ed6b-a97e-47ed-8bb6-88947de13330",
@@ -595,7 +997,13 @@
     "name": "不承不承",
     "lv": 4,
     "lang": "ja",
-    "genre": "language"
+    "genre": "language",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "8ddef6d3-e5da-4d8c-a122-b71ca71692d6",
@@ -604,7 +1012,13 @@
     "reading": "ふうりんかざん",
     "lv": 4,
     "lang": "ja",
-    "genre": "language"
+    "genre": "language",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "2e1c5abb-9894-4dff-8d47-d076d57e04f7",
@@ -613,7 +1027,13 @@
     "reading": "ゆうせい",
     "lv": 5,
     "lang": "ja",
-    "genre": "language"
+    "genre": "language",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "95f5b1a3-720a-4f1c-a52d-fba227c37d47",
@@ -621,7 +1041,13 @@
     "name": "梨の礫",
     "lv": 3,
     "lang": "ja",
-    "genre": "language"
+    "genre": "language",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "8b75e205-192f-4f0f-b154-a650e3e3149a",
@@ -631,7 +1057,13 @@
     "desc": "左右に揺れること（船が揺れる様など）。\n丿（へつ）は左払い、乀（ほつ）は右払いを表す。",
     "lv": 5,
     "lang": "ja",
-    "genre": "language"
+    "genre": "language",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "4578f4de-6f3a-4156-b91b-18b28f9613d8",
@@ -639,7 +1071,13 @@
     "name": "呻吟",
     "lv": 4,
     "lang": "ja",
-    "genre": "language"
+    "genre": "language",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "2e722790-4d5a-42fc-bd60-7a7d8a2974b3",
@@ -648,7 +1086,13 @@
     "desc": "るつぼ",
     "lv": 3,
     "lang": "ja",
-    "genre": "language"
+    "genre": "language",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "7a7780ab-343e-4a07-b894-4198cd887b70",
@@ -658,7 +1102,13 @@
     "desc": "若くして亡くなること\n＝夭折（ようせつ）",
     "lv": 4,
     "lang": "ja",
-    "genre": "language"
+    "genre": "language",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "10d4ab22-ec03-4867-87da-50f9af8a9c33",
@@ -667,7 +1117,13 @@
     "reading": "ぼつ",
     "lv": 5,
     "lang": "ja",
-    "genre": "language"
+    "genre": "language",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "31ae9725-ff10-4f3b-ae54-6acf53ef5506",
@@ -675,7 +1131,13 @@
     "name": "衒学",
     "lv": 4,
     "lang": "ja",
-    "genre": "language"
+    "genre": "language",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "1887676b-a414-478f-9baf-e07647e5212f",
@@ -684,7 +1146,13 @@
     "reading": "そうそう",
     "lv": 3,
     "lang": "ja",
-    "genre": "language"
+    "genre": "language",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "eb944f6b-8b16-436c-84e1-f38f1ca9282b",
@@ -692,7 +1160,13 @@
     "name": "4E認知",
     "lv": 5,
     "lang": "ja",
-    "genre": "mind"
+    "genre": "mind",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "433d88c4-f6b9-46dc-b905-540e8ab3ee58",
@@ -701,7 +1175,13 @@
     "reading": "あぷりおり",
     "lv": 4,
     "lang": "ja",
-    "genre": "mind"
+    "genre": "mind",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "84b66066-6b0a-49e6-963a-4fd6eadb6832",
@@ -711,7 +1191,13 @@
     "desc": "思考が行き詰まり解決の糸口が見えなくなった難問、またはその状態を表す言葉。\n古代ギリシア語の ἀπορία（aporía） に由来する。\n・a-：ない\n・poros：道、通路、手段",
     "lv": 4,
     "lang": "ja",
-    "genre": "mind"
+    "genre": "mind",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "494a79cc-3af4-46c5-a806-b687e2aaacc4",
@@ -719,7 +1205,13 @@
     "name": "エディプスコンプレックス",
     "lv": 4,
     "lang": "ja",
-    "genre": "mind"
+    "genre": "mind",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "d69f3c0e-e39f-4a6c-ba22-ed5b513c03e0",
@@ -727,7 +1219,13 @@
     "name": "エナクティヴィズム",
     "lv": 5,
     "lang": "ja",
-    "genre": "mind"
+    "genre": "mind",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "88a25413-df92-461f-bce6-6eadd97c3d37",
@@ -737,7 +1235,13 @@
     "desc": "ある物事を説明する際には、必要以上に仮定を増やすべきではないとする考え方。\n単純な説明が常に正しいという意味ではなく、同じ程度に説明できるなら、余計な仮定を置かない説明を優先すべきであることを示す。\n14世紀の哲学者・神学者ウィリアム・オブ・オッカム（オッカム村のウィリアム）の思想に由来し、後に「オッカムの剃刀」と呼ばれるようになった。\n後世の科学的思考や仮説選択の態度にも影響を与えている。",
     "lv": 2,
     "lang": "ja",
-    "genre": "mind"
+    "genre": "mind",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "e17c06b6-a769-4c68-964b-7303cd6bfc88",
@@ -746,7 +1250,13 @@
     "reading": "こんこるどこうか",
     "lv": 3,
     "lang": "ja",
-    "genre": "mind"
+    "genre": "mind",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "5187f8e8-89b0-4461-88d1-42d00ae5c8f7",
@@ -754,7 +1264,13 @@
     "name": "シャーデンフロイデ",
     "lv": 4,
     "lang": "ja",
-    "genre": "mind"
+    "genre": "mind",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "5bea98ca-94b6-40d0-98a9-a3df17c787a8",
@@ -762,7 +1278,13 @@
     "name": "センス",
     "lv": 2,
     "lang": "ja",
-    "genre": "mind"
+    "genre": "mind",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "83dadbb5-d53a-46fd-8e69-778e9ecb6dea",
@@ -772,7 +1294,13 @@
     "desc": "pathetic\n「哀れな」「痛ましい」「悲愴な」「情けない」などの意味を持つ形容詞。\nもともとは「哀れみや悲しみを誘う」という意味を持ち、文芸・音楽などでは「悲愴な」「哀切な」といった意味で使われる。一方、現代英語では「みじめな」「情けない」「見るに堪えない」といった、軽蔑や侮蔑を含む意味で使われることも多い。\n日本語では「パセティックなドラマ」、「パセティックな夢」のように形容動詞的に用いられることもある。",
     "lv": 3,
     "lang": "ja",
-    "genre": "mind"
+    "genre": "mind",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "27be1f56-1ea6-427d-9a07-35bfe2ff04b5",
@@ -780,7 +1308,13 @@
     "name": "フロイト",
     "lv": 3,
     "lang": "ja",
-    "genre": "mind"
+    "genre": "mind",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "202bb317-2153-47e5-8178-23443696fde2",
@@ -788,7 +1322,13 @@
     "name": "マンデラエフェクト",
     "lv": 4,
     "lang": "ja",
-    "genre": "mind"
+    "genre": "mind",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "79a5982b-f4d5-4fe1-bb3f-d510d3e6daf6",
@@ -798,7 +1338,13 @@
     "desc": "溺愛することのたとえ。\n人を愛するあまり、その人の家の屋根にいる鳥まで愛しく思うこと。\n『説苑』「貴徳」に拠る。",
     "lv": 3,
     "lang": "ja",
-    "genre": "mind"
+    "genre": "mind",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "0ce969da-8996-4f08-b172-11d3395c1cf0",
@@ -807,7 +1353,13 @@
     "reading": "いしき",
     "lv": 1,
     "lang": "ja",
-    "genre": "mind"
+    "genre": "mind",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "0060ed6b-470e-45ff-9e9a-65028174c4c6",
@@ -815,7 +1367,13 @@
     "name": "厭世",
     "lv": 4,
     "lang": "ja",
-    "genre": "mind"
+    "genre": "mind",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "eafc6230-6b57-4a1a-a115-c0a19b8bc6e5",
@@ -824,7 +1382,13 @@
     "reading": "よろこび",
     "lv": 1,
     "lang": "ja",
-    "genre": "mind"
+    "genre": "mind",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "5297c084-6fa0-4fc9-8de7-66aba1b00145",
@@ -833,7 +1397,13 @@
     "reading": "げんしょう",
     "lv": 1,
     "lang": "ja",
-    "genre": "mind"
+    "genre": "mind",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "abd49a8f-4173-409a-b554-fe3a9cc23f4b",
@@ -841,7 +1411,13 @@
     "name": "現象学",
     "lv": 5,
     "lang": "ja",
-    "genre": "mind"
+    "genre": "mind",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "e9ea5041-fd97-4a02-99d0-9a1bf6bc69db",
@@ -849,7 +1425,13 @@
     "name": "個性",
     "lv": 2,
     "lang": "ja",
-    "genre": "mind"
+    "genre": "mind",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "16aaef9a-a96a-4bcc-a58e-afc3b1b81543",
@@ -857,7 +1439,13 @@
     "name": "孤高",
     "lv": 3,
     "lang": "ja",
-    "genre": "mind"
+    "genre": "mind",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "eb92096f-e591-4642-b8b7-d6989ff12bcf",
@@ -865,7 +1453,13 @@
     "name": "酸っぱい葡萄",
     "lv": 3,
     "lang": "ja",
-    "genre": "mind"
+    "genre": "mind",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "d9a04546-8762-4935-83f5-4b2150b58d4c",
@@ -873,7 +1467,13 @@
     "name": "自律",
     "lv": 2,
     "lang": "ja",
-    "genre": "mind"
+    "genre": "mind",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "7156e5c3-7ba4-420d-a3e4-ee72295d36f3",
@@ -882,7 +1482,13 @@
     "reading": "しんてきかいてん",
     "lv": 3,
     "lang": "ja",
-    "genre": "mind"
+    "genre": "mind",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "f7048b1f-eaf2-4910-a8e6-b52cc38a35ab",
@@ -890,7 +1496,13 @@
     "name": "身体性認知科学",
     "lv": 5,
     "lang": "ja",
-    "genre": "mind"
+    "genre": "mind",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "e53c4ad8-e97a-4f65-b8d0-4ccb41072369",
@@ -899,7 +1511,13 @@
     "reading": "そんざい",
     "lv": 1,
     "lang": "ja",
-    "genre": "mind"
+    "genre": "mind",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "c1eededd-0c7a-4d11-9e12-3c05f4bd6480",
@@ -907,7 +1525,13 @@
     "name": "超越論的間主観性",
     "lv": 5,
     "lang": "ja",
-    "genre": "mind"
+    "genre": "mind",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "d724ae72-a442-4390-bcf0-ad13c5f48330",
@@ -915,7 +1539,13 @@
     "name": "超自我",
     "lv": 4,
     "lang": "ja",
-    "genre": "mind"
+    "genre": "mind",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "aebb8a7e-25e5-4475-ad22-b30bbfb9b51d",
@@ -923,7 +1553,13 @@
     "name": "直接知覚論",
     "lv": 5,
     "lang": "ja",
-    "genre": "mind"
+    "genre": "mind",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "b9b4c8f0-c27e-4d95-a31c-dc891f4335c6",
@@ -931,7 +1567,13 @@
     "name": "天上天下唯我独尊",
     "lv": 3,
     "lang": "ja",
-    "genre": "mind"
+    "genre": "mind",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "2157e5c2-1947-46ab-8cdf-ef0d4835e843",
@@ -940,7 +1582,13 @@
     "reading": "いかり",
     "lv": 1,
     "lang": "ja",
-    "genre": "mind"
+    "genre": "mind",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "f5902d6d-8816-4367-a863-44aae0db18a5",
@@ -949,7 +1597,13 @@
     "reading": "にんしき",
     "lv": 1,
     "lang": "ja",
-    "genre": "mind"
+    "genre": "mind",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "6d7ed5b9-c6c9-401f-8534-e975e9d71b3c",
@@ -958,7 +1612,13 @@
     "reading": "かなしみ",
     "lv": 1,
     "lang": "ja",
-    "genre": "mind"
+    "genre": "mind",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "45ed44b8-bdf9-4f55-8e16-6970bdfe15be",
@@ -966,7 +1626,13 @@
     "name": "表象",
     "lv": 3,
     "lang": "ja",
-    "genre": "mind"
+    "genre": "mind",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "f8cb0e50-89e5-4583-9748-7e43da96d8c0",
@@ -975,7 +1641,13 @@
     "reading": "ふあん",
     "lv": 1,
     "lang": "ja",
-    "genre": "mind"
+    "genre": "mind",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "b92b21e0-cb97-4574-93ee-44514e488789",
@@ -984,7 +1656,13 @@
     "reading": "ふんし",
     "lv": 3,
     "lang": "ja",
-    "genre": "mind"
+    "genre": "mind",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "a5b4a7b0-06ca-4185-b893-e1d419502c9f",
@@ -993,7 +1671,13 @@
     "reading": "ほんしつ",
     "lv": 1,
     "lang": "ja",
-    "genre": "mind"
+    "genre": "mind",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "1a858a45-2a23-4d7c-a138-3209bf7410d8",
@@ -1001,7 +1685,13 @@
     "name": "離人症",
     "lv": 4,
     "lang": "ja",
-    "genre": "mind"
+    "genre": "mind",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "d55815f5-d048-4036-8407-0c27f4a05dc6",
@@ -1010,7 +1700,13 @@
     "reading": "れいかん",
     "lv": 3,
     "lang": "ja",
-    "genre": "mind"
+    "genre": "mind",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "8cafc504-7ef2-4083-994f-26ddc15ebb2e",
@@ -1018,7 +1714,13 @@
     "name": "呵責",
     "lv": 3,
     "lang": "ja",
-    "genre": "mind"
+    "genre": "mind",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "9002ff88-f3c5-4ab9-ad25-216371edc6bb",
@@ -1027,7 +1729,13 @@
     "reading": "きょうじ",
     "lv": 4,
     "lang": "ja",
-    "genre": "mind"
+    "genre": "mind",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "8e89894c-1b5e-4bd2-96db-3d09e649de2f",
@@ -1037,7 +1745,13 @@
     "desc": "演劇において、主役が不慮の事態で出演できない場合に備えて、不慮の事態が起きてからではなく、あらかじめ代役を務められるように準備すること。",
     "lv": 4,
     "lang": "ja",
-    "genre": "society"
+    "genre": "society",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "d1e71eb0-720c-4195-92de-acf93ef9df95",
@@ -1046,7 +1760,13 @@
     "reading": "あんぱいあ",
     "lv": 2,
     "lang": "ja",
-    "genre": "society"
+    "genre": "society",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "54a19603-fd75-4aea-8719-459d03e7dc6a",
@@ -1055,7 +1775,13 @@
     "reading": "かのっさのくつじょく",
     "lv": 4,
     "lang": "ja",
-    "genre": "society"
+    "genre": "society",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "21596f51-6c24-4bab-8a5e-6bfc2b3a67f7",
@@ -1065,7 +1791,13 @@
     "desc": "「悪貨は良貨を駆逐する」という言葉で知られる、貨幣流通に関する経済学上の法則。\n素材価値や市場価値の異なる複数の貨幣が、同じ額面または固定された交換比率で流通すると、人々は価値の低い貨幣を支払いに用い、価値の高い貨幣を保有しようとする。その結果、価値の低い「悪貨」が市場に残り、価値の高い「良貨」が退蔵・溶解・国外流出などによって流通から姿を消す現象を指す。\n16世紀にイングランド王室の財務代理人を務めたトマス・グレシャムが、良質な貨幣の国外流出を貨幣の品位低下と結び付けてエリザベス1世に進言したことに由来する。19世紀の経済学者ヘンリー・ダニング・マクラウドがグレシャムの名を冠して著書で紹介したが、同様の現象はグレシャム以前から各地で知られていた。",
     "lv": 3,
     "lang": "ja",
-    "genre": "society"
+    "genre": "society",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "593effe0-ed94-4712-9f55-079bf8c6d8a6",
@@ -1073,7 +1805,13 @@
     "name": "ことなかれ",
     "lv": 3,
     "lang": "ja",
-    "genre": "society"
+    "genre": "society",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "1d535cf4-006d-48c8-8c85-cca95ddeff62",
@@ -1083,7 +1821,13 @@
     "desc": "ゴマとマヨネーズを組み合わせた調味料、またはインターネット上で広まった言葉遊びの一種。\n後者は、複数の語が結び付く境目で同じ音が連続して現れる語を見つけ、その偶然性や発音のぎこちなさを楽しむものを指す。「ゴマ＋マヨネーズ」の境目で「ま」が重なることに由来する。\n高次ゴママヨ、多項ゴママヨ、架空ゴママヨ、ゴママヨキャンセルなど、愛好者による独自の派生分類も存在する。\n例：スマホ＋本体（すまほ＋ほんたい）、相関＋関係（そうかん＋かんけい）、銀行＋口座＋残高（ぎんこう＋こうざ＋ざんだか）\nまた、音楽ゲーム、いわゆる音ゲーでは、階段状のノーツの途中に同じレーンの連打が挟まる配置を、形の類似から「ゴママヨ配置」と呼ぶことがある。",
     "lv": 4,
     "lang": "ja",
-    "genre": "society"
+    "genre": "society",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "df3152cf-4d6d-4373-ad2f-8ecc28a0b971",
@@ -1092,7 +1836,13 @@
     "reading": "てくのくらーと",
     "lv": 4,
     "lang": "ja",
-    "genre": "society"
+    "genre": "society",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "44494725-edd9-45ca-8b44-b814ef26f463",
@@ -1100,7 +1850,13 @@
     "name": "ハイカラ",
     "lv": 2,
     "lang": "ja",
-    "genre": "society"
+    "genre": "society",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "937cbd7f-8299-402d-8612-664d4eeb1ee0",
@@ -1109,7 +1865,13 @@
     "reading": "ふぁらんくす",
     "lv": 2,
     "lang": "ja",
-    "genre": "society"
+    "genre": "society",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "4e87446b-8020-4196-a3ac-8d5667ffbe13",
@@ -1117,7 +1879,13 @@
     "name": "ペルソナ・ノン・グラータ",
     "lv": 4,
     "lang": "ja",
-    "genre": "society"
+    "genre": "society",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "91d593a8-0ac3-4b54-9a94-75dceeef990f",
@@ -1126,7 +1894,13 @@
     "reading": "ぺれすとろいか",
     "lv": 2,
     "lang": "ja",
-    "genre": "society"
+    "genre": "society",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "520984b4-6152-42fe-b936-cab98c003529",
@@ -1136,7 +1910,13 @@
     "desc": "同じ名目価値を持つ複数の貨幣が流通している市場では、人々が実質価値の低い貨幣である「悪貨」を支払いに用い、実質価値の高い「良貨」を手元に残そうとするため、悪貨ばかりが流通し、良貨が市場から姿を消すという経済現象を表す言葉。この現象は「グレシャムの法則」として知られている。\n転じて、「低品質な情報が良質な情報を押し流す」「安価な粗悪品が丁寧に作られた製品を市場から排除する」など、質の低いものが質の高いものに取って代わる状況の比喩として用いられることがある。",
     "lv": 3,
     "lang": "ja",
-    "genre": "society"
+    "genre": "society",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "426515fa-8e6d-48e2-8f18-64ce1dbba2fc",
@@ -1145,7 +1925,13 @@
     "reading": "いのうただたか",
     "lv": 3,
     "lang": "ja",
-    "genre": "society"
+    "genre": "society",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "e21c6321-d0a5-4e7e-bc0b-a42b37b943ab",
@@ -1154,7 +1940,13 @@
     "reading": "かいしゃ",
     "lv": 1,
     "lang": "ja",
-    "genre": "society"
+    "genre": "society",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "f51f4210-1365-4eef-97ab-ba207c068163",
@@ -1164,7 +1956,13 @@
     "desc": "ある分野の初学者や知識のない一般の人に、専門的な知識や新しい考え方を分かりやすく伝え、理解や合理的な判断へ導くこと。また、知識や考え方を社会に広めること。\n「啓」は「ひらくこと、教え導くこと」、「蒙」は「くらいこと、道理を知らないこと」を表す。\n近代以降は、伝統的な権威や迷信を批判し、理性や経験に基づいて人間や社会を捉え直そうとしたヨーロッパの Enlightenment の訳語として、「啓蒙思想」「啓蒙主義」の形で定着した。\n現在では、教える側と教えられる側の立場の不均衡を感じさせることから、「啓発」「普及」「理解促進」などの語に言い換えられる場合もある。",
     "lv": 2,
     "lang": "ja",
-    "genre": "society"
+    "genre": "society",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "bb1fdb4e-0230-41b4-b0d1-ed3425399a40",
@@ -1173,7 +1971,13 @@
     "reading": "しょちゅうみまい",
     "lv": 1,
     "lang": "ja",
-    "genre": "society"
+    "genre": "society",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "4cb9b38c-1c8e-4b27-8d60-120b4328b824",
@@ -1181,7 +1985,13 @@
     "name": "新聞協会賞",
     "lv": 3,
     "lang": "ja",
-    "genre": "society"
+    "genre": "society",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "29857cbb-5d16-4f71-ad05-83d5f1ebd9ec",
@@ -1190,7 +2000,13 @@
     "reading": "しんわ",
     "lv": 1,
     "lang": "ja",
-    "genre": "society"
+    "genre": "society",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "752436de-cf86-46f5-8d57-c679c652e250",
@@ -1199,7 +2015,13 @@
     "reading": "せいど",
     "lv": 1,
     "lang": "ja",
-    "genre": "society"
+    "genre": "society",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "328cd89d-1ee9-404b-9444-97b8718e9e63",
@@ -1208,7 +2030,13 @@
     "reading": "にしあまね",
     "lv": 4,
     "lang": "ja",
-    "genre": "society"
+    "genre": "society",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "45358cc1-be34-4089-9f70-a2798893d2e1",
@@ -1217,7 +2045,13 @@
     "reading": "いしだみつなり",
     "lv": 3,
     "lang": "ja",
-    "genre": "society"
+    "genre": "society",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "1c0baf28-cb86-407a-b39d-dd954fa92e96",
@@ -1226,7 +2060,13 @@
     "reading": "そうだん",
     "lv": 1,
     "lang": "ja",
-    "genre": "society"
+    "genre": "society",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "5bbbc963-9e71-47fb-933e-602b09eb68ff",
@@ -1235,7 +2075,13 @@
     "reading": "ちいき",
     "lv": 1,
     "lang": "ja",
-    "genre": "society"
+    "genre": "society",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "1cc80018-751b-4d7b-963e-ec1641683a36",
@@ -1243,7 +2089,13 @@
     "name": "朕は国家なり",
     "lv": 4,
     "lang": "ja",
-    "genre": "society"
+    "genre": "society",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "33373bcd-8910-422a-b4b9-237de59622f0",
@@ -1251,7 +2103,13 @@
     "name": "敵失",
     "lv": 3,
     "lang": "ja",
-    "genre": "society"
+    "genre": "society",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "3da5a1df-e65b-4dca-9cb6-4cd85fc5efa3",
@@ -1260,7 +2118,13 @@
     "reading": "としこっか",
     "lv": 1,
     "lang": "ja",
-    "genre": "society"
+    "genre": "society",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "37b7b515-4ab8-4c13-b593-e3b873c7575f",
@@ -1269,7 +2133,13 @@
     "reading": "ひみこ",
     "lv": 3,
     "lang": "ja",
-    "genre": "society"
+    "genre": "society",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "e5d4fdc7-3f23-44c6-9a26-3b710eb0aa38",
@@ -1278,7 +2148,13 @@
     "reading": "ぶんめい",
     "lv": 1,
     "lang": "ja",
-    "genre": "society"
+    "genre": "society",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "814fd4cf-0f96-401e-9835-f4bf40b83d94",
@@ -1287,7 +2163,13 @@
     "reading": "ほうこく",
     "lv": 1,
     "lang": "ja",
-    "genre": "society"
+    "genre": "society",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "103ce8c6-69c7-41ff-b8ec-331da07b7e23",
@@ -1295,7 +2177,13 @@
     "name": "報連相",
     "lv": 2,
     "lang": "ja",
-    "genre": "society"
+    "genre": "society",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "783bbb8d-ec22-45cc-9e7d-04e9db030034",
@@ -1304,7 +2192,13 @@
     "reading": "みつげつ",
     "lv": 2,
     "lang": "ja",
-    "genre": "society"
+    "genre": "society",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "cdb2d015-1dde-4350-b2a9-410474c237a4",
@@ -1313,7 +2207,13 @@
     "reading": "れんらく",
     "lv": 1,
     "lang": "ja",
-    "genre": "society"
+    "genre": "society",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "1fabbb13-e043-4416-abee-a1c9a979ea57",
@@ -1321,7 +2221,13 @@
     "name": "シナプス",
     "lv": 3,
     "lang": "ja",
-    "genre": "body"
+    "genre": "body",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "910f0eca-de9d-4a98-b126-0e62315cccaa",
@@ -1329,7 +2235,13 @@
     "name": "ホムンクルス",
     "lv": 3,
     "lang": "ja",
-    "genre": "body"
+    "genre": "body",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "7bc4a7ea-2ad8-4bb8-bb71-7e0ca2a08ffb",
@@ -1338,7 +2250,13 @@
     "reading": "しわぶき",
     "lv": 4,
     "lang": "ja",
-    "genre": "body"
+    "genre": "body",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "9ba619c5-891a-4242-8007-a8ee634e183f",
@@ -1347,7 +2265,13 @@
     "reading": "かた",
     "lv": 2,
     "lang": "ja",
-    "genre": "body"
+    "genre": "body",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "e7d58d97-4bdc-4f65-b780-4bfffa9aff62",
@@ -1356,7 +2280,13 @@
     "reading": "くち",
     "lv": 1,
     "lang": "ja",
-    "genre": "body"
+    "genre": "body",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "7a901a9e-2542-481c-876b-f6770778abd7",
@@ -1364,7 +2294,13 @@
     "name": "甲殻類",
     "lv": 2,
     "lang": "ja",
-    "genre": "body"
+    "genre": "body",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "cd4ae06b-3d60-49a4-9418-6f65a99f49c5",
@@ -1373,7 +2309,13 @@
     "reading": "しつう",
     "lv": 1,
     "lang": "ja",
-    "genre": "body"
+    "genre": "body",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "58306f4e-443a-455b-9eaa-64492a5ec1c0",
@@ -1382,7 +2324,13 @@
     "reading": "みみ",
     "lv": 1,
     "lang": "ja",
-    "genre": "body"
+    "genre": "body",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "fabe5f5b-9dcb-44d0-babc-7b1e4f031a38",
@@ -1390,7 +2338,13 @@
     "name": "軸索",
     "lv": 4,
     "lang": "ja",
-    "genre": "body"
+    "genre": "body",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "13df7598-5ed9-4e36-a33d-f9e0bc05c2e0",
@@ -1398,7 +2352,13 @@
     "name": "髄鞘化",
     "lv": 5,
     "lang": "ja",
-    "genre": "body"
+    "genre": "body",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "89934151-d7c5-42dc-8763-7b9cd5e144bc",
@@ -1406,7 +2366,13 @@
     "name": "側頭葉",
     "lv": 3,
     "lang": "ja",
-    "genre": "body"
+    "genre": "body",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "73ad879c-9496-4974-a27c-68b3f5c3be5c",
@@ -1415,7 +2381,13 @@
     "reading": "あたま",
     "lv": 1,
     "lang": "ja",
-    "genre": "body"
+    "genre": "body",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "c4df8243-a908-4c92-a0ae-f30c7a114fb9",
@@ -1424,7 +2396,13 @@
     "reading": "はな",
     "lv": 1,
     "lang": "ja",
-    "genre": "body"
+    "genre": "body",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "bc9f5758-efc4-4ed5-bebd-d191a837852e",
@@ -1432,7 +2410,13 @@
     "name": "不思議の国のアリス症候群",
     "lv": 4,
     "lang": "ja",
-    "genre": "body"
+    "genre": "body",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "3a24098f-5014-4244-95dc-e73019304968",
@@ -1441,7 +2425,13 @@
     "reading": "め",
     "lv": 1,
     "lang": "ja",
-    "genre": "body"
+    "genre": "body",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "48350e6f-9c88-4fc8-90ba-2eb727687e96",
@@ -1451,7 +2441,13 @@
     "desc": "若くして亡くなること。\n夭逝とも。",
     "lv": 3,
     "lang": "ja",
-    "genre": "body"
+    "genre": "body",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "5cb123fb-77d9-46ff-b43a-408d5d9ca0a6",
@@ -1460,7 +2456,13 @@
     "reading": "ぜのんのぱらどっくす",
     "lv": 4,
     "lang": "ja",
-    "genre": "science"
+    "genre": "science",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "5d915729-3d40-456a-b9df-13c0ba1e4ced",
@@ -1468,7 +2470,13 @@
     "name": "ド・ブロイ波",
     "lv": 4,
     "lang": "ja",
-    "genre": "science"
+    "genre": "science",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "35f78ef9-99a4-4e63-b75e-770a207caa07",
@@ -1477,7 +2485,13 @@
     "reading": "ふぇのーるふたれいん",
     "lv": 2,
     "lang": "ja",
-    "genre": "science"
+    "genre": "science",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "9f40839f-d5e8-4d85-bef9-8532bddc25ce",
@@ -1485,7 +2499,13 @@
     "name": "ポリテトラフルオロエチレン",
     "lv": 4,
     "lang": "ja",
-    "genre": "science"
+    "genre": "science",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "e794cf95-5e55-4f25-95ba-54189a947e14",
@@ -1494,7 +2514,13 @@
     "reading": "めんそーる",
     "lv": 3,
     "lang": "ja",
-    "genre": "science"
+    "genre": "science",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "9837cfc6-ff11-4b8a-b358-b0d82c7af861",
@@ -1504,7 +2530,13 @@
     "desc": "地球の地殻とマントルの境界。通称モホ面。\n1909年10月8日にクロアチアで起きた地震をきっかけに、クロアチアの地震学者アンドリヤ・モホロビチッチは、地震波の到着時刻のずれを分析した。その結果、地下のある深さで地震波速度が急に増加する境界があると推定した。\nこの境界は現在、地殻とマントルを分ける不連続面として理解されている。",
     "lv": 4,
     "lang": "ja",
-    "genre": "science"
+    "genre": "science",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "064975a8-1e1d-491c-aa56-6d773b864d42",
@@ -1512,7 +2544,13 @@
     "name": "リヒテンベルク図形",
     "lv": 4,
     "lang": "ja",
-    "genre": "science"
+    "genre": "science",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "84e372b4-a4d9-488f-aea3-943d1dca48eb",
@@ -1521,7 +2559,13 @@
     "reading": "いでんし",
     "lv": 1,
     "lang": "ja",
-    "genre": "science"
+    "genre": "science",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "1048e375-5ec3-4308-a7f9-d4629f3c1077",
@@ -1529,7 +2573,13 @@
     "name": "可換環",
     "lv": 5,
     "lang": "ja",
-    "genre": "science"
+    "genre": "science",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "13ce77a8-f5bd-4521-aa7f-6e39a87d9f73",
@@ -1538,7 +2588,13 @@
     "reading": "げんし",
     "lv": 1,
     "lang": "ja",
-    "genre": "science"
+    "genre": "science",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "89938bb9-5d61-4710-b630-d452ec88e1a1",
@@ -1548,7 +2604,13 @@
     "desc": "生物の細胞内でエネルギーの受け渡しに関わるリン酸結合。\nリン酸基を含む結合のうち、加水分解されると大きな自由エネルギーを放出できるものを指す。\nこの結合を持つ代表的な化合物として、アデノシン三リン酸（ATP）やクレアチンリン酸などが挙げられる。",
     "lv": 2,
     "lang": "ja",
-    "genre": "science"
+    "genre": "science",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "e65a252c-132e-4ee2-99f8-70b80a7f22fc",
@@ -1557,7 +2619,13 @@
     "reading": "さいぼう",
     "lv": 1,
     "lang": "ja",
-    "genre": "science"
+    "genre": "science",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "6c4cdb33-918a-450c-b628-61c66352be1c",
@@ -1565,7 +2633,13 @@
     "name": "初期微動継続時間",
     "lv": 5,
     "lang": "ja",
-    "genre": "science"
+    "genre": "science",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "be8e8ad3-09a8-44eb-9e7c-0472781ee94f",
@@ -1574,7 +2648,13 @@
     "reading": "しんか",
     "lv": 1,
     "lang": "ja",
-    "genre": "science"
+    "genre": "science",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "f8a748f7-0373-4233-b307-277536991376",
@@ -1582,7 +2662,13 @@
     "name": "先手必勝",
     "lv": 4,
     "lang": "ja",
-    "genre": "science"
+    "genre": "science",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "4e897e32-9be1-4a63-b4bf-f6d2a988f376",
@@ -1591,7 +2677,13 @@
     "reading": "そうたいせいりろん",
     "lv": 4,
     "lang": "ja",
-    "genre": "science"
+    "genre": "science",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "8e884095-acfd-43fd-8fdb-68752af3df5c",
@@ -1601,7 +2693,13 @@
     "desc": "以下の条件を満たすゲームを指す。\n・二人＝プレイヤーが２人（チームが２チーム）\n・零和＝一方の利益が、もう一方の損になる\n・有限＝手数が有限\n・確定＝運要素が無い\n・完全情報＝すべての情報がプレイヤーに公開されている\n例としてチェス、将棋、囲碁、オセロなどのゲームが挙げられる。",
     "lv": 3,
     "lang": "ja",
-    "genre": "science"
+    "genre": "science",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "126a2fff-677e-497a-b48f-c44b9c9b620b",
@@ -1610,7 +2708,13 @@
     "reading": "ぶんし",
     "lv": 1,
     "lang": "ja",
-    "genre": "science"
+    "genre": "science",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "ac46b2b3-492a-4176-82a7-fdb62937d25c",
@@ -1619,7 +2723,13 @@
     "reading": "めいだい",
     "lv": 3,
     "lang": "ja",
-    "genre": "science"
+    "genre": "science",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "9fa8f30f-f862-4208-90ac-787ad2fba418",
@@ -1628,7 +2738,13 @@
     "reading": "あさがお",
     "lv": 1,
     "lang": "ja",
-    "genre": "nature"
+    "genre": "nature",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "10a930e3-fdab-4f5f-969e-d96f21409420",
@@ -1637,7 +2753,13 @@
     "reading": "かえる",
     "lv": 1,
     "lang": "ja",
-    "genre": "nature"
+    "genre": "nature",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "ea22a2dd-b8b3-483b-a776-b27e1059ada2",
@@ -1646,7 +2768,13 @@
     "reading": "すいれん",
     "lv": 1,
     "lang": "ja",
-    "genre": "nature"
+    "genre": "nature",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "d1d96146-0d5c-4f6c-9b5d-520b3695ea7d",
@@ -1655,7 +2783,13 @@
     "reading": "すずき",
     "lv": 1,
     "lang": "ja",
-    "genre": "nature"
+    "genre": "nature",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "e1d7a6f7-751c-4923-b144-fd74cf871aec",
@@ -1664,7 +2798,13 @@
     "reading": "せみ",
     "lv": 1,
     "lang": "ja",
-    "genre": "nature"
+    "genre": "nature",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "5abaf6c8-5760-436e-8e48-28b72eaf8e89",
@@ -1673,7 +2813,13 @@
     "reading": "つばめ",
     "lv": 1,
     "lang": "ja",
-    "genre": "nature"
+    "genre": "nature",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "20d9d48c-a95a-4591-97af-620b89cf98ad",
@@ -1681,7 +2827,13 @@
     "name": "テレビ石",
     "lv": 3,
     "lang": "ja",
-    "genre": "nature"
+    "genre": "nature",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "9dfab1a8-2608-4663-8fce-668bcc0189fa",
@@ -1690,7 +2842,13 @@
     "reading": "ひまわり",
     "lv": 1,
     "lang": "ja",
-    "genre": "nature"
+    "genre": "nature",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "2dedfdaa-bffe-46f4-b614-0aaa1637ea28",
@@ -1698,7 +2856,13 @@
     "name": "ポインセチア",
     "lv": 2,
     "lang": "ja",
-    "genre": "nature"
+    "genre": "nature",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "306b4d38-164c-4d04-a198-1cfb9071e4ce",
@@ -1707,7 +2871,13 @@
     "reading": "わし",
     "lv": 2,
     "lang": "ja",
-    "genre": "nature"
+    "genre": "nature",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "146edfee-af2c-4453-8d98-ca19c061d35e",
@@ -1716,7 +2886,13 @@
     "reading": "あし",
     "lv": 1,
     "lang": "ja",
-    "genre": "nature"
+    "genre": "nature",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "c198cecd-0cb6-48f7-aec5-52c433203694",
@@ -1725,7 +2901,13 @@
     "reading": "あゆ",
     "lv": 1,
     "lang": "ja",
-    "genre": "nature"
+    "genre": "nature",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "f05d3820-0f07-4c1c-8ebf-0cff879cd758",
@@ -1734,7 +2916,13 @@
     "reading": "あめ",
     "lv": 1,
     "lang": "ja",
-    "genre": "nature"
+    "genre": "nature",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "5112aca3-0403-43c1-9be5-03135ede871f",
@@ -1743,7 +2931,13 @@
     "reading": "くも",
     "lv": 1,
     "lang": "ja",
-    "genre": "nature"
+    "genre": "nature",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "6d5e9831-47c1-4c54-bde2-176ad54e78dd",
@@ -1753,7 +2947,13 @@
     "desc": "積乱雲の別名。",
     "lv": 4,
     "lang": "ja",
-    "genre": "nature"
+    "genre": "nature",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "78a6ac3f-44f0-4399-9acc-103fe019e991",
@@ -1762,7 +2962,13 @@
     "reading": "えんてん",
     "lv": 2,
     "lang": "ja",
-    "genre": "nature"
+    "genre": "nature",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "51f426d1-89d0-4672-a554-5f4b958e9482",
@@ -1771,7 +2977,13 @@
     "reading": "えんらい",
     "lv": 2,
     "lang": "ja",
-    "genre": "nature"
+    "genre": "nature",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "1e83886a-c3fe-4fad-8289-7b49ca113b1d",
@@ -1781,7 +2993,13 @@
     "desc": "地球表面の大部分を占めている塩水域。",
     "lv": 1,
     "lang": "ja",
-    "genre": "nature"
+    "genre": "nature",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "8be33aea-c10d-45a6-b6ff-5758727c4f02",
@@ -1790,7 +3008,13 @@
     "reading": "そら",
     "lv": 1,
     "lang": "ja",
-    "genre": "nature"
+    "genre": "nature",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "425e77ef-2734-4a2d-85fc-40a1afc5c055",
@@ -1799,7 +3023,13 @@
     "reading": "ほたる",
     "lv": 1,
     "lang": "ja",
-    "genre": "nature"
+    "genre": "nature",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "a3238161-d0c7-437e-aca5-344b263846da",
@@ -1808,7 +3038,13 @@
     "reading": "てりかえし",
     "lv": 2,
     "lang": "ja",
-    "genre": "nature"
+    "genre": "nature",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "96419223-ecd7-483b-b8cd-82e950893248",
@@ -1817,7 +3053,13 @@
     "reading": "あおた",
     "lv": 2,
     "lang": "ja",
-    "genre": "nature"
+    "genre": "nature",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "13f8e3ea-ae0c-4a76-a021-a7e81ef9138a",
@@ -1826,7 +3068,13 @@
     "reading": "せきらんうん",
     "lv": 2,
     "lang": "ja",
-    "genre": "nature"
+    "genre": "nature",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "acb9abb0-b05f-4113-9d4e-5bd0ef2ff7c0",
@@ -1834,7 +3082,13 @@
     "name": "雪花石膏",
     "lv": 3,
     "lang": "ja",
-    "genre": "nature"
+    "genre": "nature",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "b93d3850-0301-4d4b-88bc-326df64b2e78",
@@ -1843,7 +3097,13 @@
     "reading": "せみしぐれ",
     "lv": 2,
     "lang": "ja",
-    "genre": "nature"
+    "genre": "nature",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "4e914e02-900d-41f7-975c-26b45e8dd207",
@@ -1852,7 +3112,13 @@
     "reading": "ながあめ",
     "lv": 1,
     "lang": "ja",
-    "genre": "nature"
+    "genre": "nature",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "336b5fbd-845d-4747-8c94-fcb744d6a98b",
@@ -1861,7 +3127,13 @@
     "reading": "どんてん",
     "lv": 1,
     "lang": "ja",
-    "genre": "nature"
+    "genre": "nature",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "f6c1fd25-54c2-4f4d-ab15-54852ada712d",
@@ -1870,7 +3142,13 @@
     "reading": "にゅうどうぐも",
     "lv": 1,
     "lang": "ja",
-    "genre": "nature"
+    "genre": "nature",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "29292ccc-2ff4-444d-af63-061615141849",
@@ -1879,7 +3157,13 @@
     "reading": "つゆ",
     "lv": 1,
     "lang": "ja",
-    "genre": "nature"
+    "genre": "nature",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "7fc414f9-55ea-4623-b29c-ee5018977514",
@@ -1888,7 +3172,13 @@
     "reading": "ゆり",
     "lv": 1,
     "lang": "ja",
-    "genre": "nature"
+    "genre": "nature",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "98d01ab8-1241-4bae-95ad-4935fee59001",
@@ -1897,7 +3187,13 @@
     "reading": "さるすべり",
     "lv": 1,
     "lang": "ja",
-    "genre": "nature"
+    "genre": "nature",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "ba770cc4-3dc6-49c3-9979-b1803355b4af",
@@ -1906,7 +3202,13 @@
     "reading": "かぜ",
     "lv": 1,
     "lang": "ja",
-    "genre": "nature"
+    "genre": "nature",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "f789deec-9725-4bc5-a463-c4f888870926",
@@ -1915,7 +3217,13 @@
     "reading": "いちぢく",
     "lv": 1,
     "lang": "ja",
-    "genre": "nature"
+    "genre": "nature",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "0a482c16-e7e0-4275-aad6-9b510adee711",
@@ -1924,7 +3232,13 @@
     "reading": "もうしょ",
     "lv": 1,
     "lang": "ja",
-    "genre": "nature"
+    "genre": "nature",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "23d6d961-401c-4ac5-9e32-062dc2db7037",
@@ -1933,7 +3247,13 @@
     "reading": "ゆうだち",
     "lv": 1,
     "lang": "ja",
-    "genre": "nature"
+    "genre": "nature",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "12ffa5a9-6a0a-4769-8208-37c9ddf10ccf",
@@ -1942,7 +3262,13 @@
     "reading": "かげろう",
     "lv": 2,
     "lang": "ja",
-    "genre": "nature"
+    "genre": "nature",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "a0d61e2d-8882-4d51-8a1f-0ccd80777ca2",
@@ -1950,7 +3276,13 @@
     "name": "瑠璃",
     "lv": 3,
     "lang": "ja",
-    "genre": "nature"
+    "genre": "nature",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "6e10c3d1-16d1-4a5a-b252-b2fe26e52926",
@@ -1959,7 +3291,13 @@
     "reading": "はす",
     "lv": 1,
     "lang": "ja",
-    "genre": "nature"
+    "genre": "nature",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "504da349-e88b-44ce-ab0c-b7c283a063df",
@@ -1967,7 +3305,13 @@
     "name": "曼珠沙華",
     "lv": 2,
     "lang": "ja",
-    "genre": "nature"
+    "genre": "nature",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "4607540b-73b9-44b7-a990-d65552b7e060",
@@ -1976,7 +3320,13 @@
     "reading": "かげろう",
     "lv": 2,
     "lang": "ja",
-    "genre": "nature"
+    "genre": "nature",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "3664e75a-f019-42ca-bf2e-5da7e7d615cc",
@@ -1985,7 +3335,13 @@
     "reading": "すずき",
     "lv": 2,
     "lang": "ja",
-    "genre": "nature"
+    "genre": "nature",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "aa106e77-8e31-4468-8e0f-63c4662bf5f0",
@@ -1994,7 +3350,13 @@
     "reading": "いんきゅべーたー",
     "lv": 3,
     "lang": "ja",
-    "genre": "technology"
+    "genre": "technology",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "4988c8d1-b284-4628-abc3-ccc486bf334b",
@@ -2003,7 +3365,13 @@
     "reading": "すたんしょんぽーる",
     "lv": 4,
     "lang": "ja",
-    "genre": "technology"
+    "genre": "technology",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "25089e6c-23ae-4fe2-b6c5-fe7b868d8522",
@@ -2012,7 +3380,13 @@
     "reading": "だずるめいさい",
     "lv": 3,
     "lang": "ja",
-    "genre": "technology"
+    "genre": "technology",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "f996f5ca-ffe2-462d-930d-d2dbbe8a096a",
@@ -2021,7 +3395,13 @@
     "reading": "にゅーらるねっとわーく",
     "lv": 3,
     "lang": "ja",
-    "genre": "technology"
+    "genre": "technology",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "a01921fc-3626-4b22-932e-5905f4f2905b",
@@ -2029,7 +3409,13 @@
     "name": "バイラテラル制御",
     "lv": 5,
     "lang": "ja",
-    "genre": "technology"
+    "genre": "technology",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "4398fb17-7bb1-4b1c-98cb-e90ad47d4d7d",
@@ -2038,7 +3424,13 @@
     "desc": "NHKの番組「ピタゴラスイッチ」の1コーナーに登場するループ・ゴールドバーグ・マシンの1種。",
     "lv": 2,
     "lang": "ja",
-    "genre": "technology"
+    "genre": "technology",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "dc29c4a1-ddba-412a-bece-26f30bfbbd70",
@@ -2046,7 +3438,13 @@
     "name": "ループ・ゴールドバーグ・マシン",
     "lv": 3,
     "lang": "ja",
-    "genre": "technology"
+    "genre": "technology",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "893cd405-4500-4ad9-ab60-b559e3df03e6",
@@ -2055,7 +3453,13 @@
     "reading": "がぞう",
     "lv": 1,
     "lang": "ja",
-    "genre": "technology"
+    "genre": "technology",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "441495ce-f3b1-44b3-b184-0c5c793f1503",
@@ -2064,7 +3468,13 @@
     "reading": "かいろ",
     "lv": 1,
     "lang": "ja",
-    "genre": "technology"
+    "genre": "technology",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "525f7b41-bddf-47ff-b50a-06d49c0ec574",
@@ -2073,7 +3483,13 @@
     "reading": "けいさん",
     "lv": 1,
     "lang": "ja",
-    "genre": "technology"
+    "genre": "technology",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "17c41327-04aa-4872-849f-9061b7a6be92",
@@ -2082,7 +3498,13 @@
     "reading": "しんごう",
     "lv": 1,
     "lang": "ja",
-    "genre": "technology"
+    "genre": "technology",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "68362127-59df-4725-9636-4e1ea4cc0efb",
@@ -2091,7 +3513,13 @@
     "reading": "つうしん",
     "lv": 1,
     "lang": "ja",
-    "genre": "technology"
+    "genre": "technology",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "e7fa6e0a-83b1-4301-b758-204955b844bb",
@@ -2100,7 +3528,13 @@
     "reading": "ゆうがとう",
     "lv": 2,
     "lang": "ja",
-    "genre": "technology"
+    "genre": "technology",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "12e9cda4-0253-44a0-94b8-682ab82ffeaa",
@@ -2108,7 +3542,13 @@
     "name": "アウフグース",
     "lv": 3,
     "lang": "ja",
-    "genre": "living"
+    "genre": "living",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "9a39d883-d3df-4e7c-8d4d-13c1b0174343",
@@ -2116,7 +3556,13 @@
     "name": "ロウリュ",
     "lv": 2,
     "lang": "ja",
-    "genre": "living"
+    "genre": "living",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "e552e93c-a67b-47a1-bc84-f2b9f9de9645",
@@ -2125,7 +3571,13 @@
     "reading": "いす",
     "lv": 2,
     "lang": "ja",
-    "genre": "living"
+    "genre": "living",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "0b7acdc9-4e98-4093-b69d-8ec71944ed53",
@@ -2134,7 +3586,13 @@
     "reading": "しお",
     "lv": 1,
     "lang": "ja",
-    "genre": "living"
+    "genre": "living",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "e4f21d2a-b15e-4e63-93a6-e10906ce3f1e",
@@ -2143,7 +3601,13 @@
     "reading": "ごすい",
     "lv": 1,
     "lang": "ja",
-    "genre": "living"
+    "genre": "living",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "0a3f87f7-108c-4059-8fe4-327bae101760",
@@ -2152,7 +3616,13 @@
     "reading": "えだまめ",
     "lv": 1,
     "lang": "ja",
-    "genre": "living"
+    "genre": "living",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "fb185d78-ff27-40f0-a698-1c205bd3b6db",
@@ -2161,7 +3631,13 @@
     "reading": "だし",
     "lv": 1,
     "lang": "ja",
-    "genre": "living"
+    "genre": "living",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "87f9dcb1-9801-4264-8c3d-510b2e5fd778",
@@ -2170,7 +3646,13 @@
     "reading": "しょうゆ",
     "lv": 1,
     "lang": "ja",
-    "genre": "living"
+    "genre": "living",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "21cb418b-fb8e-4ab7-9784-73a002b852ef",
@@ -2179,7 +3661,13 @@
     "reading": "うちみず",
     "lv": 1,
     "lang": "ja",
-    "genre": "living"
+    "genre": "living",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "a25618a0-180b-42cb-980e-92df1af586ab",
@@ -2188,7 +3676,13 @@
     "reading": "ひる",
     "lv": 1,
     "lang": "ja",
-    "genre": "living"
+    "genre": "living",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "394c5c8a-21ab-4a17-b976-ef2344123abb",
@@ -2197,7 +3691,13 @@
     "reading": "あさ",
     "lv": 1,
     "lang": "ja",
-    "genre": "living"
+    "genre": "living",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "d3627447-8910-4e9e-aa7c-bbed71626f40",
@@ -2207,7 +3707,13 @@
     "desc": "ある物事の意味や内容について、言葉を加えたり具体例などを補足することで、分かりやすく詳しく説明すること。\nまたは、単に押し広げること。\n敷：しく、広げる、広く行き渡らせる\n衍：延ばす、広げる、展開する",
     "lv": 3,
     "lang": "ja",
-    "genre": "living"
+    "genre": "living",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "8f5b0944-9fb6-4981-a0c8-e65c1901b37b",
@@ -2216,7 +3722,13 @@
     "reading": "へや",
     "lv": 1,
     "lang": "ja",
-    "genre": "living"
+    "genre": "living",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "6a936d01-a406-47a3-b8fe-57de3d309abf",
@@ -2225,7 +3737,13 @@
     "reading": "ふうりん",
     "lv": 1,
     "lang": "ja",
-    "genre": "living"
+    "genre": "living",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "40fc83f2-2387-4871-bb39-0946b7c4cbda",
@@ -2234,7 +3752,13 @@
     "reading": "こめ",
     "lv": 1,
     "lang": "ja",
-    "genre": "living"
+    "genre": "living",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "01836dc2-07a3-43f9-9fbe-c49e1fa39604",
@@ -2243,7 +3767,13 @@
     "reading": "みそ",
     "lv": 1,
     "lang": "ja",
-    "genre": "living"
+    "genre": "living",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "41102d54-4b22-4a4c-95fc-3b1b83407ae7",
@@ -2252,7 +3782,13 @@
     "reading": "よる",
     "lv": 1,
     "lang": "ja",
-    "genre": "living"
+    "genre": "living",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "250444d8-8816-4703-a4f3-f50b77b9b872",
@@ -2262,7 +3798,13 @@
     "desc": "マッチのこと。小さな軸木を擦って火を起こすための道具。",
     "lv": 1,
     "lang": "ja",
-    "genre": "living"
+    "genre": "living",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "f26837d6-a01e-4f5e-bf0f-85113df3b324",
@@ -2271,7 +3813,13 @@
     "reading": "あおる",
     "lv": 2,
     "lang": "ja",
-    "genre": "living"
+    "genre": "living",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "99ead65b-b3b8-4853-9147-a810e304138d",
@@ -2280,7 +3828,13 @@
     "reading": "あごら",
     "lv": 2,
     "lang": "ja",
-    "genre": "place"
+    "genre": "place",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "335a51bb-a880-4c4a-98f8-b9e7ac76c794",
@@ -2289,7 +3843,13 @@
     "reading": "えきまえ",
     "lv": 2,
     "lang": "ja",
-    "genre": "place"
+    "genre": "place",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "79763f46-f653-4c45-bdc9-85e47cb8f72e",
@@ -2298,7 +3858,13 @@
     "reading": "がいせんもん",
     "lv": 2,
     "lang": "ja",
-    "genre": "place"
+    "genre": "place",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "852396a7-6226-44a8-8eb5-14f7b17c0af2",
@@ -2307,7 +3873,13 @@
     "reading": "はし",
     "lv": 1,
     "lang": "ja",
-    "genre": "place"
+    "genre": "place",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "acaaa45f-50d2-45a9-b8d9-0e665e164b8e",
@@ -2316,7 +3888,13 @@
     "reading": "こうさてん",
     "lv": 1,
     "lang": "ja",
-    "genre": "place"
+    "genre": "place",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "e2bf1d80-ae28-492c-b943-58ac3148594a",
@@ -2325,7 +3903,13 @@
     "reading": "しゅっぱつ",
     "lv": 1,
     "lang": "ja",
-    "genre": "place"
+    "genre": "place",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "7c41546b-96ea-4ece-9bd4-7d4234a7bef0",
@@ -2334,7 +3918,13 @@
     "reading": "のりかえ",
     "lv": 1,
     "lang": "ja",
-    "genre": "place"
+    "genre": "place",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "7a0b86d3-2543-437a-ac6e-b8a789b210e3",
@@ -2343,7 +3933,13 @@
     "reading": "ばしょ",
     "lv": 1,
     "lang": "ja",
-    "genre": "place"
+    "genre": "place",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "b9da69b5-a246-4c18-8d8e-b828b3209321",
@@ -2352,7 +3948,13 @@
     "reading": "しんごうき",
     "lv": 1,
     "lang": "ja",
-    "genre": "place"
+    "genre": "place",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "965fce8b-b7eb-45b7-8465-6cf81cc41434",
@@ -2361,7 +3963,13 @@
     "reading": "きっぷ",
     "lv": 1,
     "lang": "ja",
-    "genre": "place"
+    "genre": "place",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "6c51e88b-edc0-47d6-85fe-bc2d48b9a883",
@@ -2370,7 +3978,13 @@
     "reading": "ちゅうしん",
     "lv": 1,
     "lang": "ja",
-    "genre": "place"
+    "genre": "place",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "06167d1d-7973-41b1-a328-7ce3f9ed5f88",
@@ -2379,7 +3993,13 @@
     "reading": "とうちゃく",
     "lv": 1,
     "lang": "ja",
-    "genre": "place"
+    "genre": "place",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "d90f39cf-0670-4cca-9c25-681c6af82353",
@@ -2388,7 +4008,13 @@
     "reading": "どうろ",
     "lv": 1,
     "lang": "ja",
-    "genre": "place"
+    "genre": "place",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "a67a7d30-9baf-4479-850e-bdc7ee3a4a5c",
@@ -2397,7 +4023,13 @@
     "reading": "ほどう",
     "lv": 1,
     "lang": "ja",
-    "genre": "place"
+    "genre": "place",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "6beb77f6-2810-4e13-914d-16dbccf079bc",
@@ -2406,7 +4038,13 @@
     "reading": "ほうこう",
     "lv": 1,
     "lang": "ja",
-    "genre": "place"
+    "genre": "place",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "d6a8acfe-5ce4-46cf-8834-3b5a5cf5d5ed",
@@ -2415,7 +4053,13 @@
     "reading": "ばんりのちょうじょう",
     "lv": 2,
     "lang": "ja",
-    "genre": "place"
+    "genre": "place",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "464a731f-07db-4ed8-8cae-36f12437241f",
@@ -2424,7 +4068,13 @@
     "reading": "たび",
     "lv": 1,
     "lang": "ja",
-    "genre": "place"
+    "genre": "place",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "302d29a0-b28d-4cf8-86fe-bd1331bfdbe3",
@@ -2433,7 +4083,13 @@
     "reading": "なつやすみ",
     "lv": 1,
     "lang": "ja",
-    "genre": "time"
+    "genre": "time",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "7f7014ea-d3b6-4db6-839e-71e441c1d82f",
@@ -2442,7 +4098,13 @@
     "reading": "かこ",
     "lv": 1,
     "lang": "ja",
-    "genre": "time"
+    "genre": "time",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "694b78a7-3d36-4dbb-bdd1-f053ecdd859d",
@@ -2452,7 +4114,13 @@
     "desc": "海の恩恵に感謝するとともに、海洋国日本の繁栄を願う祝日。\n７月の第３月曜日。",
     "lv": 2,
     "lang": "ja",
-    "genre": "time"
+    "genre": "time",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "95cd6779-7033-4fbc-a54f-24afee4311ef",
@@ -2461,7 +4129,13 @@
     "reading": "げんざい",
     "lv": 1,
     "lang": "ja",
-    "genre": "time"
+    "genre": "time",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "018519b0-633c-45ae-8dff-8389be6cae5d",
@@ -2470,7 +4144,13 @@
     "reading": "さいじき",
     "lv": 3,
     "lang": "ja",
-    "genre": "time"
+    "genre": "time",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "38445000-2e23-4e39-aeb1-86c2d633c9f6",
@@ -2479,7 +4159,13 @@
     "reading": "きのう",
     "lv": 1,
     "lang": "ja",
-    "genre": "time"
+    "genre": "time",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "c9f70dfe-120c-4b2e-b7f0-fab1a1c70eae",
@@ -2488,7 +4174,13 @@
     "reading": "たいしょ",
     "lv": 2,
     "lang": "ja",
-    "genre": "time"
+    "genre": "time",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "ac7f195f-dd0a-456d-949b-c53400e4eec0",
@@ -2497,7 +4189,13 @@
     "reading": "どようのうし",
     "lv": 2,
     "lang": "ja",
-    "genre": "time"
+    "genre": "time",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "e3117a45-f142-4575-ba39-f4d189243374",
@@ -2506,7 +4204,13 @@
     "reading": "みらい",
     "lv": 1,
     "lang": "ja",
-    "genre": "time"
+    "genre": "time",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "985cc3da-9ace-4c89-8bef-52cd7fa52edd",
@@ -2514,7 +4218,13 @@
     "name": "刹那",
     "lv": 2,
     "lang": "ja",
-    "genre": "time"
+    "genre": "time",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "64995bc2-9880-413f-9454-368c1cf1dff9",
@@ -2523,7 +4233,13 @@
     "reading": "あれくさんどりあとしょかん",
     "lv": 3,
     "lang": "ja",
-    "genre": "learning"
+    "genre": "learning",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "716a9ea2-69cb-4b56-884c-15713cb597c9",
@@ -2532,7 +4248,13 @@
     "reading": "かだい",
     "lv": 1,
     "lang": "ja",
-    "genre": "learning"
+    "genre": "learning",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "1c370760-1235-4dbc-b7dc-69e11637f86d",
@@ -2540,7 +4262,13 @@
     "name": "吟味",
     "lv": 2,
     "lang": "ja",
-    "genre": "learning"
+    "genre": "learning",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "0419b831-e9c5-4c7f-8de4-24920291c4d1",
@@ -2549,7 +4277,13 @@
     "reading": "じゅぎょう",
     "lv": 1,
     "lang": "ja",
-    "genre": "learning"
+    "genre": "learning",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "465271db-8f82-41c8-917d-b5923f36d74f",
@@ -2558,7 +4292,13 @@
     "reading": "ていしゅつ",
     "lv": 1,
     "lang": "ja",
-    "genre": "learning"
+    "genre": "learning",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "3c6ac72c-540d-4739-b1d5-8c59de7fcae7",
@@ -2567,7 +4307,13 @@
     "reading": "ふくしゅう",
     "lv": 1,
     "lang": "ja",
-    "genre": "learning"
+    "genre": "learning",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "74933df1-3cdd-4882-87b5-0dd9972898e3",
@@ -2576,7 +4322,13 @@
     "reading": "ぼうしょう",
     "lv": 3,
     "lang": "ja",
-    "genre": "learning"
+    "genre": "learning",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   },
   {
     "id": "ba407e11-b3bb-4062-a910-ea79f0dc92bc",
@@ -2585,6 +4337,12 @@
     "reading": "よしゅう",
     "lv": 1,
     "lang": "ja",
-    "genre": "learning"
+    "genre": "learning",
+    "links": {
+      "wikipedia": {
+        "enabled": true
+      },
+      "custom": []
+    }
   }
 ]

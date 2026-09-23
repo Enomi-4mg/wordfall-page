@@ -10,7 +10,6 @@ import {
 } from "../shared/words.js?v=examples-links-v2";
 import { fitTextList } from "../shared/fit-text.js";
 
-const WIKIPEDIA_LANGS = new Set(["ja", "en", "zh", "ko", "fr", "de", "it"]);
 const HISTORY_MERGE_WINDOW = 700;
 
 const state = {
@@ -81,7 +80,6 @@ const dom = {
   dirtyStatus: document.getElementById("dirtyStatus"),
   undoButton: document.getElementById("undoButton"),
   redoButton: document.getElementById("redoButton"),
-  checkWikipediaButton: document.getElementById("checkWikipediaButton"),
   chooseFolderButton: document.getElementById("chooseFolderButton"),
   saveButton: document.getElementById("saveButton")
 };
@@ -759,63 +757,6 @@ async function saveChanges() {
   }
 }
 
-async function checkWikipedia() {
-  const targets = state.words.filter((word) => WIKIPEDIA_LANGS.has(word.lang) && word.links?.wikipedia?.enabled !== false);
-  if (!targets.length) {
-    showStatus("確認対象のWikipediaリンクはありません。");
-    return;
-  }
-  const buttonLabel = dom.checkWikipediaButton.querySelector("span");
-  const originalLabel = buttonLabel.textContent;
-  dom.checkWikipediaButton.disabled = true;
-  const missingIds = [];
-  let failures = 0;
-  try {
-    const batchSize = 6;
-    for (let start = 0; start < targets.length; start += batchSize) {
-      const batch = targets.slice(start, start + batchSize);
-      const results = await Promise.all(batch.map(async (word) => {
-        try {
-          return { word, exists: await wikipediaPageExists(word) };
-        } catch (error) {
-          return { word, error };
-        }
-      }));
-      results.forEach(({ word, exists, error }) => {
-        if (error) failures += 1;
-        else if (!exists) missingIds.push(word.id);
-      });
-      buttonLabel.textContent = `確認中 ${Math.min(start + batch.length, targets.length)}/${targets.length}`;
-    }
-  } finally {
-    buttonLabel.textContent = originalLabel;
-    dom.checkWikipediaButton.disabled = false;
-  }
-  if (missingIds.length) {
-    commitMutation("wikipedia-check", () => {
-      state.words.forEach((word) => {
-        if (!missingIds.includes(word.id)) return;
-        word.links.wikipedia.enabled = false;
-        markDirty(word.lang);
-      });
-    });
-    renderList();
-    if (getCurrentWord()) fillForm(getCurrentWord(), "Edit");
-    updateDirtyStatus();
-  }
-  showStatus(`${missingIds.length}件をWikipedia Offにしました。${failures ? ` ${failures}件は確認できませんでした。` : ""}`);
-}
-
-async function wikipediaPageExists(word) {
-  const endpoint = `https://${word.lang}.wikipedia.org/w/api.php?action=query&format=json&origin=*&redirects=1&titles=${encodeURIComponent(word.name)}`;
-  const response = await fetch(endpoint, { cache: "no-store" });
-  if (!response.ok) throw new Error(`Wikipedia API returned ${response.status}`);
-  const data = await response.json();
-  const pages = data?.query?.pages;
-  if (!pages || typeof pages !== "object") throw new Error("Wikipedia API response was incomplete.");
-  return Object.values(pages).some((page) => page && !page.missing && page.pageid !== -1);
-}
-
 function bindEvents() {
   dom.newButton.addEventListener("click", startNewWord);
   dom.searchInput.addEventListener("input", () => {
@@ -895,7 +836,6 @@ function bindEvents() {
   dom.deleteButton.addEventListener("click", deleteSelectedWord);
   dom.undoButton.addEventListener("click", undo);
   dom.redoButton.addEventListener("click", redo);
-  dom.checkWikipediaButton.addEventListener("click", checkWikipedia);
   dom.chooseFolderButton.addEventListener("click", chooseFolder);
   dom.saveButton.addEventListener("click", saveChanges);
   window.addEventListener("keydown", (event) => {
