@@ -91,7 +91,7 @@ button {
   position: fixed;
   z-index: 20;
   left: 50%;
-  bottom: calc(env(safe-area-inset-bottom, 0px) + 44px);
+  top: calc(env(safe-area-inset-top, 0px) + var(--page-gutter) + var(--control-size) + 12px);
   transform: translateX(-50%);
   max-width: min(520px, calc(100vw - 40px));
   padding: 7px 12px;
