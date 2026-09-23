@@ -218,9 +218,12 @@ button {
   text-orientation: mixed;
 }
 
-.floating-word[data-writing-direction="left"] .floating-word-orientation,
 .floating-word[data-writing-direction="up"] .floating-word-orientation {
   transform: rotate(180deg);
+}
+
+.floating-word[data-writing-direction="left"] .floating-word-orientation {
+  transform: scaleX(-1);
 }
 
 .floating-word:focus-visible {

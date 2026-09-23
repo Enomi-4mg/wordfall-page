@@ -742,7 +742,7 @@ function getModalMinimumFontSize() {
 }
 
 function isDescriptionColoringEnabled() {
-  return IS_LOCAL_DEV && state.settings.colorByDescription;
+  return state.settings.colorByDescription;
 }
 
 function updateFloatingWordDescriptionColor(word) {
