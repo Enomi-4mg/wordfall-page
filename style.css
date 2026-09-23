@@ -280,6 +280,43 @@ button {
   accent-color: var(--ink);
 }
 
+.developer-toggle {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  border: 0;
+  border-top: 1px solid var(--line);
+  background: transparent;
+  padding: 14px 0 4px;
+  color: var(--muted);
+  font-size: 12px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.developer-toggle:hover,
+.developer-toggle.is-open {
+  color: var(--ink);
+}
+
+.developer-toggle svg {
+  width: 16px;
+  height: 16px;
+  transition: transform 160ms ease;
+}
+
+.developer-toggle.is-open svg {
+  transform: rotate(180deg);
+}
+
+#devSettings {
+  margin-top: 14px;
+  border-top: 1px solid var(--line);
+  padding-top: 14px;
+}
+
 .checkbox-label {
   display: flex;
   align-items: center;
@@ -412,7 +449,56 @@ button {
   color: #9a7200;
 }
 
+.modal-usage {
+  flex: none;
+  margin: 0 0 26px;
+  border-top: 1px solid var(--line);
+  padding-top: 18px;
+}
+
+.modal-usage[hidden] {
+  display: none;
+}
+
+.modal-usage h3 {
+  margin: 0 0 12px;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.modal-usage-list {
+  display: grid;
+  gap: 13px;
+  margin: 0;
+  padding: 0 0 0 25px;
+  color: #202020;
+  font-family: var(--word-font);
+  font-size: 18px;
+  line-height: 1.45;
+}
+
+.modal-usage-example {
+  white-space: pre-line;
+}
+
+.modal-usage-meaning {
+  margin-top: 3px;
+  color: var(--muted);
+  font-family: var(--ui-font);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
 .modal-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+
+.modal-site-links {
   display: flex;
   flex-wrap: wrap;
   gap: 9px;
@@ -519,6 +605,10 @@ button {
   .modal-actions {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .modal-site-links {
+    display: contents;
   }
 
   .modal-actions .text-button {

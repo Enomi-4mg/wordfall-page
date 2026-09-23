@@ -1,11 +1,13 @@
-import { getGenreLabel, isDisplayReadyWord, normalizeWord } from "./shared/words.js?v=created-at-v1";
+import { getGenreLabel, isDisplayReadyWord, isValidHttpUrl, normalizeWord } from "./shared/words.js?v=examples-links-v2";
 import { fitTextToWidth } from "./shared/fit-text.js";
 
 const DATA_FILE = "data/ja.json";
 const AUDIO_FILE = "audio/Nature_river_Track3_loop_128.mp3";
 const FORMS_URL = "#";
 const DEFAULT_VOLUME = 0.35;
-const DEFAULT_SPEED = 1;
+const DEFAULT_SPEED = 1.0;
+// Rebase the speed control: the former 1.5x pace is the new 1.0x default.
+const SPEED_BASELINE_MULTIPLIER = 1.5;
 const DEFAULT_DENSITY = 30;
 const SPEED_RANGE = { min: 0.35, max: 2.2 };
 const DENSITY_RANGE = { min: 6, max: 240 };
@@ -21,12 +23,13 @@ const SWAY_SAMPLES = Object.freeze(Array.from(
 const VOLUME_STORAGE_KEY = "wordfall.volume";
 const AUDIO_SOURCE_STORAGE_KEY = "wordfall.audioSource";
 const FONT_STORAGE_KEY = "wordfall.font";
-const SPEED_STORAGE_KEY = "wordfall.speed";
+const SPEED_STORAGE_KEY = "wordfall.speed.v2";
+const LEGACY_SPEED_STORAGE_KEY = "wordfall.speed";
 const DENSITY_STORAGE_KEY = "wordfall.density";
 const MOTION_STORAGE_KEY = "wordfall.motion";
 const SHOW_ALL_WORDS_STORAGE_KEY = "wordfall.showAllWords";
 const COLOR_BY_DESCRIPTION_STORAGE_KEY = "wordfall.colorByDescription";
-// Developer-only settings are rendered only when the page runs from a local origin.
+// Local mode is useful for diagnostics; production exposes the same controls behind an explicit toggle.
 const IS_LOCAL_DEV = ["localhost", "127.0.0.1", "[::1]"].includes(window.location.hostname)
   || window.location.protocol === "file:";
 const AUDIO_SOURCES = new Set(["generated", "file"]);
@@ -114,6 +117,7 @@ const dom = {
   audioSourceSelect: document.getElementById("audioSourceSelect"),
   fontSelect: document.getElementById("fontSelect"),
   motionSelect: document.getElementById("motionSelect"),
+  devSettingsToggle: document.getElementById("devSettingsToggle"),
   devSettings: document.getElementById("devSettings"),
   showAllWordsCheckbox: document.getElementById("showAllWordsCheckbox"),
   colorByDescriptionCheckbox: document.getElementById("colorByDescriptionCheckbox"),
@@ -131,8 +135,10 @@ const dom = {
   modalWord: document.getElementById("modalWord"),
   modalReading: document.getElementById("modalReading"),
   modalDesc: document.getElementById("modalDesc"),
+  modalUsage: document.getElementById("modalUsage"),
+  modalUsageList: document.getElementById("modalUsageList"),
+  modalSiteLinks: document.getElementById("modalSiteLinks"),
   googleButton: document.getElementById("googleButton"),
-  wikiButton: document.getElementById("wikiButton")
 };
 
 const floatingWordsByElement = new WeakMap();
@@ -160,9 +166,9 @@ async function loadData() {
     const displayReadyCount = state.allWords.filter(isDisplayReadyWord).length;
     const hiddenCount = state.allWords.length - displayReadyCount;
     if (!state.vocabulary.length) {
-      showStatus(`No display-ready words were found in ${DATA_FILE}. Only words with desc are shown.`);
+      showStatus(`No display-ready words were found in ${DATA_FILE}. Only words with desc are shown.`, { loadNotice: true });
     } else if (!isShowingAllWords() && hiddenCount > displayReadyCount * 2) {
-      showStatus(`${displayReadyCount} words with desc are shown. ${hiddenCount} words without desc are hidden.`);
+      showStatus(`${displayReadyCount} words with desc are shown. ${hiddenCount} words without desc are hidden.`, { loadNotice: true });
     }
   } catch (error) {
     showStatus(`Could not load ${DATA_FILE}. Start a local static server and reload.`);
@@ -170,8 +176,7 @@ async function loadData() {
 }
 
 function isShowingAllWords() {
-  // The toggle only exists in local dev; never honor a stray stored value in production.
-  return IS_LOCAL_DEV && state.settings.showAllWords;
+  return state.settings.showAllWords;
 }
 
 function applyWordFilter() {
@@ -241,7 +246,11 @@ function scheduleAnimationTick(timestamp = performance.now()) {
 }
 
 function getSpawnDelay() {
-  return Math.max(24, Math.max(80, 950 - state.settings.density * 6) / Math.max(1, state.settings.speed));
+  return Math.max(24, Math.max(80, 950 - state.settings.density * 6) / Math.max(1, getEffectiveSpeedMultiplier()));
+}
+
+function getEffectiveSpeedMultiplier() {
+  return state.settings.speed * SPEED_BASELINE_MULTIPLIER;
 }
 
 function spawnWords(timestamp) {
@@ -448,7 +457,7 @@ function startFallAnimation(word, startY = WORD_START_Y) {
   word.fallEnd = endY;
   word.fallDuration = duration;
   word.fallAnimation = animation;
-  animation.playbackRate = state.settings.speed;
+  animation.playbackRate = getEffectiveSpeedMultiplier();
   if (state.paused || document.hidden) animation.pause();
   animation.onfinish = () => {
     if (word.fallAnimation === animation) removeFloatingWord(word);
@@ -542,9 +551,9 @@ function updateWordPlaybackRates() {
     const animation = word.fallAnimation;
     if (!animation) continue;
     if (typeof animation.updatePlaybackRate === "function") {
-      animation.updatePlaybackRate(state.settings.speed);
+      animation.updatePlaybackRate(getEffectiveSpeedMultiplier());
     } else {
-      animation.playbackRate = state.settings.speed;
+      animation.playbackRate = getEffectiveSpeedMultiplier();
     }
   }
 }
@@ -722,6 +731,8 @@ function openModal(item, opener = document.activeElement) {
     : "この言葉には、まだ解説が設定されていません。";
   dom.modalDesc.hidden = false;
   dom.modalDesc.classList.toggle("is-missing-desc", !hasDescription);
+  renderModalUsage(item);
+  renderModalSiteLinks(item);
   openLayer(dom.modalBackdrop);
   dom.detailModal.focus();
   refreshIcons();
@@ -768,10 +779,45 @@ function closePopovers() {
 function searchSelectedWord(site) {
   if (!state.selectedWord) return;
   const query = encodeURIComponent(state.selectedWord.name);
-  const url = site === "wiki"
-    ? getWikipediaUrl(state.selectedWord)
-    : `https://www.google.com/search?q=${query}`;
+  const url = `https://www.google.com/search?q=${query}`;
   window.open(url, "_blank", "noopener,noreferrer");
+}
+
+function renderModalUsage(item) {
+  const examples = Array.isArray(item.usageExamples)
+    ? item.usageExamples.filter((usage) => usage?.example && usage?.meaning)
+    : [];
+  dom.modalUsage.hidden = !examples.length;
+  dom.modalUsageList.innerHTML = examples.map((usage) => `
+    <li>
+      <div class="modal-usage-example">${escapeHtml(usage.example)}</div>
+      <div class="modal-usage-meaning">${escapeHtml(usage.meaning)}</div>
+    </li>
+  `).join("");
+}
+
+function renderModalSiteLinks(item) {
+  const links = item.links || { wikipedia: { enabled: true }, custom: [] };
+  const buttons = [];
+  if (links.wikipedia?.enabled !== false) {
+    buttons.push(`
+      <a class="text-button" href="${escapeAttribute(getWikipediaUrl(item))}" target="_blank" rel="noopener noreferrer">
+        <i data-lucide="book-open"></i>
+        <span>Wikipedia</span>
+      </a>
+    `);
+  }
+  (links.custom || []).forEach((link) => {
+    if (!link.enabled || !link.label || !isValidHttpUrl(link.url)) return;
+    buttons.push(`
+      <a class="text-button" href="${escapeAttribute(link.url)}" target="_blank" rel="noopener noreferrer">
+        <i data-lucide="external-link"></i>
+        <span>${escapeHtml(link.label)}</span>
+      </a>
+    `);
+  });
+  dom.modalSiteLinks.innerHTML = buttons.join("");
+  refreshIcons();
 }
 
 function getWikipediaUrl(word) {
@@ -779,6 +825,20 @@ function getWikipediaUrl(word) {
   const title = encodeURIComponent(word.name.replace(/\s+/g, "_"));
   if (WIKIPEDIA_LANGS.has(lang)) return `https://${lang}.wikipedia.org/wiki/${title}`;
   return `https://www.wikipedia.org/search-redirect.php?search=${encodeURIComponent(word.name)}`;
+}
+
+function escapeHtml(value) {
+  return String(value ?? "").replace(/[&<>"']/g, (char) => ({
+    "&": "&amp;",
+    "<": "&lt;",
+    ">": "&gt;",
+    '"': "&quot;",
+    "'": "&#039;"
+  })[char]);
+}
+
+function escapeAttribute(value) {
+  return escapeHtml(value).replace(/`/g, "&#096;");
 }
 
 async function ensureAudioContext() {
@@ -943,6 +1003,13 @@ function closeLayer(element) {
   element.inert = true;
 }
 
+function setDeveloperSettingsOpen(open) {
+  dom.devSettings.hidden = !open;
+  dom.devSettingsToggle.setAttribute("aria-expanded", String(open));
+  dom.devSettingsToggle.querySelector("span").textContent = open ? "開発者用を閉じる" : "開発者用を開く";
+  dom.devSettingsToggle.classList.toggle("is-open", open);
+}
+
 function restoreFocus() {
   const target = state.focusReturnTarget;
   state.focusReturnTarget = null;
@@ -1022,6 +1089,9 @@ function bindEvents() {
     setStoredValue(FONT_STORAGE_KEY, state.settings.font);
     applyFont();
   });
+  dom.devSettingsToggle.addEventListener("click", () => {
+    setDeveloperSettingsOpen(dom.devSettings.hidden);
+  });
   dom.motionSelect.addEventListener("change", () => {
     state.settings.motion = MOTIONS.has(dom.motionSelect.value) ? dom.motionSelect.value : DEFAULT_MOTION;
     setStoredValue(MOTION_STORAGE_KEY, state.settings.motion);
@@ -1057,7 +1127,6 @@ function bindEvents() {
     if (event.target === dom.modalBackdrop) closeModal();
   });
   dom.googleButton.addEventListener("click", () => searchSelectedWord("google"));
-  dom.wikiButton.addEventListener("click", () => searchSelectedWord("wiki"));
   document.addEventListener("click", (event) => {
     if (!event.target.closest(".top-controls") && !event.target.closest(".popover")) {
       closePopovers();
@@ -1111,7 +1180,7 @@ async function init() {
   dom.audioSourceSelect.value = state.settings.audioSource;
   dom.fontSelect.value = state.settings.font;
   dom.motionSelect.value = state.settings.motion;
-  dom.devSettings.hidden = !IS_LOCAL_DEV;
+  setDeveloperSettingsOpen(false);
   dom.showAllWordsCheckbox.checked = state.settings.showAllWords;
   dom.colorByDescriptionCheckbox.checked = state.settings.colorByDescription;
   dom.speedSlider.value = state.settings.speed;
@@ -1127,7 +1196,8 @@ async function init() {
   requestAnimationTick();
 }
 
-function showStatus(message) {
+function showStatus(message, { loadNotice = false } = {}) {
+  if (loadNotice && !IS_LOCAL_DEV) return;
   dom.statusMessage.textContent = message;
   dom.statusMessage.classList.add("is-visible");
   window.clearTimeout(state.statusTimer);
@@ -1173,9 +1243,19 @@ function loadStoredColorByDescription() {
 }
 
 function loadStoredSpeed() {
-  const raw = getStoredValue(SPEED_STORAGE_KEY);
+  const raw = getStoredValue(SPEED_STORAGE_KEY) ?? migrateLegacySpeed();
   if (raw === null || raw === "") return DEFAULT_SPEED;
   return clampNumber(Number(raw), SPEED_RANGE.min, SPEED_RANGE.max, DEFAULT_SPEED);
+}
+
+function migrateLegacySpeed() {
+  const legacy = getStoredValue(LEGACY_SPEED_STORAGE_KEY);
+  if (legacy === null || legacy === "") return null;
+  // The former baseline was 1.5x. Move that one-time default to the new 1.0x baseline,
+  // while preserving any explicit legacy speed the user had chosen.
+  const migrated = Number(legacy) === 1.5 ? String(DEFAULT_SPEED) : legacy;
+  setStoredValue(SPEED_STORAGE_KEY, migrated);
+  return migrated;
 }
 
 function loadStoredDensity() {

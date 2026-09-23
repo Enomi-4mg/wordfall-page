@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Wordfall Local Editor</title>
   <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" integrity="sha384-uTYyvsSSUZeaPhb5RbKlQa0zY/WpX/QHfvg2mczXyBQOpkWPEDy9lczyp+w7SKXu" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="editor.css">
+  <link rel="stylesheet" href="editor.css?v=ui-alignment-v1">
 </head>
 <body>
   <main class="editor-shell">
@@ -23,16 +23,61 @@
       <div class="filters">
         <label class="field-label" for="searchInput">検索</label>
         <input id="searchInput" class="control-input" type="search" placeholder="name / reading / desc">
-
-        <label class="field-label" for="sortSelect">ソート</label>
-        <select id="sortSelect" class="control-input">
-          <option value="lang">lang</option>
-          <option value="genre">genre</option>
-          <option value="lv">lv</option>
-          <option value="name">name</option>
-        </select>
-
-        <div id="languageChips" class="language-chips" aria-label="Language filters"></div>
+        <div class="filter-toolbar">
+          <button id="filterButton" class="text-button" type="button" aria-expanded="false" aria-controls="filterPanel">
+            <i data-lucide="list-filter"></i>
+            <span>絞り込み</span>
+            <span id="filterCount" class="filter-count">全件</span>
+          </button>
+        </div>
+        <div id="filterPanel" class="filter-panel" hidden>
+          <div class="filter-panel-header">
+            <strong>一覧設定</strong>
+            <button id="resetFiltersButton" class="text-button compact-text-button" type="button">リセット</button>
+          </div>
+          <div class="filter-sort-row">
+            <label class="filter-control">
+              <span>並び順</span>
+              <select id="sortSelect" class="control-input">
+                <option value="lang">言語</option>
+                <option value="genre">ジャンル</option>
+                <option value="lv">レベル</option>
+                <option value="name">名前</option>
+                <option value="createdAt">登録日</option>
+              </select>
+            </label>
+            <button id="sortDirectionButton" class="icon-button" type="button" aria-label="昇順" title="昇順">
+              <i data-lucide="arrow-down-a-z"></i>
+            </button>
+          </div>
+          <fieldset class="filter-group">
+            <legend>言語</legend>
+            <div id="languageFilters" class="filter-options"></div>
+          </fieldset>
+          <fieldset class="filter-group">
+            <legend>ジャンル</legend>
+            <div id="genreFilters" class="filter-options"></div>
+          </fieldset>
+          <fieldset class="filter-group">
+            <legend>レベル</legend>
+            <div id="levelFilters" class="filter-options"></div>
+          </fieldset>
+          <fieldset class="filter-group">
+            <legend>desc</legend>
+            <div class="filter-options filter-options-inline">
+              <label class="check-option"><input type="radio" name="descFilter" value="all" checked><span>すべて</span></label>
+              <label class="check-option"><input type="radio" name="descFilter" value="has"><span>あり</span></label>
+              <label class="check-option"><input type="radio" name="descFilter" value="missing"><span>なし</span></label>
+            </div>
+          </fieldset>
+          <fieldset class="filter-group">
+            <legend>登録日</legend>
+            <div class="date-filter-row">
+              <label class="filter-control"><span>From</span><input id="createdFromInput" class="control-input mono" type="date"></label>
+              <label class="filter-control"><span>To</span><input id="createdToInput" class="control-input mono" type="date"></label>
+            </div>
+          </fieldset>
+        </div>
       </div>
 
       <div id="wordList" class="word-list"></div>
@@ -94,6 +139,37 @@
           <span>登録日</span>
           <input id="createdAtInput" class="control-input mono" name="createdAt" readonly>
         </label>
+        <section class="editor-section" aria-labelledby="usageHeading">
+          <div class="editor-section-header">
+            <div>
+              <p class="section-kicker">Examples</p>
+              <h3 id="usageHeading">用法用例</h3>
+            </div>
+            <button id="addUsageButton" class="icon-button" type="button" aria-label="用法用例を追加" title="用法用例を追加">
+              <i data-lucide="plus"></i>
+            </button>
+          </div>
+          <div id="usageList" class="usage-list"></div>
+        </section>
+        <section class="editor-section" aria-labelledby="linksHeading">
+          <button id="linksEditorToggle" class="accordion-toggle" type="button" aria-expanded="false" aria-controls="linksEditorPanel">
+            <span>
+              <span class="section-kicker">Sites</span>
+              <strong id="linksHeading">サイトリンクを編集</strong>
+            </span>
+            <i data-lucide="chevron-down"></i>
+          </button>
+          <div id="linksEditorPanel" class="links-editor-panel" hidden>
+            <div id="siteLinkList" class="site-link-list"></div>
+            <div class="links-editor-actions">
+              <button id="addSiteButton" class="text-button" type="button">
+                <i data-lucide="plus"></i>
+                <span>サイトを追加</span>
+              </button>
+              <button id="linksDoneButton" class="text-button primary" type="button">完了</button>
+            </div>
+          </div>
+        </section>
         <label>
           <span>id</span>
           <input id="idInput" class="control-input mono" name="id" readonly>
@@ -106,6 +182,16 @@
   <footer class="bottom-bar">
     <div id="dirtyStatus" class="dirty-status">No changes</div>
     <div class="bar-actions">
+      <button id="undoButton" class="icon-button" type="button" aria-label="Undo" title="Undo" disabled>
+        <i data-lucide="undo-2"></i>
+      </button>
+      <button id="redoButton" class="icon-button" type="button" aria-label="Redo" title="Redo" disabled>
+        <i data-lucide="redo-2"></i>
+      </button>
+      <button id="checkWikipediaButton" class="text-button" type="button">
+        <i data-lucide="scan-search"></i>
+        <span>Wikipedia確認</span>
+      </button>
       <button id="chooseFolderButton" class="text-button" type="button">
         <i data-lucide="folder-open"></i>
         <span>dataフォルダ</span>
@@ -117,6 +203,6 @@
     </div>
   </footer>
 
-  <script type="module" src="editor.js?v=created-at-v1"></script>
+  <script type="module" src="editor.js?v=examples-links-history-v1"></script>
 </body>
 </html>

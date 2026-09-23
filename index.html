@@ -6,7 +6,7 @@
   <meta name="description" content="言葉が静かに落ちてくる鑑賞型Webページ。">
   <title>Wordfall</title>
   <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" integrity="sha384-uTYyvsSSUZeaPhb5RbKlQa0zY/WpX/QHfvg2mczXyBQOpkWPEDy9lczyp+w7SKXu" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="style.css?v=responsive-performance-v5">
+  <link rel="stylesheet" href="style.css?v=developer-toggle-v1">
 </head>
 <body>
   <main class="app-shell" aria-label="Wordfall">
@@ -34,7 +34,7 @@
         </select>
         <p class="popover-title">Motion</p>
         <label class="field-label" for="speedSlider">速度 <span id="speedValue">1.00x</span></label>
-        <input id="speedSlider" class="range-input" type="range" min="0.35" max="2.2" step="0.05" value="1">
+        <input id="speedSlider" class="range-input" type="range" min="0.35" max="2.2" step="0.05" value="1.0">
         <label class="field-label" for="densitySlider">密度 <span id="densityValue">30</span></label>
         <input id="densitySlider" class="range-input" type="range" min="6" max="240" step="1" value="30">
         <p class="popover-title">Sound</p>
@@ -45,6 +45,10 @@
         </select>
         <label class="field-label" for="volumeSlider">音量 <span id="volumeValue">35%</span></label>
         <input id="volumeSlider" class="range-input" type="range" min="0" max="1" step="0.01" value="0.35">
+        <button id="devSettingsToggle" class="developer-toggle" type="button" aria-expanded="false" aria-controls="devSettings">
+          <span>開発者用を開く</span>
+          <i data-lucide="chevron-down"></i>
+        </button>
         <div id="devSettings" hidden>
           <p class="popover-title">Developer</p>
           <label class="field-label" for="motionSelect">動き</label>
@@ -88,19 +92,20 @@
       <h2 id="modalWord"></h2>
       <p id="modalReading" class="modal-reading"></p>
       <p id="modalDesc" class="modal-desc"></p>
+      <section id="modalUsage" class="modal-usage" hidden aria-labelledby="modalUsageTitle">
+        <h3 id="modalUsageTitle">用法用例</h3>
+        <ol id="modalUsageList" class="modal-usage-list"></ol>
+      </section>
       <div class="modal-actions">
         <button id="googleButton" class="text-button" type="button">
           <i data-lucide="search"></i>
           <span>Google</span>
         </button>
-        <button id="wikiButton" class="text-button" type="button">
-          <i data-lucide="book-open"></i>
-          <span>Wikipedia</span>
-        </button>
+        <div id="modalSiteLinks" class="modal-site-links"></div>
       </div>
     </article>
   </div>
 
-  <script type="module" src="app.js?v=created-at-v8"></script>
+  <script type="module" src="app.js?v=developer-toggle-v1"></script>
 </body>
 </html>

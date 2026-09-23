@@ -29,7 +29,25 @@ Wordfall は、日本語の言葉が静かに落ちてくる鑑賞型Webペー�
   "reading": "よはく",
   "lv": 2,
   "lang": "ja",
-  "genre": "design"
+  "genre": "design",
+  "usageExamples": [
+    {
+      "id": "00000000-0000-4000-8000-000000000001",
+      "example": "A〜〜",
+      "meaning": "意味"
+    }
+  ],
+  "links": {
+    "wikipedia": { "enabled": true },
+    "custom": [
+      {
+        "id": "00000000-0000-4000-8000-000000000002",
+        "label": "公式サイト",
+        "url": "https://example.com",
+        "enabled": true
+      }
+    ]
+  }
 }
 ```
 
@@ -43,6 +61,9 @@ Wordfall は、日本語の言葉が静かに落ちてくる鑑賞型Webペー�
 - `genre` は未設定でも保存できます。公開版では未設定を `-` と表示します。
 - `category` は使いません。
 - `concept_id` は将来の多言語リンク用に予約していますが、現在は保存しません。
+- `usageExamples` は用例と意味の組を複数保存します。空の行は保存できず、公開画面では `desc` の下に番号付きで表示します。
+- `links.wikipedia.enabled` は自動Wikipediaリンクの表示状態です。`links.custom` は語彙ごとの追加サイトで、複数を同時に表示できます。
+- 既存データに `links` がない場合、Wikipediaは表示Onとして扱います。ローカルエディタの「Wikipedia確認」で記事の存在を確認し、存在しない記事だけをOffにできます。
 
 genre は語の厳密な学問分野ではなく、語を眺めるときの入口です。複数にまたがる語は、説明の中心ではなく、その語を次にどんな語へつなげたいかで一つを選びます。標準genreは次の12種です。
 
@@ -70,7 +91,7 @@ living, place, time, learning
 
 ローカルエディタは `local-editor/editor.html` です。公開版からのリンクはありません。
 
-起動直後は `fetch()` で全言語JSONを読み込み、一覧から検索・絞り込み・編集できます。保存時は File System Access API に対応したブラウザで `data` フォルダを選択し、変更された元JSONだけを直接上書きします。
+起動直後は `fetch()` で全言語JSONを読み込み、一覧から検索・絞り込み・編集できます。用法用例、サイトリンク、WikipediaのOn/Off、語彙データの追加・削除・編集はUndo/Redoできます。保存時は File System Access API に対応したブラウザで `data` フォルダを選択し、変更された元JSONだけを直接上書きします。
 
 `local-editor/` は制作者用の管理画面です。公開デプロイには含めない運用にしてください。
 
@@ -111,6 +132,8 @@ npm run reclassify-genres
 `audio/Nature_river_Track3_long_128.mp3` の出典は、[d-elf.com「川のせせらぎ」](https://www.d-elf.com/archives/8333.html)です。
 
 音量設定はブラウザに保存され、次回表示時に復元されます。
+
+公開画面の設定パネルにある「開発者用を開く」から、動き・descのない語の表示・解説の有無による色分けを必要なときだけ展開できます。公開画面の初期読み込み案内は表示しません。速度の既定値は1.00xです。
 
 `Generated noise` は現在 `createScriptProcessor` を使っています。この API は非推奨のため、長期的には AudioWorklet への移行を検討してください。
 

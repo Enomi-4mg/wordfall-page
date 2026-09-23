@@ -31,6 +31,7 @@ export const VALID_LEVELS = new Set([1, 2, 3, 4, 5]);
 
 const UUID_V4_PATTERN = /^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/;
 const ISO_DATE_PATTERN = /^\d{4}-\d{2}-\d{2}$/;
+const HTTP_URL_PATTERN = /^https?:\/\//i;
 
 export function cleanText(value) {
   return typeof value === "string" ? value.trim() : "";
@@ -38,6 +39,16 @@ export function cleanText(value) {
 
 export function isValidUuidV4(str) {
   return typeof str === "string" && UUID_V4_PATTERN.test(str);
+}
+
+export function isValidHttpUrl(value) {
+  if (typeof value !== "string" || !HTTP_URL_PATTERN.test(value.trim())) return false;
+  try {
+    const url = new URL(value.trim());
+    return url.protocol === "http:" || url.protocol === "https:";
+  } catch (error) {
+    return false;
+  }
 }
 
 export function isValidCreatedAt(value) {
@@ -64,6 +75,44 @@ export function isDisplayReadyWord(word) {
     cleanText(word.desc) &&
     VALID_LANGS.has(cleanText(word.lang).toLowerCase())
   );
+}
+
+function normalizeUsageExamples(rawExamples) {
+  if (!Array.isArray(rawExamples)) return [];
+  return rawExamples
+    .filter((item) => item && typeof item === "object")
+    .map((item) => {
+      const example = cleanText(item.example);
+      const meaning = cleanText(item.meaning);
+      const normalized = {};
+      if (isValidUuidV4(item.id)) normalized.id = item.id;
+      normalized.example = example;
+      normalized.meaning = meaning;
+      return normalized;
+    })
+    .filter((item) => item.example || item.meaning);
+}
+
+function normalizeLinks(rawLinks) {
+  const links = rawLinks && typeof rawLinks === "object" ? rawLinks : {};
+  const wikipedia = links.wikipedia && typeof links.wikipedia === "object"
+    ? { enabled: links.wikipedia.enabled !== false }
+    : { enabled: true };
+  const custom = Array.isArray(links.custom)
+    ? links.custom
+      .filter((item) => item && typeof item === "object")
+      .map((item) => {
+        const normalized = {
+          label: cleanText(item.label),
+          url: cleanText(item.url),
+          enabled: item.enabled !== false
+        };
+        if (isValidUuidV4(item.id)) normalized.id = item.id;
+        return normalized;
+      })
+      .filter((item) => item.label || item.url)
+    : [];
+  return { wikipedia, custom };
 }
 
 export function normalizeOptionalFields(word) {
@@ -103,7 +152,9 @@ export function normalizeWord(raw) {
     desc,
     lv: raw.lv,
     lang,
-    genre: cleanText(raw.genre).toLowerCase()
+    genre: cleanText(raw.genre).toLowerCase(),
+    usageExamples: normalizeUsageExamples(raw.usageExamples),
+    links: normalizeLinks(raw.links)
   });
 
   if (!isValidUuidV4(word.id)) delete word.id;
@@ -128,8 +179,43 @@ export function validateWord(word) {
   if (!Object.prototype.hasOwnProperty.call(word, "genre")) warnings.push("genre is not set.");
   if (word.genre && !isValidGenre(word.genre)) warnings.push(`genre is not in the standard list: ${word.genre}`);
   if (!Object.prototype.hasOwnProperty.call(word, "lv")) warnings.push("lv is not set.");
-  if (Object.prototype.hasOwnProperty.call(word, "lv") && !VALID_LEVELS.has(Number(word.lv))) {
+  if (Object.prototype.hasOwnProperty.call(word, "lv")
+    && word.lv !== ""
+    && word.lv !== null
+    && word.lv !== undefined
+    && !VALID_LEVELS.has(Number(word.lv))) {
     errors.push("lv must be 1, 2, 3, 4, 5, or empty.");
+  }
+
+  if (Object.prototype.hasOwnProperty.call(word, "usageExamples")) {
+    if (!Array.isArray(word.usageExamples)) {
+      errors.push("usageExamples must be an array.");
+    } else {
+      word.usageExamples.forEach((item, index) => {
+        if (!cleanText(item?.example) || !cleanText(item?.meaning)) {
+          errors.push(`usageExamples[${index + 1}] requires example and meaning.`);
+        }
+      });
+    }
+  }
+
+  if (word.links !== undefined) {
+    if (!word.links || typeof word.links !== "object") {
+      errors.push("links must be an object.");
+    } else {
+      if (word.links.wikipedia && typeof word.links.wikipedia.enabled !== "boolean") {
+        errors.push("links.wikipedia.enabled must be boolean.");
+      }
+      if (!Array.isArray(word.links.custom)) {
+        errors.push("links.custom must be an array.");
+      } else {
+        word.links.custom.forEach((item, index) => {
+          if (!cleanText(item?.label)) errors.push(`links.custom[${index + 1}] label is required.`);
+          if (!isValidHttpUrl(item?.url)) errors.push(`links.custom[${index + 1}] URL must start with http:// or https://.`);
+          if (typeof item?.enabled !== "boolean") errors.push(`links.custom[${index + 1}] enabled must be boolean.`);
+        });
+      }
+    }
   }
 
   return { errors, warnings };
@@ -165,5 +251,31 @@ export function orderWordKeys(word) {
   if (Object.prototype.hasOwnProperty.call(word, "lv")) ordered.lv = Number(word.lv);
   ordered.lang = word.lang;
   if (word.genre) ordered.genre = word.genre;
+  if (Array.isArray(word.usageExamples) && word.usageExamples.length) {
+    ordered.usageExamples = word.usageExamples.map((item) => {
+      const usage = {};
+      if (item.id) usage.id = item.id;
+      usage.example = cleanText(item.example);
+      usage.meaning = cleanText(item.meaning);
+      return usage;
+    });
+  }
+  if (word.links && typeof word.links === "object") {
+    ordered.links = {
+      wikipedia: {
+        enabled: word.links.wikipedia?.enabled !== false
+      },
+      custom: Array.isArray(word.links.custom)
+        ? word.links.custom.map((item) => {
+          const link = {};
+          if (item.id) link.id = item.id;
+          link.label = cleanText(item.label);
+          link.url = cleanText(item.url);
+          link.enabled = item.enabled !== false;
+          return link;
+        })
+        : []
+    };
+  }
   return ordered;
 }
