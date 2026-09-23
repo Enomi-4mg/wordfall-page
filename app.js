@@ -29,6 +29,8 @@ const DENSITY_STORAGE_KEY = "wordfall.density";
 const MOTION_STORAGE_KEY = "wordfall.motion";
 const SHOW_ALL_WORDS_STORAGE_KEY = "wordfall.showAllWords";
 const COLOR_BY_DESCRIPTION_STORAGE_KEY = "wordfall.colorByDescription";
+const WRITING_DIRECTION_STORAGE_KEY = "wordfall.writingDirection";
+const FALL_DIRECTION_STORAGE_KEY = "wordfall.fallDirection";
 // Local mode is useful for diagnostics; production exposes the same controls behind an explicit toggle.
 const IS_LOCAL_DEV = ["localhost", "127.0.0.1", "[::1]"].includes(window.location.hostname)
   || window.location.protocol === "file:";
@@ -37,6 +39,9 @@ const FONTS = new Set(["mincho", "gen"]);
 const DEFAULT_FONT = "mincho";
 const MOTIONS = new Set(["sway", "straight"]);
 const DEFAULT_MOTION = "sway";
+const DIRECTIONS = new Set(["up", "right", "down", "left"]);
+const DEFAULT_WRITING_DIRECTION = "right";
+const DEFAULT_FALL_DIRECTION = "down";
 const SPAWN_LANE_COUNT = 10;
 const SPAWN_X_MIN = 2;
 const SPAWN_X_MAX = 92;
@@ -90,6 +95,8 @@ const state = {
     speed: loadStoredSpeed(),
     density: loadStoredDensity(),
     motion: loadStoredMotion(),
+    writingDirection: loadStoredDirection(WRITING_DIRECTION_STORAGE_KEY, DEFAULT_WRITING_DIRECTION),
+    fallDirection: loadStoredDirection(FALL_DIRECTION_STORAGE_KEY, DEFAULT_FALL_DIRECTION),
     showAllWords: loadStoredShowAllWords(),
     colorByDescription: loadStoredColorByDescription()
   },
@@ -119,6 +126,8 @@ const dom = {
   audioSourceSelect: document.getElementById("audioSourceSelect"),
   fontSelect: document.getElementById("fontSelect"),
   motionSelect: document.getElementById("motionSelect"),
+  writingDirectionSelect: document.getElementById("writingDirectionSelect"),
+  fallDirectionSelect: document.getElementById("fallDirectionSelect"),
   devSettingsToggle: document.getElementById("devSettingsToggle"),
   devSettings: document.getElementById("devSettings"),
   showAllWordsCheckbox: document.getElementById("showAllWordsCheckbox"),
@@ -300,8 +309,6 @@ function createFloatingWord() {
     baseLeft: 0,
     boxW: 0,
     boxH: 0,
-    magnetMinX: 0,
-    magnetMaxX: 0,
     fallAnimation: null,
     fallStart: WORD_START_Y,
     fallEnd: WORD_START_Y,
@@ -312,13 +319,17 @@ function createFloatingWord() {
   };
 
   const el = document.createElement("button");
+  const orientation = document.createElement("span");
   const label = document.createElement("span");
   el.type = "button";
   el.className = "floating-word";
   label.className = "floating-word-label";
   label.setAttribute("aria-hidden", "true");
   label.textContent = item.name;
-  el.appendChild(label);
+  orientation.className = "floating-word-orientation";
+  orientation.appendChild(label);
+  el.appendChild(orientation);
+  el.dataset.writingDirection = state.settings.writingDirection;
   el.style.fontSize = `${size}px`;
   el.style.setProperty("--word-alpha", opacity.toFixed(3));
   el.style.setProperty("--word-hover-alpha", hoverOpacity.toFixed(3));
@@ -389,21 +400,28 @@ function shuffleInPlace(values) {
 }
 
 function positionWordHorizontally(word) {
-  const baseLeft = calculateWordBaseLeft(word);
-  word.baseLeft = baseLeft;
+  const verticalFall = isVerticalFall();
+  const baseAcross = calculateWordBaseAcross(word, verticalFall);
+  word.baseLeft = verticalFall ? baseAcross : 0;
+  word.baseTop = verticalFall ? 0 : baseAcross;
   word.boxW = word.w * word.depth;
   word.boxH = word.h * word.depth;
-  word.magnetMinX = baseLeft - word.sway - ATTRACT_MARGIN;
-  word.magnetMaxX = baseLeft + word.sway + word.boxW + ATTRACT_MARGIN;
-  word.el.style.left = `${baseLeft.toFixed(2)}px`;
+  word.el.style.left = `${word.baseLeft.toFixed(2)}px`;
+  word.el.style.top = `${word.baseTop.toFixed(2)}px`;
 }
 
-function calculateWordBaseLeft(word) {
-  const edge = state.viewport.width <= 640 ? 10 : 16;
+function calculateWordBaseAcross(word, verticalFall) {
+  const span = verticalFall ? state.viewport.width : state.viewport.height;
+  const wordSpan = verticalFall ? word.w * word.depth : word.h * word.depth;
+  const edge = span <= 640 ? 10 : 16;
   const progress = (word.x - SPAWN_X_MIN) / (SPAWN_X_MAX - SPAWN_X_MIN);
   const inset = edge + word.sway;
-  const available = Math.max(0, state.viewport.width - inset * 2 - word.w * word.depth);
+  const available = Math.max(0, span - inset * 2 - wordSpan);
   return inset + progress * available;
+}
+
+function isVerticalFall(direction = state.settings.fallDirection) {
+  return direction === "down" || direction === "up";
 }
 
 function fitFloatingWordToViewport(word) {
@@ -443,20 +461,31 @@ function observeWordSize(word) {
 }
 
 function startFallAnimation(word, startY = WORD_START_Y) {
-  const endY = state.viewport.height + WORD_END_MARGIN;
-  const distance = Math.max(1, endY - startY);
+  const direction = state.settings.fallDirection;
+  const vertical = isVerticalFall(direction);
+  const viewportSpan = vertical ? state.viewport.height : state.viewport.width;
+  const reverse = direction === "up" || direction === "left";
+  const defaultStart = reverse ? viewportSpan + WORD_END_MARGIN : WORD_START_Y;
+  const start = arguments.length > 1 ? startY : defaultStart;
+  const estimatedWordSpan = vertical
+    ? (word.h || word.size) * word.depth
+    : (word.w || word.item.name.length * word.size) * word.depth;
+  const end = reverse ? -(estimatedWordSpan + WORD_END_MARGIN) : viewportSpan + WORD_END_MARGIN;
+  const distance = Math.max(1, Math.abs(end - start));
   const duration = distance / word.speed;
+  const from = vertical ? `0px ${start.toFixed(2)}px` : `${start.toFixed(2)}px 0px`;
+  const to = vertical ? `0px ${end.toFixed(2)}px` : `${end.toFixed(2)}px 0px`;
   const animation = word.el.animate([
-    { translate: `0px ${startY.toFixed(2)}px` },
-    { translate: `0px ${endY.toFixed(2)}px` }
+    { translate: from },
+    { translate: to }
   ], {
     duration,
     easing: "linear",
     fill: "forwards"
   });
 
-  word.fallStart = startY;
-  word.fallEnd = endY;
+  word.fallStart = start;
+  word.fallEnd = end;
   word.fallDuration = duration;
   word.fallAnimation = animation;
   animation.playbackRate = getEffectiveSpeedMultiplier();
@@ -473,9 +502,12 @@ function startSwayAnimation(word, phase = word.swayPhase) {
     const progress = index / SWAY_KEYFRAME_COUNT;
     // The parent's individual scale property also scales this legacy transform.
     const x = (SWAY_SAMPLES[index] * word.sway) / word.depth;
+    const vertical = isVerticalFall();
     frames.push({
       offset: progress,
-      transform: `translate3d(${x.toFixed(2)}px, 0, 0)`
+      transform: vertical
+        ? `translate3d(${x.toFixed(2)}px, 0, 0)`
+        : `translate3d(0, ${x.toFixed(2)}px, 0)`
     });
   }
   const animation = word.el.animate(frames, {
@@ -507,6 +539,11 @@ function getFallY(word) {
   return word.fallStart + (word.fallEnd - word.fallStart) * progress;
 }
 
+function getFallPosition(word) {
+  const value = getFallY(word);
+  return isVerticalFall() ? { x: 0, y: value } : { x: value, y: 0 };
+}
+
 function getRenderedSway(word, phase) {
   // Match the browser's linear interpolation between the sway keyframes exactly.
   // Using a continuous sine here while the pixels followed segmented keyframes made
@@ -522,17 +559,19 @@ function getRenderedSway(word, phase) {
 
 function retargetFallAnimations() {
   for (const word of [...state.activeWords]) {
-    const y = getFallY(word);
+    const position = getFallY(word);
     const oldAnimation = word.fallAnimation;
     if (oldAnimation) {
       oldAnimation.onfinish = null;
       oldAnimation.cancel();
     }
-    if (y >= state.viewport.height + WORD_END_MARGIN) {
+    const reverse = state.settings.fallDirection === "up" || state.settings.fallDirection === "left";
+    const span = isVerticalFall() ? state.viewport.height : state.viewport.width;
+    if ((!reverse && position >= span + WORD_END_MARGIN) || (reverse && position <= WORD_START_Y)) {
       removeFloatingWord(word);
       continue;
     }
-    startFallAnimation(word, y);
+    startFallAnimation(word, position);
   }
 }
 
@@ -595,36 +634,27 @@ function updateMagnetism(timestamp) {
       if (word.attractX !== 0 || word.attractY !== 0) hasMotion = true;
       continue;
     }
-    if (word.w > 0) {
-      if (state.pointer.x < word.magnetMinX || state.pointer.x > word.magnetMaxX) {
-        if (word.attractX !== 0 || word.attractY !== 0) {
-          applyMagnet(word, false, 0, 0, ease);
-          if (word.attractX !== 0 || word.attractY !== 0) hasMotion = true;
-        }
-        continue;
-      }
-    }
-    const y = getFallY(word);
-    if (word.h > 0 && (state.pointer.y < y - ATTRACT_MARGIN || state.pointer.y > y + word.boxH + ATTRACT_MARGIN)) {
+    const fall = getFallPosition(word);
+    const sway = state.settings.motion === "straight" ? 0 : getRenderedSway(word, getSwayPhase(word));
+    const left = word.baseLeft + fall.x + (isVerticalFall() ? sway : 0);
+    const top = word.baseTop + fall.y + (isVerticalFall() ? 0 : sway);
+    if (word.h > 0 && (state.pointer.y < top - ATTRACT_MARGIN || state.pointer.y > top + word.boxH + ATTRACT_MARGIN)) {
       if (word.attractX !== 0 || word.attractY !== 0) {
         applyMagnet(word, false, 0, 0, ease);
         if (word.attractX !== 0 || word.attractY !== 0) hasMotion = true;
       }
       continue;
     }
-    const sway = state.settings.motion === "straight" ? 0 : getRenderedSway(word, getSwayPhase(word));
-    applyMagnet(word, true, y, sway, ease);
+    applyMagnet(word, true, left, top, ease);
     if (word.attractX !== 0 || word.attractY !== 0) hasMotion = true;
   }
   state.magnetSettling = hasMotion;
 }
 
-function applyMagnet(word, magnetize, y, sway, ease) {
+function applyMagnet(word, magnetize, left, top, ease) {
   let targetX = 0;
   let targetY = 0;
   if (magnetize && word.w > 0 && word.h > 0) {
-    const left = word.baseLeft + sway;
-    const top = y;
     const boxW = word.boxW;
     const boxH = word.boxH;
     const right = left + boxW;
@@ -1130,13 +1160,15 @@ function scheduleViewportUpdate() {
     if (widthChanged) {
       for (const word of state.activeWords) {
         updateResponsiveWordSize(word);
-        positionWordHorizontally(word);
       }
       if (dom.modalBackdrop.classList.contains("is-open")) {
         fitTextToWidth(dom.modalWord, getModalMinimumFontSize());
       }
     }
-    if (heightChanged) retargetFallAnimations();
+    for (const word of state.activeWords) positionWordHorizontally(word);
+    if ((isVerticalFall() && heightChanged) || (!isVerticalFall() && widthChanged)) {
+      retargetFallAnimations();
+    }
   }, 120);
 }
 
@@ -1179,6 +1211,25 @@ function bindEvents() {
     state.settings.motion = MOTIONS.has(dom.motionSelect.value) ? dom.motionSelect.value : DEFAULT_MOTION;
     setStoredValue(MOTION_STORAGE_KEY, state.settings.motion);
     syncSwayAnimations();
+  });
+  dom.writingDirectionSelect.addEventListener("change", () => {
+    state.settings.writingDirection = DIRECTIONS.has(dom.writingDirectionSelect.value)
+      ? dom.writingDirectionSelect.value
+      : DEFAULT_WRITING_DIRECTION;
+    setStoredValue(WRITING_DIRECTION_STORAGE_KEY, state.settings.writingDirection);
+    clearActiveWords();
+    state.lastSpawn = performance.now() - getSpawnDelay();
+    requestAnimationTick();
+  });
+  dom.fallDirectionSelect.addEventListener("change", () => {
+    state.settings.fallDirection = DIRECTIONS.has(dom.fallDirectionSelect.value)
+      ? dom.fallDirectionSelect.value
+      : DEFAULT_FALL_DIRECTION;
+    setStoredValue(FALL_DIRECTION_STORAGE_KEY, state.settings.fallDirection);
+    clearActiveWords();
+    state.spawnLanes = [];
+    state.lastSpawn = performance.now() - getSpawnDelay();
+    requestAnimationTick();
   });
   dom.showAllWordsCheckbox.addEventListener("change", () => {
     state.settings.showAllWords = dom.showAllWordsCheckbox.checked;
@@ -1268,6 +1319,8 @@ async function init() {
   dom.audioSourceSelect.value = state.settings.audioSource;
   dom.fontSelect.value = state.settings.font;
   dom.motionSelect.value = state.settings.motion;
+  dom.writingDirectionSelect.value = state.settings.writingDirection;
+  dom.fallDirectionSelect.value = state.settings.fallDirection;
   setDeveloperSettingsOpen(false);
   dom.showAllWordsCheckbox.checked = state.settings.showAllWords;
   dom.colorByDescriptionCheckbox.checked = state.settings.colorByDescription;
@@ -1320,6 +1373,11 @@ function loadStoredFont() {
 function loadStoredMotion() {
   const value = getStoredValue(MOTION_STORAGE_KEY);
   return MOTIONS.has(value) ? value : DEFAULT_MOTION;
+}
+
+function loadStoredDirection(key, fallback) {
+  const value = getStoredValue(key);
+  return DIRECTIONS.has(value) ? value : fallback;
 }
 
 function loadStoredShowAllWords() {

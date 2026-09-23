@@ -207,6 +207,23 @@ button {
   display: inline-block;
 }
 
+.floating-word-orientation {
+  display: inline-block;
+  transform-origin: center;
+}
+
+.floating-word[data-writing-direction="down"] .floating-word-orientation,
+.floating-word[data-writing-direction="up"] .floating-word-orientation {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
+
+.floating-word[data-writing-direction="left"] .floating-word-orientation,
+.floating-word[data-writing-direction="up"] .floating-word-orientation {
+  direction: rtl;
+  unicode-bidi: bidi-override;
+}
+
 .floating-word:focus-visible {
   color: rgba(var(--word-color-rgb), var(--word-hover-alpha, 0.92));
   filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.24));
