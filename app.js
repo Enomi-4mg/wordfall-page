@@ -8,7 +8,7 @@ const DEFAULT_VOLUME = 0.1;
 const AUDIO_FADE_DURATION = 0.8;
 const DEFAULT_SPEED = 1.0;
 const SPEED_BASELINE_MULTIPLIER = 1.5;
-const DEFAULT_DENSITY = 30;
+const DEFAULT_DENSITY = 70;
 const SPEED_RANGE = { min: 0.35, max: 5.0 };
 const DENSITY_RANGE = { min: 6, max: 240 };
 const WORD_START_Y = -60;
@@ -27,7 +27,7 @@ const SPEED_STORAGE_KEY = "wordfall.speed.v2";
 const LEGACY_SPEED_STORAGE_KEY = "wordfall.speed";
 const DENSITY_STORAGE_KEY = "wordfall.density";
 const MOTION_STORAGE_KEY = "wordfall.motion";
-const SHOW_ALL_WORDS_STORAGE_KEY = "wordfall.showAllWords";
+const SHOW_ALL_WORDS_STORAGE_KEY = "wordfall.showAllWords.v2";
 const COLOR_BY_DESCRIPTION_STORAGE_KEY = "wordfall.colorByDescription";
 const WRITING_DIRECTION_STORAGE_KEY = "wordfall.writingDirection";
 const FALL_DIRECTION_STORAGE_KEY = "wordfall.fallDirection";
@@ -162,6 +162,10 @@ const wordSizeObserver = typeof ResizeObserver === "function"
       word.h = entry.contentRect.height;
       if (fitFloatingWordToViewport(word)) continue;
       positionWordHorizontally(word);
+      if (!word.fallAnimation) {
+        startFallAnimation(word);
+        startSwayAnimation(word);
+      }
     }
   })
   : null;
@@ -345,8 +349,6 @@ function createFloatingWord() {
   dom.cascade.appendChild(el);
   positionWordHorizontally(word);
   observeWordSize(word);
-  startFallAnimation(word);
-  startSwayAnimation(word);
 }
 
 function pickDepthLayer() {
@@ -453,24 +455,28 @@ function observeWordSize(word) {
         word.w = word.el.offsetWidth;
         word.h = word.el.offsetHeight;
         positionWordHorizontally(word);
+        startFallAnimation(word);
+        startSwayAnimation(word);
       });
       return;
     }
     positionWordHorizontally(word);
+    startFallAnimation(word);
+    startSwayAnimation(word);
   });
 }
 
-function startFallAnimation(word, startY = WORD_START_Y) {
+function startFallAnimation(word, startPosition) {
   const direction = state.settings.fallDirection;
   const vertical = isVerticalFall(direction);
   const viewportSpan = vertical ? state.viewport.height : state.viewport.width;
   const reverse = direction === "up" || direction === "left";
-  const defaultStart = reverse ? viewportSpan + WORD_END_MARGIN : WORD_START_Y;
-  const start = arguments.length > 1 ? startY : defaultStart;
-  const estimatedWordSpan = vertical
-    ? (word.h || word.size) * word.depth
-    : (word.w || word.item.name.length * word.size) * word.depth;
-  const end = reverse ? -(estimatedWordSpan + WORD_END_MARGIN) : viewportSpan + WORD_END_MARGIN;
+  const wordSpan = vertical ? word.boxH : word.boxW;
+  const beforeViewport = -(wordSpan + WORD_END_MARGIN);
+  const afterViewport = viewportSpan + WORD_END_MARGIN;
+  const defaultStart = reverse ? afterViewport : beforeViewport;
+  const start = Number.isFinite(startPosition) ? startPosition : defaultStart;
+  const end = reverse ? beforeViewport : afterViewport;
   const distance = Math.max(1, Math.abs(end - start));
   const duration = distance / word.speed;
   const from = vertical ? `0px ${start.toFixed(2)}px` : `${start.toFixed(2)}px 0px`;
@@ -567,7 +573,9 @@ function retargetFallAnimations() {
     }
     const reverse = state.settings.fallDirection === "up" || state.settings.fallDirection === "left";
     const span = isVerticalFall() ? state.viewport.height : state.viewport.width;
-    if ((!reverse && position >= span + WORD_END_MARGIN) || (reverse && position <= WORD_START_Y)) {
+    const wordSpan = isVerticalFall() ? word.boxH : word.boxW;
+    const beforeViewport = -(wordSpan + WORD_END_MARGIN);
+    if ((!reverse && position >= span + WORD_END_MARGIN) || (reverse && position <= beforeViewport)) {
       removeFloatingWord(word);
       continue;
     }
